@@ -1,0 +1,74 @@
+{
+  "name": "@textoic/enlint",
+  "version": "0.1.0",
+  "description": "Finds flaws in English writing and offers mechanical replacements.",
+  "keywords": [
+    "writing",
+    "style",
+    "linter",
+    "prose",
+    "english"
+  ],
+  "homepage": "https://github.com/Textoic/enlint#readme",
+  "bugs": {
+    "url": "https://github.com/Textoic/enlint/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Textoic/enlint.git"
+  },
+  "license": "MIT",
+  "files": [
+    "dist",
+    "!dist/.tsbuildinfo"
+  ],
+  "scripts": {
+    "add": "node --import tsx/esm ./scripts/add.ts",
+    "build": "tsc --build",
+    "build-docs": "node --import tsx/esm ./scripts/build-docs.ts",
+    "clean": "tsc --build --clean",
+    "examples": "node --import tsx/esm ./scripts/examples.ts",
+    "format": "prettier --check .",
+    "format:write": "prettier --write .",
+    "lint": "eslint .",
+    "lookup": "node --import tsx/esm ./scripts/lookup.ts",
+    "prepare": "npm run build",
+    "start": "node --import tsx/esm ./scripts/start.ts",
+    "test": "node --test --experimental-test-coverage --import tsx/esm test/**/*.test.ts",
+    "test-file": "node --test --import tsx/esm",
+    "typecheck": "tsc --build --force"
+  },
+  "dependencies": {
+    "@textoic/artisan": "^0.1.0",
+    "css-select": "6.0.0",
+    "css-what": "7.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.18.1",
+    "eslint": "9.31.0",
+    "eslint-config-pretty-strict": "10.0.0",
+    "prettier": "3.6.2",
+    "tsx": "4.20.3",
+    "typescript": "5.8.3",
+    "typescript-eslint": "8.37.0"
+  },
+  "private": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./types": {
+      "types": "./dist/types/index.d.ts",
+      "default": "./dist/types/index.js"
+    },
+    "./testing": {
+      "types": "./dist/testing.d.ts",
+      "default": "./dist/testing.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

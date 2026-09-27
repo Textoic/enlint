@@ -1,0 +1,6 @@
+dist
+node_modules
+*.tsbuildinfo
+test.md
+TODO.md
+corpus

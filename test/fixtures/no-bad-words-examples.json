@@ -1,0 +1,4630 @@
+{
+  "a beacon of": [
+    {
+      "text": "The lighthouse stood as a beacon of hope for the sailors.",
+      "fixed": "The lighthouse stood as a hopeful guide for the sailors."
+    },
+    {
+      "text": "Her speech was a beacon of clarity in the debate.",
+      "fixed": "Her speech was remarkably clear in the debate."
+    }
+  ],
+  "a clarion call": [
+    {
+      "text": "The sudden drop in sales served as a clarion call for immediate action.",
+      "fixed": "The sudden drop in sales served as a clear signal for immediate action."
+    },
+    {
+      "text": "Her speech was a clarion call for environmental reform.",
+      "fixed": "Her speech was a compelling appeal for environmental reform."
+    }
+  ],
+  "a commitment to excellence": [
+    {
+      "text": "The firm's a commitment to excellence drove every decision.",
+      "fixed": "The firm was determined to do things right in every decision."
+    },
+    {
+      "text": "Her a commitment to excellence impressed the board.",
+      "fixed": "Her determination to do things right impressed the board."
+    }
+  ],
+  "a complex interplay": [
+    {
+      "text": "The study highlights a complex interplay between diet and sleep.",
+      "fixed": "The study highlights a link between diet and sleep."
+    },
+    {
+      "text": "We must account for the complex interplay of market forces.",
+      "fixed": "We must account for the link of market forces."
+    }
+  ],
+  "a crucial/pivotal/vital/key role/moment": [
+    {
+      "text": "The treaty was a crucial moment for the region.",
+      "fixed": "The treaty ended forty years of border disputes."
+    },
+    {
+      "text": "She played a vital role in the rescue.",
+      "fixed": "She pulled three people out of the water."
+    }
+  ],
+  "a crucible of": [
+    {
+      "text": "The pandemic served as a crucible of resilience for the local healthcare system.",
+      "fixed": "The pandemic served as a test of resilience for the local healthcare system."
+    },
+    {
+      "text": "Her early years in the industry were a crucible of creative pressure.",
+      "fixed": "Her early years in the industry were a gauntlet of creative pressure."
+    }
+  ],
+  "a delicate balance": [
+    {
+      "text": "Maintaining a delicate balance between privacy and security is hard.",
+      "fixed": "Maintaining a tricky balance between privacy and security is hard."
+    },
+    {
+      "text": "The team struggled to keep a delicate balance in their workflow.",
+      "fixed": "The team struggled to keep a tricky balance in their workflow."
+    }
+  ],
+  "a diverse perspective": [
+    {
+      "text": "We need a diverse perspective on this policy.",
+      "fixed": "We need a different view on this policy."
+    },
+    {
+      "text": "Her a diverse perspective challenged the team.",
+      "fixed": "Her a different view challenged the team."
+    }
+  ],
+  "a lasting/indelible mark": [
+    {
+      "text": "The 2008 crash left an indelible mark on global banking regulations.",
+      "fixed": "The 2008 crash forced banks to hold more capital reserves."
+    },
+    {
+      "text": "Her early poetry left a lasting mark on contemporary verse.",
+      "fixed": "Her early poetry popularized free-verse structures in modern journals."
+    }
+  ],
+  "a multifaceted nature": [
+    {
+      "text": "The multifaceted nature of climate change defies simple solutions.",
+      "fixed": "The complex quality of climate change defies simple solutions."
+    },
+    {
+      "text": "We must acknowledge the multifaceted nature of urban poverty.",
+      "fixed": "We must acknowledge the complex quality of urban poverty."
+    }
+  ],
+  "a myriad/plethora of": [
+    {
+      "text": "The app offers a plethora of options.",
+      "fixed": "The app offers many options."
+    },
+    {
+      "text": "We faced a myriad of small delays.",
+      "fixed": "We faced many small delays."
+    }
+  ],
+  "a new avenue": [
+    {
+      "text": "This discovery opens a new avenue for research.",
+      "fixed": "This discovery opens a new possibility for research."
+    },
+    {
+      "text": "We need to find a new avenue for growth.",
+      "fixed": "We need to find a new possibility for growth."
+    }
+  ],
+  "a pivotal moment": [
+    {
+      "text": "The treaty signed in 1994 marked a pivotal moment for regional stability.",
+      "fixed": "The treaty signed in 1994 marked a decisive moment for regional stability."
+    },
+    {
+      "text": "Her resignation from the board was a pivotal moment in the company's history.",
+      "fixed": "Her resignation from the board was a decisive moment in the company's history."
+    }
+  ],
+  "a potential risk/concern": [
+    {
+      "text": "The report highlights a potential risk to data privacy.",
+      "fixed": "The report highlights a risk to data privacy."
+    },
+    {
+      "text": "We must address this potential concern before launch.",
+      "fixed": "We must address this concern before launch."
+    }
+  ],
+  "a prominent figure": [
+    {
+      "text": "She became a prominent figure in the tech industry.",
+      "fixed": "She became a notable person in the tech industry."
+    },
+    {
+      "text": "The report highlighted a prominent figure in local politics.",
+      "fixed": "The report highlighted a notable person in local politics."
+    }
+  ],
+  "a relentless pursuit": [
+    {
+      "text": "The company's a relentless pursuit of market share led to aggressive pricing.",
+      "fixed": "The company's drive to get market share led to aggressive pricing."
+    },
+    {
+      "text": "Her a relentless pursuit of perfection often delayed the project launch.",
+      "fixed": "Her drive to get perfection often delayed the project launch."
+    }
+  ],
+  "a renewed sense": [
+    {
+      "text": "After the layoff, she finally felt a renewed sense of purpose.",
+      "fixed": "After the layoff, she finally knew what she was for again."
+    },
+    {
+      "text": "The quiet morning brought him a renewed sense of calm.",
+      "fixed": "The quiet morning brought him a deep, settling peace."
+    }
+  ],
+  "a role in shaping": [
+    {
+      "text": "The algorithm played a role in shaping public opinion.",
+      "fixed": "The algorithm shaped public opinion."
+    },
+    {
+      "text": "Early internet culture had a role in shaping modern slang.",
+      "fixed": "Early internet culture shaped modern slang."
+    }
+  ],
+  "a sense of": [
+    {
+      "text": "She felt a sense of pride watching her team win.",
+      "fixed": "She felt proud watching her team win."
+    },
+    {
+      "text": "The crowd moved with a sense of anticipation for the finale.",
+      "fixed": "The crowd moved with anticipation for the finale."
+    }
+  ],
+  "a sense of (noun)": [
+    {
+      "text": "The silence in the room created a sense of dread.",
+      "fixed": "The silence in the room created dread."
+    },
+    {
+      "text": "Her sudden departure left a sense of confusion.",
+      "fixed": "Her sudden departure left confusion."
+    }
+  ],
+  "a sense of anticipation": [
+    {
+      "text": "She felt a sense of anticipation before the interview.",
+      "fixed": "She felt anxious before the interview."
+    },
+    {
+      "text": "The crowd stood with a sense of anticipation for the announcement.",
+      "fixed": "The crowd stood nervously for the announcement."
+    }
+  ],
+  "a stark contrast": [
+    {
+      "text": "The quiet library offered a stark contrast to the noisy street.",
+      "fixed": "The quiet library offered a clear distinction to the noisy street."
+    },
+    {
+      "text": "Her calm demeanor stood in a stark contrast to his anger.",
+      "fixed": "Her calm demeanor stood in a clear distinction to his anger."
+    }
+  ],
+  "a stark reminder": [
+    {
+      "text": "The audit report served as a stark reminder of our compliance gaps.",
+      "fixed": "The audit report served as a harsh reminder of our compliance gaps."
+    },
+    {
+      "text": "Her sudden departure was a stark reminder that plans often change.",
+      "fixed": "Her sudden departure was a harsh reminder that plans often change."
+    }
+  ],
+  "a step forward": [
+    {
+      "text": "The new protocol is a significant step forward for data privacy.",
+      "fixed": "The new protocol advances data privacy."
+    },
+    {
+      "text": "Researchers view this discovery as a major step forward in genomics.",
+      "fixed": "Researchers view this discovery as advancing genomics."
+    }
+  ],
+  "a step toward": [
+    {
+      "text": "The new policy is a step toward greater transparency.",
+      "fixed": "The new policy brings greater transparency closer."
+    },
+    {
+      "text": "With each step toward the summit, her breathing became labored.",
+      "fixed": "As she approached the summit, her breathing became labored."
+    }
+  ],
+  "a symphony of": [
+    {
+      "text": "The garden was a symphony of blooming roses.",
+      "fixed": "The garden was full of blooming roses."
+    },
+    {
+      "text": "Her voice created a symphony of emotion.",
+      "fixed": "Her voice was full of emotion."
+    }
+  ],
+  "a tapestry of": [
+    {
+      "text": "The city is a tapestry of diverse cultures and traditions.",
+      "fixed": "The city blends diverse cultures and traditions into daily life."
+    },
+    {
+      "text": "Her career became a tapestry of unexpected opportunities and setbacks.",
+      "fixed": "Her career involved a mix of unexpected opportunities and setbacks."
+    }
+  ],
+  "a testament to": [
+    {
+      "text": "The city's rapid growth is a testament to its innovative spirit.",
+      "fixed": "The city's rapid growth is evidence of its innovative spirit."
+    },
+    {
+      "text": "Her dedication to the project was a testament to her passion.",
+      "fixed": "Her dedication to the project proved her passion."
+    }
+  ],
+  "a transformative power": [
+    {
+      "text": "The company cites a transformative power in its new AI model.",
+      "fixed": "The company cites a driving force in its new AI model."
+    },
+    {
+      "text": "Critics argue that a transformative power drives modern innovation.",
+      "fixed": "Critics argue that a driving force drives modern innovation."
+    }
+  ],
+  "a turning point": [
+    {
+      "text": "The merger was a turning point for the company.",
+      "fixed": "The merger was a crossroads for the company."
+    },
+    {
+      "text": "Her resignation marked a turning point in the debate.",
+      "fixed": "Her resignation marked a crossroads in the debate."
+    }
+  ],
+  "a unique blend": [
+    {
+      "text": "The recipe offers a unique blend of spices.",
+      "fixed": "The recipe offers a particular combination of spices."
+    },
+    {
+      "text": "Her approach creates a unique blend of theory and practice.",
+      "fixed": "Her approach creates a particular combination of theory and practice."
+    }
+  ],
+  "a voice fills": [
+    {
+      "text": "A voice fills the room as the speaker begins.",
+      "fixed": "A booming voice echoes as the speaker begins."
+    },
+    {
+      "text": "Suddenly, a voice fills the silence.",
+      "fixed": "Suddenly, a whisper breaks the silence."
+    }
+  ],
+  "aamof": [
+    {
+      "text": "Aamof, the project was finished early.",
+      "fixed": "actually, the project was finished early."
+    },
+    {
+      "text": "We were, aamof, quite surprised by the results.",
+      "fixed": "We were, actually, quite surprised by the results."
+    }
+  ],
+  "ability to navigate": [
+    {
+      "text": "The new algorithm lacks the ability to navigate complex legal documents.",
+      "fixed": "The new algorithm cannot handle complex legal documents."
+    },
+    {
+      "text": "Users praise the system for its ability to navigate ambiguous user requests.",
+      "fixed": "Users praise the system because it knows how to get through ambiguous requests."
+    }
+  ],
+  "according to me": [
+    {
+      "text": "According to me, the new policy will fail.",
+      "fixed": "The new policy will fail."
+    },
+    {
+      "text": "She believes, according to me, that the data is wrong.",
+      "fixed": "She believes that the data is wrong."
+    }
+  ],
+  "actual fact": [
+    {
+      "text": "The actual fact of the matter is that we missed the deadline.",
+      "fixed": "The fact of the matter is that we missed the deadline."
+    },
+    {
+      "text": "She ignored the actual fact that the building was condemned.",
+      "fixed": "She ignored the fact that the building was condemned."
+    }
+  ],
+  "add a layer": [
+    {
+      "text": "The algorithm adds a layer of noise to the input data.",
+      "fixed": "The algorithm adds an extra element of noise to the input data."
+    },
+    {
+      "text": "We should add a layer of security before deploying the model.",
+      "fixed": "We should add an extra element of security before deploying the model."
+    }
+  ],
+  "add a layer of complexity": [
+    {
+      "text": "The new regulation adds a layer of complexity to the audit process.",
+      "fixed": "The new regulation complicates to the audit process."
+    },
+    {
+      "text": "His sudden resignation added a layer of complexity to the merger talks.",
+      "fixed": "His sudden resignation complicated to the merger talks."
+    }
+  ],
+  "add insult to injury": [
+    {
+      "text": "The power outage added insult to injury during the exam.",
+      "fixed": "The power outage aggravated during the exam."
+    },
+    {
+      "text": "Losing his job added insult to injury after the breakup.",
+      "fixed": "Losing his job aggravated after the breakup."
+    }
+  ],
+  "added bonus": [
+    {
+      "text": "The free parking is a nice added bonus for visitors.",
+      "fixed": "The free parking is a nice bonus for visitors."
+    },
+    {
+      "text": "We received an added bonus of extra time to finish the project.",
+      "fixed": "We received a bonus of extra time to finish the project."
+    }
+  ],
+  "address the root cause": [
+    {
+      "text": "We need to address the root cause of the latency spikes.",
+      "fixed": "We need to fix the faulty network switch causing the latency spikes."
+    },
+    {
+      "text": "The engineers will address the root cause before deploying the update.",
+      "fixed": "The engineers will repair the broken cache invalidation logic before deploying the update."
+    }
+  ],
+  "affluent": [
+    {
+      "text": "The affluent neighborhood features manicured lawns.",
+      "fixed": "The wealthy neighborhood features manicured lawns."
+    },
+    {
+      "text": "She moved to an affluent suburb after retiring.",
+      "fixed": "She moved to a wealthy suburb after retiring."
+    }
+  ],
+  "after all is said and done": [
+    {
+      "text": "After all is said and done, the project succeeded.",
+      "fixed": "at last, the project succeeded."
+    },
+    {
+      "text": "We will be grateful, after all is said and done.",
+      "fixed": "We will be grateful, at last."
+    }
+  ],
+  "aim to explore": [
+    {
+      "text": "This paper aims to explore the impact of remote work on productivity.",
+      "fixed": "This paper looks at the impact of remote work on productivity."
+    },
+    {
+      "text": "We aim to explore how neural networks handle sparse data.",
+      "fixed": "We look at how neural networks handle sparse data."
+    }
+  ],
+  "align with": [
+    {
+      "text": "The new policy aligns with our core values.",
+      "fixed": "The new policy matches our core values."
+    },
+    {
+      "text": "Her schedule does not align with the meeting time.",
+      "fixed": "Her schedule does not match the meeting time."
+    }
+  ],
+  "all things being equal": [
+    {
+      "text": "The decision is simple, all things being equal.",
+      "fixed": "The decision is simple, all."
+    }
+  ],
+  "along the lines of": [
+    {
+      "text": "She suggested a design along the lines of the original blueprint.",
+      "fixed": "She suggested a design like the original blueprint."
+    },
+    {
+      "text": "The results were along the lines of what we predicted.",
+      "fixed": "The results were like what we predicted."
+    }
+  ],
+  "alternative choice": [
+    {
+      "text": "The committee rejected the alternative choice for the new policy.",
+      "fixed": "The committee rejected the choice for the new policy."
+    }
+  ],
+  "amiable / amicable": [
+    {
+      "text": "The amiable staff greeted us warmly.",
+      "fixed": "The friendly staff greeted us warmly."
+    },
+    {
+      "text": "They reached an amicable agreement on the terms.",
+      "fixed": "They reached a friendly agreement on the terms."
+    }
+  ],
+  "amidst": [
+    {
+      "text": "The team remained calm amidst the chaos of the server crash.",
+      "fixed": "The team remained calm during the chaos of the server crash."
+    },
+    {
+      "text": "She found a rare orchid amidst the dense jungle foliage.",
+      "fixed": "She found a rare orchid among the dense jungle foliage."
+    }
+  ],
+  "amongst": [
+    {
+      "text": "The artifacts were scattered amongst the ruins.",
+      "fixed": "The artifacts were scattered among the ruins."
+    },
+    {
+      "text": "She felt isolated amongst her colleagues.",
+      "fixed": "She felt isolated among her colleagues."
+    }
+  ],
+  "an analysis of the data": [
+    {
+      "text": "We found that an analysis of the data reveals significant gaps.",
+      "fixed": "We found that analyzing the data reveals significant gaps."
+    },
+    {
+      "text": "Our report summarizes an analysis of the data from last quarter.",
+      "fixed": "Our report summarizes analyzing the data from last quarter."
+    }
+  ],
+  "an approach ensures": [
+    {
+      "text": "This approach ensures that all data is encrypted before transmission.",
+      "fixed": "We encrypt all data before transmission."
+    },
+    {
+      "text": "The new approach ensures consistent performance across all devices.",
+      "fixed": "This change keeps performance consistent across all devices."
+    }
+  ],
+  "an enduring legacy": [
+    {
+      "text": "Her work left an enduring legacy in modern architecture.",
+      "fixed": "Her work left a lasting impact on modern architecture."
+    },
+    {
+      "text": "The founder's vision created an enduring legacy for the company.",
+      "fixed": "The founder's vision shaped the company's long-term culture."
+    }
+  ],
+  "an exceptional performance": [
+    {
+      "text": "The team delivered an exceptional performance during the final quarter.",
+      "fixed": "The team delivered a great performance during the final quarter."
+    },
+    {
+      "text": "Critics praised the actor for an exceptional performance in the lead role.",
+      "fixed": "Critics praised the actor for a remarkable performance in the lead role."
+    }
+  ],
+  "an initiative aims to": [
+    {
+      "text": "The city's new initiative aims to plant ten thousand trees.",
+      "fixed": "The city's new initiative will plant ten thousand trees."
+    },
+    {
+      "text": "A recent initiative aims to improve access to clean water.",
+      "fixed": "A recent initiative will improve access to clean water."
+    }
+  ],
+  "an ongoing dialogue": [
+    {
+      "text": "The committee maintains an ongoing dialogue with local stakeholders.",
+      "fixed": "The committee keeps talking with local stakeholders."
+    },
+    {
+      "text": "We view this as an ongoing dialogue about data privacy.",
+      "fixed": "We view this as continuous discussion about data privacy."
+    }
+  ],
+  "an unwavering commitment": [
+    {
+      "text": "The team maintained an unwavering commitment to user privacy.",
+      "fixed": "The team refused to compromise user privacy."
+    },
+    {
+      "text": "Her an unwavering commitment to accuracy defined the audit process.",
+      "fixed": "Her refusal to accept sloppy data defined the audit process."
+    }
+  ],
+  "as a matter of fact": [
+    {
+      "text": "As a matter of fact, the data shows a decline.",
+      "fixed": "actually, the data shows a decline."
+    },
+    {
+      "text": "She said, as a matter of fact, she had never been there.",
+      "fixed": "She said, actually, she had never been there."
+    }
+  ],
+  "as a result of": [
+    {
+      "text": "The team missed the deadline as a result of poor planning.",
+      "fixed": "The team missed the deadline because poor planning."
+    },
+    {
+      "text": "Prices rose sharply as a result of the supply shortage.",
+      "fixed": "Prices rose sharply because the supply shortage."
+    }
+  ],
+  "as far as I am concerned": [
+    {
+      "text": "As far as I am concerned, the project is finished.",
+      "fixed": "The project is finished."
+    },
+    {
+      "text": "She believes, as far as she is concerned, that the data is accurate.",
+      "fixed": "She believes that the data is accurate."
+    }
+  ],
+  "as mentioned earlier": [
+    {
+      "text": "As mentioned earlier, the deadline has been extended.",
+      "fixed": "The deadline has been extended."
+    },
+    {
+      "text": "We need to revisit the budget, as mentioned earlier.",
+      "fixed": "We need to revisit the budget."
+    }
+  ],
+  "as to whether": [
+    {
+      "text": "The committee debated as to whether the budget was sufficient.",
+      "fixed": "The committee debated whether the budget was sufficient."
+    },
+    {
+      "text": "She remained uncertain as to whether the train would arrive on time.",
+      "fixed": "She remained uncertain whether the train would arrive on time."
+    }
+  ],
+  "as we can see": [
+    {
+      "text": "As we can see, the trend is clear.",
+      "fixed": "The trend is clear."
+    },
+    {
+      "text": "The costs fell every quarter, as we can see.",
+      "fixed": "The costs fell every quarter."
+    }
+  ],
+  "as yet": [
+    {
+      "text": "The committee has not reached a decision as yet.",
+      "fixed": "The committee has not reached a decision yet."
+    },
+    {
+      "text": "We have not received the report as yet.",
+      "fixed": "We have not received the report yet."
+    }
+  ],
+  "associated with": [
+    {
+      "text": "The risks associated with the drug are known.",
+      "fixed": "The risks linked to the drug are known."
+    },
+    {
+      "text": "Costs associated with the move came to twelve thousand.",
+      "fixed": "Costs linked to the move came to twelve thousand."
+    }
+  ],
+  "assuming/conceding/granted/supposing that": [
+    {
+      "text": "Assuming that the server is down, we will retry the request.",
+      "fixed": "if the server is down, we will retry the request."
+    },
+    {
+      "text": "Granted that you are right, the cost is still too high.",
+      "fixed": "if you are right, the cost is still too high."
+    }
+  ],
+  "at a point in time": [
+    {
+      "text": "The contract expired at a point in time when nobody was watching.",
+      "fixed": "The contract expired when nobody was watching."
+    },
+    {
+      "text": "He lost interest at the point in time when the funding ended.",
+      "fixed": "He lost interest when the funding ended."
+    }
+  ],
+  "at loose ends": [
+    {
+      "text": "The manager felt at loose ends after the merger.",
+      "fixed": "The manager felt uneasy after the merger."
+    },
+    {
+      "text": "She was at loose ends during the quiet afternoon.",
+      "fixed": "She was uneasy during the quiet afternoon."
+    }
+  ],
+  "at that point in time": [
+    {
+      "text": "At that point in time, the market was volatile.",
+      "fixed": "then, the market was volatile."
+    },
+    {
+      "text": "She did not know the answer at that point in time.",
+      "fixed": "She did not know the answer then."
+    }
+  ],
+  "at the end of the day": [
+    {
+      "text": "At the end of the day, we must prioritize user safety.",
+      "fixed": "We must prioritize user safety."
+    },
+    {
+      "text": "The committee agreed that, at the end of the day, cost matters most.",
+      "fixed": "The committee agreed that cost matters most."
+    }
+  ],
+  "at the hands of": [
+    {
+      "text": "The manuscript was rejected at the hands of the editor.",
+      "fixed": "The manuscript was rejected by the editor."
+    },
+    {
+      "text": "She was criticized at the hands of her colleagues.",
+      "fixed": "She was criticized by her colleagues."
+    }
+  ],
+  "at the intersection of": [
+    {
+      "text": "Her work sits at the intersection of art and technology.",
+      "fixed": "Her work blends art and technology."
+    },
+    {
+      "text": "We found a solution at the intersection of design and usability.",
+      "fixed": "We found a solution combining design and usability."
+    }
+  ],
+  "at the present time": [
+    {
+      "text": "The committee is reviewing the budget at the present time.",
+      "fixed": "The committee is reviewing the budget now."
+    },
+    {
+      "text": "We do not have the data at the present time.",
+      "fixed": "We do not have the data now."
+    }
+  ],
+  "at this point in time": [
+    {
+      "text": "At this point in time, the team is reviewing the quarterly budget.",
+      "fixed": "now, the team is reviewing the quarterly budget."
+    },
+    {
+      "text": "We will finalize the contract at this point in time.",
+      "fixed": "We will finalize the contract now."
+    }
+  ],
+  "audacious": [
+    {
+      "text": "Her audacious proposal shocked the board.",
+      "fixed": "Her bold proposal shocked the board."
+    },
+    {
+      "text": "The audacious plan required immediate funding.",
+      "fixed": "The bold plan required immediate funding."
+    }
+  ],
+  "be a testament to": [
+    {
+      "text": "The old bridge is a testament to the city's resilience.",
+      "fixed": "The old bridge shows the city's resilience."
+    },
+    {
+      "text": "Her career will be a testament to her dedication.",
+      "fixed": "Her career will show her dedication."
+    }
+  ],
+  "be aware/cognizant/conscious of": [
+    {
+      "text": "Please be aware of the deadline.",
+      "fixed": "Please know about the deadline."
+    },
+    {
+      "text": "They were conscious of the risks.",
+      "fixed": "They knew about the risks."
+    }
+  ],
+  "be familiar/acquainted with": [
+    {
+      "text": "You must be familiar with the new safety protocols.",
+      "fixed": "You must know the new safety protocols."
+    },
+    {
+      "text": "She was not acquainted with the local customs.",
+      "fixed": "She knew the local customs."
+    }
+  ],
+  "be in need of": [
+    {
+      "text": "The old bridge is in need of repair.",
+      "fixed": "The old bridge needs repair."
+    },
+    {
+      "text": "We are in need of more funding.",
+      "fixed": "We need more funding."
+    }
+  ],
+  "be in possession of": [
+    {
+      "text": "The suspect was found to be in possession of stolen goods.",
+      "fixed": "The suspect was found to have stolen goods."
+    },
+    {
+      "text": "She claims to be in possession of the original contract.",
+      "fixed": "She claims to have the original contract."
+    }
+  ],
+  "be not sure": [
+    {
+      "text": "I am not sure if the train is delayed.",
+      "fixed": "I doubt if the train is delayed."
+    },
+    {
+      "text": "She was not sure about the exact date.",
+      "fixed": "She doubted about the exact date."
+    }
+  ],
+  "be not willing": [
+    {
+      "text": "The committee be not willing to approve the budget.",
+      "fixed": "The committee refuse to approve the budget."
+    },
+    {
+      "text": "She be not willing to share her notes.",
+      "fixed": "She refuse to share her notes."
+    }
+  ],
+  "be unsure": [
+    {
+      "text": "She was unsure about the deadline.",
+      "fixed": "She doubted about the deadline."
+    },
+    {
+      "text": "We are unsure if the train is late.",
+      "fixed": "We doubt if the train is late."
+    }
+  ],
+  "be unwilling": [
+    {
+      "text": "The committee was unwilling to approve the budget.",
+      "fixed": "The committee refused to approve the budget."
+    },
+    {
+      "text": "She is unwilling to sign the contract.",
+      "fixed": "She refuses to sign the contract."
+    }
+  ],
+  "beat a retreat": [
+    {
+      "text": "The manager beat a retreat from the heated discussion.",
+      "fixed": "The manager retreat from the heated discussion."
+    },
+    {
+      "text": "Seeing the storm approach, the hikers beat a retreat to the shelter.",
+      "fixed": "Seeing the storm approach, the hikers retreat to the shelter."
+    }
+  ],
+  "beauteous / ravishing / splendiferous / pulchritudinous": [
+    {
+      "text": "The pulchritudinous sunset painted the sky in shades of orange.",
+      "fixed": "The beautiful sunset painted the sky in shades of orange."
+    },
+    {
+      "text": "She wore a ravishing gown to the gala.",
+      "fixed": "She wore a beautiful gown to the gala."
+    }
+  ],
+  "become aware of": [
+    {
+      "text": "The team quickly became aware of the critical bug.",
+      "fixed": "The team quickly realized the critical bug."
+    },
+    {
+      "text": "She did not become aware of the policy change until later.",
+      "fixed": "She did not realize the policy change until later."
+    }
+  ],
+  "become dry": [
+    {
+      "text": "The clay will become dry after a week.",
+      "fixed": "The clay will dry after a week."
+    },
+    {
+      "text": "Her lips began to become dry in the cold air.",
+      "fixed": "Her lips began to dry in the cold air."
+    }
+  ],
+  "become known/apparent": [
+    {
+      "text": "The error became apparent after the update.",
+      "fixed": "The error emerged after the update."
+    },
+    {
+      "text": "These issues will become known to users soon.",
+      "fixed": "These issues will emerge to users soon."
+    }
+  ],
+  "become liquid": [
+    {
+      "text": "The frozen water began to become liquid as the sun rose.",
+      "fixed": "The frozen water began to liquefy as the sun rose."
+    },
+    {
+      "text": "Wax will become liquid when heated above its melting point.",
+      "fixed": "Wax will liquefy when heated above its melting point."
+    }
+  ],
+  "become pregnant": [
+    {
+      "text": "She hopes to become pregnant by next spring.",
+      "fixed": "She hopes to conceive by next spring."
+    },
+    {
+      "text": "The patient became pregnant during the trial.",
+      "fixed": "The patient conceived during the trial."
+    }
+  ],
+  "become solid": [
+    {
+      "text": "The resin will become solid after twenty minutes.",
+      "fixed": "The resin will solidify after twenty minutes."
+    },
+    {
+      "text": "As the temperature dropped, the mixture became solid.",
+      "fixed": "As the temperature dropped, the mixture solidified."
+    }
+  ],
+  "become/get different": [
+    {
+      "text": "The market conditions will become different by next quarter.",
+      "fixed": "The market conditions will change by next quarter."
+    },
+    {
+      "text": "The software will become different after the update.",
+      "fixed": "The software will change after the update."
+    }
+  ],
+  "become/get established": [
+    {
+      "text": "The firm became established in 1990.",
+      "fixed": "The firm established in 1990."
+    },
+    {
+      "text": "She got established in the local community quickly.",
+      "fixed": "She established in the local community quickly."
+    }
+  ],
+  "become/get hot": [
+    {
+      "text": "The engine began to get hot after the long climb.",
+      "fixed": "The engine began to heat after the long climb."
+    },
+    {
+      "text": "As the sun sets, the pavement becomes hot.",
+      "fixed": "As the sun sets, the pavement heats."
+    }
+  ],
+  "become/get large": [
+    {
+      "text": "The tumor began to become large after the biopsy.",
+      "fixed": "The tumor began to enlarge after the biopsy."
+    },
+    {
+      "text": "If you let the garden get large, it will overrun the path.",
+      "fixed": "If you let the garden enlarge, it will overrun the path."
+    }
+  ],
+  "become/get smaller/shorter": [
+    {
+      "text": "The budget became smaller after the audit.",
+      "fixed": "The budget shrank after the audit."
+    },
+    {
+      "text": "Her hair gets shorter every summer.",
+      "fixed": "Her hair shrinks every summer."
+    }
+  ],
+  "become/get smaller/shorter than": [
+    {
+      "text": "The river will become smaller than the lake.",
+      "fixed": "The river will shrink to less than the lake."
+    },
+    {
+      "text": "The garden will become smaller than the yard.",
+      "fixed": "The garden will shrink to less than the yard."
+    }
+  ],
+  "become/get taller/bigger": [
+    {
+      "text": "The sapling became taller after the rain.",
+      "fixed": "The sapling grew after the rain."
+    },
+    {
+      "text": "Our city got bigger every year.",
+      "fixed": "Our city grown every year."
+    }
+  ],
+  "become/get taller/bigger than": [
+    {
+      "text": "The building became taller than the mountain.",
+      "fixed": "The building grew bigger than the mountain."
+    }
+  ],
+  "become/get/grow old": [
+    {
+      "text": "The oak tree will grow old in the yard.",
+      "fixed": "The oak tree will age in the yard."
+    },
+    {
+      "text": "She became old after the accident.",
+      "fixed": "She aged after the accident."
+    }
+  ],
+  "become/get/make blacker": [
+    {
+      "text": "The old wood became blacker over time.",
+      "fixed": "The old wood blackened over time."
+    },
+    {
+      "text": "The paper got blacker from the soot.",
+      "fixed": "The paper blackened from the soot."
+    }
+  ],
+  "become/get/make cold": [
+    {
+      "text": "The soup began to get cold on the counter.",
+      "fixed": "The soup began to chill on the counter."
+    },
+    {
+      "text": "We watched the metal become cold after the fire died.",
+      "fixed": "We watched the metal chill after the fire died."
+    }
+  ],
+  "become/get/make damp": [
+    {
+      "text": "The fog made the path damp.",
+      "fixed": "The fog dampened."
+    },
+    {
+      "text": "Rain will get the floor damp.",
+      "fixed": "Rain will dampen."
+    }
+  ],
+  "become/get/make darker": [
+    {
+      "text": "The sky began to get darker as the storm approached.",
+      "fixed": "The sky began to darken as the storm approached."
+    },
+    {
+      "text": "Her eyes became darker when she felt threatened.",
+      "fixed": "Her eyes darkened when she felt threatened."
+    }
+  ],
+  "become/get/make deep": [
+    {
+      "text": "The conversation became deep after midnight.",
+      "fixed": "The conversation deepened after midnight."
+    },
+    {
+      "text": "Her commitment to the project got deep over time.",
+      "fixed": "Her commitment to the project deepened over time."
+    }
+  ],
+  "become/get/make lighter": [
+    {
+      "text": "The clouds began to become lighter as the storm passed.",
+      "fixed": "The clouds began to lighten as the storm passed."
+    },
+    {
+      "text": "We need to make the packaging lighter to reduce shipping costs.",
+      "fixed": "We need to lighten to reduce shipping costs."
+    }
+  ],
+  "become/get/make longer": [
+    {
+      "text": "The new algorithm will make the processing time longer.",
+      "fixed": "The new algorithm will lengthen."
+    },
+    {
+      "text": "The video will get longer if you add more clips.",
+      "fixed": "The video will lengthen if you add more clips."
+    }
+  ],
+  "become/get/make stronger": [
+    {
+      "text": "Regular exercise helps you get stronger.",
+      "fixed": "Regular exercise helps you strengthen."
+    },
+    {
+      "text": "The team will become stronger.",
+      "fixed": "The team will strengthen."
+    }
+  ],
+  "become/get/make worse": [
+    {
+      "text": "The new policy made the situation worse.",
+      "fixed": "The new policy worsened."
+    },
+    {
+      "text": "Ignoring the warning will get the problem worse.",
+      "fixed": "Ignoring the warning will worsen."
+    }
+  ],
+  "become/make better": [
+    {
+      "text": "The new protocol will become better over time.",
+      "fixed": "The new protocol will improve over time."
+    },
+    {
+      "text": "Regular practice makes your skills better.",
+      "fixed": "Regular practice improves."
+    }
+  ],
+  "become/make broad": [
+    {
+      "text": "The market will become broad as new entrants arrive.",
+      "fixed": "The market will broaden as new entrants arrive."
+    },
+    {
+      "text": "Her interests have made broad over the years.",
+      "fixed": "Her interests have broadened over the years."
+    }
+  ],
+  "become/make even": [
+    {
+      "text": "The new policy will make even the smallest errors visible.",
+      "fixed": "The new policy will even the smallest errors visible."
+    },
+    {
+      "text": "Her calm demeanor became even more apparent during the crisis.",
+      "fixed": "Her calm demeanor evened more apparent during the crisis."
+    }
+  ],
+  "become/make stiff": [
+    {
+      "text": "The clay becomes stiff as it dries.",
+      "fixed": "The clay stiffens as it dries."
+    },
+    {
+      "text": "Heat makes the plastic stiff.",
+      "fixed": "Heat stiffens."
+    }
+  ],
+  "become/make strong": [
+    {
+      "text": "The new policy will make strong the company's security stance.",
+      "fixed": "The new policy will strengthen the company's security stance."
+    },
+    {
+      "text": "The coach wants to make strong the players' leg muscles.",
+      "fixed": "The coach wants to strengthen the players' leg muscles."
+    }
+  ],
+  "become/make sweet": [
+    {
+      "text": "The chef plans to make the sauce sweet with honey.",
+      "fixed": "The chef plans to sweeten with honey."
+    },
+    {
+      "text": "Adding vanilla will become the dessert sweet.",
+      "fixed": "Adding vanilla will sweeten."
+    }
+  ],
+  "become/make thick": [
+    {
+      "text": "The fog will become thick by morning.",
+      "fixed": "The fog will thicken by morning."
+    },
+    {
+      "text": "Heat makes the air thick and humid.",
+      "fixed": "Heat thickens and humid."
+    }
+  ],
+  "beg the question": [
+    {
+      "text": "The result begs the question whether we should stop.",
+      "fixed": "The result raises the question whether we should stop."
+    },
+    {
+      "text": "Every audit begs the question.",
+      "fixed": "Every audit raises the question."
+    }
+  ],
+  "beyond a shadow of a doubt": [
+    {
+      "text": "The evidence proves her guilt beyond a shadow of a doubt.",
+      "fixed": "The evidence proves her guilt absolutely."
+    },
+    {
+      "text": "She knew beyond a shadow of a doubt that he would leave.",
+      "fixed": "She knew absolutely that he would leave."
+    }
+  ],
+  "bite off more than one can chew": [
+    {
+      "text": "The team tried to launch three products at once and bit off more than one can chew.",
+      "fixed": "The team tried to launch three products at once and overextend."
+    },
+    {
+      "text": "She will bite off more than one can chew if she takes on another client.",
+      "fixed": "She will overextend if she takes on another client."
+    }
+  ],
+  "blend together": [
+    {
+      "text": "The artist blends the colors together on the canvas.",
+      "fixed": "The artist blends on the canvas."
+    },
+    {
+      "text": "We need to blend the ingredients together for the batter.",
+      "fixed": "We need to blend for the batter."
+    }
+  ],
+  "boast a": [
+    {
+      "text": "The hotel boasts a rooftop pool.",
+      "fixed": "The hotel has a rooftop pool."
+    },
+    {
+      "text": "The town boasts a market that has run since 1340.",
+      "fixed": "The town has a market that has run since 1340."
+    }
+  ],
+  "boil the ocean": [
+    {
+      "text": "We don't need to boil the ocean to fix this bug.",
+      "fixed": "We don't need to fix this bug."
+    },
+    {
+      "text": "The team decided not to boil the ocean with new features.",
+      "fixed": "The team decided not to add new features."
+    }
+  ],
+  "bolster": [
+    {
+      "text": "The news bolstered the stock.",
+      "fixed": "The news strengthened the stock."
+    },
+    {
+      "text": "Fresh funding will bolster the programme.",
+      "fixed": "Fresh funding will strengthen the programme."
+    }
+  ],
+  "breath coming in ragged gasps": [
+    {
+      "text": "She stood trembling, her breath coming in ragged gasps.",
+      "fixed": "She stood trembling, breathless."
+    },
+    {
+      "text": "Terrified, he watched the storm with his breath coming in ragged gasps.",
+      "fixed": "Terrified, he watched the storm, breathless."
+    }
+  ],
+  "brief moment": [
+    {
+      "text": "She paused for a brief moment before speaking.",
+      "fixed": "She paused for a moment before speaking."
+    },
+    {
+      "text": "There was a brief moment of silence in the room.",
+      "fixed": "There was a moment of silence in the room."
+    }
+  ],
+  "built on top of": [
+    {
+      "text": "The dashboard is built on top of an open-source charting library.",
+      "fixed": "An open-source charting library powers the dashboard."
+    },
+    {
+      "text": "Most of our internal tools were built on top of Postgres.",
+      "fixed": "Postgres powers most of our internal tools."
+    }
+  ],
+  "bury the hatchet": [
+    {
+      "text": "The rivals finally buried the hatchet after the merger.",
+      "fixed": "The rivals finally made peace after the merger."
+    },
+    {
+      "text": "We should bury the hatchet and move forward.",
+      "fixed": "We should make peace and move forward."
+    }
+  ],
+  "bustle": [
+    {
+      "text": "The children bustle around the kitchen table.",
+      "fixed": "The children scurry around the kitchen table."
+    },
+    {
+      "text": "She bustled out of the room without a word.",
+      "fixed": "She scurried out of the room without a word."
+    }
+  ],
+  "bustling": [
+    {
+      "text": "The bustling market filled with vendors.",
+      "fixed": "The market filled with vendors."
+    },
+    {
+      "text": "We walked through the bustling streets.",
+      "fixed": "We walked through the streets."
+    }
+  ],
+  "busy as a bee": [
+    {
+      "text": "She was busy as a bee all morning.",
+      "fixed": "She was busy all morning."
+    },
+    {
+      "text": "The manager stayed busy as a bee until the deadline.",
+      "fixed": "The manager stayed busy until the deadline."
+    }
+  ],
+  "by cause/reason/virtue of": [
+    {
+      "text": "The project failed by virtue of poor planning.",
+      "fixed": "The project failed because poor planning."
+    },
+    {
+      "text": "She was promoted by reason of her exceptional skills.",
+      "fixed": "She was promoted because her exceptional skills."
+    }
+  ],
+  "by orders of magnitude": [
+    {
+      "text": "The new index cut query times by two orders of magnitude.",
+      "fixed": "The new index cut query times massively."
+    },
+    {
+      "text": "Costs fell by orders of magnitude after the redesign.",
+      "fixed": "Costs fell massively after the redesign."
+    }
+  ],
+  "byte-for-byte": [
+    {
+      "text": "The two files are byte-for-byte identical.",
+      "fixed": "The two files are identical."
+    },
+    {
+      "text": "They promised the archive would be byte-for-byte.",
+      "fixed": "They promised the archive would match the original exactly."
+    }
+  ],
+  "byte-identical/bit-identical": [
+    {
+      "text": "The output is byte-identical to the reference.",
+      "fixed": "The output is identical to the reference."
+    },
+    {
+      "text": "Every rebuild came out bit-identical.",
+      "fixed": "Every rebuild came out identical."
+    }
+  ],
+  "call loudly": [
+    {
+      "text": "The coach call loudly for the team to gather.",
+      "fixed": "The coach cry for the team to gather."
+    },
+    {
+      "text": "She call loudly to warn us about the storm.",
+      "fixed": "She cry to warn us about the storm."
+    }
+  ],
+  "cameo appearance": [
+    {
+      "text": "She made a brief cameo appearance in the film.",
+      "fixed": "She made a brief cameo in the film."
+    },
+    {
+      "text": "The director's cameo appearance surprised the audience.",
+      "fixed": "The director's cameo surprised the audience."
+    }
+  ],
+  "cannot help but": [
+    {
+      "text": "She cannot help but smile when the puppy barks.",
+      "fixed": "She smile when the puppy barks."
+    },
+    {
+      "text": "We cannot help but notice the rising costs.",
+      "fixed": "We notice the rising costs."
+    }
+  ],
+  "carefully constructed": [
+    {
+      "text": "The museum's carefully constructed exhibit drew large crowds.",
+      "fixed": "The museum's well-planned exhibit drew large crowds."
+    },
+    {
+      "text": "We admire her carefully constructed arguments.",
+      "fixed": "We admire her well-planned arguments."
+    }
+  ],
+  "carry a weight": [
+    {
+      "text": "Her words carried a weight in the quiet room.",
+      "fixed": "Her words mattered in the quiet room."
+    },
+    {
+      "text": "The legacy carries a weight.",
+      "fixed": "The legacy matters."
+    }
+  ],
+  "catalyst": [
+    {
+      "text": "The strike was a catalyst for change.",
+      "fixed": "The strike was a trigger for change."
+    },
+    {
+      "text": "Two bad harvests acted as catalysts for the reform.",
+      "fixed": "Two bad harvests acted as triggers for the reform."
+    }
+  ],
+  "catalyze": [
+    {
+      "text": "The ruling catalyzed a wave of lawsuits.",
+      "fixed": "The ruling triggered a wave of lawsuits."
+    },
+    {
+      "text": "Cheap credit catalyzes building booms.",
+      "fixed": "Cheap credit triggers building booms."
+    }
+  ],
+  "cause a drop in": [
+    {
+      "text": "The new policy caused a drop in employee morale.",
+      "fixed": "The new policy reduced employee morale."
+    },
+    {
+      "text": "The outage caused a drop in server uptime.",
+      "fixed": "The outage reduced server uptime."
+    }
+  ],
+  "cerebrate / ideate / intellectualize / logicalize": [
+    {
+      "text": "We need to ideate about the new product launch.",
+      "fixed": "We need to think about the new product launch."
+    },
+    {
+      "text": "She refused to logicalize her emotional response.",
+      "fixed": "She refused to think her emotional response."
+    }
+  ],
+  "certainly": [
+    {
+      "text": "The data certainly shows a decline.",
+      "fixed": "The data shows a decline."
+    },
+    {
+      "text": "The release will almost certainly slip.",
+      "fixed": "The release will slip."
+    }
+  ],
+  "choose one's words carefully": [
+    {
+      "text": "The editor advised the intern to choose his words carefully during the press conference.",
+      "fixed": "The editor advised the intern to watch his words during the press conference."
+    },
+    {
+      "text": "She knew she needed to choose her words carefully before speaking to the board.",
+      "fixed": "She knew she needed to watch her words before speaking to the board."
+    }
+  ],
+  "clear as crystal": [
+    {
+      "text": "The committee's reasoning was clear as crystal.",
+      "fixed": "The committee's reasoning was transparent."
+    },
+    {
+      "text": "Her motives remained clear as crystal throughout the debate.",
+      "fixed": "Her motives remained transparent throughout the debate."
+    }
+  ],
+  "close proximity": [
+    {
+      "text": "The sensors operate in close proximity to the target.",
+      "fixed": "The sensors operate in proximity to the target."
+    },
+    {
+      "text": "Keep your hands in close proximity to the controls.",
+      "fixed": "Keep your hands in proximity to the controls."
+    }
+  ],
+  "cloud one's judgement": [
+    {
+      "text": "The noise from the crowd clouded his judgement.",
+      "fixed": "The noise from the crowd biased his judgement."
+    },
+    {
+      "text": "The conflicting reports clouded his judgement.",
+      "fixed": "The conflicting reports biased his judgement."
+    }
+  ],
+  "cogitate": [
+    {
+      "text": "She paused to cogitate on the complex problem.",
+      "fixed": "She paused to ponder on the complex problem."
+    },
+    {
+      "text": "He likes to cogitate during his morning walks.",
+      "fixed": "He likes to ponder during his morning walks."
+    }
+  ],
+  "cognize / cognise": [
+    {
+      "text": "The algorithm will not cognize the error.",
+      "fixed": "The algorithm will not know the error."
+    },
+    {
+      "text": "She refused to cognize his authority.",
+      "fixed": "She refused to know his authority."
+    }
+  ],
+  "commence / dive headfirst": [
+    {
+      "text": "We will commence the project immediately.",
+      "fixed": "We will start the project immediately."
+    },
+    {
+      "text": "The team dived headfirst into the new strategy.",
+      "fixed": "The team dived start into the new strategy."
+    }
+  ],
+  "commitment to": [
+    {
+      "text": "The mayor repeated her commitment to cycling.",
+      "fixed": "The mayor promised again to build the cycle lanes."
+    },
+    {
+      "text": "The firm published its commitment to fair pay.",
+      "fixed": "The firm published what it will pay each grade."
+    }
+  ],
+  "comprehensive": [
+    {
+      "text": "The report offers a comprehensive analysis of market trends.",
+      "fixed": "The report offers a broad analysis of market trends."
+    },
+    {
+      "text": "We need a comprehensive understanding of the user base.",
+      "fixed": "We need a broad understanding of the user base."
+    }
+  ],
+  "conceptualization": [
+    {
+      "text": "The team's conceptualization of the market was flawed.",
+      "fixed": "The team's interpretation of the market was flawed."
+    },
+    {
+      "text": "We need a clearer conceptualization before proceeding.",
+      "fixed": "We need a clearer interpretation before proceeding."
+    }
+  ],
+  "conceptualize": [
+    {
+      "text": "We need to conceptualize the new data flow.",
+      "fixed": "We need to interpret the new data flow."
+    },
+    {
+      "text": "The team conceptualized the project's core value.",
+      "fixed": "The team interpreted the project's core value."
+    }
+  ],
+  "connected with/to": [
+    {
+      "text": "The delay is connected to the strike.",
+      "fixed": "The delay is linked to the strike."
+    },
+    {
+      "text": "Every fault we found was connected with the same board.",
+      "fixed": "Every fault we found was linked to the same board."
+    }
+  ],
+  "continue to inspire": [
+    {
+      "text": "Her early sketches continue to inspire modern architects.",
+      "fixed": "Her early sketches still inspire modern architects."
+    },
+    {
+      "text": "The 1960s jazz recordings continue to inspire new generations of musicians.",
+      "fixed": "The 1960s jazz recordings still inspire new generations of musicians."
+    }
+  ],
+  "contribute to": [
+    {
+      "text": "The rain contributed to the delay.",
+      "fixed": "The rain added two hours to the delay."
+    },
+    {
+      "text": "Poor lighting contributes to accidents on the stairs.",
+      "fixed": "Poor lighting causes most accidents on the stairs."
+    }
+  ],
+  "cornerstone": [
+    {
+      "text": "Trust is the cornerstone of the deal.",
+      "fixed": "Trust is the foundation of the deal."
+    },
+    {
+      "text": "Free schooling remains a cornerstone of the policy.",
+      "fixed": "Free schooling remains a foundation of the policy."
+    }
+  ],
+  "corporate greed": [
+    {
+      "text": "The board's decision to ignore safety warnings stemmed from corporate greed.",
+      "fixed": "The board's decision to ignore safety warnings stemmed from a desire to maximize quarterly earnings."
+    },
+    {
+      "text": "Critics argued that the merger was driven purely by corporate greed.",
+      "fixed": "Critics argued that the merger was driven purely by the pursuit of market dominance."
+    }
+  ],
+  "cultivate": [
+    {
+      "text": "He cultivated a reputation for honesty.",
+      "fixed": "He built a reputation for honesty."
+    },
+    {
+      "text": "The charity cultivates a loyal following.",
+      "fixed": "The charity builds a loyal following."
+    }
+  ],
+  "current trend": [
+    {
+      "text": "We must adapt to the current trend.",
+      "fixed": "We must adapt to the trend."
+    },
+    {
+      "text": "The current trend is moving toward sustainability.",
+      "fixed": "The trend is moving toward sustainability."
+    }
+  ],
+  "cut to the chase": [
+    {
+      "text": "Let's cut to the chase and discuss the budget.",
+      "fixed": "Let's summarize and discuss the budget."
+    },
+    {
+      "text": "He cut to the chase by listing the key risks.",
+      "fixed": "He summarize by listing the key risks."
+    }
+  ],
+  "cutting-edge": [
+    {
+      "text": "The lab uses cutting-edge equipment.",
+      "fixed": "The lab uses new equipment."
+    },
+    {
+      "text": "They sold it as a cutting-edge design.",
+      "fixed": "They sold it as a new design."
+    }
+  ],
+  "deconstruct": [
+    {
+      "text": "We need to deconstruct the argument carefully.",
+      "fixed": "We need to examine the argument carefully."
+    },
+    {
+      "text": "She deconstructed the novel's themes in her lecture.",
+      "fixed": "She examined the novel's themes in her lecture."
+    }
+  ],
+  "decrease in strength": [
+    {
+      "text": "The patient showed a marked decrease in strength after the surgery.",
+      "fixed": "The patient showed a marked weaken after the surgery."
+    },
+    {
+      "text": "Engineers noted a gradual decrease in strength within the alloy.",
+      "fixed": "Engineers noted a gradual weaken within the alloy."
+    }
+  ],
+  "deep dive": [
+    {
+      "text": "The article is a deep dive into tax law.",
+      "fixed": "The article works through the tax law clause by clause."
+    },
+    {
+      "text": "We did a deep dive on the outage.",
+      "fixed": "We read every log line from the outage and found the cause."
+    }
+  ],
+  "deeply rooted": [
+    {
+      "text": "The custom is deeply rooted in local history.",
+      "fixed": "The custom goes back to the wool trade of the 1600s."
+    },
+    {
+      "text": "Their distrust of the council is deeply rooted.",
+      "fixed": "Their distrust of the council dates from the flood of 1978."
+    }
+  ],
+  "deliberately": [
+    {
+      "text": "She deliberately left the door open.",
+      "fixed": "She left the door open on purpose."
+    },
+    {
+      "text": "The clause was deliberately vague.",
+      "fixed": "The drafters made the clause vague on purpose."
+    }
+  ],
+  "delve": [
+    {
+      "text": "The report delves into the causes of the outage.",
+      "fixed": "The report explores the causes of the outage."
+    },
+    {
+      "text": "We need to delve deeper into the financial data.",
+      "fixed": "We need to examine the financial data more closely."
+    }
+  ],
+  "delve into": [
+    {
+      "text": "Researchers delve into the archives every spring.",
+      "fixed": "Researchers explore the archives every spring."
+    },
+    {
+      "text": "She delved into the accounts and found nothing.",
+      "fixed": "She explored the accounts and found nothing."
+    }
+  ],
+  "demonstrate": [
+    {
+      "text": "The new algorithm demonstrates improved accuracy.",
+      "fixed": "The new algorithm shows improved accuracy."
+    },
+    {
+      "text": "Users can demonstrate their skills in the lab.",
+      "fixed": "Users can show their skills in the lab."
+    }
+  ],
+  "depreciate in value": [
+    {
+      "text": "The vintage car continued to depreciate in value every year.",
+      "fixed": "The vintage car continued to depreciate every year."
+    },
+    {
+      "text": "Investors warned that the asset would depreciate in value.",
+      "fixed": "Investors warned that the asset would depreciate."
+    }
+  ],
+  "desiderate": [
+    {
+      "text": "She began to desiderate a quieter life.",
+      "fixed": "She began to desire a quieter life."
+    },
+    {
+      "text": "He did not desiderate the promotion.",
+      "fixed": "He did not desire the promotion."
+    }
+  ],
+  "despite the challenge/fact": [
+    {
+      "text": "Despite the challenge, the team shipped the update on time.",
+      "fixed": "The team shipped the update on time despite the server outage."
+    },
+    {
+      "text": "Despite the fact, users still prefer the old interface.",
+      "fixed": "Users still prefer the old interface, even after the redesign."
+    }
+  ],
+  "diaspora": [
+    {
+      "text": "The diaspora scattered across three continents.",
+      "fixed": "The dispersion scattered across three continents."
+    },
+    {
+      "text": "We tracked the diaspora through census records.",
+      "fixed": "We tracked the dispersion through census records."
+    }
+  ],
+  "dimly lit": [
+    {
+      "text": "The dimly lit hallway felt oppressive.",
+      "fixed": "The dark hallway felt oppressive."
+    },
+    {
+      "text": "We sat in the dimly lit cafe.",
+      "fixed": "We sat in the dark cafe."
+    }
+  ],
+  "diverse array": [
+    {
+      "text": "The museum holds a diverse array of paintings.",
+      "fixed": "The museum holds four hundred paintings, most of them Dutch."
+    },
+    {
+      "text": "Shoppers face a diverse array of tariffs.",
+      "fixed": "Shoppers face nine different tariffs."
+    }
+  ],
+  "do not remember": [
+    {
+      "text": "I do not remember the date of our last meeting.",
+      "fixed": "I forget the date of our last meeting."
+    },
+    {
+      "text": "She does not remember where she left her keys.",
+      "fixed": "She forgets where she left her keys."
+    }
+  ],
+  "during the course of": [
+    {
+      "text": "During the course of the trial, the jury deliberated for three days.",
+      "fixed": "during the trial, the jury deliberated for three days."
+    },
+    {
+      "text": "She learned several skills during the course of her internship.",
+      "fixed": "She learned several skills during her internship."
+    }
+  ],
+  "dynamic": [
+    {
+      "text": "She prefers a dynamic lifestyle over a static one.",
+      "fixed": "She prefers a changing lifestyle over a static one."
+    }
+  ],
+  "each and every": [
+    {
+      "text": "We reviewed each and every comment before publishing the report.",
+      "fixed": "We reviewed each comment before publishing the report."
+    },
+    {
+      "text": "The manager checked each and every box in the inventory list.",
+      "fixed": "The manager checked each box in the inventory list."
+    }
+  ],
+  "easier said than done": [
+    {
+      "text": "It is easier said than done to maintain discipline.",
+      "fixed": "It is hard to maintain discipline."
+    },
+    {
+      "text": "Keeping the budget balanced is easier said than done.",
+      "fixed": "Keeping the budget balanced is hard."
+    }
+  ],
+  "echo": [
+    {
+      "text": "Her words echo through the empty hall.",
+      "fixed": "Her words reverberate through the empty hall."
+    }
+  ],
+  "elevate": [
+    {
+      "text": "The new policy aims to elevate community engagement.",
+      "fixed": "The new policy aims to raise community engagement."
+    },
+    {
+      "text": "She sought to elevate her status within the firm.",
+      "fixed": "She sought to raise her status within the firm."
+    }
+  ],
+  "elucidate": [
+    {
+      "text": "The author elucidates the theory.",
+      "fixed": "The author explains the theory."
+    },
+    {
+      "text": "Her notes elucidated the method.",
+      "fixed": "Her notes explained the method."
+    }
+  ],
+  "embark": [
+    {
+      "text": "The team will embark on a new strategy next quarter.",
+      "fixed": "The team will begin a new strategy next quarter."
+    },
+    {
+      "text": "She decided to embark on a solo journey.",
+      "fixed": "She decided to start a solo journey."
+    }
+  ],
+  "emphasize": [
+    {
+      "text": "The report emphasizes the need for immediate action.",
+      "fixed": "The report underlines the need for immediate action."
+    },
+    {
+      "text": "We should emphasize that safety is our top priority.",
+      "fixed": "We should underline that safety is our top priority."
+    }
+  ],
+  "emphasize/underscore/highlight the need/potential": [
+    {
+      "text": "This report highlights the need for stricter data privacy laws.",
+      "fixed": "Stricter data privacy laws are needed."
+    },
+    {
+      "text": "The study underscores the potential of renewable energy sources.",
+      "fixed": "Renewable energy sources hold significant potential."
+    }
+  ],
+  "empower": [
+    {
+      "text": "The new policy aims to empower employees.",
+      "fixed": "The new policy aims to enable employees."
+    },
+    {
+      "text": "Training programs can empower staff to lead projects.",
+      "fixed": "Training programs can enable staff to lead projects."
+    }
+  ],
+  "encompass": [
+    {
+      "text": "The survey encompasses ten countries.",
+      "fixed": "The survey includes ten countries."
+    },
+    {
+      "text": "The role encompassed both teams.",
+      "fixed": "The role included both teams."
+    }
+  ],
+  "endeavor (noun)": [
+    {
+      "text": "The team's primary endeavor was to reduce latency.",
+      "fixed": "The team's primary attempt was to reduce latency."
+    },
+    {
+      "text": "Her latest endeavor involved writing a novel.",
+      "fixed": "Her latest attempt involved writing a novel."
+    }
+  ],
+  "endeavor (verb)": [
+    {
+      "text": "We endeavor to reduce latency in every request.",
+      "fixed": "We try to reduce latency in every request."
+    },
+    {
+      "text": "The team will endeavor to fix the bug.",
+      "fixed": "The team will try to fix the bug."
+    }
+  ],
+  "enduring": [
+    {
+      "text": "Their enduring rivalry sold tickets.",
+      "fixed": "Their lasting rivalry sold tickets."
+    },
+    {
+      "text": "He wrote about the enduring myth of the self-made man.",
+      "fixed": "He wrote about the lasting myth of the self-made man."
+    }
+  ],
+  "enhance": [
+    {
+      "text": "The update enhances battery life.",
+      "fixed": "The update improves battery life."
+    },
+    {
+      "text": "Better lighting enhanced the room.",
+      "fixed": "Better lighting improved the room."
+    }
+  ],
+  "ensure compliance": [
+    {
+      "text": "The manager will ensure compliance with the new safety protocols.",
+      "fixed": "The manager will make sure the team follows the new safety protocols."
+    },
+    {
+      "text": "We need to ensure compliance from all vendors before the audit.",
+      "fixed": "We need to make sure all vendors go along with the audit requirements."
+    }
+  ],
+  "evolving landscape": [
+    {
+      "text": "The evolving landscape of retail confuses investors.",
+      "fixed": "Investors cannot tell which shops will still be trading in a year."
+    },
+    {
+      "text": "She writes about the evolving landscape of privacy law.",
+      "fixed": "She writes about the three privacy laws that changed this year."
+    }
+  ],
+  "exact same": [
+    {
+      "text": "We both chose the exact same restaurant for dinner.",
+      "fixed": "We both chose the same restaurant for dinner."
+    },
+    {
+      "text": "Her response was the exact same as last year.",
+      "fixed": "Her response was the same as last year."
+    }
+  ],
+  "exemplify": [
+    {
+      "text": "This exemplifies the problem with the design.",
+      "fixed": "This shows the problem with the design."
+    },
+    {
+      "text": "Her essay exemplified the house style.",
+      "fixed": "Her essay showed the house style."
+    }
+  ],
+  "exhibit a tendency to": [
+    {
+      "text": "The algorithm exhibits a tendency to overfit small datasets.",
+      "fixed": "The algorithm tends to overfit small datasets."
+    },
+    {
+      "text": "She exhibits a tendency to procrastinate on difficult tasks.",
+      "fixed": "She tends to procrastinate on difficult tasks."
+    }
+  ],
+  "experts/critics argue": [
+    {
+      "text": "Experts argue the policy will fail.",
+      "fixed": "Three economists at the institute say the policy will fail."
+    },
+    {
+      "text": "Critics argued that the rule was unworkable.",
+      "fixed": "The union said the rule was unworkable."
+    }
+  ],
+  "face adversity": [
+    {
+      "text": "The team faced adversity during the final quarter.",
+      "fixed": "The team struggled during the final quarter."
+    },
+    {
+      "text": "She faced adversity throughout her career.",
+      "fixed": "She struggled throughout her career."
+    }
+  ],
+  "facilitate": [
+    {
+      "text": "The tool facilitates faster reviews.",
+      "fixed": "The tool helps faster reviews."
+    },
+    {
+      "text": "A grant facilitated the move.",
+      "fixed": "A grant helped the move."
+    }
+  ],
+  "fast-paced": [
+    {
+      "text": "The fast-paced action kept viewers on the edge of their seats.",
+      "fixed": "The fast action kept viewers on the edge of their seats."
+    },
+    {
+      "text": "We need a fast-paced workflow to meet the deadline.",
+      "fixed": "We need a fast workflow to meet the deadline."
+    }
+  ],
+  "feel the necessity for": [
+    {
+      "text": "One should not feel the necessity for validation.",
+      "fixed": "One should not need validation."
+    },
+    {
+      "text": "We do not feel the necessity for haste.",
+      "fixed": "We do not need haste."
+    }
+  ],
+  "few and far between": [
+    {
+      "text": "True opportunities for growth are few and far between.",
+      "fixed": "True opportunities for growth are scarce."
+    },
+    {
+      "text": "We found that reliable data points were few and far between.",
+      "fixed": "We found that reliable data points were scarce."
+    }
+  ],
+  "fleeting": [
+    {
+      "text": "The fleeting moment of silence broke the tension in the room.",
+      "fixed": "The brief moment of silence broke the tension in the room."
+    },
+    {
+      "text": "We enjoyed a fleeting glimpse of the city skyline before the clouds rolled in.",
+      "fixed": "We enjoyed a brief glimpse of the city skyline before the clouds rolled in."
+    }
+  ],
+  "focal point": [
+    {
+      "text": "The fountain is the focal point of the square.",
+      "fixed": "The fountain is the center of the square."
+    },
+    {
+      "text": "Wages became the focal point of the talks.",
+      "fixed": "Wages became the center of the talks."
+    }
+  ],
+  "for all intents and purposes": [
+    {
+      "text": "The server is down for all intents and purposes.",
+      "fixed": "The server is down."
+    },
+    {
+      "text": "She was gone for all intents and purposes by noon.",
+      "fixed": "She was gone by noon."
+    }
+  ],
+  "for the most part": [
+    {
+      "text": "The new policy, for the most part, reduced administrative overhead.",
+      "fixed": "The new policy reduced administrative overhead."
+    },
+    {
+      "text": "Most users found the interface intuitive, for the most part.",
+      "fixed": "Most users found the interface intuitive."
+    }
+  ],
+  "for the purpose of": [
+    {
+      "text": "The committee met for the purpose of reviewing the budget.",
+      "fixed": "The committee met to reviewing the budget."
+    },
+    {
+      "text": "She submitted the form for the purpose of applying for a visa.",
+      "fixed": "She submitted the form to applying for a visa."
+    }
+  ],
+  "for the reason that": [
+    {
+      "text": "She left early for the reason that she felt unwell.",
+      "fixed": "She left early because she felt unwell."
+    },
+    {
+      "text": "He stayed home for the reason that it rained.",
+      "fixed": "He stayed home because it rained."
+    }
+  ],
+  "foreseeable future": [
+    {
+      "text": "We will not see a cure in the foreseeable future.",
+      "fixed": "We will not see a cure in the future."
+    },
+    {
+      "text": "The project remains stalled for the foreseeable future.",
+      "fixed": "The project remains stalled for the future."
+    }
+  ],
+  "foster": [
+    {
+      "text": "The programme fosters collaboration.",
+      "fixed": "The programme encourages collaboration."
+    },
+    {
+      "text": "Good managers fostered trust in the team.",
+      "fixed": "Good managers encouraged trust in the team."
+    }
+  ],
+  "from my personal perspective/standpoint": [
+    {
+      "text": "From my personal perspective, the new policy is too strict.",
+      "fixed": "The new policy is too strict."
+    },
+    {
+      "text": "We should proceed, from my personal standpoint.",
+      "fixed": "We should proceed."
+    }
+  ],
+  "from the point of view": [
+    {
+      "text": "From my point of view, the meeting went well.",
+      "fixed": "The meeting went well."
+    },
+    {
+      "text": "The plan is sound from my point of view.",
+      "fixed": "The plan is sound."
+    }
+  ],
+  "from the point of view of": [
+    {
+      "text": "From the point of view of the users, the change is welcome.",
+      "fixed": "The users welcome the change."
+    },
+    {
+      "text": "The merger looked risky from the point of view of the regulators.",
+      "fixed": "The regulators thought the merger looked risky."
+    }
+  ],
+  "fully grasp": [
+    {
+      "text": "The team failed to fully grasp the new protocol.",
+      "fixed": "The team failed to entirely understand the new protocol."
+    },
+    {
+      "text": "She did not fully grasp why the system crashed.",
+      "fixed": "She did not entirely understand why the system crashed."
+    }
+  ],
+  "furthermore/moreover/additionally": [
+    {
+      "text": "Additionally, the cost has doubled.",
+      "fixed": "also, the cost has doubled."
+    },
+    {
+      "text": "Moreover, the deadline moved twice.",
+      "fixed": "also, the deadline moved twice."
+    }
+  ],
+  "gain an insight": [
+    {
+      "text": "The workshop helped us gain an insight into local customs.",
+      "fixed": "The workshop helped us learn about local customs."
+    },
+    {
+      "text": "She finally gained an insight into his true intentions.",
+      "fixed": "She finally understood his true intentions."
+    }
+  ],
+  "galvanize": [
+    {
+      "text": "The speech galvanized the crowd.",
+      "fixed": "The speech motivated the crowd."
+    },
+    {
+      "text": "News of the closure galvanizes the union.",
+      "fixed": "News of the closure motivates the union."
+    }
+  ],
+  "game-changer": [
+    {
+      "text": "The battery is a game-changer.",
+      "fixed": "The battery holds a charge for three days."
+    },
+    {
+      "text": "They called the ruling a game-changer.",
+      "fixed": "They said the ruling lets councils refuse permits."
+    }
+  ],
+  "garner": [
+    {
+      "text": "The film garnered praise from critics.",
+      "fixed": "The film got praise from critics."
+    },
+    {
+      "text": "He garners support wherever he speaks.",
+      "fixed": "He gets support wherever he speaks."
+    }
+  ],
+  "genuinely": [
+    {
+      "text": "The result is genuinely surprising.",
+      "fixed": "The result is surprising."
+    },
+    {
+      "text": "She was genuinely sorry about the mistake.",
+      "fixed": "She was sorry about the mistake."
+    }
+  ],
+  "give an account of": [
+    {
+      "text": "The witness gave an account of the accident.",
+      "fixed": "The witness told the accident."
+    },
+    {
+      "text": "She will give an account of her findings.",
+      "fixed": "She will tell her findings."
+    }
+  ],
+  "give rise to": [
+    {
+      "text": "The new policy will give rise to confusion.",
+      "fixed": "The new policy will create confusion."
+    },
+    {
+      "text": "These errors often give rise to bugs.",
+      "fixed": "These errors often create bugs."
+    }
+  ],
+  "green with envy": [
+    {
+      "text": "She watched her rival win the award, green with envy.",
+      "fixed": "She watched her rival win the award, jealous."
+    },
+    {
+      "text": "The new hire was green with envy over the promotion.",
+      "fixed": "The new hire was jealous over the promotion."
+    }
+  ],
+  "ground-truth": [
+    {
+      "text": "We compared the model against the ground-truth labels.",
+      "fixed": "We compared the model against the reference labels."
+    },
+    {
+      "text": "Without ground-truth, the score means nothing.",
+      "fixed": "Without reference, the score means nothing."
+    }
+  ],
+  "hale and hearty": [
+    {
+      "text": "The dog is hale and hearty.",
+      "fixed": "The dog is healthy."
+    },
+    {
+      "text": "I found him hale and hearty.",
+      "fixed": "I found him healthy."
+    }
+  ],
+  "hang in the air between": [
+    {
+      "text": "She asked whether he had told anyone. The question hung in the air between them.",
+      "fixed": "She asked whether he had told anyone."
+    },
+    {
+      "text": "An unspoken accusation hung in the air between the two men.",
+      "fixed": "Neither man said it aloud."
+    }
+  ],
+  "harness": [
+    {
+      "text": "The plant harnesses wind power.",
+      "fixed": "The plant uses wind power."
+    },
+    {
+      "text": "They harnessed the data to price the loans.",
+      "fixed": "They used the data to price the loans."
+    }
+  ],
+  "have knowledge of": [
+    {
+      "text": "Candidates must have knowledge of basic accounting principles.",
+      "fixed": "Candidates must know basic accounting principles."
+    },
+    {
+      "text": "The new hire does not have knowledge of the legacy codebase.",
+      "fixed": "The new hire does not know the legacy codebase."
+    }
+  ],
+  "have the effect of": [
+    {
+      "text": "The new policy will have the effect of reducing costs.",
+      "fixed": "The new policy will cause reducing costs."
+    },
+    {
+      "text": "Her speech had the effect of calming the audience.",
+      "fixed": "Her speech caused calming the audience."
+    }
+  ],
+  "he is the man who is": [
+    {
+      "text": "He is the man who is responsible for the delay.",
+      "fixed": "he is responsible for the delay."
+    },
+    {
+      "text": "She believes he is the man who is best suited for the role.",
+      "fixed": "She believes he is best suited for the role."
+    }
+  ],
+  "heart pounding against one's ribs": [
+    {
+      "text": "Her heart pounded against her ribs as she waited.",
+      "fixed": "Her heart pounded as she waited."
+    }
+  ],
+  "highlight": [
+    {
+      "text": "The report highlights the need for better data privacy.",
+      "fixed": "The report underlines the need for better data privacy."
+    },
+    {
+      "text": "We should highlight the risks before proceeding.",
+      "fixed": "We should underline the risks before proceeding."
+    }
+  ],
+  "hold out an olive branch": [
+    {
+      "text": "The CEO held out an olive branch to the striking workers.",
+      "fixed": "The CEO offered to make peace to the striking workers."
+    },
+    {
+      "text": "She held out an olive branch after their argument.",
+      "fixed": "She offered to make peace after their argument."
+    }
+  ],
+  "hold tightly": [
+    {
+      "text": "She held tightly to the railing as the boat rocked.",
+      "fixed": "She clutched to the railing as the boat rocked."
+    },
+    {
+      "text": "The child held tightly to his mother's hand.",
+      "fixed": "The child clutched to his mother's hand."
+    }
+  ],
+  "holistic": [
+    {
+      "text": "The school takes a holistic approach.",
+      "fixed": "The school takes a complete approach."
+    },
+    {
+      "text": "She wanted a holistic view of the budget.",
+      "fixed": "She wanted a complete view of the budget."
+    }
+  ],
+  "hone one's skills": [
+    {
+      "text": "She spent the afternoon honing her skills in data analysis.",
+      "fixed": "She spent the afternoon improving her skills in data analysis."
+    },
+    {
+      "text": "Regular practice is essential for honing one's skills.",
+      "fixed": "Regular practice is essential for improving one's skills."
+    }
+  ],
+  "honest": [
+    {
+      "text": "The report gives an honest account of the failure.",
+      "fixed": "The report lists every step that went wrong."
+    },
+    {
+      "text": "I want to be honest about the delay.",
+      "fixed": "I will say what caused the delay."
+    }
+  ],
+  "I believe that": [
+    {
+      "text": "I believe that the new policy will reduce costs.",
+      "fixed": "The new policy will reduce costs."
+    },
+    {
+      "text": "We I believe that this approach is flawed.",
+      "fixed": "We this approach is flawed."
+    }
+  ],
+  "identify an area of improvement": [
+    {
+      "text": "The manager asked the team to identify an area of improvement.",
+      "fixed": "The manager asked the team to find what to improve."
+    },
+    {
+      "text": "We need to identify an area of improvement before the launch.",
+      "fixed": "We need to find what to improve before the launch."
+    }
+  ],
+  "imo / imho / personally": [
+    {
+      "text": "IMO, the new policy creates more problems than it solves.",
+      "fixed": "The new policy creates more problems than it solves."
+    },
+    {
+      "text": "She personally believes the project will fail without additional funding.",
+      "fixed": "She believes the project will fail without additional funding."
+    }
+  ],
+  "implication": [
+    {
+      "text": "The model's output carries a strong implication of bias.",
+      "fixed": "The model's output suggests bias."
+    },
+    {
+      "text": "There is an implication that the system will fail under load.",
+      "fixed": "The system will likely fail under load."
+    }
+  ],
+  "importance": [
+    {
+      "text": "The importance of regular backups cannot be overstated.",
+      "fixed": "Regular backups are crucial."
+    },
+    {
+      "text": "We must recognize the importance of clear communication.",
+      "fixed": "Clear communication is critical."
+    }
+  ],
+  "importantly/notably/interestingly": [
+    {
+      "text": "Importantly, the tests still pass.",
+      "fixed": "The tests still pass."
+    },
+    {
+      "text": "Notably, nobody objected to the change.",
+      "fixed": "Nobody objected to the change."
+    }
+  ],
+  "in a world where": [
+    {
+      "text": "In a world where privacy is scarce, data brokers thrive.",
+      "fixed": "With privacy scarce, data brokers thrive."
+    },
+    {
+      "text": "We live in a world where remote work is standard.",
+      "fixed": "Remote work is now standard."
+    }
+  ],
+  "in accordance with": [
+    {
+      "text": "The committee acted in accordance with the new regulations.",
+      "fixed": "The committee acted following the new regulations."
+    },
+    {
+      "text": "Please submit the report in accordance with company policy.",
+      "fixed": "Please submit the report following company policy."
+    }
+  ],
+  "in association with": [
+    {
+      "text": "The show runs in association with the museum.",
+      "fixed": "The show runs with the museum."
+    },
+    {
+      "text": "They published the atlas in association with the university.",
+      "fixed": "They published the atlas with the university."
+    }
+  ],
+  "in connection with/to": [
+    {
+      "text": "The committee wrote to us in connection with the report.",
+      "fixed": "The committee wrote to us about the report."
+    },
+    {
+      "text": "She had questions in connection with the invoice.",
+      "fixed": "She had questions about the invoice."
+    }
+  ],
+  "in my opinion/view/estimation/judgement": [
+    {
+      "text": "In my opinion, the new policy will fail.",
+      "fixed": "The new policy will fail."
+    },
+    {
+      "text": "We believe the market is overvalued in my estimation.",
+      "fixed": "We believe the market is overvalued."
+    }
+  ],
+  "in order to": [
+    {
+      "text": "She saved the file in order to preserve the changes.",
+      "fixed": "She saved the file to preserve the changes."
+    },
+    {
+      "text": "They arrived early in order to secure good seats.",
+      "fixed": "They arrived early to secure good seats."
+    }
+  ],
+  "in spite of": [
+    {
+      "text": "In spite of the rain, the match continued.",
+      "fixed": "despite the rain, the match continued."
+    },
+    {
+      "text": "She finished the project in spite of the tight deadline.",
+      "fixed": "She finished the project despite the tight deadline."
+    }
+  ],
+  "in summary/conclusion": [
+    {
+      "text": "In conclusion, the plan works.",
+      "fixed": "The plan works."
+    },
+    {
+      "text": "In summary, the tests pass and the cost is unchanged.",
+      "fixed": "The tests pass and the cost is unchanged."
+    }
+  ],
+  "in the digital age": [
+    {
+      "text": "Handwritten letters feel quaint in the digital age.",
+      "fixed": "Handwritten letters feel anachronistic."
+    },
+    {
+      "text": "Fax machines are out of date in the digital age.",
+      "fixed": "Fax machines are out of date."
+    }
+  ],
+  "in the event/case of": [
+    {
+      "text": "In the event of a power outage, the backup generator activates automatically.",
+      "fixed": "if a power outage, the backup generator activates automatically."
+    },
+    {
+      "text": "In the case of an emergency, staff will guide you to the nearest exit.",
+      "fixed": "if an emergency, staff will guide you to the nearest exit."
+    }
+  ],
+  "in the heart of": [
+    {
+      "text": "The cafe sits in the heart of the old town.",
+      "fixed": "The cafe sits in the old town."
+    },
+    {
+      "text": "They opened a workshop in the heart of the industrial quarter.",
+      "fixed": "They opened a workshop in the industrial quarter."
+    }
+  ],
+  "in the nature of": [
+    {
+      "text": "The manager issued a warning in the nature of a reprimand.",
+      "fixed": "The manager issued a warning like a reprimand."
+    },
+    {
+      "text": "Her comments were in the nature of gentle criticism.",
+      "fixed": "Her comments were like gentle criticism."
+    }
+  ],
+  "in the neighborhood of": [
+    {
+      "text": "The repair cost was in the neighborhood of five hundred dollars.",
+      "fixed": "The repair cost was around five hundred dollars."
+    },
+    {
+      "text": "We arrived in the neighborhood of noon.",
+      "fixed": "We arrived around noon."
+    }
+  ],
+  "in the process of": [
+    {
+      "text": "The team is in the process of migrating the database.",
+      "fixed": "The team is migrating the database."
+    },
+    {
+      "text": "We are in the process of reviewing your application.",
+      "fixed": "We are reviewing your application."
+    }
+  ],
+  "in the realm of": [
+    {
+      "text": "In the realm of renewable energy, solar costs have dropped sharply.",
+      "fixed": "In renewable energy, solar costs have dropped sharply."
+    },
+    {
+      "text": "She excels in the realm of digital marketing strategy.",
+      "fixed": "She excels in digital marketing strategy."
+    }
+  ],
+  "in the scheme of things": [
+    {
+      "text": "In the grand scheme of things, the delay cost us little.",
+      "fixed": "The delay cost us little."
+    },
+    {
+      "text": "The bug is minor in the scheme of things.",
+      "fixed": "The bug is minor."
+    }
+  ],
+  "in this day and age": [
+    {
+      "text": "In this day and age, remote work is standard practice.",
+      "fixed": "now, remote work is standard practice."
+    },
+    {
+      "text": "We cannot afford to ignore these changes in this day and age.",
+      "fixed": "We cannot afford to ignore these changes now."
+    }
+  ],
+  "in this section": [
+    {
+      "text": "In this section we cover the basics.",
+      "fixed": "The basics come first."
+    },
+    {
+      "text": "In this section the author lists the sources.",
+      "fixed": "The author lists the sources next."
+    }
+  ],
+  "inasmuch as": [
+    {
+      "text": "Inasmuch as the budget is tight, we must cut costs.",
+      "fixed": "since the budget is tight, we must cut costs."
+    },
+    {
+      "text": "She left early, inasmuch as she had a meeting.",
+      "fixed": "She left early, since she had a meeting."
+    }
+  ],
+  "incline toward": [
+    {
+      "text": "She tends to incline toward silence during meetings.",
+      "fixed": "She tends to lean silence during meetings."
+    },
+    {
+      "text": "The committee will incline toward the stricter regulation.",
+      "fixed": "The committee will lean the stricter regulation."
+    }
+  ],
+  "indistinguishable": [
+    {
+      "text": "The copy is indistinguishable from the original.",
+      "fixed": "The copy and the original are the same."
+    },
+    {
+      "text": "To a reader, the two drafts are indistinguishable.",
+      "fixed": "No reader can tell the two drafts apart."
+    }
+  ],
+  "industry reports": [
+    {
+      "text": "Industry reports suggest demand is falling.",
+      "fixed": "Two trade bodies said in March that demand is falling."
+    },
+    {
+      "text": "He cited industry reports to justify the price rise.",
+      "fixed": "He cited a survey by the grocers' association to justify the price rise."
+    }
+  ],
+  "innovative / groundbreaking / avant-garde / newfound": [
+    {
+      "text": "The team adopted a groundbreaking approach to data storage.",
+      "fixed": "The team adopted an original approach to data storage."
+    },
+    {
+      "text": "Her avant-garde sculptures challenged traditional gallery norms.",
+      "fixed": "Her originals sculptures challenged traditional gallery norms."
+    }
+  ],
+  "internalize": [
+    {
+      "text": "Students internalize the rules over their first term.",
+      "fixed": "Students absorb the rules over their first term."
+    },
+    {
+      "text": "He had internalized his father's suspicion of banks.",
+      "fixed": "He had absorbed his father's suspicion of banks."
+    }
+  ],
+  "interplay": [
+    {
+      "text": "The interplay of light and shadow defined the room.",
+      "fixed": "The interaction of light and shadow defined the room."
+    },
+    {
+      "text": "We studied the interplay between supply and demand.",
+      "fixed": "We studied the interaction between supply and demand."
+    }
+  ],
+  "intricacies": [
+    {
+      "text": "He explained the intricacies of the tax code.",
+      "fixed": "He explained the details of the tax code."
+    },
+    {
+      "text": "The intricacies of the treaty defeated most readers.",
+      "fixed": "The details of the treaty defeated most readers."
+    }
+  ],
+  "intricate": [
+    {
+      "text": "The algorithm's intricate logic defies simple explanation.",
+      "fixed": "The algorithm's complex logic defies simple explanation."
+    },
+    {
+      "text": "We struggled to map the intricate dependencies between services.",
+      "fixed": "We struggled to map the complex dependencies between services."
+    }
+  ],
+  "introduce for the first time": [
+    {
+      "text": "The 2024 report introduced the new metric for the first time.",
+      "fixed": "The 2024 report introduce."
+    },
+    {
+      "text": "We will introduce the feature for the first time next quarter.",
+      "fixed": "We will introduce next quarter."
+    }
+  ],
+  "is a reminder": [
+    {
+      "text": "The ruling is a reminder that rules bind everyone.",
+      "fixed": "The ruling shows that rules bind everyone."
+    },
+    {
+      "text": "Her letter was a reminder of how quickly things changed.",
+      "fixed": "Her letter showed how quickly things changed."
+    }
+  ],
+  "it could be suggested that": [
+    {
+      "text": "It could be suggested that the data is thin.",
+      "fixed": "The data is thin."
+    },
+    {
+      "text": "It could be suggested that the rule needs work.",
+      "fixed": "The rule needs work."
+    }
+  ],
+  "it goes without saying": [
+    {
+      "text": "It goes without saying that safety comes first.",
+      "fixed": "It that safety comes first."
+    },
+    {
+      "text": "It goes without saying that the tests must pass.",
+      "fixed": "It that the tests must pass."
+    }
+  ],
+  "it is agreed/probable/conceivable that": [
+    {
+      "text": "It is probable that the supply chain will face delays next quarter.",
+      "fixed": "The supply chain will likely face delays next quarter."
+    },
+    {
+      "text": "It is agreed that remote work boosts employee retention rates.",
+      "fixed": "Remote work boosts employee retention rates."
+    }
+  ],
+  "it is clear to me": [
+    {
+      "text": "It is clear to me that the deadline has passed.",
+      "fixed": "The deadline has passed."
+    },
+    {
+      "text": "After reviewing the data, it is clear to me the strategy failed.",
+      "fixed": "After reviewing the data, the strategy failed."
+    }
+  ],
+  "it is important/critical/crucial to": [
+    {
+      "text": "It is important to back up your data regularly.",
+      "fixed": "Back up your data regularly."
+    },
+    {
+      "text": "We believe it is important to listen to customers.",
+      "fixed": "We believe listen to customers."
+    }
+  ],
+  "it is important/critical/crucial/desirable to": [
+    {
+      "text": "It is critical to back up your data before updating.",
+      "fixed": "Back up your data before updating."
+    },
+    {
+      "text": "It is desirable to arrive early for the meeting.",
+      "fixed": "Arrive early for the meeting."
+    }
+  ],
+  "it is worth noting": [
+    {
+      "text": "It is worth noting that the deadline slipped.",
+      "fixed": "The deadline slipped."
+    },
+    {
+      "text": "It is worth noting that the tests still pass.",
+      "fixed": "The tests still pass."
+    }
+  ],
+  "it might be said/argued": [
+    {
+      "text": "It might be argued that remote work boosts employee productivity.",
+      "fixed": "Remote work boosts employee productivity."
+    },
+    {
+      "text": "It might be said the policy failed to address core issues.",
+      "fixed": "The policy failed to address core issues."
+    }
+  ],
+  "it might be the case/possible that": [
+    {
+      "text": "It might be the case that the new policy reduces costs.",
+      "fixed": "The new policy reduces costs."
+    },
+    {
+      "text": "It might be the case that the deadline is flexible.",
+      "fixed": "The deadline is flexible."
+    }
+  ],
+  "it seems important to note": [
+    {
+      "text": "It seems important to note that the market is shifting.",
+      "fixed": "The market is shifting."
+    },
+    {
+      "text": "We must act now, as it seems important to note the risks.",
+      "fixed": "We must act now, as the risks are significant."
+    }
+  ],
+  "it seems to me": [
+    {
+      "text": "It seems to me that the deadline is unrealistic.",
+      "fixed": "The deadline is unrealistic."
+    },
+    {
+      "text": "We should ship it, it seems to me.",
+      "fixed": "We should ship it."
+    }
+  ],
+  "it seems/appears that": [
+    {
+      "text": "It seems that the new policy will reduce costs significantly.",
+      "fixed": "The new policy will reduce costs significantly."
+    },
+    {
+      "text": "It appears that the engine failed due to overheating.",
+      "fixed": "The engine failed due to overheating."
+    }
+  ],
+  "just only": [
+    {
+      "text": "She just only wanted to finish the report.",
+      "fixed": "She just wanted to finish the report."
+    },
+    {
+      "text": "We have just only one ticket left.",
+      "fixed": "We have just one ticket left."
+    }
+  ],
+  "juxtapose": [
+    {
+      "text": "The film juxtaposes wealth and poverty.",
+      "fixed": "The film compares wealth and poverty."
+    },
+    {
+      "text": "He juxtaposed the two drafts on one page.",
+      "fixed": "He compared the two drafts on one page."
+    }
+  ],
+  "kind of / sort of": [
+    {
+      "text": "She sort of agreed to the proposal.",
+      "fixed": "She agreed to the proposal."
+    }
+  ],
+  "landscape": [
+    {
+      "text": "The regulatory landscape changed after the crash.",
+      "fixed": "The rules changed after the crash."
+    },
+    {
+      "text": "Two mergers redrew the landscape for buyers.",
+      "fixed": "Two mergers left buyers with three suppliers instead of five."
+    }
+  ],
+  "last but not least": [
+    {
+      "text": "We discussed budget, timeline, and last but not least, staffing.",
+      "fixed": "We discussed budget, timeline, and finally, staffing."
+    },
+    {
+      "text": "The report covers risks, rewards, and last but not least, compliance.",
+      "fixed": "The report covers risks, rewards, and finally, compliance."
+    }
+  ],
+  "lay eyes on": [
+    {
+      "text": "She finally laid eyes on the finished manuscript.",
+      "fixed": "She finally saw the finished manuscript."
+    },
+    {
+      "text": "I have never laid eyes on such a beautiful sunset.",
+      "fixed": "I have never saw such a beautiful sunset."
+    }
+  ],
+  "lay the groundwork": [
+    {
+      "text": "The committee aimed to lay the groundwork for the new policy.",
+      "fixed": "The committee aimed to prepare for the new policy."
+    },
+    {
+      "text": "We must lay the groundwork before launching the product.",
+      "fixed": "We must prepare before launching the product."
+    }
+  ],
+  "leave a mark": [
+    {
+      "text": "You will leave a mark on us.",
+      "fixed": "You will make an impact on us."
+    },
+    {
+      "text": "I hope this experience leaves a mark.",
+      "fixed": "I hope this experience makes an impact."
+    }
+  ],
+  "leave suddenly": [
+    {
+      "text": "Please do not leave suddenly.",
+      "fixed": "Please do not disappear."
+    },
+    {
+      "text": "She decided to leave suddenly.",
+      "fixed": "She decided to disappear."
+    }
+  ],
+  "let bygones be bygones": [
+    {
+      "text": "Let bygones be bygones and move forward.",
+      "fixed": "make peace and move forward."
+    },
+    {
+      "text": "We should let bygones be bygones now.",
+      "fixed": "We should make peace now."
+    }
+  ],
+  "let's dive into/explore": [
+    {
+      "text": "Let's dive into the numbers.",
+      "fixed": "The numbers show a ten percent drop."
+    },
+    {
+      "text": "Let's explore the data together.",
+      "fixed": "The data covers eight years and four regions."
+    }
+  ],
+  "leverage": [
+    {
+      "text": "The algorithm leverages historical data to predict trends.",
+      "fixed": "The algorithm uses historical data to predict trends."
+    },
+    {
+      "text": "We should leverage the new API for faster processing.",
+      "fixed": "We should use the new API for faster processing."
+    }
+  ],
+  "load-bearing": [
+    {
+      "text": "The assumption turned out to be load-bearing.",
+      "fixed": "Everything else in the proof rests on that assumption."
+    },
+    {
+      "text": "The comment was load-bearing, so nobody dared delete it.",
+      "fixed": "Delete the comment and the parser stops working, so nobody dared."
+    }
+  ],
+  "loom large": [
+    {
+      "text": "The deadline looms large over the entire team.",
+      "fixed": "The deadline dominates the entire team."
+    },
+    {
+      "text": "Her past failures still loom large in her daily thoughts.",
+      "fixed": "Her past failures are never far from her daily thoughts."
+    }
+  ],
+  "lucubrate": [
+    {
+      "text": "He lucubrated over the manuscript until dawn.",
+      "fixed": "He studied over the manuscript until dawn."
+    },
+    {
+      "text": "They are lucubrating on the new policy.",
+      "fixed": "They are studying on the new policy."
+    }
+  ],
+  "make a long story short": [
+    {
+      "text": "To make a long story short, the project failed.",
+      "fixed": "To summarize, the project failed."
+    },
+    {
+      "text": "We made a long story short about the delay.",
+      "fixed": "We summarized about the delay."
+    }
+  ],
+  "make a lot of sense": [
+    {
+      "text": "Your proposal makes a lot of sense.",
+      "fixed": "Your proposal is logical."
+    },
+    {
+      "text": "Moving the launch to Friday made a lot of sense to the team.",
+      "fixed": "Moving the launch to Friday was logical to the team."
+    }
+  ],
+  "make accessible": [
+    {
+      "text": "The new API gateway makes the internal data accessible to all clients.",
+      "fixed": "The new API gateway opens the internal data to all clients."
+    },
+    {
+      "text": "This plugin makes the legacy codebase accessible to junior developers.",
+      "fixed": "This plugin lets junior developers use the legacy codebase."
+    }
+  ],
+  "make an attempt": [
+    {
+      "text": "The team will make an attempt to fix the bug.",
+      "fixed": "The team will try to fix the bug."
+    },
+    {
+      "text": "She made an attempt to explain the complex theory.",
+      "fixed": "She tried to explain the complex theory."
+    }
+  ],
+  "mark a turning point": [
+    {
+      "text": "The treaty signed in 1945 marked a turning point in the conflict.",
+      "fixed": "From 1945 on, the conflict went the other way."
+    },
+    {
+      "text": "Her resignation marked a turning point in the company's culture.",
+      "fixed": "After her resignation, the company's culture shifted entirely."
+    }
+  ],
+  "marking/shaping the": [
+    {
+      "text": "The law passed in May, marking the end of a long fight.",
+      "fixed": "The law passed in May, and the ten-year fight ended."
+    },
+    {
+      "text": "Two decisions in 1994 kept shaping the market for a decade.",
+      "fixed": "Two decisions in 1994 set prices for the next decade."
+    }
+  ],
+  "may vary": [
+    {
+      "text": "Results may vary between machines.",
+      "fixed": "Results differ by up to ten percent between machines."
+    },
+    {
+      "text": "Delivery times may vary in December.",
+      "fixed": "Delivery takes two extra days in December."
+    }
+  ],
+  "meticulous": [
+    {
+      "text": "The engineer provided a meticulous analysis of the system failures.",
+      "fixed": "The engineer provided a detailed analysis of the system failures."
+    },
+    {
+      "text": "Her meticulous approach ensures every data point is verified twice.",
+      "fixed": "Her conscientious approach ensures every data point is verified twice."
+    }
+  ],
+  "meticulous attention": [
+    {
+      "text": "The editor paid meticulous attention to every comma.",
+      "fixed": "The editor paid special care to every comma."
+    },
+    {
+      "text": "Historians require meticulous attention when dating manuscripts.",
+      "fixed": "Historians require special care when dating manuscripts."
+    }
+  ],
+  "meticulously": [
+    {
+      "text": "The algorithm meticulously tracks user behavior.",
+      "fixed": "The algorithm accurately tracks user behavior."
+    },
+    {
+      "text": "She meticulously calculated the final balance.",
+      "fixed": "She accurately calculated the final balance."
+    }
+  ],
+  "might be a reason why/for": [
+    {
+      "text": "Low battery life might be a reason why users switch to competitors.",
+      "fixed": "Low battery life is a reason why users switch to competitors."
+    },
+    {
+      "text": "Stress might be a reason for his poor performance.",
+      "fixed": "Stress is a reason for his poor performance."
+    }
+  ],
+  "might have been a reason why/for": [
+    {
+      "text": "Poor communication might have been a reason why the project failed.",
+      "fixed": "Poor communication was a reason why the project failed."
+    },
+    {
+      "text": "It might have been a reason for the error.",
+      "fixed": "It was a reason for the error."
+    }
+  ],
+  "more specifically": [
+    {
+      "text": "The data was inconsistent, more specifically the timestamps.",
+      "fixed": "The data was inconsistent, specifically the timestamps."
+    },
+    {
+      "text": "We need to cut costs, more specifically the travel budget.",
+      "fixed": "We need to cut costs, specifically the travel budget."
+    }
+  ],
+  "most profound": [
+    {
+      "text": "This is the most profound change in decades.",
+      "fixed": "This is the deepest change in decades."
+    },
+    {
+      "text": "Her most profound regret went unspoken.",
+      "fixed": "Her deepest regret went unspoken."
+    }
+  ],
+  "mounting pressure": [
+    {
+      "text": "Mounting pressure from investors forced the CEO to resign.",
+      "fixed": "heat rising from investors forced the CEO to resign."
+    },
+    {
+      "text": "Mounting pressure on the supply chain disrupted delivery schedules.",
+      "fixed": "heat rising on the supply chain disrupted delivery schedules."
+    }
+  ],
+  "multifaceted": [
+    {
+      "text": "The project's multifaceted nature made it difficult to manage.",
+      "fixed": "The project's complex nature made it difficult to manage."
+    },
+    {
+      "text": "We need a multifaceted approach to solve this problem.",
+      "fixed": "We need a varied approach to solve this problem."
+    }
+  ],
+  "multiplicity": [
+    {
+      "text": "The dataset lacks the necessary multiplicity for robust analysis.",
+      "fixed": "The dataset lacks the necessary variety for robust analysis."
+    },
+    {
+      "text": "We must account for the multiplicity in the sensor readings.",
+      "fixed": "We must account for the variety in the sensor readings."
+    }
+  ],
+  "mutation-tested/mutation-checked/mutation-verified": [
+    {
+      "text": "The parser is mutation-tested.",
+      "fixed": "The parser is tested."
+    },
+    {
+      "text": "Every branch in the module is mutation-checked.",
+      "fixed": "Every branch in the module is tested."
+    }
+  ],
+  "natural beauty": [
+    {
+      "text": "Tourists come for the natural beauty of the coast.",
+      "fixed": "Tourists come for the cliffs and the empty beaches."
+    },
+    {
+      "text": "The park is famous for its natural beauty.",
+      "fixed": "The park is famous for its oak woods and its river."
+    }
+  ],
+  "navigate": [
+    {
+      "text": "The software failed to navigate the complex file structure.",
+      "fixed": "The software failed to maneuver through the complex file structure."
+    },
+    {
+      "text": "Users often struggle to navigate the new dashboard interface.",
+      "fixed": "Users often struggle to find their way around the new dashboard interface."
+    }
+  ],
+  "navigate the complex": [
+    {
+      "text": "The algorithm struggles to navigate the complex decision tree.",
+      "fixed": "The algorithm struggles to find its way through the decision tree."
+    },
+    {
+      "text": "Users often fail to navigate the complex interface.",
+      "fixed": "Users often fail to find their way through the interface."
+    }
+  ],
+  "need a robust": [
+    {
+      "text": "We need a robust solution before the deadline.",
+      "fixed": "We need a solution that survives a bad week before the deadline."
+    },
+    {
+      "text": "The team needs a robust process for handovers.",
+      "fixed": "The team needs a handover process that works when someone is away."
+    }
+  ],
+  "nestled": [
+    {
+      "text": "The village is nestled in the hills.",
+      "fixed": "The village sits in the hills."
+    },
+    {
+      "text": "A small chapel is nestled between the two farms.",
+      "fixed": "A small chapel stands between the two farms."
+    }
+  ],
+  "not anticipate": [
+    {
+      "text": "The team did not anticipate the sudden drop in user traffic.",
+      "fixed": "The team missed the sudden drop in user traffic."
+    },
+    {
+      "text": "We failed to not anticipate the potential security risks.",
+      "fixed": "We failed to overlook the potential security risks."
+    }
+  ],
+  "not fully understand": [
+    {
+      "text": "The committee does not fully understand the new policy.",
+      "fixed": "The committee does partially understand the new policy."
+    },
+    {
+      "text": "We do not fully understand why the server crashed.",
+      "fixed": "We do partially understand why the server crashed."
+    }
+  ],
+  "notwithstanding": [
+    {
+      "text": "Notwithstanding the rain, the match continued.",
+      "fixed": "despite the rain, the match continued."
+    },
+    {
+      "text": "The team shipped the update, notwithstanding the bugs.",
+      "fixed": "The team shipped the update, despite the bugs."
+    }
+  ],
+  "nuanced": [
+    {
+      "text": "She gave a nuanced answer.",
+      "fixed": "She said the rule works for imports but not for exports."
+    },
+    {
+      "text": "The report takes a nuanced view of the merger.",
+      "fixed": "The report backs the merger but wants the depots sold."
+    }
+  ],
+  "observers have cited": [
+    {
+      "text": "Observers have cited the delay as a warning.",
+      "fixed": "The auditor called the delay a warning."
+    },
+    {
+      "text": "Observers have cited weak demand for months.",
+      "fixed": "Two analysts at the bank have blamed weak demand for months."
+    }
+  ],
+  "off the top of my head": [
+    {
+      "text": "Off the top of my head, I can name three suppliers.",
+      "fixed": "I can name three suppliers."
+    },
+    {
+      "text": "She could not recall the figure off the top of her head.",
+      "fixed": "She could not recall the figure."
+    }
+  ],
+  "offer/present/provide something unique/valuable": [
+    {
+      "text": "This tool offers a unique way to organize your files.",
+      "fixed": "This tool sorts your files by date automatically."
+    },
+    {
+      "text": "The report presents valuable insights into market trends.",
+      "fixed": "The report shows which product lines grew fastest last quarter."
+    }
+  ],
+  "oft": [
+    {
+      "text": "The river floods oft in spring.",
+      "fixed": "The river floods often in spring."
+    },
+    {
+      "text": "She visited her grandmother oft during the holidays.",
+      "fixed": "She visited her grandmother often during the holidays."
+    }
+  ],
+  "on a regular basis": [
+    {
+      "text": "The team reviews the logs on a regular basis.",
+      "fixed": "The team reviews the logs regularly."
+    },
+    {
+      "text": "She updates her portfolio on a regular basis.",
+      "fixed": "She updates her portfolio regularly."
+    }
+  ],
+  "on the assumption that": [
+    {
+      "text": "We shipped the update on the assumption that users would restart their devices.",
+      "fixed": "We shipped the update if users would restart their devices."
+    },
+    {
+      "text": "She accepted the offer on the assumption that the bonus would be paid quarterly.",
+      "fixed": "She accepted the offer if the bonus would be paid quarterly."
+    }
+  ],
+  "on the basis of": [
+    {
+      "text": "The committee rejected the proposal on the basis of insufficient data.",
+      "fixed": "The committee rejected the proposal based on insufficient data."
+    },
+    {
+      "text": "We can make a decision on the basis of these preliminary results.",
+      "fixed": "We can make a decision based on these preliminary results."
+    }
+  ],
+  "on the grounds that": [
+    {
+      "text": "The board rejected the proposal on the grounds that costs were too high.",
+      "fixed": "The board rejected the proposal because costs were too high."
+    },
+    {
+      "text": "She resigned on the grounds that the culture was toxic.",
+      "fixed": "She resigned because the culture was toxic."
+    }
+  ],
+  "one might say/argue": [
+    {
+      "text": "One might argue that the new policy is overly restrictive.",
+      "fixed": "The new policy is overly restrictive."
+    },
+    {
+      "text": "One might say the results were inconclusive.",
+      "fixed": "The results were inconclusive."
+    }
+  ],
+  "operationalize": [
+    {
+      "text": "The team will operationalize the new policy next quarter.",
+      "fixed": "The team will put the new policy into practice next quarter."
+    },
+    {
+      "text": "Managers keep asking how to operationalize the strategy.",
+      "fixed": "Managers keep asking how to start using the strategy."
+    }
+  ],
+  "optimize": [
+    {
+      "text": "We optimized the query.",
+      "fixed": "We improved the query."
+    },
+    {
+      "text": "The team optimizes the route every morning.",
+      "fixed": "The team improves the route every morning."
+    }
+  ],
+  "over the course of": [
+    {
+      "text": "Over the course of the trial, the defendant remained silent.",
+      "fixed": "during the trial, the defendant remained silent."
+    },
+    {
+      "text": "She gained weight over the course of the winter.",
+      "fixed": "She gained weight during the winter."
+    }
+  ],
+  "owing to": [
+    {
+      "text": "The flight was cancelled owing to severe weather.",
+      "fixed": "The flight was cancelled because of severe weather."
+    },
+    {
+      "text": "Owing to a typo, the report was rejected.",
+      "fixed": "because of a typo, the report was rejected."
+    }
+  ],
+  "paradigm": [
+    {
+      "text": "The paper proposes a new paradigm.",
+      "fixed": "The paper proposes a new model."
+    },
+    {
+      "text": "Two competing paradigms split the field.",
+      "fixed": "Two competing models split the field."
+    }
+  ],
+  "particularly a concern": [
+    {
+      "text": "Rising energy costs are particularly a concern for small manufacturers.",
+      "fixed": "Rising energy costs worry small manufacturers most."
+    },
+    {
+      "text": "Cost is particularly a concern for freelancers.",
+      "fixed": "Cost worries freelancers most."
+    }
+  ],
+  "particularly noteworthy/concerning": [
+    {
+      "text": "This is a particularly noteworthy shift in consumer behavior.",
+      "fixed": "This is a shift in consumer behavior that defies previous market trends."
+    },
+    {
+      "text": "The report is particularly concerning.",
+      "fixed": "The report is alarming."
+    }
+  ],
+  "pave the way": [
+    {
+      "text": "The new regulations will pave the way for faster approvals.",
+      "fixed": "The new regulations will make way for faster approvals."
+    },
+    {
+      "text": "Her research paved the way for modern vaccine design.",
+      "fixed": "Her research made way for modern vaccine design."
+    }
+  ],
+  "pave the way for the future": [
+    {
+      "text": "By standardizing interfaces, the committee paved the way for the future of modular hardware.",
+      "fixed": "By standardizing interfaces, the committee paved the way for modular hardware."
+    },
+    {
+      "text": "The grant will help pave the way for the future of local research.",
+      "fixed": "The grant will help pave the way for local research."
+    }
+  ],
+  "personae": [
+    {
+      "text": "The author developed distinct personae for each chapter.",
+      "fixed": "The author developed distinct characters for each chapter."
+    },
+    {
+      "text": "These literary personae often mirror the writer's own anxieties.",
+      "fixed": "These literary characters often mirror the writer's own anxieties."
+    }
+  ],
+  "pivotal": [
+    {
+      "text": "She was pivotal to the deal.",
+      "fixed": "She was important to the deal."
+    },
+    {
+      "text": "The court called the letter pivotal.",
+      "fixed": "The court called the letter important."
+    }
+  ],
+  "plainly": [
+    {
+      "text": "He said it plainly.",
+      "fixed": "He said it clearly."
+    },
+    {
+      "text": "The letter plainly states the terms of the sale.",
+      "fixed": "The letter clearly states the terms of the sale."
+    }
+  ],
+  "play a pivotal/crucial role": [
+    {
+      "text": "The new algorithm played a crucial role in reducing latency.",
+      "fixed": "The new algorithm reduced latency significantly."
+    },
+    {
+      "text": "Her insights played a pivotal role in shaping the strategy.",
+      "fixed": "Her insights shaped the strategy."
+    }
+  ],
+  "potentially lead to": [
+    {
+      "text": "Ignoring the warning could potentially lead to data loss.",
+      "fixed": "Ignoring the warning could cause data loss."
+    },
+    {
+      "text": "The new policy might potentially lead to confusion.",
+      "fixed": "The new policy might cause confusion."
+    }
+  ],
+  "pre-fix": [
+    {
+      "text": "We pre-fixed the config before the migration.",
+      "fixed": "We corrected the config the day before the migration."
+    },
+    {
+      "text": "The team shipped a pre-fix for the crash.",
+      "fixed": "The team shipped a patch for the crash on Tuesday."
+    }
+  ],
+  "predate": [
+    {
+      "text": "The church predates the town.",
+      "fixed": "The church was built before the town."
+    },
+    {
+      "text": "Those rules predated the merger by a decade.",
+      "fixed": "Those rules were written ten years before the merger."
+    }
+  ],
+  "prepossessing": [
+    {
+      "text": "We were drawn to her prepossessing smile during the interview.",
+      "fixed": "We were drawn to her attractive smile during the interview."
+    },
+    {
+      "text": "She had a prepossessing charm that made people trust her instantly.",
+      "fixed": "She had an attractive charm that made people trust her instantly."
+    }
+  ],
+  "prior to": [
+    {
+      "text": "Prior to the merger, the company operated independently.",
+      "fixed": "before the merger, the company operated independently."
+    },
+    {
+      "text": "She finished the report prior to submitting it.",
+      "fixed": "She finished the report before submitting it."
+    }
+  ],
+  "profound": [
+    {
+      "text": "The study revealed a profound impact on local ecosystems.",
+      "fixed": "The study revealed a deep impact on local ecosystems."
+    },
+    {
+      "text": "Her profound understanding of the theory impressed the committee.",
+      "fixed": "Her deep understanding of the theory impressed the committee."
+    }
+  ],
+  "provide insight": [
+    {
+      "text": "The new dashboard aims to provide insight into user behavior.",
+      "fixed": "The new dashboard aims to clarify into user behavior."
+    },
+    {
+      "text": "Her notes failed to provide insight on the complex issue.",
+      "fixed": "Her notes failed to clarify on the complex issue."
+    }
+  ],
+  "push boundaries": [
+    {
+      "text": "The team aims to push boundaries in renewable energy.",
+      "fixed": "The team aims to innovate in renewable energy."
+    },
+    {
+      "text": "She pushed boundaries during the experimental phase.",
+      "fixed": "She innovated during the experimental phase."
+    }
+  ],
+  "put into words": [
+    {
+      "text": "She struggled to put into words the sudden joy.",
+      "fixed": "She struggled to say the sudden joy."
+    },
+    {
+      "text": "He could not put into words his deep regret.",
+      "fixed": "He could not say his deep regret."
+    }
+  ],
+  "quick as a flash": [
+    {
+      "text": "The cat moved quick as a flash.",
+      "fixed": "The cat moved quick."
+    },
+    {
+      "text": "She reacted quick as a flash to the alarm.",
+      "fixed": "She reacted quick to the alarm."
+    }
+  ],
+  "quietly": [
+    {
+      "text": "The rule quietly changed last year.",
+      "fixed": "The rule changed last year and nobody announced it."
+    },
+    {
+      "text": "She quietly paid the fine and went home.",
+      "fixed": "She paid the fine without telling anyone and went home."
+    }
+  ],
+  "raise an important question": [
+    {
+      "text": "This data gap raises an important question about our methodology.",
+      "fixed": "What does this data gap imply about our methodology?"
+    },
+    {
+      "text": "This policy change raises an important question about funding.",
+      "fixed": "How does this policy change affect funding?"
+    }
+  ],
+  "rather / somewhat / fairly / quite / pretty": [
+    {
+      "text": "This book is fairly easy to read.",
+      "fixed": "This book is easy to read."
+    }
+  ],
+  "re-derive/re-verify/re-measure": [
+    {
+      "text": "We re-verify the numbers before every release.",
+      "fixed": "We check the numbers again before every release."
+    },
+    {
+      "text": "He had to re-derive the constant from the raw data.",
+      "fixed": "He worked the constant out again from the raw data."
+    }
+  ],
+  "ready to embrace": [
+    {
+      "text": "The team is ready to embrace the new workflow.",
+      "fixed": "The team is ready to accept the new workflow."
+    },
+    {
+      "text": "She was ready to embrace the challenge.",
+      "fixed": "She was ready to accept the challenge."
+    }
+  ],
+  "realm": [
+    {
+      "text": "This falls in the realm of guesswork.",
+      "fixed": "This falls in the area of guesswork."
+    },
+    {
+      "text": "He worked in the realm of public health.",
+      "fixed": "He worked in the area of public health."
+    }
+  ],
+  "reflect broader": [
+    {
+      "text": "The protest reflects broader anger at the government.",
+      "fixed": "The protest shows that voters outside the capital are angry too."
+    },
+    {
+      "text": "These delays reflect broader problems in the supply chain.",
+      "fixed": "These delays follow from a shortage of two parts."
+    }
+  ],
+  "refusal": [
+    {
+      "text": "His refusal to answer ended the meeting.",
+      "fixed": "He would not answer, and the meeting ended."
+    },
+    {
+      "text": "The board cited her refusal to resign.",
+      "fixed": "The board said she would not resign."
+    }
+  ],
+  "refuse": [
+    {
+      "text": "The parser refuses to accept the file.",
+      "fixed": "The parser rejects the file."
+    },
+    {
+      "text": "She refused the offer twice.",
+      "fixed": "She turned the offer down twice."
+    }
+  ],
+  "regard as being": [
+    {
+      "text": "Critics often regard the film as being overly long.",
+      "fixed": "Critics often consider overly long."
+    },
+    {
+      "text": "We should not regard this error as being fatal.",
+      "fixed": "We should not consider fatal."
+    }
+  ],
+  "render inoperative": [
+    {
+      "text": "The patch will render inoperative the legacy authentication module.",
+      "fixed": "The patch will disable the legacy authentication module."
+    },
+    {
+      "text": "The new firmware update renders inoperative the old boot sector.",
+      "fixed": "The new firmware update disables the old boot sector."
+    }
+  ],
+  "renowned": [
+    {
+      "text": "The chef is renowned for his soups.",
+      "fixed": "The chef is famous for his soups."
+    },
+    {
+      "text": "She studied under a renowned violinist.",
+      "fixed": "She studied under a famous violinist."
+    }
+  ],
+  "reply in a tone": [
+    {
+      "text": "She replied in a sharp tone, ignoring his pleas.",
+      "fixed": "She snapped, ignoring his pleas."
+    },
+    {
+      "text": "He replied in a gentle tone to calm the crowd.",
+      "fixed": "He soothed the crowd with quiet words."
+    }
+  ],
+  "represent/mark a shift": [
+    {
+      "text": "The ruling represents a shift in policy.",
+      "fixed": "The ruling lets councils refuse permits, which they could not do before."
+    },
+    {
+      "text": "Last year marked a shift in how the paper covers science.",
+      "fixed": "Last year the paper started giving science its own section."
+    }
+  ],
+  "resonate": [
+    {
+      "text": "The message resonated.",
+      "fixed": "The message hit home."
+    },
+    {
+      "text": "His argument resonates in small towns.",
+      "fixed": "His argument connects with people in small towns."
+    }
+  ],
+  "resonate with": [
+    {
+      "text": "The marketing campaign failed to resonate with younger demographics.",
+      "fixed": "The marketing campaign failed to align younger demographics."
+    },
+    {
+      "text": "Her speech resonated with the audience throughout the hall.",
+      "fixed": "Her speech aligned the audience throughout the hall."
+    }
+  ],
+  "revolutionize": [
+    {
+      "text": "The new algorithm will revolutionize how we process data.",
+      "fixed": "The new algorithm will transform how we process data."
+    },
+    {
+      "text": "This software aims to revolutionize the industry.",
+      "fixed": "This software aims to transform the industry."
+    }
+  ],
+  "scalable": [
+    {
+      "text": "The design is scalable.",
+      "fixed": "The design handles ten thousand users on one machine."
+    },
+    {
+      "text": "They promised a scalable system.",
+      "fixed": "They promised a system that grows with the customer count."
+    }
+  ],
+  "seamless": [
+    {
+      "text": "The transition between scenes felt seamless.",
+      "fixed": "The transition between scenes felt smooth."
+    },
+    {
+      "text": "We aim for a seamless user experience.",
+      "fixed": "We aim for a smooth user experience."
+    }
+  ],
+  "seamlessly": [
+    {
+      "text": "The parts fit together seamlessly.",
+      "fixed": "The parts fit together smoothly."
+    },
+    {
+      "text": "Data moves seamlessly between the two systems.",
+      "fixed": "Data moves smoothly between the two systems."
+    }
+  ],
+  "send shockwaves": [
+    {
+      "text": "The announcement sent shockwaves through the industry.",
+      "fixed": "The announcement reverberated through the industry."
+    },
+    {
+      "text": "Her resignation will send shockwaves across the board.",
+      "fixed": "Her resignation will reverberate across the board."
+    }
+  ],
+  "serve the purpose of": [
+    {
+      "text": "The new protocol serves the purpose of reducing latency.",
+      "fixed": "The new protocol helps reducing latency."
+    },
+    {
+      "text": "This clause serves the purpose of protecting user data.",
+      "fixed": "This clause helps protecting user data."
+    }
+  ],
+  "serve/stand/function/operate as": [
+    {
+      "text": "The bridge serves as a link between the two districts.",
+      "fixed": "The bridge is a link between the two districts."
+    },
+    {
+      "text": "The tower stood as a warning to ships.",
+      "fixed": "The tower was a warning to ships."
+    }
+  ],
+  "set the stage for": [
+    {
+      "text": "The meeting set the stage for a deal.",
+      "fixed": "The meeting ended with both sides agreeing to draft a deal."
+    },
+    {
+      "text": "A dry summer sets the stage for fires.",
+      "fixed": "A dry summer leaves the hills ready to burn."
+    }
+  ],
+  "shape the public": [
+    {
+      "text": "They tried to shape the public opinion with new data.",
+      "fixed": "They tried to change what people believed with new data."
+    },
+    {
+      "text": "The report failed to shape the public debate.",
+      "fixed": "The report failed to change how people discussed the issue."
+    }
+  ],
+  "she is the woman who is": [
+    {
+      "text": "She is the woman who is responsible for the audit.",
+      "fixed": "she is responsible for the audit."
+    },
+    {
+      "text": "She is the woman who is holding the map.",
+      "fixed": "she is holding the map."
+    }
+  ],
+  "shed light": [
+    {
+      "text": "The new data should shed light on the anomaly.",
+      "fixed": "The new data should illuminate on the anomaly."
+    }
+  ],
+  "shed light on": [
+    {
+      "text": "The report sheds light on the error.",
+      "fixed": "The report explains the error."
+    }
+  ],
+  "shimmer / glimmer / glint / glitter / glisten": [
+    {
+      "text": "The wet pavement shimmered under the streetlights.",
+      "fixed": "The wet pavement shone under the streetlights."
+    },
+    {
+      "text": "Her eyes glistened with unshed tears.",
+      "fixed": "Her eyes shone with unshed tears."
+    }
+  ],
+  "short-circuit": [
+    {
+      "text": "A cache can short-circuit the lookup.",
+      "fixed": "A cache can answer before the lookup runs."
+    },
+    {
+      "text": "They short-circuit the review whenever a deadline slips.",
+      "fixed": "They skip the review whenever a deadline slips."
+    }
+  ],
+  "showcase": [
+    {
+      "text": "The gallery showcases local artists.",
+      "fixed": "The gallery shows work by twelve local artists."
+    },
+    {
+      "text": "Every spring the festival showcases young directors.",
+      "fixed": "Every spring the festival shows films by young directors."
+    }
+  ],
+  "significant": [
+    {
+      "text": "The team reported a significant drop in user engagement.",
+      "fixed": "The team reported a major drop in user engagement."
+    },
+    {
+      "text": "We must address this significant issue before launch.",
+      "fixed": "We must address this major issue before launch."
+    }
+  ],
+  "smoke the peace pipe": [
+    {
+      "text": "The two rivals agreed to smoke the peace pipe before the tournament.",
+      "fixed": "The two rivals agreed to make peace before the tournament."
+    },
+    {
+      "text": "We must smoke the peace pipe now that the conflict has ended.",
+      "fixed": "We must make peace now that the conflict has ended."
+    }
+  ],
+  "spate": [
+    {
+      "text": "The region suffered a spate of violent storms last winter.",
+      "fixed": "The region suffered a flood of violent storms last winter."
+    },
+    {
+      "text": "We are seeing a spate of new competitors entering the market.",
+      "fixed": "We are seeing a flood of new competitors entering the market."
+    }
+  ],
+  "speak loudly": [
+    {
+      "text": "The coach told the players to speak loudly during the huddle.",
+      "fixed": "The coach told the players to shout during the huddle."
+    },
+    {
+      "text": "She refused to speak loudly in the quiet library.",
+      "fixed": "She refused to shout in the quiet library."
+    }
+  ],
+  "speak/say quietly": [
+    {
+      "text": "She said quietly to her colleague that the deadline had moved.",
+      "fixed": "She whispered to her colleague that the deadline had moved."
+    },
+    {
+      "text": "The doctor spoke quietly as he examined the patient.",
+      "fixed": "The doctor whispered as he examined the patient."
+    }
+  ],
+  "speaks volumes": [
+    {
+      "text": "Her silence speaks volumes about the project's failure.",
+      "fixed": "Her silence shows about the project's failure."
+    },
+    {
+      "text": "The data speaks volumes regarding user retention.",
+      "fixed": "The data shows regarding user retention."
+    }
+  ],
+  "stand in stark contrast": [
+    {
+      "text": "The minimalist office stands in stark contrast to the chaotic warehouse next door.",
+      "fixed": "The minimalist office clashes with the chaotic warehouse next door."
+    },
+    {
+      "text": "Her cheerful demeanor stands in stark contrast to the grim news she delivered.",
+      "fixed": "Her cheerful demeanor is nothing alike to the grim news she delivered."
+    }
+  ],
+  "stop to consider": [
+    {
+      "text": "He stopped to consider his next move.",
+      "fixed": "He considered his next move."
+    },
+    {
+      "text": "He stopped to consider the consequences.",
+      "fixed": "He considered the consequences."
+    }
+  ],
+  "strategize": [
+    {
+      "text": "We need to strategize for the upcoming launch.",
+      "fixed": "We need to plan for the upcoming launch."
+    },
+    {
+      "text": "The team will strategize during the morning meeting.",
+      "fixed": "The team will plan during the morning meeting."
+    }
+  ],
+  "streamline": [
+    {
+      "text": "The company streamlined its hiring.",
+      "fixed": "The company simplified its hiring."
+    },
+    {
+      "text": "A new form streamlines the claim.",
+      "fixed": "A new form simplifies the claim."
+    }
+  ],
+  "structural": [
+    {
+      "text": "The problem is structural.",
+      "fixed": "The problem is in how the two teams report to each other."
+    },
+    {
+      "text": "Auditors found a structural weakness in the funding model.",
+      "fixed": "Auditors found that the funding model depends on one grant."
+    }
+  ],
+  "structurally": [
+    {
+      "text": "The two systems are structurally the same.",
+      "fixed": "The two systems share the same layout."
+    },
+    {
+      "text": "Structurally, the argument holds.",
+      "fixed": "The argument holds from its first step to its last."
+    }
+  ],
+  "swear to protect": [
+    {
+      "text": "The new CEO swore to protect the company's legacy.",
+      "fixed": "The new CEO vowed to defend the company's legacy."
+    },
+    {
+      "text": "Officers swear to protect the public from harm.",
+      "fixed": "Officers pledge to protect the public from harm."
+    }
+  ],
+  "symbolize its ongoing/enduring/lasting": [
+    {
+      "text": "The statue symbolizes its enduring commitment to peace.",
+      "fixed": "The city has kept the peace treaty for sixty years."
+    },
+    {
+      "text": "The award symbolized their lasting friendship.",
+      "fixed": "The two families have stayed close for forty years."
+    }
+  ],
+  "synergy/synergize": [
+    {
+      "text": "The merger created real synergy.",
+      "fixed": "The merger let one team sell what the other builds."
+    },
+    {
+      "text": "They keep talking about synergies between the two units.",
+      "fixed": "They keep saying the two units could share a warehouse."
+    }
+  ],
+  "take under consideration": [
+    {
+      "text": "The committee will take under consideration the new budget proposal.",
+      "fixed": "The committee will consider the new budget proposal."
+    },
+    {
+      "text": "Please take under consideration the feedback from last week.",
+      "fixed": "Please consider the feedback from last week."
+    }
+  ],
+  "target an intervention": [
+    {
+      "text": "The program targets an intervention for at-risk youth.",
+      "fixed": "The program helps at-risk youth by providing weekly counseling."
+    },
+    {
+      "text": "We must target an intervention to reduce hospital readmissions.",
+      "fixed": "We must reduce hospital readmissions by calling patients within 48 hours of discharge."
+    }
+  ],
+  "tbh": [
+    {
+      "text": "tbh, I didn't expect the meeting to run so long.",
+      "fixed": "honestly, I didn't expect the meeting to run so long."
+    },
+    {
+      "text": "She admitted, tbh, that the code was a mess.",
+      "fixed": "She admitted, honestly, that the code was a mess."
+    }
+  ],
+  "that is to say": [
+    {
+      "text": "The system fails, that is to say it crashes.",
+      "fixed": "The system fails, that is it crashes."
+    },
+    {
+      "text": "We need a backup, that is to say a copy.",
+      "fixed": "We need a backup, that is a copy."
+    }
+  ],
+  "the evidence base": [
+    {
+      "text": "The evidence base supports the new policy.",
+      "fixed": "The evidence supports the new policy."
+    },
+    {
+      "text": "We need a stronger evidence base for this claim.",
+      "fixed": "We need a stronger evidence for this claim."
+    }
+  ],
+  "the fact that": [
+    {
+      "text": "Everyone knows the fact that sugar is bad for you.",
+      "fixed": "Everyone knows sugar is bad for you."
+    },
+    {
+      "text": "He mentioned the fact that the deadline had moved.",
+      "fixed": "He mentioned the deadline had moved."
+    }
+  ],
+  "the journey begins": [
+    {
+      "text": "The journey begins with a simple handshake.",
+      "fixed": "The negotiation begins with a simple handshake."
+    },
+    {
+      "text": "For many students, the journey begins on campus.",
+      "fixed": "For many students, the semester begins on campus."
+    }
+  ],
+  "the path ahead": [
+    {
+      "text": "The report outlines the path ahead for the company.",
+      "fixed": "The report outlines the future for the company."
+    },
+    {
+      "text": "The path ahead looks difficult.",
+      "fixed": "The future looks difficult."
+    }
+  ],
+  "the question hanging between them": [
+    {
+      "text": "The question hanging between them made the silence feel heavy.",
+      "fixed": "They stood apart, the silence between them heavy."
+    },
+    {
+      "text": "He could feel the question hanging between them as she turned away.",
+      "fixed": "He watched her turn away, the silence between them heavy."
+    }
+  ],
+  "the question hangs between them": [
+    {
+      "text": "The question hangs between them as they stare at the floor.",
+      "fixed": "They stood apart, staring at the floor in silence."
+    },
+    {
+      "text": "After the insult, the question hangs between them.",
+      "fixed": "They turned away from each other, shoulders stiff."
+    }
+  ],
+  "the societal expectation": [
+    {
+      "text": "The societal expectation of silence made her uncomfortable.",
+      "fixed": "The social expectation of silence made her uncomfortable."
+    },
+    {
+      "text": "He defied the societal expectation to marry early.",
+      "fixed": "He defied the social expectation to marry early."
+    }
+  ],
+  "the stakes are high": [
+    {
+      "text": "We cannot afford errors here because the stakes are high.",
+      "fixed": "We cannot afford errors here because there is a lot at risk."
+    },
+    {
+      "text": "The stakes are high for every employee in this merger.",
+      "fixed": "There is a lot at risk for every employee in this merger."
+    }
+  ],
+  "the very": [
+    {
+      "text": "The very idea of remote work changed everything.",
+      "fixed": "the idea of remote work changed everything."
+    }
+  ],
+  "the way I see it": [
+    {
+      "text": "The way I see it, remote work boosts productivity.",
+      "fixed": "Remote work boosts productivity."
+    },
+    {
+      "text": "We should hire her, the way I see it.",
+      "fixed": "We should hire her."
+    }
+  ],
+  "the way I think/feel about it": [
+    {
+      "text": "The way I think about it, we should wait until next quarter to launch the feature.",
+      "fixed": "We should wait until next quarter to launch the feature."
+    },
+    {
+      "text": "The way I think about it, this is a mistake.",
+      "fixed": "This is a mistake."
+    }
+  ],
+  "think in terms of": [
+    {
+      "text": "Engineers think in terms of trade-offs.",
+      "fixed": "Engineers think of trade-offs."
+    },
+    {
+      "text": "She started thinking in terms of quarterly targets.",
+      "fixed": "She started thinking of quarterly targets."
+    }
+  ],
+  "thrilling": [
+    {
+      "text": "The roller coaster ride was truly thrilling.",
+      "fixed": "The roller coaster ride was truly exciting."
+    },
+    {
+      "text": "She felt a thrilling sense of anticipation before the concert.",
+      "fixed": "She felt an exciting sense of anticipation before the concert."
+    }
+  ],
+  "through the agency/medium of": [
+    {
+      "text": "The message was delivered through the agency of a courier.",
+      "fixed": "The message was delivered by a courier."
+    },
+    {
+      "text": "She expressed her gratitude through the medium of a handwritten letter.",
+      "fixed": "She expressed her gratitude by a handwritten letter."
+    }
+  ],
+  "thrum": [
+    {
+      "text": "The engine began to thrum quietly.",
+      "fixed": "The engine began to hum quietly."
+    },
+    {
+      "text": "The old car thrummed on the highway.",
+      "fixed": "The old car hummed on the highway."
+    }
+  ],
+  "thusly": [
+    {
+      "text": "The committee approved the budget, thusly securing the funding.",
+      "fixed": "The committee approved the budget, thus securing the funding."
+    },
+    {
+      "text": "He finished the report, thusly meeting the deadline.",
+      "fixed": "He finished the report, thus meeting the deadline."
+    }
+  ],
+  "to be honest": [
+    {
+      "text": "To be honest, I prefer working remotely.",
+      "fixed": "honestly, I prefer working remotely."
+    },
+    {
+      "text": "She admitted that, to be honest, she was tired.",
+      "fixed": "She admitted that, honestly, she was tired."
+    }
+  ],
+  "to summarize": [
+    {
+      "text": "To summarize, the tests pass.",
+      "fixed": "The tests pass."
+    },
+    {
+      "text": "To summarize, nothing in the contract changed.",
+      "fixed": "Nothing in the contract changed."
+    }
+  ],
+  "treasure trove": [
+    {
+      "text": "The archive proved to be a treasure trove of early photographs.",
+      "fixed": "The archive proved to be a collection of early photographs."
+    },
+    {
+      "text": "She kept a treasure trove of vintage tickets in her drawer.",
+      "fixed": "She kept a collection of vintage tickets in her drawer."
+    }
+  ],
+  "trials and tribulations": [
+    {
+      "text": "The team navigated years of trials and tribulations before launching the product.",
+      "fixed": "The team navigated years of trouble before launching the product."
+    },
+    {
+      "text": "Her memoir details the trials and tribulations of raising a family abroad.",
+      "fixed": "Her memoir details the trouble of raising a family abroad."
+    }
+  ],
+  "try to shake": [
+    {
+      "text": "He tried to shake the dust from his boots.",
+      "fixed": "He tried to get rid of the dust from his boots."
+    },
+    {
+      "text": "The dog tried to shake the water off its fur.",
+      "fixed": "The dog tried to get rid of the water off its fur."
+    }
+  ],
+  "turn a profit": [
+    {
+      "text": "We expect to turn a profit by next year.",
+      "fixed": "We expect to profit by next year."
+    },
+    {
+      "text": "The bakery needs to turn a profit this month.",
+      "fixed": "The bakery needs to profit this month."
+    }
+  ],
+  "unboundedness": [
+    {
+      "text": "The unboundedness of the domain complicates the proof.",
+      "fixed": "The domain is unbounded, which complicates the proof."
+    },
+    {
+      "text": "He kept returning to the unboundedness of the problem.",
+      "fixed": "He kept saying the problem is unbounded."
+    }
+  ],
+  "undeniable": [
+    {
+      "text": "The team's commitment to the deadline was undeniable.",
+      "fixed": "The team's commitment to the deadline was certain."
+    },
+    {
+      "text": "Her frustration with the process became undeniable.",
+      "fixed": "Her frustration with the process became certain."
+    }
+  ],
+  "underscore": [
+    {
+      "text": "The report underscores the risk.",
+      "fixed": "The report highlights the risk."
+    },
+    {
+      "text": "Two failures underscored the need for tests.",
+      "fixed": "Two failures highlighted the need for tests."
+    }
+  ],
+  "understand the behavior": [
+    {
+      "text": "The team spent weeks trying to understand the behavior of the legacy database.",
+      "fixed": "The team spent weeks mapping how the legacy database handles concurrent writes."
+    },
+    {
+      "text": "We need to understand the behavior before deploying the new patch.",
+      "fixed": "We need to verify how the system reacts to null inputs before deploying the new patch."
+    }
+  ],
+  "understanding": [
+    {
+      "text": "We reached an understanding about the deadline.",
+      "fixed": "We agreed on the deadline."
+    }
+  ],
+  "unleash": [
+    {
+      "text": "The storm unleashed devastating winds across the coast.",
+      "fixed": "The storm released devastating winds across the coast."
+    },
+    {
+      "text": "She will unleash her full creative potential this year.",
+      "fixed": "She will release her full creative potential this year."
+    }
+  ],
+  "unwavering": [
+    {
+      "text": "Her unwavering commitment to the project inspired the entire team.",
+      "fixed": "Her unshakable commitment to the project inspired the entire team."
+    },
+    {
+      "text": "The board maintained an unwavering stance against the merger.",
+      "fixed": "The board maintained an unshakable stance against the merger."
+    }
+  ],
+  "up to the time/moment/point when": [
+    {
+      "text": "The system remained offline up to the moment when the patch applied.",
+      "fixed": "The system remained offline until the patch applied."
+    },
+    {
+      "text": "She waited in the lobby up to the time when her name was called.",
+      "fixed": "She waited in the lobby until her name was called."
+    }
+  ],
+  "utilize / utilise / put to use": [
+    {
+      "text": "The team will utilize the new software for testing.",
+      "fixed": "The team will use the new software for testing."
+    },
+    {
+      "text": "The factory will utilize the waste heat for heating.",
+      "fixed": "The factory will use the waste heat for heating."
+    }
+  ],
+  "vacuous": [
+    {
+      "text": "The proof is vacuous.",
+      "fixed": "The proof is empty."
+    },
+    {
+      "text": "He gave a vacuous answer and left.",
+      "fixed": "He gave an empty answer and left."
+    }
+  ],
+  "vacuously": [
+    {
+      "text": "The test passes vacuously.",
+      "fixed": "The test passes because it asserts nothing."
+    },
+    {
+      "text": "Every claim in the empty set holds vacuously.",
+      "fixed": "Every claim about an empty set holds because there is nothing to check."
+    }
+  ],
+  "verbalize": [
+    {
+      "text": "She tried to verbalize her confusion about the new policy.",
+      "fixed": "She tried to say her confusion about the new policy."
+    },
+    {
+      "text": "The therapist encouraged him to verbalize his feelings.",
+      "fixed": "The therapist encouraged him to say his feelings."
+    }
+  ],
+  "vibrant": [
+    {
+      "text": "The vibrant market filled with color and noise.",
+      "fixed": "The alive market filled with color and noise."
+    },
+    {
+      "text": "Her vibrant imagination sparked the entire project.",
+      "fixed": "Her alive imagination sparked the entire project."
+    }
+  ],
+  "vis-a-vis": [
+    {
+      "text": "Our sales are up vis-a-vis last quarter.",
+      "fixed": "Our sales are up compared to last quarter."
+    },
+    {
+      "text": "They met vis-a-vis to negotiate the terms.",
+      "fixed": "They met compared to to negotiate the terms."
+    }
+  ],
+  "walk slowly": [
+    {
+      "text": "The guards walk slowly along the perimeter.",
+      "fixed": "The guards crawl along the perimeter."
+    },
+    {
+      "text": "He walked slowly toward the gate.",
+      "fixed": "He crawled toward the gate."
+    }
+  ],
+  "want/need strongly/desperately": [
+    {
+      "text": "She wanted the promotion desperately.",
+      "fixed": "She craved."
+    },
+    {
+      "text": "The toddler wanted a cookie desperately.",
+      "fixed": "The toddler craved."
+    }
+  ],
+  "wedge": [
+    {
+      "text": "A bad migration wedged the queue for an hour.",
+      "fixed": "A bad migration froze the queue for an hour."
+    },
+    {
+      "text": "They wedged a caveat into the contract.",
+      "fixed": "They pushed a caveat into the contract."
+    }
+  ],
+  "wedged": [
+    {
+      "text": "The build got wedged again.",
+      "fixed": "The build got stuck again."
+    },
+    {
+      "text": "The queue stayed wedged for an hour.",
+      "fixed": "The queue stayed stuck for an hour."
+    }
+  ],
+  "well-nigh": [
+    {
+      "text": "The storm was well-nigh over by dawn.",
+      "fixed": "The storm was almost over by dawn."
+    },
+    {
+      "text": "She felt well-nigh exhausted after the hike.",
+      "fixed": "She felt almost exhausted after the hike."
+    }
+  ],
+  "what is the reason": [
+    {
+      "text": "What is the reason we keep losing customers?",
+      "fixed": "Why do we keep losing customers?"
+    },
+    {
+      "text": "What was the reason for the delay?",
+      "fixed": "Why was there a delay?"
+    }
+  ],
+  "when it comes to": [
+    {
+      "text": "When it comes to budgeting, we must prioritize savings.",
+      "fixed": "when budgeting, we must prioritize savings."
+    },
+    {
+      "text": "The report is clear when it comes to data accuracy.",
+      "fixed": "The report is clear when data accuracy."
+    }
+  ],
+  "whilst": [
+    {
+      "text": "The team reviewed the code whilst the server was down.",
+      "fixed": "The team reviewed the code while the server was down."
+    },
+    {
+      "text": "She smiled whilst reading the letter.",
+      "fixed": "She smiled while reading the letter."
+    }
+  ],
+  "white as a sheet": [
+    {
+      "text": "He stood there, white as a sheet.",
+      "fixed": "He stood there, pale."
+    }
+  ],
+  "with a grain/pinch of salt": [
+    {
+      "text": "Take these early results with a grain of salt.",
+      "fixed": "Take these early results with caution."
+    },
+    {
+      "text": "Investors treated the forecast with a pinch of salt.",
+      "fixed": "Investors treated the forecast with caution."
+    }
+  ],
+  "with a view to": [
+    {
+      "text": "The committee met with a view to approving the budget.",
+      "fixed": "The committee met to approving the budget."
+    },
+    {
+      "text": "She revised the draft with a view to improving clarity.",
+      "fixed": "She revised the draft to improving clarity."
+    }
+  ],
+  "with or in regard/reference to": [
+    {
+      "text": "The committee debated the proposal with regard to budget constraints.",
+      "fixed": "The committee debated the proposal about budget constraints."
+    },
+    {
+      "text": "She asked for clarification in reference to the new policy.",
+      "fixed": "She asked for clarification about the new policy."
+    }
+  ],
+  "with practiced ease": [
+    {
+      "text": "She parried the question with practiced ease.",
+      "fixed": "She parried the question effortlessly."
+    },
+    {
+      "text": "The dealer shuffled the deck with practised ease.",
+      "fixed": "The dealer shuffled the deck effortlessly."
+    }
+  ],
+  "with the advent of": [
+    {
+      "text": "With the advent of smartphones, communication changed forever.",
+      "fixed": "When smartphones arrived, communication changed forever."
+    },
+    {
+      "text": "The company struggled to adapt with the advent of remote work.",
+      "fixed": "The company struggled to adapt as remote work became common."
+    }
+  ],
+  "with the condition that": [
+    {
+      "text": "We will proceed with the condition that the budget is approved.",
+      "fixed": "We will proceed if the budget is approved."
+    },
+    {
+      "text": "She accepted the offer with the condition that she keeps her title.",
+      "fixed": "She accepted the offer if she keeps her title."
+    }
+  ],
+  "without further ado": [
+    {
+      "text": "Without further ado, here are the results.",
+      "fixed": "Here are the results."
+    },
+    {
+      "text": "Without further ado, she opened the envelope.",
+      "fixed": "She opened the envelope."
+    }
+  ],
+  "work tirelessly": [
+    {
+      "text": "The team worked tirelessly to meet the deadline.",
+      "fixed": "The team toiled to meet the deadline."
+    },
+    {
+      "text": "She works tirelessly for her clients.",
+      "fixed": "She toils for her clients."
+    }
+  ],
+  "woven into": [
+    {
+      "text": "Security is woven into every stage of the pipeline.",
+      "fixed": "Security is embedded in every stage of the pipeline."
+    },
+    {
+      "text": "Her grandmother's stories are woven into the novel.",
+      "fixed": "Her grandmother's stories are embedded in the novel."
+    }
+  ]
+}
