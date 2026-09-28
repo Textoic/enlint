@@ -1,6 +1,6 @@
 import type { PosTag } from "./types/index.js";
 
-const antonyms: Record<string, { [tag in PosTag]?: string }> = {
+export const antonyms: Record<string, { [tag in PosTag]?: string }> = {
   able: { ADJ: "unable" },
   abridged: { ADJ: "unabridged" },
   absent: { ADJ: "present" },
@@ -397,12 +397,9 @@ const antonyms: Record<string, { [tag in PosTag]?: string }> = {
   worthy: { ADJ: "unworthy" },
 };
 
-export default ({
-  lemma,
-  form,
-  xpos,
-}: {
-  lemma?: string;
-  form: string;
-  xpos: PosTag;
-}) => antonyms[lemma ?? form.toLowerCase()]?.[xpos];
+type Word = { lemma?: string; form: string; xpos: PosTag };
+
+export const antonymKeyOf = ({ lemma, form }: Word) =>
+  lemma ?? form.toLowerCase();
+
+export default (word: Word) => antonyms[antonymKeyOf(word)]?.[word.xpos];

@@ -1,6 +1,6 @@
 {
   "name": "@textoic/enlint",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Finds flaws in English writing and offers mechanical replacements.",
   "keywords": [
     "writing",
@@ -62,6 +62,10 @@
     "./types": {
       "types": "./dist/types/index.d.ts",
       "default": "./dist/types/index.js"
+    },
+    "./catalog": {
+      "types": "./dist/catalog.d.ts",
+      "default": "./dist/catalog.js"
     },
     "./testing": {
       "types": "./dist/testing.d.ts",

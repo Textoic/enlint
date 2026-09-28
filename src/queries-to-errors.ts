@@ -24,6 +24,8 @@ const compile = (queries: Query[]) => {
   return compilation;
 };
 
+const caseOf = ({ case: key }: Query) => (key == null ? {} : { case: key });
+
 const withInflections = (
   tokens: ParsedToken[],
   tree: number[],
@@ -55,7 +57,8 @@ export default (queries: Query[], sentences: ParsedToken[][]) => {
         misc: { at: endPosition },
         form: endWord,
       } = tokens[Math.max(...tree)];
-      const { message, id, suggestions } = queries[queryIndices[selectorIndex]];
+      const query = queries[queryIndices[selectorIndex]];
+      const { message, id, suggestions } = query;
       const { form } = tokens[tree[0]];
       const end = endPosition + endWord.length;
       errors.push({
@@ -63,6 +66,7 @@ export default (queries: Query[], sentences: ParsedToken[][]) => {
         start,
         end,
         message,
+        ...caseOf(query),
         ...(suggestions
           ? {
               suggestions: suggestions.map((suggestion) =>

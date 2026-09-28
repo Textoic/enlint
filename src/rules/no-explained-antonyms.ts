@@ -1,5 +1,5 @@
 import inflect from "@textoic/artisan/inflect";
-import antonymOf from "../antonyms.js";
+import antonymOf, { antonymKeyOf } from "../antonyms.js";
 import {
   ErrorId,
   type LintError,
@@ -33,6 +33,7 @@ const swappedPredicateError = (
     end: sibling.misc.at + sibling.form.length,
     message: `Rewrite using '${antonymOf(sibling)}' instead of 'not ${sibling.form}'`,
     id: ErrorId.NO_EXPLAINED_ANTONYMS,
+    case: antonymKeyOf(sibling),
   };
 };
 
@@ -165,6 +166,7 @@ const applyRule = (entities: ParsedToken[]) =>
           })),
           message: `Replace a negative with a positive when it retains the same meaning`,
           id: ErrorId.NO_EXPLAINED_ANTONYMS,
+          case: antonymKeyOf(headToken),
         });
       },
       [],

@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 import lint, { defaults } from "../src/index.js";
+import { caseFrom } from "./case-from.js";
 import nlp from "./nlp.js";
 import type { LintError } from "../src/types/index.js";
 
@@ -111,7 +112,11 @@ describe("lint", () => {
       const actual = lint(nlp(text));
       assert.deepEqual(
         actual,
-        expected.map((error, i) => ({ ...error, message: actual[i]?.message })),
+        expected.map((error, i) => ({
+          ...error,
+          message: actual[i]?.message,
+          ...caseFrom(actual[i]),
+        })),
       );
     });
   });

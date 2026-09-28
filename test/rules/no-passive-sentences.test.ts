@@ -348,6 +348,7 @@ const tests = [
         start: 1,
         end: 22,
         id: "no-bad-words",
+        case: "at the end of the day",
         suggestions: [{ range: [1, 27], text: "The" }],
       },
       {

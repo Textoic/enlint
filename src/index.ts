@@ -1,7 +1,9 @@
 import {
+  CaseRuleId,
   ErrorId,
   type AdpositionType,
   type Config,
+  type IgnoredCases,
   type LexicalDensityOptions,
   type LexicalFeatures,
   type LintError,
@@ -38,12 +40,13 @@ import noPassiveSentences from "./rules/no-passive-sentences.js";
 import noSimiles from "./rules/no-similes.js";
 import noSpecialPunctuation from "./rules/no-special-punctuation.js";
 
-export { ErrorId };
+export { CaseRuleId, ErrorId };
 export type {
   AdpositionType,
   BadWordCategory,
   BadWordEntry,
   Config,
+  IgnoredCases,
   LexicalDensityOptions,
   LexicalFeatures,
   LintError,
@@ -146,11 +149,35 @@ const settled = (problems: LintError[]): LintError[] =>
     )
     .sort(byPosition);
 
-export default (sentences: ParsedToken[][], config: Config = defaults) =>
-  settled(
-    rules.reduce(
-      (lintErrors: LintError[], [id, rule]) =>
-        config[id] ? lintErrors.concat(rule(sentences, config)) : lintErrors,
-      [],
-    ),
+export const caseKey = (key: string) => key.trim().toLowerCase();
+
+const ignoredKeysOf = (ignore: IgnoredCases = {}) =>
+  new Map(
+    Object.entries(ignore).map(([id, keys]) => [
+      id,
+      new Set((keys ?? []).map(caseKey)),
+    ]),
   );
+
+const isIgnoredBy =
+  (ignored: Map<string, Set<string>>) =>
+  ({ id, case: key }: LintError) =>
+    key != null && (ignored.get(id)?.has(caseKey(key)) ?? false);
+
+export const withoutIgnoredCases = (
+  problems: LintError[],
+  ignore: IgnoredCases | undefined,
+) => {
+  const isIgnored = isIgnoredBy(ignoredKeysOf(ignore));
+  return problems.filter((problem) => !isIgnored(problem));
+};
+
+const reported = (sentences: ParsedToken[][], config: Config) =>
+  rules.reduce(
+    (lintErrors: LintError[], [id, rule]) =>
+      config[id] ? lintErrors.concat(rule(sentences, config)) : lintErrors,
+    [],
+  );
+
+export default (sentences: ParsedToken[][], config: Config = defaults) =>
+  settled(withoutIgnoredCases(reported(sentences, config), config.ignore));

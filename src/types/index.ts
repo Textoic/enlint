@@ -62,7 +62,18 @@ export type LintError = {
   end: number;
   message: string;
   suggestions?: Suggestion[];
+  case?: string;
 };
+
+export const CaseRuleId = {
+  NO_BAD_WORDS: ErrorId.NO_BAD_WORDS,
+  NO_EXPLAINED_ANTONYMS: ErrorId.NO_EXPLAINED_ANTONYMS,
+  NO_EXPLAINED_INTENSIFIERS: ErrorId.NO_EXPLAINED_INTENSIFIERS,
+} as const;
+
+export type CaseRuleId = (typeof CaseRuleId)[keyof typeof CaseRuleId];
+
+export type IgnoredCases = { [id in CaseRuleId]?: string[] };
 
 export type LexicalDensityOptions = {
   nounPercentage?: number;
@@ -77,6 +88,7 @@ export type RuleOptions = {
 
 export type Config = {
   locale?: string;
+  ignore?: IgnoredCases;
 } & {
   [id in ErrorId]?: id extends keyof RuleOptions
     ? boolean | RuleOptions[id]
@@ -90,6 +102,7 @@ export type Query = {
   suggestions?: string[];
   message: string;
   id: ErrorId;
+  case?: string;
 };
 
 export type RuleMatch = {

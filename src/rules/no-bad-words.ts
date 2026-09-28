@@ -2785,6 +2785,7 @@ export const entries: BadWordEntry[] = [
 ];
 
 export const asQuery = ({
+  phrase,
   selector,
   suggestions,
   message,
@@ -2794,6 +2795,7 @@ export const asQuery = ({
   ...(suggestions ? { suggestions } : {}),
   message: message ?? categoryMessages[category],
   id: ErrorId.NO_BAD_WORDS,
+  case: phrase,
 });
 
 const queries: Query[] = entries.map(asQuery);

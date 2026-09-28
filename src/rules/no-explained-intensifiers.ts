@@ -1,7 +1,7 @@
 import parseToSubtree from "../parse-to-subtree.js";
 import { ErrorId, type LintError, type ParsedToken } from "../types/index.js";
 
-const intensifierDictionary = {
+export const intensifierDictionary = {
   accurate: ["exact"],
   afraid: ["terrified"],
   angry: ["furious"],
@@ -128,6 +128,7 @@ const applyRule = (entities: ParsedToken[]) =>
           })),
           message: `Replace intensified modifiers with a more powerful and concise word that retains the meaning`,
           id: ErrorId.NO_EXPLAINED_INTENSIFIERS,
+          case: headLemma,
         },
       ];
     }, []);

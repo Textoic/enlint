@@ -73,6 +73,39 @@ lint(parsed, { ...defaults, "no-mixed-dialects": true, locale: "en-GB" });
 
 A config replaces the defaults rather than merging with them, so `lint(parsed, {})` runs nothing at all.
 
+### Ignoring specific cases
+
+Three rules work from a list of cases: `no-bad-words` (one case per
+expression), `no-explained-intensifiers` (one per intensified word) and
+`no-explained-antonyms` (one per negated word). Every problem they report
+carries a `case` key, and `ignore` in the config drops matching problems
+before the overlap resolution runs, so an ignored wide problem never hides a
+narrower one:
+
+```js
+lint(parsed, {
+  ...defaults,
+  ignore: {
+    "no-explained-intensifiers": ["dirty"],
+    "no-bad-words": ["delve into"],
+  },
+});
+```
+
+Keys match without regard to case or surrounding space. The other rules report
+no `case`, so the only way to silence them is to switch the rule off.
+
+### The rule catalog
+
+`@textoic/enlint/catalog` describes the rules for a settings screen:
+`ruleCatalog` gives each rule's name, summary, description, default and
+examples, and `casesOf(id)` lists the cases of a case-based rule with a label
+and the replacements it offers.
+
+```js
+import { casesOf, ruleCatalog } from "@textoic/enlint/catalog";
+```
+
 `no-negated-contrasts` reports the same "not just X but Y" shape as
 `no-bad-sentence-structures`, over a longer span, so with both on the newer rule
 always wins the overlap and the older one is never heard. Decide which you want

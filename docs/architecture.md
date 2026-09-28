@@ -16,6 +16,27 @@ Nor does routine history: git already records what changed and when.
 
 ## Log
 
+### 2026-09-27, ignored cases are filtered before `settled`, and a case key is the entry's own name
+
+Editors built on enlint need to silence one case of a rule ("very dirty")
+without switching the rule off. Three rules have cases: `no-bad-words`,
+`no-explained-intensifiers` and `no-explained-antonyms`. Their problems now
+carry `case`: the entry's `phrase`, the intensified lemma, and the negated
+lemma. The phrase is already unique across the 420 entries, and a catalog test
+keeps it so; a generated key would change whenever an entry was reworded.
+
+`ignore` is applied inside `lint`, before `settled`. Filtering the output
+instead gives the wrong answer: a wide ignored problem that offers a
+replacement supersedes the narrower problems it overlaps, so dropping it
+afterwards would also drop them. The intensifier key is the head lemma, so
+ignoring "dirty" also ignores "really dirty"; the catalog labels it
+"very dirty" because that is how people search for it.
+
+The catalog's examples run through the parser in a test. Five of the first
+drafts reported nothing or reported another rule first: "I am not sure" is a
+`no-bad-words` hedge before it is an antonym, and the lexical density example
+from the docs is under the 16-word floor once shortened.
+
 ### 2026-09-27, artisan is a runtime dependency, pinned to a git tag until it is on npm
 
 The provider was `"nlp": "file:../artisan"`, a sibling checkout installed
