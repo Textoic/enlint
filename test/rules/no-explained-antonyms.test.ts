@@ -20,18 +20,7 @@ const tests = [
     ],
     "only the negated antonym",
   ],
-  [
-    "I can't agree",
-    [
-      {
-        start: 2,
-        end: 13,
-        id: "no-explained-antonyms",
-        suggestions: [{ range: [2, 13], text: "disagree" }],
-      },
-    ],
-    "a negated verb after a modal",
-  ],
+  ["I can't agree", [], "a modal cannot be replaced by an inflected antonym"],
   ["just say no", [], "a negative as the verb argument"],
   [
     "Chad writes only in affirmative",

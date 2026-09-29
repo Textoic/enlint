@@ -44,7 +44,7 @@ const isAuxiliaryBefore = (
   token != null &&
   token.xpos === "VERB" &&
   token.misc.at < negativePosition &&
-  (token.lemma === "do" || token.feats.Mood != null);
+  token.lemma === "do";
 
 type Negator = { id: number; grandFather: number; negativePosition: number };
 

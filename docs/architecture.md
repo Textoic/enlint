@@ -16,6 +16,67 @@ Nor does routine history: git already records what changed and when.
 
 ## Log
 
+### 2026-09-29 — noun percentages do not measure difficulty in narrative prose
+
+The Neytopia book produced 7,232 sentence segments when parsed one blank-line
+block at a time. The installed artisan 0.1.0 provider produced 37 density
+warnings with trained weights and 38 with the development fallback. The audit
+kept Markdown in the blocks, including the table of contents and credits. It
+did not edit the book or add a document runner to this package. Local audit
+records live in the ignored `corpus` directory.
+
+The warnings included character lists, ordinary action and descriptions:
+"Neytopia tells the lives of a ruthless goddess, a lost space traveler, a raven
+and a revolutionary" and "The raven ran his sword through the leader's ribs,
+splitting the leader's heart in two." These have many nouns without the
+nominalizations the rule intends to discourage. This contradicts the
+2026-09-01 entry's claim that the percentage measure alone is sound.
+
+The rule now requires two distinct lemmas from an explicit set of action
+nouns, a finite predicate, and an immediately following
+preposition attached to at least one of those nouns. A small preposition set
+excludes conjunctions: artisan marks "and" with `AdpType: Prep` too. The
+16-word floor and percentage thresholds still apply after these guards.
+Custom percentage settings cannot bypass the guards. The message presents
+the result as a possible nominalization problem and suggests verbs. When each
+pair of successive action nouns has a comma or conjunction between them and
+no intervening finite predicate, the rule treats them as an enumeration.
+
+The independent reviewer found two false positives in the first draft.
+Suffix matching counted "apartment" and "basement" as hidden actions.
+It also reported an explicit list of implementation, consultation and other
+activities when each item had a prepositional complement. The action-noun set
+and enumeration guard replace those guesses; both examples now have tests
+under both providers. The set trades recall for precision and can grow through
+labeled examples without treating every word ending in `ment` as an action.
+
+Both providers now produce zero density warnings on this book. Three positive
+examples still report under both providers; their verb-based rewrites pass.
+Lists of action nouns and long nominal fragments also pass. "Noon" already
+passed before this change. Its reported failure could not be reproduced with
+this checkout, even when parsed as a Markdown heading.
+
+This is a conservative heuristic, not a general readability measure. A known
+action noun can still have another sense. The rule misses nominalizations
+outside its set and sentences whose verbs or complements the provider mistags.
+For example, the fallback tags "demands" as a noun in "Rapid organizational
+transformation demands robust strategic alignment across diverse operational
+units." The rule now abstains on that parse. Neither ambiguous tags nor this
+book provide enough evidence for a general Artisan tagging change, so Artisan
+is unchanged. The audit covered both loaders without changing their behavior.
+
+### 2026-09-29 — antonym substitutions must preserve modality and meaning
+
+The book contains "she wasn't human" and "the raven, who wasn't human
+anymore." Replacing "not human" with "inhuman" can assert cruelty instead of
+species, so that pairing is removed. It also contains "You can't accept it"
+and "he can't forget." The old replacements consumed the modal and produced
+"refuse" and "remember." Verb replacements now require a preceding auxiliary
+whose lemma is `do`. Modal cases abstain; adjective handling is unchanged.
+These changes remove seven antonym warnings with the trained provider and six
+with the fallback. Regression tests retain the `does not like` → `dislikes`
+replacement in both modes.
+
 ### 2026-09-27, ignored cases are filtered before `settled`, and a case key is the entry's own name
 
 Editors built on enlint need to silence one case of a rule ("very dirty")

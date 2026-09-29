@@ -86,9 +86,9 @@ const ruleTexts: Record<ErrorId, RuleText> = {
   },
   [ErrorId.NO_HIGH_LEXICAL_DENSITY]: {
     name: "High lexical density",
-    summary: "Sentences made mostly of nouns and adjectives.",
+    summary: "Long, noun-heavy sentences with several nominalizations.",
     description:
-      "Past a point the reader holds too many things at once. The usual cause is a verb turned into a noun and given modifiers. Give the action back to a verb.",
+      "A high share of nouns and adjectives alone does not make a sentence difficult. This rule also looks for several known action nouns, a prepositional complement, and a finite verb. It skips enumerations. Try expressing the actions as verbs.",
     examples: [
       {
         text: "The implementation of the new policy framework required extensive consultation with regional stakeholder groups and a comprehensive assessment methodology drawn from prior work.",

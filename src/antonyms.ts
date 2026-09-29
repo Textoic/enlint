@@ -202,7 +202,6 @@ export const antonyms: Record<string, { [tag in PosTag]?: string }> = {
   hopefully: { ADV: "hopelessly" },
   hospitable: { ADJ: "inhospitable" },
   hospitably: { ADV: "inhospitably" },
-  human: { ADJ: "inhuman" },
   humane: { ADJ: "inhumane" },
   humanely: { ADV: "inhumanely" },
   humble: { ADJ: "arrogant" },
