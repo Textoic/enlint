@@ -40,6 +40,14 @@ const ruleTexts: Record<ErrorId, RuleText> = {
         text: "His hands shaking, he opened the envelope.",
         suggestion: "His hands shook as he opened the envelope.",
       },
+      {
+        text: "Her voice trembling, she read the verdict aloud.",
+        suggestion: "Her voice trembled as she read the verdict aloud.",
+      },
+      {
+        text: "Its engine roaring, the truck climbed the hill.",
+        suggestion: "The truck's engine roared as it climbed the hill.",
+      },
     ],
   },
   [ErrorId.NO_BAD_SENTENCE_STRUCTURES]: {
@@ -51,6 +59,8 @@ const ruleTexts: Record<ErrorId, RuleText> = {
       {
         text: "Will you be my partner, not just in life, but in every sense of the word?",
       },
+      { text: "It is not just a tool, but a way of life." },
+      { text: "This is not merely a bug, but a design flaw." },
     ],
   },
   [ErrorId.NO_BAD_WORDS]: {
@@ -72,6 +82,7 @@ const ruleTexts: Record<ErrorId, RuleText> = {
     examples: [
       { text: "I do not agree.", suggestion: "disagree" },
       { text: "The door was not visible.", suggestion: "invisible" },
+      { text: "The plan is not legal.", suggestion: "illegal" },
     ],
   },
   [ErrorId.NO_EXPLAINED_INTENSIFIERS]: {
@@ -82,6 +93,7 @@ const ruleTexts: Record<ErrorId, RuleText> = {
     examples: [
       { text: "The room was very dirty.", suggestion: "filthy" },
       { text: "The results were really bad.", suggestion: "awful" },
+      { text: "It was very cold outside.", suggestion: "freezing" },
     ],
   },
   [ErrorId.NO_HIGH_LEXICAL_DENSITY]: {
@@ -93,6 +105,12 @@ const ruleTexts: Record<ErrorId, RuleText> = {
       {
         text: "The implementation of the new policy framework required extensive consultation with regional stakeholder groups and a comprehensive assessment methodology drawn from prior work.",
       },
+      {
+        text: "The evaluation of the proposed modification to the regional distribution network necessitated careful consideration of infrastructure investment requirements and the prioritization of maintenance activities.",
+      },
+      {
+        text: "Successful completion of the migration depended on the standardization of data collection procedures and the elimination of redundant verification steps across departments.",
+      },
     ],
   },
   [ErrorId.NO_MIXED_DIALECTS]: {
@@ -100,7 +118,14 @@ const ruleTexts: Record<ErrorId, RuleText> = {
     summary: "British and American spellings in the same text.",
     description:
       "Pick one dialect and keep to it. The rule follows the configured locale.",
-    examples: [{ text: "The colour of the car park.", suggestion: "color" }],
+    examples: [
+      { text: "The colour of the car park.", suggestion: "color" },
+      {
+        text: "We organised the program around the color theme.",
+        suggestion: "organized",
+      },
+      { text: "Our favourite color is gray.", suggestion: "favorite" },
+    ],
   },
   [ErrorId.NO_NEGATED_CONTRASTS]: {
     name: "Negated contrasts",
@@ -111,6 +136,11 @@ const ruleTexts: Record<ErrorId, RuleText> = {
       {
         text: "The span is the phrase, not a stray overlap.",
         suggestion: "The span is the phrase.",
+      },
+      { text: "It's a feature, not a bug.", suggestion: "It's a feature." },
+      {
+        text: "The problem is the process, not the people.",
+        suggestion: "The problem is the process.",
       },
     ],
   },
@@ -123,6 +153,10 @@ const ruleTexts: Record<ErrorId, RuleText> = {
       {
         text: "The report that the analyst who the board hired drafted was lost.",
       },
+      { text: "The house that the man who the bank sued built was sold." },
+      {
+        text: "The email that the intern who the manager trained sent was deleted.",
+      },
     ],
   },
   [ErrorId.NO_NOUN_CLUSTERS]: {
@@ -130,7 +164,11 @@ const ruleTexts: Record<ErrorId, RuleText> = {
     summary: "Four or more nouns in a row.",
     description:
       "Long chains of nouns hide how the words relate. Break the chain with prepositions or a verb (ASD-STE100 rule 2.1).",
-    examples: [{ text: "Runway light connection resistance calibration." }],
+    examples: [
+      { text: "Runway light connection resistance calibration." },
+      { text: "The customer account data migration schedule slipped." },
+      { text: "Check the engine oil pressure warning light." },
+    ],
   },
   [ErrorId.NO_PASSIVE_SENTENCES]: {
     name: "Passive sentences",
@@ -142,6 +180,14 @@ const ruleTexts: Record<ErrorId, RuleText> = {
         text: "The piano is played by John.",
         suggestion: "John plays the piano.",
       },
+      {
+        text: "The report was written by the committee.",
+        suggestion: "The committee wrote the report.",
+      },
+      {
+        text: "The decision was made by the board.",
+        suggestion: "The board made the decision.",
+      },
     ],
   },
   [ErrorId.NO_SIMILES]: {
@@ -149,7 +195,11 @@ const ruleTexts: Record<ErrorId, RuleText> = {
     summary: "Comparisons with “like” or “as”.",
     description:
       "A simile asks the reader to translate an image back into a fact. Say the fact.",
-    examples: [{ text: "He fought like a lion." }],
+    examples: [
+      { text: "He fought like a lion." },
+      { text: "He slept like a baby." },
+      { text: "The deadline loomed like a storm cloud." },
+    ],
   },
   [ErrorId.NO_SPECIAL_PUNCTUATION]: {
     name: "Special punctuation",
@@ -158,6 +208,8 @@ const ruleTexts: Record<ErrorId, RuleText> = {
       "The em dash is the single most model-skewed mark in modern prose. Use a comma, a colon or a full stop instead.",
     examples: [
       { text: "The result was clear — we had won.", suggestion: ", " },
+      { text: "We had one goal — ship by Friday.", suggestion: ", " },
+      { text: "Read pages 10–20 before class.", suggestion: "-" },
     ],
   },
 };
