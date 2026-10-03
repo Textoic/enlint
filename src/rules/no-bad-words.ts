@@ -1599,6 +1599,15 @@ export const entries: BadWordEntry[] = [
       ":matches([form=kind i], [form=sort i]) > [lemma=of] > :matches([xpos=ADJ], [xpos=ADV])",
   },
   {
+    phrase: "land near/around",
+    category: "ai",
+    selector:
+      "[lemma=land][xpos=VERB] > :matches([form=near i], [form=around i])",
+    suggestions: [":inflect(give) you"],
+    message:
+      "A result does not 'land' anywhere. Say what it gives you: 'Forty years gives you ~15'",
+  },
+  {
     phrase: "landscape",
     category: "ai",
     selector: "[lemma=landscape]",
@@ -2454,6 +2463,15 @@ export const entries: BadWordEntry[] = [
     selector: "[form=testament i] > [form=to i]",
     message:
       "Rewrite this whole sentence to avoid using 'testament' as a metaphor. Describe something as 'proof' or 'evidence' instead.",
+  },
+  {
+    phrase: "than you think",
+    category: "ai",
+    selector:
+      "[form=than i] > :matches([lemma=think], [lemma=expect], [lemma=imagine], [lemma=realize]) > [form=you i]",
+    suggestions: [""],
+    message:
+      "'Simpler than you think' is a sales pitch. Cut the comparison and say how simple it is",
   },
   {
     phrase: "that is to say",

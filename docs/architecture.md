@@ -16,6 +16,44 @@ Nor does routine history: git already records what changed and when.
 
 ## Log
 
+### 2026-10-02 — machine tells are found from the words, because the parse cannot be trusted on them
+
+`src/tells.ts` finds five shapes that model-written prose keeps producing, and
+`no-bad-sentence-structures` reports them: a noun with a clause hung on it and no
+main verb ("The open-source pieces every product shares."), an idea announced or
+praised before it is given ("one more effect, and it's the one I like best"),
+"Here's X:", a tail that comments on its own sentence (", which is the bit..."),
+and a figure given with its arithmetic or to three decimals. `tells` is exported
+on its own (`@textoic/enlint/tells`) so enlint-lab can count each kind.
+
+Four of the five read token forms and punctuation in order and never ask the
+tree. The examples that prompted them parse wrongly: "centre" comes out a verb
+in "a bored data centre in Oregon", "live" an adverb in "backups that live
+outside the laptop". The noun fragment is the one that needs the tree, since it
+asks whether the root is a noun, and it is the weak one. Over 289 model-written
+articles it first fired 266 times, mostly on ordinary sentences whose verb the
+tagger had called a noun ("The resolver checks its cache before..."). It now
+also asks that the sentence end on a verb and run twelve words or fewer, which
+cut it to 24, and about half of those are still misparses. Treat a single
+finding from it as a prompt to look, not as a verdict.
+
+`no-negated-contrasts` now also reports a bare tail: a comma, "not", and a noun
+phrase that runs to the end of the sentence with no auxiliary and no pronoun in
+it ("Ransomware is the real threat, not a bored data centre in Oregon"). The
+existing trailing check needs the negated noun to hang off a matching noun,
+which this sentence's parse does not give it.
+
+Two entries joined `no-bad-words` under `ai`: "land near/around" for a result,
+with "gives you" offered, and "than you think". The first cannot ask for a
+number after the preposition, because `NumType` is not an attribute the input
+contract lets a selector use, so "at" was left out to keep "the plane lands at
+Heathrow" clean.
+
+A sentence that sets up a colon ("So adopt my rule: ...") is not reported here.
+The essays this style is modelled on do it in one sentence in ten, and a rule
+that fires that often on human prose is not a rule. enlint-lab counts it and
+charges only for the excess.
+
 ### 2026-09-29 — noun percentages do not measure difficulty in narrative prose
 
 The Neytopia book produced 7,232 sentence segments when parsed one blank-line

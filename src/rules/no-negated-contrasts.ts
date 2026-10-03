@@ -397,6 +397,54 @@ const trailingError = (
   };
 };
 
+const LONGEST_BARE_TAIL = 9;
+
+const tailWords = (tokens: ParsedToken[], negation: ParsedToken) => {
+  const rest = tokens.slice(negation.id + 1);
+  const stop = rest.findIndex(isClauseBreak);
+  return (stop === -1 ? rest : rest.slice(0, stop)).filter(
+    ({ xpos }) => xpos !== "PUNCT",
+  );
+};
+
+const opensANounPhrase = (token: ParsedToken | undefined) =>
+  token != null && isNominal(token) && !isPronoun(token);
+
+const isStatedBefore = (tokens: ParsedToken[], negation: ParsedToken) =>
+  tokens.slice(0, negation.id).some(({ xpos }) => xpos === "VERB");
+
+const isBareTail = (tokens: ParsedToken[], negation: ParsedToken) => {
+  const words = tailWords(tokens, negation);
+  const last = lastContentToken(tokens);
+  return (
+    negation.form.toLowerCase() === "not" &&
+    opensANounPhrase(words[0]) &&
+    words.length <= LONGEST_BARE_TAIL &&
+    words[words.length - 1] === last &&
+    !words.some((word) => isAuxiliary(word) || isPronoun(word)) &&
+    isStatedBefore(tokens, negation)
+  );
+};
+
+const bareTailError = (
+  tokens: ParsedToken[],
+  negation: ParsedToken,
+  opening: ParsedToken,
+): LintError => {
+  const words = tailWords(tokens, negation);
+  const range: [number, number] = [
+    opening.misc.at,
+    endOf(words[words.length - 1]),
+  ];
+  return {
+    start: range[0],
+    end: range[1],
+    message: messages.trailing,
+    id: ErrorId.NO_NEGATED_CONTRASTS,
+    suggestions: [{ range, text: "" }],
+  };
+};
+
 const contraction = /^(?:['’`´]|n['’`´]?t$)/u;
 
 const startOf = (tokens: ParsedToken[], negation: ParsedToken) => {
@@ -464,9 +512,17 @@ const classify = ({
   }
 
   const opening = tokens[negation.id - 1];
+  if (!opening || !isComma(opening)) {
+    return undefined;
+  }
+
   const tail = negatedTail(tokens, negation, negated);
-  return opening && isComma(opening) && tail
-    ? trailingError(tokens, tail, opening)
+  if (tail) {
+    return trailingError(tokens, tail, opening);
+  }
+
+  return isBareTail(tokens, negation)
+    ? bareTailError(tokens, negation, opening)
     : undefined;
 };
 

@@ -67,6 +67,10 @@
       "types": "./dist/catalog.d.ts",
       "default": "./dist/catalog.js"
     },
+    "./tells": {
+      "types": "./dist/tells.d.ts",
+      "default": "./dist/tells.js"
+    },
     "./testing": {
       "types": "./dist/testing.d.ts",
       "default": "./dist/testing.js"
