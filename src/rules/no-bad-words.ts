@@ -381,6 +381,14 @@ export const entries: BadWordEntry[] = [
       "Rewrite this phrase to go from 'a beacon of X' to describe it with an adjective that conveys X. Example: 'Her smile, once a beacon of warmth' => 'Her smile, once warm'.",
   },
   {
+    phrase: "beat (comparison)",
+    category: "ai",
+    selector:
+      ":matches([form=beats i][xpos=VERB], :matches([Mood=Pot], [Mood=Nec], [Mood=Cnd], [lemma=do]) > [form=beat i][xpos=VERB]):not(:has(> :matches([PronType=Prs]:not([form=it i]):not([form=its i]), [lemma=heart], [lemma=pulse], [lemma=retreat], [lemma=cook], [lemma=chef], [lemma=drummer], [lemma=rain], [lemma=sun], [form=per i], [form=against i], [form=down i]))):not(:has(> [xpos=NOUN] > [PronType=Prs]:not([form=it i]):not([form=its i]))):not(:matches([Mood=Pot], [Mood=Nec], [Mood=Cnd], [lemma=do]):has(> [PronType=Prs]:not([form=it i]):not([form=its i])) > *)",
+    message:
+      "'Beats' turns a comparison into a contest: 'the year beats the amount'. Say which is larger and by how much: 'ten more years add more than twice the amount'",
+  },
+  {
     phrase: "beat a retreat",
     category: "redundancy",
     selector: "[lemma=beat] > [lemma=retreat]",
@@ -561,7 +569,7 @@ export const entries: BadWordEntry[] = [
     phrase: "carry a weight",
     category: "ai",
     selector: "[lemma=carry] > [lemma=weight]",
-    suggestions: [":inflect(matter)", ":inflect(count)"],
+    suggestions: [":inflect(count)"],
   },
   {
     phrase: "catalyst",
@@ -1714,6 +1722,14 @@ export const entries: BadWordEntry[] = [
     selector: "[lemma=mark] > [lemma=point] > [form=turning i]",
     message:
       "Say what changed and when, e.g. 'it marked a turning point in the war' => 'from then on the war went the other way'",
+  },
+  {
+    phrase: "matter (verb)",
+    category: "ai",
+    selector:
+      "[lemma=matter][xpos=VERB]:not(:has(> :matches([lemma=not], [form=never i], [form=longer i], [PronType=Neg], [form=subject i], [form=grey i], [form=gray i], [form=dark i], [form=white i], [form=organic i], [form=particulate i], [form=volatile i], [form=printed i])))",
+    message:
+      "Saying that something matters tells the reader nothing about it: 'That is why the year you start matters so much'. Say what it changes: 'Start ten years sooner and the total doubles'",
   },
   {
     phrase: "may vary",

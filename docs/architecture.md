@@ -16,6 +16,82 @@ Nor does routine history: git already records what changed and when.
 
 ## Log
 
+### 2026-10-03 — "beats" and "matters" are list entries, and they needed a parser fix first
+
+Two entries joined `no-bad-words` under `ai`. "beat (comparison)" reports
+"beats" used to rank two things ("the year beats the amount"). "matter (verb)"
+reports a sentence that says something matters without saying what it
+changes. A third shape, a "can" set against a "can't" ("The amount can be
+fixed later. The start date can't."), is a tell in `src/tells.ts`, because it
+is a sentence pattern that can span two sentences.
+
+The first version of this work put all three in `src/tells.ts` as word-order
+detectors, because artisan tagged "beats" and "matters" as nouns in the
+sentences that prompted it. That was the wrong repair. The fault was in
+artisan, and it is fixed there: see the 2026-10-03 entry in artisan's
+`docs/architecture.md`. With that fix both selectors match every sentence of
+the request under both loaders.
+
+The entries need artisan newer than the published 0.1.0. This checkout runs
+against the sibling `../artisan` through `npm install --no-save ../artisan`.
+`package.json` still says `^0.1.0`. Until artisan is published and the range
+is raised, a fresh install gets the old parser, and the two entries miss the
+sentences they were written for.
+
+What the selectors give up:
+
+- "beat" matches "beats", and "beat" under a modal or "do" ("can 10 years beat
+  30", "does beat"). Past-tense "beat" is a fight or a match, so "Stocks beat
+  bonds" is missed. These stop the report: a personal pronoun other than "it"
+  on the verb or on its modal; a possessive person on a noun below it ("beats
+  his dog"); the subjects "heart", "pulse", "cook", "chef", "drummer", "rain"
+  and "sun"; and "per", "against", "down" and "retreat". A selector cannot
+  read capitals or tell a person from a thing, so "Brazil beats Germany",
+  "The man beats the dog" and "Police will beat protesters" report. So does
+  the noun where the parser calls it a verb: "four beats in every bar", "The
+  drum beats grew louder".
+- "matter" matches the verb unless "not", "never", "longer" or a negative
+  pronoun hangs from it, or one of nine words that make a compound with the
+  noun ("dark", "grey", "subject", "volatile"). "It doesn't matter" and
+  "nothing else matters" pass. Where the parser reads the noun as a verb the
+  entry reports it: "for that matter", "They discussed family matters" under
+  the development loader.
+- Misses: "The things people say matter", "Early beats big", and "An early
+  start beats, by a wide margin, a bigger deposit" under the trained loader.
+
+The word-order detectors for these two stay in `src/tells.ts` as a fallback.
+They run only on a word the parser did not tag VERB, so one word is never
+reported twice. They still catch "Being consistent matters more than being
+clever" and "Starting early beats saving more", which the trained loader tags
+as nouns. The fallback leaves "matters" alone after a bare noun that follows
+a verb ("discussed family matters") and "matter" straight after a verb
+("convert matter into energy").
+
+The "can / can't" tell, and what keeps it quiet:
+
+- Across two sentences, the second must open with its "can't" within five
+  words. A full "can't" clause must share a subject word or a verb with the
+  first sentence. A bare "can't" must have a different subject, or "He asked
+  if I can come. I can't." reports. The pair is skipped across a blank line,
+  a list marker, a question or quoted speech. It needs exactly one character
+  between the sentences, so two spaces or a Windows line break hide it.
+  "could / couldn't" and "can no longer" are not covered.
+- Inside one sentence, "but", "yet" or a comma has to separate the two.
+  Without one, only a bare "can't" at the end ("You can do what I can't") or
+  a repeated verb ("buys something your later pay cheques can't buy") counts.
+  "You can say that you can't come" passes. "I can swim but I can't dive"
+  reports, because it is the same contrast with the full stop removed.
+- Known false report: "He said I can leave. I can't wait."
+
+Three independent reviews ran. They found the pair reaching across headings
+and list items, "to beat the record" reporting, a bare "can't" answering any
+earlier "can", literal beating under the entry, a "can't" inside a "that"
+clause, and the containment pair with "as a matter of fact". Each is fixed and
+has a test, except the cases listed above as known.
+
+"carry a weight" offered "matter" as its first replacement. It now offers
+"count" alone, so the fix no longer trips the new entry.
+
 ### 2026-10-02 — machine tells are found from the words, because the parse cannot be trusted on them
 
 `src/tells.ts` finds five shapes that model-written prose keeps producing, and

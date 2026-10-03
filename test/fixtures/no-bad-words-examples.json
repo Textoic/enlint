@@ -841,6 +841,16 @@
       "fixed": "She refuses to sign the contract."
     }
   ],
+  "beat (comparison)": [
+    {
+      "text": "Over thirty years the year beats the amount.",
+      "fixed": "Over thirty years ten more years add more than twice the amount."
+    },
+    {
+      "text": "Ten years of patience will beat any clever trick.",
+      "fixed": "Ten years of patience will earn more than any clever trick."
+    }
+  ],
   "beat a retreat": [
     {
       "text": "The manager beat a retreat from the heated discussion.",
@@ -1390,11 +1400,11 @@
   "carry a weight": [
     {
       "text": "Her words carried a weight in the quiet room.",
-      "fixed": "Her words mattered in the quiet room."
+      "fixed": "Her words counted in the quiet room."
     },
     {
       "text": "The legacy carries a weight.",
-      "fixed": "The legacy matters."
+      "fixed": "The legacy counts."
     }
   ],
   "catalyst": [
@@ -3079,6 +3089,16 @@
     {
       "text": "Two decisions in 1994 kept shaping the market for a decade.",
       "fixed": "Two decisions in 1994 set prices for the next decade."
+    }
+  ],
+  "matter (verb)": [
+    {
+      "text": "The year you start matters more than the sum.",
+      "fixed": "An early start adds more than a larger sum."
+    },
+    {
+      "text": "The first ten years matter most.",
+      "fixed": "The first ten years produce half of the total."
     }
   ],
   "may vary": [

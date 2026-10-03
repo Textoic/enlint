@@ -143,6 +143,7 @@ describe("no-bad-words entries", () => {
     ["interplay", "a complex interplay", "span"],
     ["it is worth noting", "it seems important to note", "advice"],
     ["landscape", "evolving landscape", "advice"],
+    ["matter (verb)", "as a matter of fact", "span"],
     ["meticulous", "meticulous attention", "span"],
     ["multifaceted", "a multifaceted nature", "span"],
     ["navigate", "ability to navigate", "advice"],

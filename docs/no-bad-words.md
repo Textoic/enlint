@@ -66,6 +66,7 @@ Sorted ignoring a leading "a", "an" or "the", so "a beacon of" files under B.
 | be unsure                                               | Explained verbs          | `:inflect(doubt)`                                                                                                                                                                                        |
 | be unwilling                                            | Explained verbs          | `:inflect(refuse)`                                                                                                                                                                                       |
 | a beacon of                                             | Clichés                  | Rewrite this phrase to go from 'a beacon of X' to describe it with an adjective that conveys X. Example: 'Her smile, once a beacon of warmth' => 'Her smile, once warm'.                                 |
+| beat (comparison)                                       | AI writing               | 'Beats' turns a comparison into a contest: 'the year beats the amount'. Say which is larger and by how much: 'ten more years add more than twice the amount'                                             |
 | beat a retreat                                          | Redundancies             | `:inflect(retreat)`                                                                                                                                                                                      |
 | beauteous / ravishing / splendiferous / pulchritudinous | Inelegant variations     | `beautiful`                                                                                                                                                                                              |
 | become aware of                                         | Explained verbs          | `:inflect(realize)`                                                                                                                                                                                      |
@@ -120,7 +121,7 @@ Sorted ignoring a leading "a", "an" or "the", so "a beacon of" files under B.
 | cameo appearance                                        | Redundancies             | `cameo`                                                                                                                                                                                                  |
 | cannot help but                                         | Empty phrases            | _delete_                                                                                                                                                                                                 |
 | carefully constructed                                   | AI writing               | `well-planned`, `thoughtfully put together`                                                                                                                                                              |
-| carry a weight                                          | AI writing               | `:inflect(matter)`, `:inflect(count)`                                                                                                                                                                    |
+| carry a weight                                          | AI writing               | `:inflect(count)`                                                                                                                                                                                        |
 | catalyst                                                | Inelegant variations     | `:inflect(trigger)`, `:inflect(cause)`                                                                                                                                                                   |
 | catalyze                                                | Inelegant variations     | `:inflect(trigger)`, `:inflect(cause)`                                                                                                                                                                   |
 | cause a drop in                                         | Inelegant variations     | `:inflect(reduce)`                                                                                                                                                                                       |
@@ -284,6 +285,7 @@ Sorted ignoring a leading "a", "an" or "the", so "a beacon of" files under B.
 | just only                                               | Inelegant variations     | `just`                                                                                                                                                                                                   |
 | juxtapose                                               | Inelegant variations     | `:inflect(compare)`, `:inflect(contrast)`                                                                                                                                                                |
 | kind of / sort of                                       | Hedges                   | Avoid cautious language to make your writing more persuasive                                                                                                                                             |
+| land near/around                                        | AI writing               | `:inflect(give) you`                                                                                                                                                                                     |
 | landscape                                               | AI writing               | If you mean a field, a market or a situation rather than scenery, say which                                                                                                                              |
 | last but not least                                      | Inelegant variations     | `finally`                                                                                                                                                                                                |
 | a lasting/indelible mark                                | AI writing               | Say what the thing actually changed, instead of saying it left something that lasts                                                                                                                      |
@@ -301,6 +303,7 @@ Sorted ignoring a leading "a", "an" or "the", so "a beacon of" files under B.
 | make a lot of sense                                     | Inelegant variations     | Say that it is logical: 'the plan makes a lot of sense' => 'the plan is logical'                                                                                                                         |
 | make an attempt                                         | Inelegant variations     | `:inflect(try)`                                                                                                                                                                                          |
 | mark a turning point                                    | AI writing               | Say what changed and when, e.g. 'it marked a turning point in the war' => 'from then on the war went the other way'                                                                                      |
+| matter (verb)                                           | AI writing               | Saying that something matters tells the reader nothing about it: 'That is why the year you start matters so much'. Say what it changes: 'Start ten years sooner and the total doubles'                   |
 | may vary                                                | Hedges                   | Say what changes it, or give the range                                                                                                                                                                   |
 | meticulous                                              | AI writing               | Rewrite using 'detailed', 'accurate' or 'thorough' if describing something, or 'perfectionist' or 'conscientious' if describing someone                                                                  |
 | meticulous attention                                    | AI writing               | `special care`                                                                                                                                                                                           |
@@ -416,6 +419,7 @@ Sorted ignoring a leading "a", "an" or "the", so "a beacon of" files under B.
 | target an intervention                                  | AI writing               | Say who is helped and how, instead of 'targeted interventions'                                                                                                                                           |
 | tbh                                                     | Inelegant variations     | `honestly`                                                                                                                                                                                               |
 | a testament to                                          | Clichés                  | Rewrite this whole sentence to avoid using 'testament' as a metaphor. Describe something as 'proof' or 'evidence' instead.                                                                               |
+| than you think                                          | AI writing               | _delete_                                                                                                                                                                                                 |
 | that is to say                                          | Inelegant variations     | `that :inflect(be)`                                                                                                                                                                                      |
 | think in terms of                                       | Inelegant variations     | `:inflect(think) of`                                                                                                                                                                                     |
 | thrilling                                               | AI writing               | `exciting`, `exhilarating`                                                                                                                                                                               |
@@ -499,7 +503,7 @@ broader ones.
 **adversity** — face adversity  
 **affluent** — affluent  
 **after** — after all is said and done  
-**against** — heart pounding against one's ribs  
+**against** — beat (comparison); heart pounding against one's ribs  
 **age** — in the digital age; in this day and age  
 **agency** — through the agency/medium of  
 **agreed** — it is agreed/probable/conceivable that  
@@ -523,6 +527,7 @@ broader ones.
 **approach** — an approach ensures  
 **area** — identify an area of improvement  
 **argue** — experts/critics argue; it might be said/argued; one might say/argue  
+**around** — land near/around  
 **as** — as a matter of fact; as a result of; as far as I am concerned; as mentioned earlier; as to whether; as we can see; as yet; busy as a bee; clear as crystal; inasmuch as; quick as a flash; regard as being; serve/stand/function/operate as; white as a sheet  
 **associated** — associated with  
 **association** — in association with  
@@ -539,7 +544,8 @@ broader ones.
 **basis** — on a regular basis; on the basis of  
 **be** — after all is said and done; as far as I am concerned; be a testament to; be aware/cognizant/conscious of; be familiar/acquainted with; be in need of; be in possession of; be not sure; be not willing; be unsure; be unwilling; he is the man who is; is a reminder; it could be suggested that; it is agreed/probable/conceivable that; it is clear to me; it is important/critical/crucial to; it is important/critical/crucial/desirable to; it is worth noting; it might be said/argued; it might be the case/possible that; it seems important to note; let bygones be bygones; might be a reason why/for; she is the woman who is; the stakes are high; that is to say; to be honest; what is the reason  
 **beacon** — a beacon of  
-**beat** — beat a retreat  
+**beat** — beat (comparison); beat a retreat  
+**beats** — beat (comparison)  
 **beauteous** — beauteous / ravishing / splendiferous / pulchritudinous  
 **beauty** — natural beauty  
 **become** — become aware of; become dry; become known/apparent; become liquid; become pregnant; become solid; become/get different; become/get established; become/get hot; become/get large; become/get smaller/shorter; become/get smaller/shorter than; become/get taller/bigger; become/get taller/bigger than; become/get/grow old; become/get/make blacker; become/get/make cold; become/get/make damp; become/get/make darker; become/get/make deep; become/get/make lighter; become/get/make longer; become/get/make stronger; become/get/make worse; become/make better; become/make broad; become/make even; become/make stiff; become/make strong; become/make sweet; become/make thick  
@@ -598,6 +604,7 @@ broader ones.
 **certainly** — certainly  
 **challenge** — despite the challenge/fact  
 **chase** — cut to the chase  
+**chef** — beat (comparison)  
 **chest** — heart pounding in one's chest  
 **chew** — bite off more than one can chew  
 **choice** — alternative choice  
@@ -637,6 +644,7 @@ broader ones.
 **continue** — continue to inspire  
 **contrast** — stand in stark contrast; a stark contrast  
 **contribute** — contribute to  
+**cook** — beat (comparison)  
 **cornerstone** — cornerstone  
 **corporate** — corporate greed  
 **could** — bite off more than one can chew; do not remember  
@@ -651,6 +659,7 @@ broader ones.
 **cut** — cut to the chase; make a long story short  
 **cutting-edge** — cutting-edge  
 **damp** — become/get/make damp  
+**dark** — matter (verb)  
 **darker** — become/get/make darker  
 **data** — an analysis of the data  
 **day** — at the end of the day; in this day and age  
@@ -673,10 +682,12 @@ broader ones.
 **dimly** — dimly lit  
 **dive** — commence / dive headfirst; deep dive; let's dive into/explore  
 **diverse** — a diverse perspective  
-**do** — do not remember  
+**do** — beat (comparison); do not remember  
 **done** — after all is said and done; easier said than done  
 **doubt** — beyond a shadow of a doubt  
+**down** — beat (comparison)  
 **drop** — cause a drop in  
+**drummer** — beat (comparison)  
 **dry** — become dry  
 **during** — during the course of  
 **dynamic** — dynamic  
@@ -712,6 +723,7 @@ broader ones.
 **exceptional** — an exceptional performance  
 **exemplify** — exemplify  
 **exhibit** — exhibit a tendency to  
+**expect** — than you think  
 **expectation** — the societal expectation  
 **expert** — experts/critics argue  
 **explore** — aim to explore; let's dive into/explore  
@@ -760,8 +772,10 @@ broader ones.
 **grain** — with a grain/pinch of salt  
 **granted** — assuming/conceding/granted/supposing that  
 **grasp** — fully grasp  
+**gray** — matter (verb)  
 **greed** — corporate greed  
 **green** — green with envy  
+**grey** — matter (verb)  
 **ground-truth** — ground-truth  
 **ground-truths** — ground-truth  
 **groundbreaking** — innovative / groundbreaking / avant-garde / newfound  
@@ -778,7 +792,7 @@ broader ones.
 **he** — he is the man who is  
 **head** — off the top of my head  
 **headfirst** — commence / dive headfirst  
-**heart** — heart pounding against one's ribs; heart pounding in one's chest; in the heart of  
+**heart** — beat (comparison); heart pounding against one's ribs; heart pounding in one's chest; in the heart of  
 **hearty** — hale and hearty  
 **help** — cannot help but  
 **high** — the stakes are high  
@@ -791,6 +805,7 @@ broader ones.
 **i** — I believe that; the way I see it; the way I think/feel about it  
 **ideate** — cerebrate / ideate / intellectualize / logicalize  
 **identify** — identify an area of improvement  
+**imagine** — than you think  
 **imho** — imo / imho / personally  
 **imo** — imo / imho / personally  
 **implication** — implication  
@@ -825,7 +840,8 @@ broader ones.
 **intricacy** — intricacies  
 **intricate** — intricate  
 **introduce** — introduce for the first time  
-**it** — it is agreed/probable/conceivable that; it is clear to me; it is important/critical/crucial to; it is important/critical/crucial/desirable to; it is worth noting; it might be said/argued; it might be the case/possible that; it seems important to note; it seems to me; it seems/appears that; the way I see it; the way I think/feel about it; when it comes to  
+**it** — beat (comparison); it is agreed/probable/conceivable that; it is clear to me; it is important/critical/crucial to; it is important/critical/crucial/desirable to; it is worth noting; it might be said/argued; it might be the case/possible that; it seems important to note; it seems to me; it seems/appears that; the way I see it; the way I think/feel about it; when it comes to  
+**its** — beat (comparison)  
 **journey** — the journey begins  
 **judgement** — cloud one's judgement; in my opinion/view/estimation/judgement  
 **just** — just only  
@@ -834,6 +850,7 @@ broader ones.
 **kind** — kind of / sort of  
 **knowledge** — have knowledge of  
 **known** — become known/apparent  
+**land** — land near/around  
 **landscape** — evolving landscape; landscape  
 **large** — become/get large; loom large  
 **last** — last but not least  
@@ -853,7 +870,7 @@ broader ones.
 **lit** — dimly lit  
 **load-bearing** — load-bearing  
 **logicalize** — cerebrate / ideate / intellectualize / logicalize  
-**longer** — become/get/make longer  
+**longer** — become/get/make longer; matter (verb)  
 **loom** — loom large  
 **loose** — at loose ends  
 **lot** — make a lot of sense  
@@ -863,7 +880,7 @@ broader ones.
 **make** — become/get/make blacker; become/get/make cold; become/get/make damp; become/get/make darker; become/get/make deep; become/get/make lighter; become/get/make longer; become/get/make stronger; become/get/make worse; become/make better; become/make broad; become/make even; become/make stiff; become/make strong; become/make sweet; become/make thick; make a long story short; make a lot of sense; make an attempt  
 **man** — he is the man who is  
 **mark** — leave a mark; mark a turning point; represent/mark a shift  
-**matter** — as a matter of fact  
+**matter** — as a matter of fact; matter (verb)  
 **may** — may vary  
 **me** — according to me; it is clear to me; it seems to me  
 **medium** — through the agency/medium of  
@@ -885,13 +902,15 @@ broader ones.
 **natural** — natural beauty  
 **nature** — in the nature of  
 **navigate** — ability to navigate; navigate; navigate the complex  
+**near** — land near/around  
 **necessity** — feel the necessity for  
 **need** — be in need of; emphasize/underscore/highlight the need/potential; want/need strongly/desperately  
 **neighborhood** — in the neighborhood of  
 **nestled** — nestled  
+**never** — matter (verb)  
 **new** — a new avenue  
 **newfound** — innovative / groundbreaking / avant-garde / newfound  
-**not** — be not sure; be not willing; cannot help but; do not remember; last but not least; not anticipate; not fully understand  
+**not** — be not sure; be not willing; cannot help but; do not remember; last but not least; matter (verb); not anticipate; not fully understand  
 **notably** — importantly/notably/interestingly  
 **note** — it is worth noting; it seems important to note  
 **notwithstanding** — notwithstanding  
@@ -915,13 +934,16 @@ broader ones.
 **optimise** — optimize  
 **optimize** — optimize  
 **order** — by orders of magnitude; in order to  
+**organic** — matter (verb)  
 **out** — hold out an olive branch  
 **over** — over the course of  
 **owing** — owing to  
 **paradigm** — paradigm  
 **part** — for the most part  
+**particulate** — matter (verb)  
 **pave** — pave the way; pave the way for the future  
 **peace** — smoke the peace pipe  
+**per** — beat (comparison)  
 **performance** — an exceptional performance  
 **personae** — personae  
 **personal** — from my personal perspective/standpoint  
@@ -952,6 +974,7 @@ broader ones.
 **present** — at the present time; offer/present/provide something unique/valuable  
 **pressure** — mounting pressure  
 **pretty** — rather / somewhat / fairly / quite / pretty  
+**printed** — matter (verb)  
 **prior** — prior to  
 **probable** — it is agreed/probable/conceivable that  
 **process** — in the process of  
@@ -963,6 +986,7 @@ broader ones.
 **proximity** — close proximity  
 **public** — shape the public opinion  
 **pulchritudinous** — beauteous / ravishing / splendiferous / pulchritudinous  
+**pulse** — beat (comparison)  
 **purpose** — for the purpose of; serve the purpose of  
 **purposes** — for all intents and purposes  
 **pursuit** — a relentless pursuit  
@@ -973,6 +997,7 @@ broader ones.
 **quietly** — speak/say quietly  
 **quite** — rather / somewhat / fairly / quite / pretty  
 **ragged** — breath coming in ragged gasps  
+**rain** — beat (comparison)  
 **raise** — raise an important question  
 **rather** — rather / somewhat / fairly / quite / pretty  
 **ravishing** — beauteous / ravishing / splendiferous / pulchritudinous  
@@ -988,6 +1013,7 @@ broader ones.
 **re-verifies** — re-derive/re-verify/re-measure  
 **re-verify** — re-derive/re-verify/re-measure  
 **re-verifying** — re-derive/re-verify/re-measure  
+**realize** — than you think  
 **realm** — in the realm of; realm  
 **reason** — by cause/reason/virtue of; for the reason that; might be a reason why/for; might have been a reason why/for; what is the reason  
 **reference** — with or in regard/reference to  
@@ -1005,7 +1031,7 @@ broader ones.
 **represent** — represent/mark a shift  
 **resonate** — resonate; resonate with  
 **result** — as a result of  
-**retreat** — beat a retreat  
+**retreat** — beat (comparison); beat a retreat  
 **revolutionise** — revolutionize  
 **revolutionize** — revolutionize  
 **rib** — heart pounding against one's ribs  
@@ -1078,11 +1104,13 @@ broader ones.
 **strongly** — want/need strongly/desperately  
 **structural** — structural  
 **structurally** — structurally  
+**subject** — matter (verb)  
 **suddenly** — leave suddenly  
 **suggest** — it could be suggested that  
 **summarise** — to summarize  
 **summarize** — to summarize  
 **summary** — in summary/conclusion  
+**sun** — beat (comparison)  
 **supposing** — assuming/conceding/granted/supposing that  
 **sure** — be not sure  
 **swear** — swear to protect  
@@ -1101,12 +1129,12 @@ broader ones.
 **tendency** — exhibit a tendency to  
 **terms** — think in terms of  
 **testament** — be a testament to; a testament to  
-**than** — become/get smaller/shorter than; become/get taller/bigger than; bite off more than one can chew; easier said than done  
+**than** — become/get smaller/shorter than; become/get taller/bigger than; bite off more than one can chew; easier said than done; than you think  
 **that** — assuming/conceding/granted/supposing that; at a point in time; at that point in time; the fact that; for the reason that; I believe that; in the event/case of; it is agreed/probable/conceivable that; it might be the case/possible that; it seems/appears that; on the assumption that; on the grounds that; that is to say; with the condition that  
 **the** — at the end of the day; the fact that; for the most part; for the reason that; in the event/case of; in the heart of; in the neighborhood of; in the process of; on the assumption that; up to the time/moment/point when; the very; the way I see it; the way I think/feel about it  
 **thick** — become/make thick  
 **things** — all things being equal; in the scheme of things  
-**think** — think in terms of; the way I think/feel about it  
+**think** — than you think; think in terms of; the way I think/feel about it  
 **this** — at a point in time; at this point in time; in this day and age; in this section  
 **thrilling** — thrilling  
 **through** — through the agency/medium of  
@@ -1162,6 +1190,7 @@ broader ones.
 **vis-à-vis** — vis-a-vis  
 **vital** — a crucial/pivotal/vital/key role/moment  
 **voice** — a voice fills  
+**volatile** — matter (verb)  
 **volumes** — speaks volumes  
 **walk** — walk slowly  
 **want** — want/need strongly/desperately  
@@ -1175,7 +1204,7 @@ broader ones.
 **where** — in a world where; up to the time/moment/point when  
 **whether** — as to whether  
 **whilst** — whilst  
-**white** — white as a sheet  
+**white** — matter (verb); white as a sheet  
 **why** — might be a reason why/for; might have been a reason why/for  
 **willing** — be not willing  
 **with** — align with; associated with; be familiar/acquainted with; connected with/to; green with envy; in accordance with; in association with; in connection with/to; resonate with; with a grain/pinch of salt; with a view to; with or in regard/reference to; with practiced ease; with the advent of; with the condition that  
@@ -1188,7 +1217,8 @@ broader ones.
 **worse** — become/get/make worse  
 **worth** — it is worth noting; it seems important to note  
 **woven** — woven into  
-**yet** — as yet
+**yet** — as yet  
+**you** — than you think
 
 ## By category
 
@@ -1547,179 +1577,183 @@ Default message: _Avoid clichés that make your writing stale_
 | with a grain/pinch of salt        | `with caution`                                                                                                                                                                                           |
 | with practiced ease               | `effortlessly`                                                                                                                                                                                           |
 
-### AI writing (168)
+### AI writing (172)
 
 Words and expressions that turn up constantly in text generated by language models. None of them is wrong on its own; together they are a house style, and readers have learned to recognize it.
 
 Default message: _Avoid words and expressions that are common in AI-generated writing._
 
-| Expression                                         | Replace with                                                                                                                                                 |
-| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ability to navigate                                | Rewrite with the equivalent of 'can handle' or 'knows how to get through'                                                                                    |
-| add a layer                                        | Rewrite with 'add an extra element'                                                                                                                          |
-| add a layer of complexity                          | `:inflect(complicate)`                                                                                                                                       |
-| address the root cause                             | Name what actually causes the problem and say you are fixing that, instead of 'addressing the root cause'                                                    |
-| aim to explore                                     | Say what the work does, not what it aims to do: 'the study aims to explore X' => 'the study looks at X'                                                      |
-| align with                                         | `:inflect(match)`, `:inflect(agree)`, `:inflect(fit)`                                                                                                        |
-| an analysis of the data                            | Rewrite as a phrase: 'the data shows'                                                                                                                        |
-| an approach ensures                                | Say who does what and what happens as a result, instead of crediting the approach                                                                            |
-| bolster                                            | `:inflect(strengthen)`, `:inflect(support)`                                                                                                                  |
-| built on top of                                    | When one technology relies on another, say that the other powers it: 'the app is built on top of Postgres' => 'Postgres powers the app'                      |
-| byte-for-byte                                      | Write 'identical', or say what you compared and how                                                                                                          |
-| byte-identical/bit-identical                       | `identical`                                                                                                                                                  |
-| carefully constructed                              | `well-planned`, `thoughtfully put together`                                                                                                                  |
-| carry a weight                                     | `:inflect(matter)`, `:inflect(count)`                                                                                                                        |
-| certainly                                          | Cut it, along with whatever qualifies it: 'the release will almost certainly slip' => 'the release will slip'                                                |
-| choose one's words carefully                       | Rewrite using 'watching (his/her) words'                                                                                                                     |
-| cloud one's judgement                              | Rewrite with the equivalent of 'bias', either as a verb or as a noun                                                                                         |
-| commitment to                                      | Use a verb: say what they promised to do                                                                                                                     |
-| a commitment to excellence                         | Rewrite this as a verb expressing someone is 'decided to do things right'                                                                                    |
-| a complex interplay                                | `link`, `complicated relationship`                                                                                                                           |
-| comprehensive                                      | `broad`, `wide`, `complete`                                                                                                                                  |
-| continue to inspire                                | `still :inflect(inspire)`                                                                                                                                    |
-| contribute to                                      | `:inflect(lead)`, `:inflect(cause)`                                                                                                                          |
-| cornerstone                                        | `:inflect(foundation)`, `:inflect(basis)`                                                                                                                    |
-| a crucial/pivotal/vital/key role/moment            | Say what the person or thing actually did                                                                                                                    |
-| cultivate                                          | `:inflect(build)`, `:inflect(grow)`, `:inflect(develop)`                                                                                                     |
-| cutting-edge                                       | `new`, `latest`, `modern`                                                                                                                                    |
-| deep dive                                          | Rewrite when it's a metaphor for a long exploration of a subject                                                                                             |
-| deeply rooted                                      | `ingrained`, `entrenched`                                                                                                                                    |
-| deeply-rooted                                      | `ingrained`, `entrenched`                                                                                                                                    |
-| demonstrate                                        | `:inflect(show)`, `:inflect(display)`                                                                                                                        |
-| despite the challenge/fact                         | Name the specific obstacle, or drop the concession and state what happened                                                                                   |
-| a diverse perspective                              | `different :inflect(view)`, `varied :inflect(opinion)`                                                                                                       |
-| dynamic                                            | `changing`, `active`                                                                                                                                         |
-| echo                                               | When it means 'repeat', rewrite as 'repeat'. When it means 'resonate', rewrite as 'resonate'                                                                 |
-| emphasize                                          | `:inflect(underline)`, `:inflect(stress)`, `:inflect(point) out`                                                                                             |
-| emphasize/underscore/highlight the need/potential  | Say what is needed or what is possible, instead of reporting that a need or a potential is being pointed at                                                  |
-| endeavor (noun)                                    | `:inflect(attempt)`, `:inflect(effort)`                                                                                                                      |
-| endeavor (verb)                                    | `:inflect(try)`                                                                                                                                              |
-| enduring                                           | `lasting`                                                                                                                                                    |
-| an enduring legacy                                 | Drop 'enduring', or say what the person left behind that people still use                                                                                    |
-| enhance                                            | `:inflect(improve)`, `:inflect(boost)`                                                                                                                       |
-| ensure compliance                                  | Rewrite to mean 'make sure (someone) plays/follows along' or 'make (someone) go along with it'                                                               |
-| the evidence base                                  | `:inflect(evidence)`                                                                                                                                         |
-| evolving landscape                                 | Name the thing that is changing, and say how                                                                                                                 |
-| an exceptional performance                         | Rewrite with the equivalent of 'great', 'outstanding' or 'remarkable'                                                                                        |
-| exemplify                                          | `:inflect(show)`                                                                                                                                             |
-| experts/critics argue                              | Avoid vague generalizations, point to specific claims                                                                                                        |
-| face adversity                                     | `:inflect(struggle)`, `:inflect(suffer)`                                                                                                                     |
-| fast-paced                                         | `fast`, `hectic`, `quick`                                                                                                                                    |
-| fleeting                                           | `brief`, `quick`                                                                                                                                             |
-| focal point                                        | `:inflect(center)`, `:inflect(focus)`                                                                                                                        |
-| foster                                             | `:inflect(encourage)`, `:inflect(support)`                                                                                                                   |
-| fully grasp                                        | `entirely :inflect(understand)`, `totally :inflect(get)`                                                                                                     |
-| gain an insight                                    | `:inflect(learn)`, `:inflect(understand)`                                                                                                                    |
-| galvanize                                          | `:inflect(motivate)`, `:inflect(inspire)`, `:inflect(rally)`                                                                                                 |
-| game-changer                                       | `revolutionary`                                                                                                                                              |
-| ground-truth                                       | `reference`                                                                                                                                                  |
-| harness                                            | `:inflect(use)`                                                                                                                                              |
-| highlight                                          | `:inflect(underline)`, `:inflect(stress)`, `:inflect(point) out`                                                                                             |
-| hone one's skills                                  | Rewrite with the equivalent of 'improve (one's) skills'                                                                                                      |
-| identify an area of improvement                    | Rewrite saying what to improve                                                                                                                               |
-| implication                                        | Rewrite the sentence to avoid using a noun here. Say what the implication is instead of saying there is an implication.                                      |
-| importance                                         | Rewrite into a verb that turns 'importance of X' into 'X is important/crucial/critical'.                                                                     |
-| in the digital age                                 | Rewrite to avoid speaking about the 'modern day' or 'digital age', use 'anachronistic' or 'out of date' for things which are out of date.                    |
-| in the heart of                                    | `in`                                                                                                                                                         |
-| industry reports                                   | Avoid vague language. Name the reports and who wrote them                                                                                                    |
-| an initiative aims to                              | Say what the initiative does, not what it aims to do. If it has not done it yet, say when it will                                                            |
-| intricacies                                        | `:inflect(detail)`                                                                                                                                           |
-| intricate                                          | `complex`, `complicated`                                                                                                                                     |
-| is a reminder                                      | Say what it reminds the reader of, or cut the sentence                                                                                                       |
-| the journey begins                                 | Name what is actually starting instead of calling it a journey                                                                                               |
-| landscape                                          | If you mean a field, a market or a situation rather than scenery, say which                                                                                  |
-| a lasting/indelible mark                           | Say what the thing actually changed, instead of saying it left something that lasts                                                                          |
-| lay the groundwork                                 | `:inflect(prepare)`, `:inflect(set) up`                                                                                                                      |
-| leave a mark                                       | `:inflect(make) an impact`, `:inflect(impress)`                                                                                                              |
-| leverage                                           | `:inflect(use)`                                                                                                                                              |
-| load-bearing                                       | Avoid this when used as a metaphor                                                                                                                           |
-| loom large                                         | `inflect(dominate)`                                                                                                                                          |
-| mark a turning point                               | Say what changed and when, e.g. 'it marked a turning point in the war' => 'from then on the war went the other way'                                          |
-| meticulous                                         | Rewrite using 'detailed', 'accurate' or 'thorough' if describing something, or 'perfectionist' or 'conscientious' if describing someone                      |
-| meticulous attention                               | `special care`                                                                                                                                               |
-| meticulously                                       | `accurately`, `exactly`, `precisely`                                                                                                                         |
-| most profound                                      | `deepest`                                                                                                                                                    |
-| mounting pressure                                  | `heat :inflect(rise)`, `tension :inflect(escalate)`                                                                                                          |
-| multifaceted                                       | `complex`, `varied`, `versatile`                                                                                                                             |
-| mutation-tested/mutation-checked/mutation-verified | `tested`                                                                                                                                                     |
-| navigate                                           | Rewrite using the most appropriate from 'making/finding one's way', 'sail' or 'maneuver'                                                                     |
-| navigate the complex                               | Rewrite with the equivalent of 'finding one's way through', and drop 'complex' if the difficulty is already clear                                            |
-| nestled                                            | Write 'sits in' or 'is in'                                                                                                                                   |
-| a new avenue                                       | `new :inflect(possibility)`, `new :inflect(option)`                                                                                                          |
-| not fully understand                               | `partially :inflect(understand)`, `only somewhat :inflect(comprehend)`                                                                                       |
-| nuanced                                            | `subtle`, `complex`                                                                                                                                          |
-| observers have cited                               | Avoid vague claims and statements. Name who said it                                                                                                          |
-| offer/present/provide something unique/valuable    | Say what the thing actually gives the reader, instead of calling it unique or valuable                                                                       |
-| an ongoing dialogue                                | Rewrite with the equivalent of 'they keep talking' and/or say what the talks are about                                                                       |
-| optimize                                           | `:inflect(improve)`, `:inflect(tune)`                                                                                                                        |
-| pave the way                                       | `:inflect(make) way`, `:inflect(aid)`                                                                                                                        |
-| pave the way for the future                        | 'Paving the way' already points forward. Drop 'for the future', or name what it makes possible                                                               |
-| pivotal                                            | `important`, `key`, `central`                                                                                                                                |
-| a pivotal moment                                   | `decisive :inflect(moment)`                                                                                                                                  |
-| plainly                                            | `clearly`, `simply`                                                                                                                                          |
-| play a pivotal/crucial role                        | Say what the person or thing actually did, e.g. 'he played a pivotal role in the deal' => 'he made the deal happen'                                          |
-| a potential risk/concern                           | A risk is already potential. Drop the adjective, or say how likely the harm is                                                                               |
-| potentially lead to                                | `can :inflect(cause)`                                                                                                                                        |
-| pre-fix                                            | Say what you fixed, and when                                                                                                                                 |
-| profound                                           | `deep`                                                                                                                                                       |
-| a prominent figure                                 | `notable :inflect(person)`, `key :inflect(individual)`                                                                                                       |
-| provide insight                                    | `:inflect(clarify)`, `:inflect(explain)`, `:inflect(reveal)`                                                                                                 |
-| push boundaries                                    | `:inflect(innovate)`, `:inflect(pioneer)`                                                                                                                    |
-| raise an important question                        | Avoid filler. Directly state the question                                                                                                                    |
-| re-derive/re-verify/re-measure                     | Drop the 're-': say you worked it out again, and what changed                                                                                                |
-| realm                                              | `:inflect(area)`, `:inflect(field)`                                                                                                                          |
-| reflect broader                                    | Name the bigger thing you mean                                                                                                                               |
-| a relentless pursuit                               | Rewrite using 'drive to get'                                                                                                                                 |
-| a renewed sense                                    | Name the feeling directly: 'a renewed sense of purpose' => 'she knew what she was for again'                                                                 |
-| reply in a tone                                    | Use a speech verb that carries the tone: 'replied in a soft tone' => 'whispered'                                                                             |
-| represent/mark a shift                             | Say what changed, from what to what                                                                                                                          |
-| resonate                                           | Avoid as a metaphor, say how it connects with or matches something else                                                                                      |
-| resonate with                                      | `:inflect(align)`, `:inflect(match)`                                                                                                                         |
-| revolutionize                                      | `:inflect(transform)`, `:inflect(reimagine)`                                                                                                                 |
-| a role in shaping                                  | Rewrite without 'a role' to say what the thing did: 'played a role in shaping society' => 'shaped society'                                                   |
-| seamless                                           | `smooth`                                                                                                                                                     |
-| seamlessly                                         | `smoothly`, `easily`                                                                                                                                         |
-| send shockwaves                                    | `:inflect(reverberate)`, `:inflect(make) waves`, `:inflect(ripple)`                                                                                          |
-| a sense of (noun)                                  | Rewrite using a single noun instead of a phrase. E.g. 'his sense of isolation' => 'his isolation', 'a sense of self' => 'individuality'                      |
-| serve/stand/function/operate as                    | `inflect(be)`                                                                                                                                                |
-| set the stage for                                  | Say what happened next                                                                                                                                       |
-| shape the public opinion                           | Say who ends up believing what, instead of 'shaping public opinion'                                                                                          |
-| shed light                                         | `:inflect(illuminate)`, `:inflect(clarify)`, `:inflect(explain)`                                                                                             |
-| shed light on                                      | `:inflect(explain)`, `:inflect(clarify)`, `:inflect(reveal)`                                                                                                 |
-| showcase                                           | `:inflect(show)`                                                                                                                                             |
-| significant                                        | Prefer a more common, shorter version of the same notion: important, major or big                                                                            |
-| the societal expectation                           | `social :inflect(expectation)`                                                                                                                               |
-| speaks volumes                                     | `shows`, `indicates`, `says a lot`                                                                                                                           |
-| the stakes are high                                | Rewrite with the equivalent of 'there is a lot at risk'                                                                                                      |
-| stand in stark contrast                            | Rewrite with the equivalent of 'X and Y are nothing alike' or 'X clashes with Y'                                                                             |
-| a stark contrast                                   | `clear :inflect(distinction)`, `sharp :inflect(contrast)`                                                                                                    |
-| a stark reminder                                   | `harsh :inflect(reminder)`, `clear :inflect(reminder)`, `strong :inflect(reminder)`                                                                          |
-| a step forward                                     | Rewrite the sentence to use an action verb, e.g. 'it is a step forward for the industry' => 'it advances the industry'                                       |
-| a step toward                                      | Rewrite the sentence to use an action verb, e.g. rewrite 'X is a step toward Y' to 'X brings Y closer', or 'with each step toward X' => 'as he approached X' |
-| streamline                                         | `:inflect(simplify)`                                                                                                                                         |
-| structural                                         | Avoid vague metaphors, use concrete language.                                                                                                                |
-| structurally                                       | Avoid vague metaphors, use concrete language.                                                                                                                |
-| swear to protect                                   | Rewrite with the equivalent of 'vow to defend', or 'pledge to protect'                                                                                       |
-| symbolize its ongoing/enduring/lasting             | Say what the thing keeps doing                                                                                                                               |
-| a symphony of                                      | Rewrite saying something is 'full of X' rather than saying it's a 'symphony of X'                                                                            |
-| synergy/synergize                                  | Delete it, and say what the two things do together                                                                                                           |
-| target an intervention                             | Say who is helped and how, instead of 'targeted interventions'                                                                                               |
-| thrilling                                          | `exciting`, `exhilarating`                                                                                                                                   |
-| a transformative power                             | `driving force`                                                                                                                                              |
-| try to shake                                       | `:inflect(try) to get rid of`                                                                                                                                |
-| a turning point                                    | `crossroads`, `decisive moment`, `watershed`                                                                                                                 |
-| undeniable                                         | `certain`, `sure`                                                                                                                                            |
-| underscore                                         | `:inflect(highlight)`, `:inflect(stress)`, `:inflect(show)`                                                                                                  |
-| understanding                                      | Rewrite the phrase using 'know' or 'understand' acting as verbs.                                                                                             |
-| a unique blend                                     | `particular combination`, `special mix`                                                                                                                      |
-| unleash                                            | `:inflect(release)`, `:inflect(let) loose`, `:inflect(free)`                                                                                                 |
-| unleashed                                          | `unfettered`, `liberated`, `free`, `unbound`                                                                                                                 |
-| unwavering                                         | `unshakable`, `resolute`, `staunch`                                                                                                                          |
-| an unwavering commitment                           | Rewrite with a verb phrase: 'they showed an unwavering commitment to quality' => 'they refused to ship anything shoddy'                                      |
-| vacuously                                          | Say the test proves nothing, and why                                                                                                                         |
-| vibrant                                            | `alive`, `vivid`, `lively`                                                                                                                                   |
-| a voice fills                                      | Generally avoid this cliche, just write what the character said                                                                                              |
-| wedge                                              | Say what got stuck, or what you drove in between                                                                                                             |
-| wedged                                             | `stuck`, `jammed`                                                                                                                                            |
-| work tirelessly                                    | `:inflect(toil)`, `:inflect(strive)`, `:inflect(labor)`                                                                                                      |
-| woven into                                         | `embedded in`, `included in`                                                                                                                                 |
+| Expression                                         | Replace with                                                                                                                                                                           |
+| -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ability to navigate                                | Rewrite with the equivalent of 'can handle' or 'knows how to get through'                                                                                                              |
+| add a layer                                        | Rewrite with 'add an extra element'                                                                                                                                                    |
+| add a layer of complexity                          | `:inflect(complicate)`                                                                                                                                                                 |
+| address the root cause                             | Name what actually causes the problem and say you are fixing that, instead of 'addressing the root cause'                                                                              |
+| aim to explore                                     | Say what the work does, not what it aims to do: 'the study aims to explore X' => 'the study looks at X'                                                                                |
+| align with                                         | `:inflect(match)`, `:inflect(agree)`, `:inflect(fit)`                                                                                                                                  |
+| an analysis of the data                            | Rewrite as a phrase: 'the data shows'                                                                                                                                                  |
+| an approach ensures                                | Say who does what and what happens as a result, instead of crediting the approach                                                                                                      |
+| beat (comparison)                                  | 'Beats' turns a comparison into a contest: 'the year beats the amount'. Say which is larger and by how much: 'ten more years add more than twice the amount'                           |
+| bolster                                            | `:inflect(strengthen)`, `:inflect(support)`                                                                                                                                            |
+| built on top of                                    | When one technology relies on another, say that the other powers it: 'the app is built on top of Postgres' => 'Postgres powers the app'                                                |
+| byte-for-byte                                      | Write 'identical', or say what you compared and how                                                                                                                                    |
+| byte-identical/bit-identical                       | `identical`                                                                                                                                                                            |
+| carefully constructed                              | `well-planned`, `thoughtfully put together`                                                                                                                                            |
+| carry a weight                                     | `:inflect(count)`                                                                                                                                                                      |
+| certainly                                          | Cut it, along with whatever qualifies it: 'the release will almost certainly slip' => 'the release will slip'                                                                          |
+| choose one's words carefully                       | Rewrite using 'watching (his/her) words'                                                                                                                                               |
+| cloud one's judgement                              | Rewrite with the equivalent of 'bias', either as a verb or as a noun                                                                                                                   |
+| commitment to                                      | Use a verb: say what they promised to do                                                                                                                                               |
+| a commitment to excellence                         | Rewrite this as a verb expressing someone is 'decided to do things right'                                                                                                              |
+| a complex interplay                                | `link`, `complicated relationship`                                                                                                                                                     |
+| comprehensive                                      | `broad`, `wide`, `complete`                                                                                                                                                            |
+| continue to inspire                                | `still :inflect(inspire)`                                                                                                                                                              |
+| contribute to                                      | `:inflect(lead)`, `:inflect(cause)`                                                                                                                                                    |
+| cornerstone                                        | `:inflect(foundation)`, `:inflect(basis)`                                                                                                                                              |
+| a crucial/pivotal/vital/key role/moment            | Say what the person or thing actually did                                                                                                                                              |
+| cultivate                                          | `:inflect(build)`, `:inflect(grow)`, `:inflect(develop)`                                                                                                                               |
+| cutting-edge                                       | `new`, `latest`, `modern`                                                                                                                                                              |
+| deep dive                                          | Rewrite when it's a metaphor for a long exploration of a subject                                                                                                                       |
+| deeply rooted                                      | `ingrained`, `entrenched`                                                                                                                                                              |
+| deeply-rooted                                      | `ingrained`, `entrenched`                                                                                                                                                              |
+| demonstrate                                        | `:inflect(show)`, `:inflect(display)`                                                                                                                                                  |
+| despite the challenge/fact                         | Name the specific obstacle, or drop the concession and state what happened                                                                                                             |
+| a diverse perspective                              | `different :inflect(view)`, `varied :inflect(opinion)`                                                                                                                                 |
+| dynamic                                            | `changing`, `active`                                                                                                                                                                   |
+| echo                                               | When it means 'repeat', rewrite as 'repeat'. When it means 'resonate', rewrite as 'resonate'                                                                                           |
+| emphasize                                          | `:inflect(underline)`, `:inflect(stress)`, `:inflect(point) out`                                                                                                                       |
+| emphasize/underscore/highlight the need/potential  | Say what is needed or what is possible, instead of reporting that a need or a potential is being pointed at                                                                            |
+| endeavor (noun)                                    | `:inflect(attempt)`, `:inflect(effort)`                                                                                                                                                |
+| endeavor (verb)                                    | `:inflect(try)`                                                                                                                                                                        |
+| enduring                                           | `lasting`                                                                                                                                                                              |
+| an enduring legacy                                 | Drop 'enduring', or say what the person left behind that people still use                                                                                                              |
+| enhance                                            | `:inflect(improve)`, `:inflect(boost)`                                                                                                                                                 |
+| ensure compliance                                  | Rewrite to mean 'make sure (someone) plays/follows along' or 'make (someone) go along with it'                                                                                         |
+| the evidence base                                  | `:inflect(evidence)`                                                                                                                                                                   |
+| evolving landscape                                 | Name the thing that is changing, and say how                                                                                                                                           |
+| an exceptional performance                         | Rewrite with the equivalent of 'great', 'outstanding' or 'remarkable'                                                                                                                  |
+| exemplify                                          | `:inflect(show)`                                                                                                                                                                       |
+| experts/critics argue                              | Avoid vague generalizations, point to specific claims                                                                                                                                  |
+| face adversity                                     | `:inflect(struggle)`, `:inflect(suffer)`                                                                                                                                               |
+| fast-paced                                         | `fast`, `hectic`, `quick`                                                                                                                                                              |
+| fleeting                                           | `brief`, `quick`                                                                                                                                                                       |
+| focal point                                        | `:inflect(center)`, `:inflect(focus)`                                                                                                                                                  |
+| foster                                             | `:inflect(encourage)`, `:inflect(support)`                                                                                                                                             |
+| fully grasp                                        | `entirely :inflect(understand)`, `totally :inflect(get)`                                                                                                                               |
+| gain an insight                                    | `:inflect(learn)`, `:inflect(understand)`                                                                                                                                              |
+| galvanize                                          | `:inflect(motivate)`, `:inflect(inspire)`, `:inflect(rally)`                                                                                                                           |
+| game-changer                                       | `revolutionary`                                                                                                                                                                        |
+| ground-truth                                       | `reference`                                                                                                                                                                            |
+| harness                                            | `:inflect(use)`                                                                                                                                                                        |
+| highlight                                          | `:inflect(underline)`, `:inflect(stress)`, `:inflect(point) out`                                                                                                                       |
+| hone one's skills                                  | Rewrite with the equivalent of 'improve (one's) skills'                                                                                                                                |
+| identify an area of improvement                    | Rewrite saying what to improve                                                                                                                                                         |
+| implication                                        | Rewrite the sentence to avoid using a noun here. Say what the implication is instead of saying there is an implication.                                                                |
+| importance                                         | Rewrite into a verb that turns 'importance of X' into 'X is important/crucial/critical'.                                                                                               |
+| in the digital age                                 | Rewrite to avoid speaking about the 'modern day' or 'digital age', use 'anachronistic' or 'out of date' for things which are out of date.                                              |
+| in the heart of                                    | `in`                                                                                                                                                                                   |
+| industry reports                                   | Avoid vague language. Name the reports and who wrote them                                                                                                                              |
+| an initiative aims to                              | Say what the initiative does, not what it aims to do. If it has not done it yet, say when it will                                                                                      |
+| intricacies                                        | `:inflect(detail)`                                                                                                                                                                     |
+| intricate                                          | `complex`, `complicated`                                                                                                                                                               |
+| is a reminder                                      | Say what it reminds the reader of, or cut the sentence                                                                                                                                 |
+| the journey begins                                 | Name what is actually starting instead of calling it a journey                                                                                                                         |
+| land near/around                                   | `:inflect(give) you`                                                                                                                                                                   |
+| landscape                                          | If you mean a field, a market or a situation rather than scenery, say which                                                                                                            |
+| a lasting/indelible mark                           | Say what the thing actually changed, instead of saying it left something that lasts                                                                                                    |
+| lay the groundwork                                 | `:inflect(prepare)`, `:inflect(set) up`                                                                                                                                                |
+| leave a mark                                       | `:inflect(make) an impact`, `:inflect(impress)`                                                                                                                                        |
+| leverage                                           | `:inflect(use)`                                                                                                                                                                        |
+| load-bearing                                       | Avoid this when used as a metaphor                                                                                                                                                     |
+| loom large                                         | `inflect(dominate)`                                                                                                                                                                    |
+| mark a turning point                               | Say what changed and when, e.g. 'it marked a turning point in the war' => 'from then on the war went the other way'                                                                    |
+| matter (verb)                                      | Saying that something matters tells the reader nothing about it: 'That is why the year you start matters so much'. Say what it changes: 'Start ten years sooner and the total doubles' |
+| meticulous                                         | Rewrite using 'detailed', 'accurate' or 'thorough' if describing something, or 'perfectionist' or 'conscientious' if describing someone                                                |
+| meticulous attention                               | `special care`                                                                                                                                                                         |
+| meticulously                                       | `accurately`, `exactly`, `precisely`                                                                                                                                                   |
+| most profound                                      | `deepest`                                                                                                                                                                              |
+| mounting pressure                                  | `heat :inflect(rise)`, `tension :inflect(escalate)`                                                                                                                                    |
+| multifaceted                                       | `complex`, `varied`, `versatile`                                                                                                                                                       |
+| mutation-tested/mutation-checked/mutation-verified | `tested`                                                                                                                                                                               |
+| navigate                                           | Rewrite using the most appropriate from 'making/finding one's way', 'sail' or 'maneuver'                                                                                               |
+| navigate the complex                               | Rewrite with the equivalent of 'finding one's way through', and drop 'complex' if the difficulty is already clear                                                                      |
+| nestled                                            | Write 'sits in' or 'is in'                                                                                                                                                             |
+| a new avenue                                       | `new :inflect(possibility)`, `new :inflect(option)`                                                                                                                                    |
+| not fully understand                               | `partially :inflect(understand)`, `only somewhat :inflect(comprehend)`                                                                                                                 |
+| nuanced                                            | `subtle`, `complex`                                                                                                                                                                    |
+| observers have cited                               | Avoid vague claims and statements. Name who said it                                                                                                                                    |
+| offer/present/provide something unique/valuable    | Say what the thing actually gives the reader, instead of calling it unique or valuable                                                                                                 |
+| an ongoing dialogue                                | Rewrite with the equivalent of 'they keep talking' and/or say what the talks are about                                                                                                 |
+| optimize                                           | `:inflect(improve)`, `:inflect(tune)`                                                                                                                                                  |
+| pave the way                                       | `:inflect(make) way`, `:inflect(aid)`                                                                                                                                                  |
+| pave the way for the future                        | 'Paving the way' already points forward. Drop 'for the future', or name what it makes possible                                                                                         |
+| pivotal                                            | `important`, `key`, `central`                                                                                                                                                          |
+| a pivotal moment                                   | `decisive :inflect(moment)`                                                                                                                                                            |
+| plainly                                            | `clearly`, `simply`                                                                                                                                                                    |
+| play a pivotal/crucial role                        | Say what the person or thing actually did, e.g. 'he played a pivotal role in the deal' => 'he made the deal happen'                                                                    |
+| a potential risk/concern                           | A risk is already potential. Drop the adjective, or say how likely the harm is                                                                                                         |
+| potentially lead to                                | `can :inflect(cause)`                                                                                                                                                                  |
+| pre-fix                                            | Say what you fixed, and when                                                                                                                                                           |
+| profound                                           | `deep`                                                                                                                                                                                 |
+| a prominent figure                                 | `notable :inflect(person)`, `key :inflect(individual)`                                                                                                                                 |
+| provide insight                                    | `:inflect(clarify)`, `:inflect(explain)`, `:inflect(reveal)`                                                                                                                           |
+| push boundaries                                    | `:inflect(innovate)`, `:inflect(pioneer)`                                                                                                                                              |
+| raise an important question                        | Avoid filler. Directly state the question                                                                                                                                              |
+| re-derive/re-verify/re-measure                     | Drop the 're-': say you worked it out again, and what changed                                                                                                                          |
+| realm                                              | `:inflect(area)`, `:inflect(field)`                                                                                                                                                    |
+| reflect broader                                    | Name the bigger thing you mean                                                                                                                                                         |
+| a relentless pursuit                               | Rewrite using 'drive to get'                                                                                                                                                           |
+| a renewed sense                                    | Name the feeling directly: 'a renewed sense of purpose' => 'she knew what she was for again'                                                                                           |
+| reply in a tone                                    | Use a speech verb that carries the tone: 'replied in a soft tone' => 'whispered'                                                                                                       |
+| represent/mark a shift                             | Say what changed, from what to what                                                                                                                                                    |
+| resonate                                           | Avoid as a metaphor, say how it connects with or matches something else                                                                                                                |
+| resonate with                                      | `:inflect(align)`, `:inflect(match)`                                                                                                                                                   |
+| revolutionize                                      | `:inflect(transform)`, `:inflect(reimagine)`                                                                                                                                           |
+| a role in shaping                                  | Rewrite without 'a role' to say what the thing did: 'played a role in shaping society' => 'shaped society'                                                                             |
+| seamless                                           | `smooth`                                                                                                                                                                               |
+| seamlessly                                         | `smoothly`, `easily`                                                                                                                                                                   |
+| send shockwaves                                    | `:inflect(reverberate)`, `:inflect(make) waves`, `:inflect(ripple)`                                                                                                                    |
+| a sense of (noun)                                  | Rewrite using a single noun instead of a phrase. E.g. 'his sense of isolation' => 'his isolation', 'a sense of self' => 'individuality'                                                |
+| serve/stand/function/operate as                    | `inflect(be)`                                                                                                                                                                          |
+| set the stage for                                  | Say what happened next                                                                                                                                                                 |
+| shape the public opinion                           | Say who ends up believing what, instead of 'shaping public opinion'                                                                                                                    |
+| shed light                                         | `:inflect(illuminate)`, `:inflect(clarify)`, `:inflect(explain)`                                                                                                                       |
+| shed light on                                      | `:inflect(explain)`, `:inflect(clarify)`, `:inflect(reveal)`                                                                                                                           |
+| showcase                                           | `:inflect(show)`                                                                                                                                                                       |
+| significant                                        | Prefer a more common, shorter version of the same notion: important, major or big                                                                                                      |
+| the societal expectation                           | `social :inflect(expectation)`                                                                                                                                                         |
+| speaks volumes                                     | `shows`, `indicates`, `says a lot`                                                                                                                                                     |
+| the stakes are high                                | Rewrite with the equivalent of 'there is a lot at risk'                                                                                                                                |
+| stand in stark contrast                            | Rewrite with the equivalent of 'X and Y are nothing alike' or 'X clashes with Y'                                                                                                       |
+| a stark contrast                                   | `clear :inflect(distinction)`, `sharp :inflect(contrast)`                                                                                                                              |
+| a stark reminder                                   | `harsh :inflect(reminder)`, `clear :inflect(reminder)`, `strong :inflect(reminder)`                                                                                                    |
+| a step forward                                     | Rewrite the sentence to use an action verb, e.g. 'it is a step forward for the industry' => 'it advances the industry'                                                                 |
+| a step toward                                      | Rewrite the sentence to use an action verb, e.g. rewrite 'X is a step toward Y' to 'X brings Y closer', or 'with each step toward X' => 'as he approached X'                           |
+| streamline                                         | `:inflect(simplify)`                                                                                                                                                                   |
+| structural                                         | Avoid vague metaphors, use concrete language.                                                                                                                                          |
+| structurally                                       | Avoid vague metaphors, use concrete language.                                                                                                                                          |
+| swear to protect                                   | Rewrite with the equivalent of 'vow to defend', or 'pledge to protect'                                                                                                                 |
+| symbolize its ongoing/enduring/lasting             | Say what the thing keeps doing                                                                                                                                                         |
+| a symphony of                                      | Rewrite saying something is 'full of X' rather than saying it's a 'symphony of X'                                                                                                      |
+| synergy/synergize                                  | Delete it, and say what the two things do together                                                                                                                                     |
+| target an intervention                             | Say who is helped and how, instead of 'targeted interventions'                                                                                                                         |
+| than you think                                     | _delete_                                                                                                                                                                               |
+| thrilling                                          | `exciting`, `exhilarating`                                                                                                                                                             |
+| a transformative power                             | `driving force`                                                                                                                                                                        |
+| try to shake                                       | `:inflect(try) to get rid of`                                                                                                                                                          |
+| a turning point                                    | `crossroads`, `decisive moment`, `watershed`                                                                                                                                           |
+| undeniable                                         | `certain`, `sure`                                                                                                                                                                      |
+| underscore                                         | `:inflect(highlight)`, `:inflect(stress)`, `:inflect(show)`                                                                                                                            |
+| understanding                                      | Rewrite the phrase using 'know' or 'understand' acting as verbs.                                                                                                                       |
+| a unique blend                                     | `particular combination`, `special mix`                                                                                                                                                |
+| unleash                                            | `:inflect(release)`, `:inflect(let) loose`, `:inflect(free)`                                                                                                                           |
+| unleashed                                          | `unfettered`, `liberated`, `free`, `unbound`                                                                                                                                           |
+| unwavering                                         | `unshakable`, `resolute`, `staunch`                                                                                                                                                    |
+| an unwavering commitment                           | Rewrite with a verb phrase: 'they showed an unwavering commitment to quality' => 'they refused to ship anything shoddy'                                                                |
+| vacuously                                          | Say the test proves nothing, and why                                                                                                                                                   |
+| vibrant                                            | `alive`, `vivid`, `lively`                                                                                                                                                             |
+| a voice fills                                      | Generally avoid this cliche, just write what the character said                                                                                                                        |
+| wedge                                              | Say what got stuck, or what you drove in between                                                                                                                                       |
+| wedged                                             | `stuck`, `jammed`                                                                                                                                                                      |
+| work tirelessly                                    | `:inflect(toil)`, `:inflect(strive)`, `:inflect(labor)`                                                                                                                                |
+| woven into                                         | `embedded in`, `included in`                                                                                                                                                           |
