@@ -40,13 +40,18 @@ describe("tells: a noun with a clause hung on it", () => {
 });
 
 describe("tells: an idea announced and praised", () => {
-  [
-    "There's one more effect, and it's the one I like best.",
-    "And here's the thing nobody tells you.",
-    "The best part is the price.",
-  ].forEach((text) => {
+  (
+    [
+      [
+        "There's one more effect, and it's the one I like best.",
+        ["teaser", "comma-and"],
+      ],
+      ["And here's the thing nobody tells you.", ["teaser"]],
+      ["The best part is the price.", ["teaser", "equation"]],
+    ] as const
+  ).forEach(([text, kinds]) => {
     it(`finds "${text}"`, () => {
-      assert.deepEqual(kindsIn(text), ["teaser"]);
+      assert.deepEqual(kindsIn(text), kinds);
     });
   });
 
@@ -61,7 +66,7 @@ describe("tells: here is, then a colon", () => {
       kindsIn(
         "Here's the whole job, and it fits in a Saturday afternoon plus some waiting:",
       ),
-      ["announcement"],
+      ["announcement", "comma-and"],
     );
   });
 
@@ -373,5 +378,206 @@ describe("no-bad-words: carry weight", () => {
       error.suggestions?.map(({ text }) => text),
       ["counts"],
     );
+  });
+});
+
+const structures = (text: string, parse: typeof nlp, kind: string) =>
+  tells(parse(text))
+    .filter((tell) => tell.kind === kind)
+    .map(({ start, end }) => text.slice(start, end));
+
+providers.forEach(([provider, parse]) => {
+  describe(`tells: one noun set equal to another, under ${provider}`, () => {
+    (
+      [
+        [
+          "An apostrophe in the middle of a fight is the writer making you stop for a pronunciation exercise.",
+          "An apostrophe in the middle of a fight is the writer",
+        ],
+        [
+          "That flip is time you do not get back, and it lands in the middle of the bit you were actually reading.",
+          "That flip is time",
+        ],
+        [
+          "A puzzle you did not ask for is just an interruption.",
+          "A puzzle you did not ask for is just an interruption",
+        ],
+        [
+          "A village in Dumas was somebody else's street the whole time.",
+          "A village in Dumas was somebody else's street",
+        ],
+        [
+          "Art is the thing you are left with when somebody has worked inside rules.",
+          "Art is the thing",
+        ],
+        ["Because the rules were the work.", "the rules were the work"],
+      ] as const
+    ).forEach(([text, span]) => {
+      it(`finds "${text}"`, () => {
+        assert.deepEqual(structures(text, parse, "equation"), [span]);
+      });
+    });
+
+    [
+      "The house is in the valley.",
+      "The plan is to leave early.",
+      "It was a mistake.",
+      "This is a test.",
+      "There is a problem.",
+      "Is the answer a number?",
+      "The book was written in 1920.",
+      "The report is long.",
+      "The writer is making you stop.",
+      "Thirty years is 3.869 times 1.967.",
+    ].forEach((text) => {
+      it(`leaves "${text}" alone`, () => {
+        assert.deepEqual(structures(text, parse, "equation"), []);
+      });
+    });
+  });
+
+  describe(`tells: a second clause hung on ", and", under ${provider}`, () => {
+    [
+      'People will tell you "But it made the world feel lived in" and sometimes a small detail does that, and a lot of the time the world was already clear.',
+      'They looked, the picture did not answer, and a staff member with a laptop called that "a failure of attention".',
+      "The fog came in, and the boats stayed out.",
+      "The rules are old, and nobody reads them.",
+      "People stand there and feel nothing, and then they decide they have failed some test.",
+    ].forEach((text) => {
+      it(`finds "${text}"`, () => {
+        assert.deepEqual(structures(text, parse, "comma-and"), [", and"]);
+      });
+    });
+
+    [
+      "I bought bread, milk, and eggs.",
+      "She came home, and went to bed.",
+      "He was tired, hungry, and cold.",
+      "We tried the door, the window, and the cellar hatch.",
+      "She wrote the book and he sold it.",
+      "After lunch, and before the meeting, he slept.",
+      "Tom, Ann, and the dog went out.",
+      "I bought bread, milk, and eggs that looked fresh.",
+      "We visited Paris, Rome, and the town where she was born.",
+      "He packed a tent, a stove, and everything he needed.",
+    ].forEach((text) => {
+      it(`leaves "${text}" alone`, () => {
+        assert.deepEqual(structures(text, parse, "comma-and"), []);
+      });
+    });
+  });
+
+  describe(`no-bad-words: "sit" and "land" for where a thing is, under ${provider}`, () => {
+    (
+      [
+        ["The rarest sit with specialists who already wanted them.", "sit"],
+        ["The book sits unfinished on a table.", "sits"],
+        ["The plot sits there.", "sits"],
+        ["The canvas is where the fault sits.", "sits"],
+        ["It sits on shelves in american apartments unread.", "sits"],
+        ["The fog sits over the Court of Chancery.", "sits"],
+        ["The trophy still sits on the shelf.", "sits"],
+      ] as const
+    ).forEach(([text, word]) => {
+      it(`lists "${text}"`, () => {
+        assert.deepEqual(listed(text, parse, "sit (place)"), [word]);
+      });
+    });
+
+    [
+      "She sat on the bench.",
+      "The children sat down.",
+      "People sit in meetings for the whole volume.",
+      "The crowd that stayed will sit with hundreds of pages.",
+      "The cat sat on the mat.",
+      "I'm gonna sit down and read this through.",
+      "Nobody sat near him.",
+      "You sat through that subplot waiting for it to do something.",
+      "They are not sitting there with a red pencil.",
+      "The teacher sat at her desk.",
+      "The king sat on the throne.",
+    ].forEach((text) => {
+      it(`leaves "${text}" alone`, () => {
+        assert.deepEqual(listed(text, parse, "sit (place)"), []);
+      });
+    });
+
+    (
+      [
+        [
+          "That flip is time you do not get back, and it lands in the middle of the bit you were actually reading.",
+          "lands",
+        ],
+        ["The puns do not land.", "land"],
+        ["You can hear where the line lands.", "lands"],
+        ["It means saying a thing so it lands.", "lands"],
+        ["A writer still has to land a sentence.", "land"],
+      ] as const
+    ).forEach(([text, word]) => {
+      it(`lists "${text}"`, () => {
+        assert.deepEqual(listed(text, parse, "land (place)"), [word]);
+      });
+    });
+
+    [
+      "The plane landed at noon.",
+      "She landed a job at the bank.",
+      "We landed in Lisbon.",
+      "The waste land got the same treatment.",
+      "The pilot will land the plane.",
+      "The bird landed on the roof.",
+      "The ball landed in the garden.",
+      "The cat landed on its feet.",
+    ].forEach((text) => {
+      it(`leaves "${text}" alone`, () => {
+        assert.deepEqual(listed(text, parse, "land (place)"), []);
+      });
+    });
+  });
+
+  describe(`no-bad-words: "strip away" and "shared understanding", under ${provider}`, () => {
+    (
+      [
+        ["The edit strips away everything the reader liked.", "strips away"],
+        [
+          "Strip the rhyme away and you are reading prose.",
+          "Strip the rhyme away",
+        ],
+      ] as const
+    ).forEach(([text, span]) => {
+      it(`lists "${text}"`, () => {
+        assert.deepEqual(listed(text, parse, "strip away"), [span]);
+      });
+    });
+
+    ["She stripped the wallpaper.", "Strip that out and it's prose."].forEach(
+      (text) => {
+        it(`leaves "${text}" alone`, () => {
+          assert.deepEqual(listed(text, parse, "strip away"), []);
+        });
+      },
+    );
+
+    it("lists a shared understanding", () => {
+      assert.deepEqual(
+        listed(
+          "They never reach a shared understanding of the book.",
+          parse,
+          "shared understanding",
+        ),
+        ["shared understanding"],
+      );
+    });
+
+    it("leaves a plain understanding to the broader entry", () => {
+      assert.deepEqual(
+        listed(
+          "Our understanding of the rule changed.",
+          parse,
+          "shared understanding",
+        ),
+        [],
+      );
+    });
   });
 });

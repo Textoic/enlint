@@ -142,6 +142,7 @@ describe("no-bad-words entries", () => {
     ["honest", "to be honest", "span"],
     ["interplay", "a complex interplay", "span"],
     ["it is worth noting", "it seems important to note", "advice"],
+    ["land (place)", "land near/around", "span"],
     ["landscape", "evolving landscape", "advice"],
     ["matter (verb)", "as a matter of fact", "span"],
     ["meticulous", "meticulous attention", "span"],

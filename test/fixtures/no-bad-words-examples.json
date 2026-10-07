@@ -4646,5 +4646,45 @@
       "text": "Her grandmother's stories are woven into the novel.",
       "fixed": "Her grandmother's stories are embedded in the novel."
     }
+  ],
+  "strip away": [
+    {
+      "text": "The edit strips away the jokes.",
+      "fixed": "The edit removes the jokes."
+    },
+    {
+      "text": "The new rule stripped away two exemptions.",
+      "fixed": "The new rule removed two exemptions."
+    }
+  ],
+  "shared understanding": [
+    {
+      "text": "The two teams reached a shared understanding of the plan.",
+      "fixed": "The two teams agreed on the plan."
+    },
+    {
+      "text": "The meeting ended without a shared understanding of the budget.",
+      "fixed": "The meeting ended with no agreed budget."
+    }
+  ],
+  "sit (place)": [
+    {
+      "text": "The rarest words sit with specialists.",
+      "fixed": "Only specialists use the rarest words."
+    },
+    {
+      "text": "The book sits unfinished on a table.",
+      "fixed": "Nobody finished the book."
+    }
+  ],
+  "land (place)": [
+    {
+      "text": "The joke lands in the middle of the scene.",
+      "fixed": "The joke interrupts the scene."
+    },
+    {
+      "text": "You can hear where the line lands.",
+      "fixed": "You can hear where the line ends."
+    }
   ]
 }

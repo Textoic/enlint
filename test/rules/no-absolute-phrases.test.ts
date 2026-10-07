@@ -158,6 +158,7 @@ const tests = [
 
 const config = {
   ...defaults,
+  "no-bad-sentence-structures": false,
   "no-bad-words": false,
   "no-high-lexical-density": false,
 };

@@ -1,3 +1,4 @@
+import parseToSubtree from "./parse-to-subtree.js";
 import type { ParsedToken } from "./types/index.js";
 
 export type TellKind =
@@ -8,7 +9,9 @@ export type TellKind =
   | "precise-figure"
   | "beat-comparison"
   | "matters-claim"
-  | "can-cannot";
+  | "can-cannot"
+  | "equation"
+  | "comma-and";
 
 export type Tell = { kind: TellKind; start: number; end: number };
 
@@ -603,6 +606,143 @@ const pairedAbilities = (
   return isAnswered && first && last ? [spanOf("can-cannot", first, last)] : [];
 };
 
+const isBe = (token: ParsedToken) =>
+  token.xpos === "VERB" && wordOf(token) === "be";
+
+const childrenOf = (
+  tokens: ParsedToken[],
+  { misc: { children } }: ParsedToken,
+) => children.map((child) => tokens[child]);
+
+const PLACEHOLDER_SUBJECTS = new Set(["there", "here"]);
+
+const isFullNoun = (token: ParsedToken) =>
+  isCommonNoun(token) && !PLACEHOLDER_SUBJECTS.has(formOf(token));
+
+const helpsAnotherVerb = (tokens: ParsedToken[], be: ParsedToken) =>
+  childrenOf(tokens, be).some(
+    (child) =>
+      child.id > be.id && child.xpos === "VERB" && !opensAClause(child),
+  ) &&
+  !childrenOf(tokens, be).some(
+    (child) => child.id > be.id && isFullNoun(child),
+  );
+
+const isPronounWord = ({ xpos, feats: { PronType } }: ParsedToken) =>
+  xpos === "NOUN" && PronType != null;
+
+const equatedPair = (tokens: ParsedToken[], be: ParsedToken) => {
+  const children = childrenOf(tokens, be);
+  const subject = [...children]
+    .reverse()
+    .find((child) => child.id < be.id && child.xpos === "NOUN");
+  const predicate = children.find(
+    (child) =>
+      child.id > be.id &&
+      child.xpos !== "PUNCT" &&
+      !isAdverb(child) &&
+      !isPronounWord(child),
+  );
+  return subject != null &&
+    predicate != null &&
+    isFullNoun(subject) &&
+    isFullNoun(predicate) &&
+    !isFigure(predicate)
+    ? { subject, predicate }
+    : undefined;
+};
+
+const startOfPhrase = (tokens: ParsedToken[], head: ParsedToken) =>
+  tokens[Math.min(...parseToSubtree(tokens, head.id), head.id)];
+
+const isAsked = (tokens: ParsedToken[]) =>
+  punctuationOf(tokens).includes("Qest");
+
+const equations = (tokens: ParsedToken[]): Tell[] =>
+  isAsked(tokens)
+    ? []
+    : tokens
+        .filter((token) => isBe(token) && !helpsAnotherVerb(tokens, token))
+        .flatMap((be) => {
+          const pair = equatedPair(tokens, be);
+          return pair == null
+            ? []
+            : [
+                spanOf(
+                  "equation",
+                  startOfPhrase(tokens, pair.subject),
+                  pair.predicate,
+                ),
+              ];
+        });
+
+const isComma = ({ feats: { PunctType } }: ParsedToken) => PunctType === "Comm";
+
+const isPresentParticiple = ({ feats: { VerbForm, Tense } }: ParsedToken) =>
+  VerbForm === "Part" && Tense === "Pres";
+
+const isFinite = (token: ParsedToken) =>
+  token.xpos === "VERB" && !isPresentParticiple(token);
+
+const firstVerbAfter = (tokens: ParsedToken[], and: ParsedToken) => {
+  const rest = tokens.slice(and.id + 1);
+  const stop = rest.findIndex(isComma);
+  return (stop === -1 ? rest : rest.slice(0, stop)).find(
+    ({ xpos }) => xpos === "VERB",
+  );
+};
+
+const isSubjectOf = (
+  subject: ParsedToken,
+  verb: ParsedToken,
+  and: ParsedToken,
+) =>
+  subject.xpos === "NOUN" &&
+  (subject.head === verb.id ||
+    verb.head === subject.id ||
+    subject.head === and.id);
+
+const opensAnInfinitiveAt = (tokens: ParsedToken[], verb: ParsedToken) =>
+  formOf(tokens[verb.id - 1]) === "to";
+
+const isNounWord = ({ xpos }: ParsedToken) => xpos === "NOUN";
+
+const isRelativized = (
+  tokens: ParsedToken[],
+  and: ParsedToken,
+  verb: ParsedToken,
+) =>
+  tokens
+    .slice(and.id + 1, verb.id)
+    .some((token) => RELATIVIZERS.has(formOf(token))) ||
+  (isPersonalPronoun(tokens[verb.id - 1]) &&
+    tokens.slice(and.id + 1, verb.id - 1).some(isNounWord));
+
+const joinsAClause = (tokens: ParsedToken[], and: ParsedToken) => {
+  const verb = firstVerbAfter(tokens, and);
+  return (
+    verb != null &&
+    isFinite(verb) &&
+    !opensAnInfinitiveAt(tokens, verb) &&
+    !isRelativized(tokens, and, verb) &&
+    tokens.slice(0, and.id).some(isFinite) &&
+    tokens
+      .slice(and.id + 1, verb.id)
+      .some((token) => isSubjectOf(token, verb, and))
+  );
+};
+
+const commaAnds = (tokens: ParsedToken[]): Tell[] =>
+  tokens
+    .filter(
+      (token, at) =>
+        formOf(token) === "and" &&
+        at > 0 &&
+        isComma(tokens[at - 1]) &&
+        joinsAClause(tokens, token),
+    )
+    .map((and) => spanOf("comma-and", tokens[and.id - 1], and));
+
 const DETECTORS: ((
   tokens: ParsedToken[],
   next: ParsedToken[] | undefined,
@@ -616,6 +756,8 @@ const DETECTORS: ((
   mattersClaims,
   splitAbilities,
   pairedAbilities,
+  equations,
+  commaAnds,
 ];
 
 export default (sentences: ParsedToken[][]): Tell[] =>

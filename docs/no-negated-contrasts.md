@@ -34,6 +34,12 @@ verb in between. Together those keep a comma splice of two unrelated clauses
 quiet — "Readers do not need to know that someone is as busy as a bee, it has
 been said a million times" reports nothing.
 
+The two clauses of a comma splice must share a subject. The same word counts
+("It wasn't confusing, it was extra footage"), and so does a noun answered by
+"he", "she", "it" or "they" when the pronoun agrees in number and the second
+clause repeats the verb: "The writer is not being exact, he is showing off"
+reports, and "The plan is not finished, it needs another week" does not.
+
 A negated tail runs to the end of the sentence only when no comma, colon,
 semicolon or dash stands in the way; otherwise it stops at the end of the
 negated chunk. That matters on text a parser reads as one long sentence, such as

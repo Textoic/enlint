@@ -10,6 +10,8 @@ export const tellMessages: Record<TellKind, string> = {
   "precise-figure": `Round the figure and leave the arithmetic out: "3.869 times 1.967, near 7.61" becomes "~7.6".`,
   "beat-comparison": `"Beats" turns a comparison into a contest: "the year beats the amount". Say which is larger and by how much: "ten more years add more than twice the amount".`,
   "matters-claim": `Saying that something matters tells the reader nothing about it: "That's why the year you start matters so much." Say what it changes: "Start ten years sooner and the total doubles."`,
+  equation: `"X is Y" sets one noun equal to another instead of saying what happens: "A puzzle you did not ask for is just an interruption." Give the subject a verb of its own: "Random puzzles interrupt the reader."`,
+  "comma-and": `", and" hangs a second full clause on the first: "They looked, the picture did not answer, and a staff member called that a failure." End the sentence at the comma, or drop the weaker clause.`,
   "can-cannot": `This sets a "can" against a "can't" for effect: "The amount can be fixed later. The start date can't." Say the point once: "Only the amount can be fixed later."`,
 };
 

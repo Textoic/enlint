@@ -221,6 +221,30 @@ const clauseSubject = (tokens: ParsedToken[], verb: ParsedToken) =>
   subjectOf(tokens, verb) ??
   (verb.head >= 0 ? subjectOf(tokens, tokens[verb.head]) : undefined);
 
+const singularPronouns = new Set(["he", "she", "it"]);
+
+const isPlural = ({ feats: { Number: number } }: ParsedToken) =>
+  number === "Plur";
+
+const agreesWith = (pronoun: ParsedToken, noun: ParsedToken) =>
+  pronoun.form.toLowerCase() === "they"
+    ? isPlural(noun)
+    : singularPronouns.has(pronoun.form.toLowerCase()) && !isPlural(noun);
+
+const refersBackTo = (pronoun: ParsedToken, noun: ParsedToken) =>
+  isPronoun(pronoun) && !isPronoun(noun) && agreesWith(pronoun, noun);
+
+const finiteVerbOf = (tokens: ParsedToken[], verb: ParsedToken) => {
+  const parent = verb.head >= 0 ? tokens[verb.head] : undefined;
+  return parent != null && isAuxiliary(parent) ? parent : verb;
+};
+
+const repeatsTheFiniteVerb = (
+  tokens: ParsedToken[],
+  clause: ParsedToken,
+  negated: ParsedToken,
+) => wordOf(clause) === wordOf(finiteVerbOf(tokens, negated));
+
 const sharesItsSubject = (
   tokens: ParsedToken[],
   clause: ParsedToken,
@@ -231,9 +255,26 @@ const sharesItsSubject = (
   return (
     restated != null &&
     original != null &&
-    restated.form.toLowerCase() === original.form.toLowerCase()
+    (restated.form.toLowerCase() === original.form.toLowerCase() ||
+      (refersBackTo(restated, original) &&
+        repeatsTheFiniteVerb(tokens, clause, negated)))
   );
 };
+
+const isParticiple = ({ xpos, feats: { VerbForm } }: ParsedToken) =>
+  xpos === "VERB" && VerbForm === "Part";
+
+const offersAParticipleForAnAdjective = (
+  tokens: ParsedToken[],
+  clause: ParsedToken,
+  negated: ParsedToken,
+) =>
+  negated.xpos === "ADJ" &&
+  wordOf(clause) === "be" &&
+  clause.misc.children.some(
+    (child) => child > clause.id && isParticiple(tokens[child]),
+  ) &&
+  sharesItsSubject(tokens, clause, negated);
 
 const restatesInPlace = (
   tokens: ParsedToken[],
@@ -245,7 +286,8 @@ const restatesInPlace = (
     ? clause.head === negated.head &&
       noVerbBetween(tokens, negated.id, breakId) &&
       sharesItsSubject(tokens, clause, negated)
-    : offersNominalCounterpart(tokens, clause, negated);
+    : offersNominalCounterpart(tokens, clause, negated) ||
+      offersAParticipleForAnAdjective(tokens, clause, negated);
 
 const restatesAcrossTheBreak = (
   tokens: ParsedToken[],

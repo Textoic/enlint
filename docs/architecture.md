@@ -16,6 +16,116 @@ Nor does routine history: git already records what changed and when.
 
 ## Log
 
+### 2026-10-06 — "X is Y", ", and", "sit" and "land": two tells, four entries, and a wider contrast
+
+The request came from model-written essays in enlint-lab. artisan mistagged
+most of the prompting sentences, and it was fixed first (its
+`docs/architecture.md`, 2026-10-06). Everything here reads the corrected
+parse. This checkout still runs against the sibling `../artisan`, and
+`package.json` still says `^0.1.0`.
+
+Two tells joined `src/tells.ts`, and `no-bad-sentence-structures` reports
+them:
+
+- `equation`: a form of "be" with a noun subject in front and a noun as the
+  first thing after it. "A puzzle you did not ask for is just an
+  interruption", "Because the rules were the work." Pronouns on either side
+  do not count ("It was a mistake", "This is a test"), nor "there" and
+  "here", a question, a figure ("Thirty years is 3.869 times 1.967"), an
+  adjective or a preposition after the verb, or a "be" that only helps
+  another verb ("is making").
+- `comma-and`: a comma, "and", and a clause with a subject of its own. The
+  first verb after "and" and before the next comma must be finite, a noun
+  between the two must be its subject, and a finite verb must stand before
+  the comma. That last test keeps "Tom, Ann, and the dog went out" quiet. The
+  subject is read three ways, because artisan attaches it three ways: below
+  the verb, above the verb, or on "and".
+
+Measured with the trained loader, per 1,000 words:
+
+| text                                                   | words  | `equation` | `comma-and` |
+| ------------------------------------------------------ | ------ | ---------- | ----------- |
+| the author's literature essays                         | 2,661  | 3.4        | 0.8         |
+| the author's NLP essays                                | 3,744  | 5.3        | 1.6         |
+| 40 Grok essays, run `2026-10-06T06-41-09-human-grok-6` | 19,855 | 7.6        | 17.2        |
+
+`comma-and` separates the two by a factor of ten or more. `equation` does
+not: the author writes "Filler is any part of a story that..." and "Art is
+rules." The lab counts only the excess over the author. Reported as a lint it
+fires three to five times per 1,000 words on the author's own essays, and
+that is a decision for the person who owns the default configuration.
+
+Tried and dropped for `equation`: only a predicate with a clause hung on it
+("is the writer making you stop", "is time you do not get back"). The author
+has none in 6,400 words and the model 1.3 per 1,000, which is a cleaner
+signal. It misses "A puzzle you did not ask for is just an interruption" and
+"Because the rules were the work", which the request names.
+
+Four entries joined `no-bad-words` under `ai`:
+
+- "strip away" matches the verb with "away" below it. Its message says
+  "remove" and it offers no replacement: when the object stands between the
+  two ("Strip the rhyme away") the span runs over the object, and a
+  replacement deleted it ("remove and you are reading prose").
+- "shared understanding" matches the two words by form. The older
+  "understanding" entry matches the same noun, and the narrower report wins
+  the overlap.
+- "sit (place)" reports the verb unless a person is its subject, the subject
+  of its auxiliary, or the noun it hangs from. A person is a personal pronoun
+  other than "it", an indefinite pronoun ("nobody", "everyone", relative
+  "who"), or one of 38 nouns ("reader", "teacher", "king", "cat"). "down",
+  "up", "back", "tight" and "through" below the verb also stop it. "they"
+  counts as people, so "the essays are piled up, and they're still sitting
+  there" is missed.
+- "land (place)" reports the verb unless the subject is a personal pronoun
+  or flies or falls ("plane", "pilot", "bird", "ball", fourteen more), or the
+  object is caught
+  ("job", "deal", "punch", seven more). "land near/around" keeps its own
+  entry and its replacement, and the new entry leaves "near" and "around"
+  to it.
+
+A selector cannot read capitals or tell a person from a thing, so "Tom sat
+in the chair", "My aunt sat in the kitchen" and "Columbus landed in 1492"
+report. On the Grok run about 6 of 30 hits are people. Missed:
+a participle that hangs on a noun other than its subject ("a laxative brand
+sitting in a chapter", "a common synonym sitting right there").
+
+`no-negated-contrasts` now reports a restatement whose subject is a noun
+answered by "he", "she", "it" or "they": "A novelist who drops pulchritude
+... is not being exact, he is writing for..." It asks for more than the
+same-word case does. The pronoun must agree in number, and the second clause
+must repeat the finite verb of the first ("is ... is", "were ... were").
+Without the verb test "The plan is not finished, it needs another week"
+reported, and a test from the rule's first version says it must not. An
+adjective answered by a participle counts as a counterpart too ("was not
+open, it was locked"), under the development loader only.
+
+Missed, because of the parse: "I am not saying college makes you a better
+person, I am saying that is one place..." artisan hangs "saying" on "makes".
+A check for a repeated verb was written for this sentence, caught nothing
+and was removed.
+
+An independent review ran once. Fixed after it: the "strip away"
+replacement, "still" stopping "sit" ("The trophy still sits on the shelf"),
+a list whose last item carries a clause ("bread, milk, and eggs that looked
+fresh", "a tent, a stove, and everything he needed"), and more people and
+falling things in the two verb entries. Found and left:
+
+- The parser tags "strips" a noun in "Good editing strips away jargon",
+  "stripping" an adjective in "They are stripping away the context", and
+  "understanding" an adjective in "We have a shared understanding." with no
+  "of" after it. All three sentences report nothing.
+- "The road was not closed, it was snowing" reports as a contrast: a dummy
+  "it" and a repeated "was" satisfy the noun-and-pronoun test.
+- `equation` reports "The door was open all day" and "The children were home
+  by noon", where the parser tags "open" and "home" nouns.
+- The reviewer parsed by paragraph and measured 3.0, 5.6 and 7.8 for
+  `equation` and 0.8, 1.3 and 16.1 for `comma-and`, against the table above.
+
+The tests of other rules that run every rule now switch
+`no-bad-sentence-structures` off (`no-absolute-phrases`,
+`no-passive-sentences`), as the contrast tests already did.
+
 ### 2026-10-03 — "beats" and "matters" are list entries, and they needed a parser fix first
 
 Two entries joined `no-bad-words` under `ai`. "beat (comparison)" reports

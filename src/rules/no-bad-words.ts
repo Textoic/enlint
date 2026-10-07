@@ -1607,6 +1607,14 @@ export const entries: BadWordEntry[] = [
       ":matches([form=kind i], [form=sort i]) > [lemma=of] > :matches([xpos=ADJ], [xpos=ADV])",
   },
   {
+    phrase: "land (place)",
+    category: "ai",
+    selector:
+      "[lemma=land][xpos=VERB]:not(:has(> :matches([PronType=Prs]:not([form=it i]):not([form=its i]), [lemma=plane], [lemma=aircraft], [lemma=flight], [lemma=pilot], [lemma=helicopter], [lemma=jet], [lemma=bird], [lemma=rocket], [lemma=probe], [lemma=spacecraft], [lemma=drone], [lemma=troop], [lemma=ship], [lemma=boat], [lemma=fish], [lemma=eagle], [lemma=ball], [lemma=cat], [lemma=job], [lemma=deal], [lemma=role], [lemma=contract], [lemma=punch], [lemma=blow], [lemma=interview], [lemma=gig], [lemma=client], [lemma=part], [form=safely i], [form=near i], [form=around i]))):not(:matches([Mood=Pot], [Mood=Nec], [Mood=Cnd], [lemma=do], [lemma=be], [lemma=have]):has(> :matches([PronType=Prs]:not([form=it i]):not([form=its i]), [lemma=plane], [lemma=aircraft], [lemma=flight], [lemma=pilot], [lemma=helicopter], [lemma=jet], [lemma=bird], [lemma=rocket], [lemma=probe], [lemma=spacecraft], [lemma=drone], [lemma=troop], [lemma=ship], [lemma=boat], [lemma=fish], [lemma=eagle], [lemma=ball], [lemma=cat])) > *):not(:matches([lemma=plane], [lemma=aircraft], [lemma=flight], [lemma=pilot], [lemma=helicopter], [lemma=jet], [lemma=bird], [lemma=rocket], [lemma=probe], [lemma=spacecraft], [lemma=drone], [lemma=troop], [lemma=ship], [lemma=boat], [lemma=fish], [lemma=eagle], [lemma=ball], [lemma=cat]) > *)",
+    message:
+      "A thing does not 'land' anywhere: 'the joke lands in the middle of the scene'. Say what happens: 'the joke interrupts the scene'",
+  },
+  {
     phrase: "land near/around",
     category: "ai",
     selector:
@@ -2264,6 +2272,13 @@ export const entries: BadWordEntry[] = [
       "Say who ends up believing what, instead of 'shaping public opinion'",
   },
   {
+    phrase: "shared understanding",
+    category: "ai",
+    selector: "[form=understanding i] > [form=shared i]",
+    message:
+      "Cut 'a shared understanding'. Say what the people agree on: 'They reached a shared understanding of the plan' becomes 'They agreed on the plan'",
+  },
+  {
     phrase: "she is the woman who is",
     category: "variation",
     selector:
@@ -2311,6 +2326,14 @@ export const entries: BadWordEntry[] = [
     selector: "[form=significant i]",
     message:
       "Prefer a more common, shorter version of the same notion: important, major or big",
+  },
+  {
+    phrase: "sit (place)",
+    category: "ai",
+    selector:
+      "[lemma=sit][xpos=VERB]:not(:has(> :matches([PronType=Prs]:not([form=it i]):not([form=its i]), [PronType=Ind]:not([form=something i]):not([form=anything i]), [PronType=Tot]:not([form=everything i]), [lemma=nobody], [PronType=Rel][form=who i], [lemma=person], [lemma=reader], [lemma=writer], [lemma=author], [lemma=audience], [lemma=viewer], [lemma=student], [lemma=child], [lemma=kid], [lemma=man], [lemma=woman], [lemma=guest], [lemma=crowd], [lemma=family], [lemma=sitter], [lemma=passenger], [lemma=driver], [lemma=patient], [lemma=jury], [lemma=judge], [lemma=committee], [lemma=cat], [lemma=dog], [lemma=bird], [lemma=teacher], [lemma=mother], [lemma=father], [lemma=brother], [lemma=sister], [lemma=friend], [lemma=boy], [lemma=girl], [lemma=king], [lemma=queen], [lemma=guy], [lemma=doctor], [lemma=player], [lemma=pianist], [form=down i], [form=up i], [form=back i], [form=tight i], [form=through i]))):not(:matches([Mood=Pot], [Mood=Nec], [Mood=Cnd], [lemma=do], [lemma=be], [lemma=have]):has(> :matches([PronType=Prs]:not([form=it i]):not([form=its i]), [PronType=Ind]:not([form=something i]):not([form=anything i]), [PronType=Tot]:not([form=everything i]), [lemma=nobody], [PronType=Rel][form=who i], [lemma=person], [lemma=reader], [lemma=writer], [lemma=author], [lemma=audience], [lemma=viewer], [lemma=student], [lemma=child], [lemma=kid], [lemma=man], [lemma=woman], [lemma=guest], [lemma=crowd], [lemma=family], [lemma=sitter], [lemma=passenger], [lemma=driver], [lemma=patient], [lemma=jury], [lemma=judge], [lemma=committee], [lemma=cat], [lemma=dog], [lemma=bird], [lemma=teacher], [lemma=mother], [lemma=father], [lemma=brother], [lemma=sister], [lemma=friend], [lemma=boy], [lemma=girl], [lemma=king], [lemma=queen], [lemma=guy], [lemma=doctor], [lemma=player], [lemma=pianist])) > *):not(:matches([PronType=Prs]:not([form=it i]):not([form=its i]), [PronType=Ind]:not([form=something i]):not([form=anything i]), [PronType=Tot]:not([form=everything i]), [lemma=nobody], [PronType=Rel][form=who i], [lemma=person], [lemma=reader], [lemma=writer], [lemma=author], [lemma=audience], [lemma=viewer], [lemma=student], [lemma=child], [lemma=kid], [lemma=man], [lemma=woman], [lemma=guest], [lemma=crowd], [lemma=family], [lemma=sitter], [lemma=passenger], [lemma=driver], [lemma=patient], [lemma=jury], [lemma=judge], [lemma=committee], [lemma=cat], [lemma=dog], [lemma=bird], [lemma=teacher], [lemma=mother], [lemma=father], [lemma=brother], [lemma=sister], [lemma=friend], [lemma=boy], [lemma=girl], [lemma=king], [lemma=queen], [lemma=guy], [lemma=doctor], [lemma=player], [lemma=pianist]) > *)",
+    message:
+      "A thing does not 'sit' anywhere: 'the rarest words sit with specialists'. Say what is true of it: 'only specialists use the rarest words'",
   },
   {
     phrase: "smoke the peace pipe",
@@ -2408,6 +2431,13 @@ export const entries: BadWordEntry[] = [
     category: "ai",
     selector: "[lemma=streamline]",
     suggestions: [":inflect(simplify)"],
+  },
+  {
+    phrase: "strip away",
+    category: "ai",
+    selector: "[lemma=strip][xpos=VERB] > [form=away i]",
+    message:
+      "'Strip away' is a dressed-up 'remove': 'the edit strips away the jokes' becomes 'the edit removes the jokes'",
   },
   {
     phrase: "structural",

@@ -285,6 +285,7 @@ Sorted ignoring a leading "a", "an" or "the", so "a beacon of" files under B.
 | just only                                               | Inelegant variations     | `just`                                                                                                                                                                                                   |
 | juxtapose                                               | Inelegant variations     | `:inflect(compare)`, `:inflect(contrast)`                                                                                                                                                                |
 | kind of / sort of                                       | Hedges                   | Avoid cautious language to make your writing more persuasive                                                                                                                                             |
+| land (place)                                            | AI writing               | A thing does not 'land' anywhere: 'the joke lands in the middle of the scene'. Say what happens: 'the joke interrupts the scene'                                                                         |
 | land near/around                                        | AI writing               | `:inflect(give) you`                                                                                                                                                                                     |
 | landscape                                               | AI writing               | If you mean a field, a market or a situation rather than scenery, say which                                                                                                                              |
 | last but not least                                      | Inelegant variations     | `finally`                                                                                                                                                                                                |
@@ -387,12 +388,14 @@ Sorted ignoring a leading "a", "an" or "the", so "a beacon of" files under B.
 | serve/stand/function/operate as                         | AI writing               | `inflect(be)`                                                                                                                                                                                            |
 | set the stage for                                       | AI writing               | Say what happened next                                                                                                                                                                                   |
 | shape the public opinion                                | AI writing               | Say who ends up believing what, instead of 'shaping public opinion'                                                                                                                                      |
+| shared understanding                                    | AI writing               | Cut 'a shared understanding'. Say what the people agree on: 'They reached a shared understanding of the plan' becomes 'They agreed on the plan'                                                          |
 | she is the woman who is                                 | Inelegant variations     | `she is`                                                                                                                                                                                                 |
 | shed light                                              | AI writing               | `:inflect(illuminate)`, `:inflect(clarify)`, `:inflect(explain)`                                                                                                                                         |
 | shed light on                                           | AI writing               | `:inflect(explain)`, `:inflect(clarify)`, `:inflect(reveal)`                                                                                                                                             |
 | shimmer / glimmer / glint / glitter / glisten           | Inelegant variations     | `:inflect(shine)`, `:inflect(sparkle)`, `:inflect(glow)`, `:inflect(beam)`                                                                                                                               |
 | showcase                                                | AI writing               | `:inflect(show)`                                                                                                                                                                                         |
 | significant                                             | AI writing               | Prefer a more common, shorter version of the same notion: important, major or big                                                                                                                        |
+| sit (place)                                             | AI writing               | A thing does not 'sit' anywhere: 'the rarest words sit with specialists'. Say what is true of it: 'only specialists use the rarest words'                                                                |
 | smoke the peace pipe                                    | Clichés                  | `:inflect(make) peace`                                                                                                                                                                                   |
 | the societal expectation                                | AI writing               | `social :inflect(expectation)`                                                                                                                                                                           |
 | spate                                                   | Inelegant variations     | `:inflect(flood)`                                                                                                                                                                                        |
@@ -408,6 +411,7 @@ Sorted ignoring a leading "a", "an" or "the", so "a beacon of" files under B.
 | stop to consider                                        | Inelegant variations     | `:inflect(consider)`                                                                                                                                                                                     |
 | strategize                                              | Inelegant variations     | `:inflect(plan)`                                                                                                                                                                                         |
 | streamline                                              | AI writing               | `:inflect(simplify)`                                                                                                                                                                                     |
+| strip away                                              | AI writing               | 'Strip away' is a dressed-up 'remove': 'the edit strips away the jokes' becomes 'the edit removes the jokes'                                                                                             |
 | structural                                              | AI writing               | Avoid vague metaphors, use concrete language.                                                                                                                                                            |
 | structurally                                            | AI writing               | Avoid vague metaphors, use concrete language.                                                                                                                                                            |
 | swear to protect                                        | AI writing               | Rewrite with the equivalent of 'vow to defend', or 'pledge to protect'                                                                                                                                   |
@@ -509,6 +513,7 @@ broader ones.
 **agreed** — it is agreed/probable/conceivable that  
 **aim** — aim to explore; an initiative aims to  
 **air** — hang in the air between  
+**aircraft** — land (place)  
 **align** — align with  
 **all** — after all is said and done; for all intents and purposes  
 **along** — along the lines of  
@@ -521,13 +526,14 @@ broader ones.
 **and** — after all is said and done; each and every; few and far between; for all intents and purposes; hale and hearty; in this day and age; trials and tribulations  
 **anticipate** — not anticipate  
 **anticipation** — a sense of anticipation  
+**anything** — sit (place)  
 **apparent** — become known/apparent  
 **appearance** — cameo appearance  
 **appears** — it seems/appears that  
 **approach** — an approach ensures  
 **area** — identify an area of improvement  
 **argue** — experts/critics argue; it might be said/argued; one might say/argue  
-**around** — land near/around  
+**around** — land (place); land near/around  
 **as** — as a matter of fact; as a result of; as far as I am concerned; as mentioned earlier; as to whether; as we can see; as yet; busy as a bee; clear as crystal; inasmuch as; quick as a flash; regard as being; serve/stand/function/operate as; white as a sheet  
 **associated** — associated with  
 **association** — in association with  
@@ -537,12 +543,17 @@ broader ones.
 **attempt** — make an attempt  
 **attention** — meticulous attention  
 **audacious** — audacious  
+**audience** — sit (place)  
+**author** — sit (place)  
 **avant-garde** — innovative / groundbreaking / avant-garde / newfound  
 **avenue** — a new avenue  
 **aware** — be aware/cognizant/conscious of; become aware of  
+**away** — strip away  
+**back** — sit (place)  
+**ball** — land (place)  
 **base** — the evidence base  
 **basis** — on a regular basis; on the basis of  
-**be** — after all is said and done; as far as I am concerned; be a testament to; be aware/cognizant/conscious of; be familiar/acquainted with; be in need of; be in possession of; be not sure; be not willing; be unsure; be unwilling; he is the man who is; is a reminder; it could be suggested that; it is agreed/probable/conceivable that; it is clear to me; it is important/critical/crucial to; it is important/critical/crucial/desirable to; it is worth noting; it might be said/argued; it might be the case/possible that; it seems important to note; let bygones be bygones; might be a reason why/for; she is the woman who is; the stakes are high; that is to say; to be honest; what is the reason  
+**be** — after all is said and done; as far as I am concerned; be a testament to; be aware/cognizant/conscious of; be familiar/acquainted with; be in need of; be in possession of; be not sure; be not willing; be unsure; be unwilling; he is the man who is; is a reminder; it could be suggested that; it is agreed/probable/conceivable that; it is clear to me; it is important/critical/crucial to; it is important/critical/crucial/desirable to; it is worth noting; it might be said/argued; it might be the case/possible that; it seems important to note; land (place); let bygones be bygones; might be a reason why/for; she is the woman who is; sit (place); the stakes are high; that is to say; to be honest; what is the reason  
 **beacon** — a beacon of  
 **beat** — beat (comparison); beat a retreat  
 **beats** — beat (comparison)  
@@ -559,6 +570,7 @@ broader ones.
 **between** — few and far between; hang in the air between; the question hanging between them; the question hangs between them  
 **beyond** — beyond a shadow of a doubt  
 **bigger** — become/get taller/bigger; become/get taller/bigger than  
+**bird** — land (place); sit (place)  
 **bit** — bite off more than one can chew  
 **bit-for-bit** — byte-for-byte  
 **bit-identical** — byte-identical/bit-identical  
@@ -567,15 +579,19 @@ broader ones.
 **bits** — bite off more than one can chew  
 **blacker** — become/get/make blacker  
 **blend** — blend together; a unique blend  
+**blow** — land (place)  
+**boat** — land (place)  
 **boil** — boil the ocean  
 **bolster** — bolster  
 **bonus** — added bonus  
 **boundary** — push boundaries  
+**boy** — sit (place)  
 **branch** — hold out an olive branch  
 **breath** — breath coming in ragged gasps  
 **brief** — brief moment  
 **broad** — become/make broad  
 **broader** — reflect broader  
+**brother** — sit (place)  
 **build** — built on top of  
 **bury** — bury the hatchet  
 **bustle** — bustle  
@@ -592,6 +608,7 @@ broader ones.
 **carefully** — carefully constructed; choose one's words carefully  
 **carry** — carry a weight  
 **case** — in the event/case of; it might be the case/possible that  
+**cat** — land (place); sit (place)  
 **catalyse** — catalyze  
 **catalysed** — catalyze  
 **catalysing** — catalyze  
@@ -607,12 +624,14 @@ broader ones.
 **chef** — beat (comparison)  
 **chest** — heart pounding in one's chest  
 **chew** — bite off more than one can chew  
+**child** — sit (place)  
 **choice** — alternative choice  
 **choose** — choose one's words carefully  
 **cite** — observers have cited  
 **claim** — experts/critics argue  
 **clarion** — a clarion call  
 **clear** — clear as crystal; it is clear to me  
+**client** — land (place)  
 **close** — close proximity  
 **cloud** — cloud one's judgement  
 **cogitate** — cogitate  
@@ -624,6 +643,7 @@ broader ones.
 **coming** — breath coming in ragged gasps  
 **commence** — commence / dive headfirst  
 **commitment** — commitment to; a commitment to excellence; an unwavering commitment  
+**committee** — sit (place)  
 **complex** — a complex interplay; navigate the complex  
 **complexity** — add a layer of complexity  
 **compliance** — ensure compliance  
@@ -642,6 +662,7 @@ broader ones.
 **consideration** — take under consideration  
 **constructed** — carefully constructed  
 **continue** — continue to inspire  
+**contract** — land (place)  
 **contrast** — stand in stark contrast; a stark contrast  
 **contribute** — contribute to  
 **cook** — beat (comparison)  
@@ -651,6 +672,7 @@ broader ones.
 **course** — during the course of; over the course of  
 **critic** — experts/critics argue  
 **critical** — it is important/critical/crucial to; it is important/critical/crucial/desirable to  
+**crowd** — sit (place)  
 **crucial** — a crucial/pivotal/vital/key role/moment; it is important/critical/crucial to; it is important/critical/crucial/desirable to; play a pivotal/crucial role  
 **crucible** — a crucible of  
 **crystal** — clear as crystal  
@@ -663,6 +685,7 @@ broader ones.
 **darker** — become/get/make darker  
 **data** — an analysis of the data  
 **day** — at the end of the day; in this day and age  
+**deal** — land (place)  
 **deconstruct** — deconstruct  
 **decrease** — decrease in strength  
 **deep** — become/get/make deep; deep dive  
@@ -682,16 +705,21 @@ broader ones.
 **dimly** — dimly lit  
 **dive** — commence / dive headfirst; deep dive; let's dive into/explore  
 **diverse** — a diverse perspective  
-**do** — beat (comparison); do not remember  
+**do** — beat (comparison); do not remember; land (place); sit (place)  
+**doctor** — sit (place)  
+**dog** — sit (place)  
 **done** — after all is said and done; easier said than done  
 **doubt** — beyond a shadow of a doubt  
-**down** — beat (comparison)  
+**down** — beat (comparison); sit (place)  
+**driver** — sit (place)  
+**drone** — land (place)  
 **drop** — cause a drop in  
 **drummer** — beat (comparison)  
 **dry** — become dry  
 **during** — during the course of  
 **dynamic** — dynamic  
 **each** — each and every  
+**eagle** — land (place)  
 **earlier** — as mentioned earlier  
 **ease** — with practiced ease  
 **easier** — easier said than done  
@@ -716,6 +744,7 @@ broader ones.
 **even** — become/make even  
 **event** — in the event/case of  
 **every** — each and every  
+**everything** — sit (place)  
 **evidence** — the evidence base  
 **evolving** — evolving landscape  
 **exact** — exact same  
@@ -733,20 +762,25 @@ broader ones.
 **fact** — actual fact; as a matter of fact; despite the challenge/fact; the fact that  
 **fairly** — rather / somewhat / fairly / quite / pretty  
 **familiar** — be familiar/acquainted with  
+**family** — sit (place)  
 **far** — as far as I am concerned; few and far between  
 **fast-paced** — fast-paced  
+**father** — sit (place)  
 **feel** — feel the necessity for; the way I think/feel about it  
 **few** — few and far between  
 **figure** — a prominent figure  
 **fill** — a voice fills  
 **first** — introduce for the first time  
+**fish** — land (place)  
 **flash** — quick as a flash  
 **fleeting** — fleeting  
+**flight** — land (place)  
 **focal** — focal point  
 **for** — feel the necessity for; for all intents and purposes; for the most part; for the purpose of; for the reason that; introduce for the first time; might be a reason why/for; might have been a reason why/for; pave the way for the future  
 **foreseeable** — foreseeable future  
 **forward** — a step forward  
 **foster** — foster  
+**friend** — sit (place)  
 **from** — from my personal perspective/standpoint; from the point of view; from the point of view of  
 **fully** — fully grasp; not fully understand  
 **function** — serve/stand/function/operate as  
@@ -763,6 +797,8 @@ broader ones.
 **gasp** — breath coming in ragged gasps  
 **genuinely** — genuinely  
 **get** — become/get different; become/get established; become/get hot; become/get large; become/get smaller/shorter; become/get smaller/shorter than; become/get taller/bigger; become/get taller/bigger than; become/get/grow old; become/get/make blacker; become/get/make cold; become/get/make damp; become/get/make darker; become/get/make deep; become/get/make lighter; become/get/make longer; become/get/make stronger; become/get/make worse  
+**gig** — land (place)  
+**girl** — sit (place)  
 **give** — give an account of; give rise to  
 **glimmer** — shimmer / glimmer / glint / glitter / glisten  
 **glint** — shimmer / glimmer / glint / glitter / glisten  
@@ -782,18 +818,21 @@ broader ones.
 **grounds** — on the grounds that  
 **groundwork** — lay the groundwork  
 **grow** — become/get/grow old  
+**guest** — sit (place)  
+**guy** — sit (place)  
 **hale** — hale and hearty  
 **hand** — at the hands of  
 **hang** — hang in the air between; the question hangs between them  
 **hanging** — the question hanging between them  
 **harness** — harness  
 **hatchet** — bury the hatchet  
-**have** — have knowledge of; have the effect of; might have been a reason why/for; observers have cited  
+**have** — have knowledge of; have the effect of; land (place); might have been a reason why/for; observers have cited; sit (place)  
 **he** — he is the man who is  
 **head** — off the top of my head  
 **headfirst** — commence / dive headfirst  
 **heart** — beat (comparison); heart pounding against one's ribs; heart pounding in one's chest; in the heart of  
 **hearty** — hale and hearty  
+**helicopter** — land (place)  
 **help** — cannot help but  
 **high** — the stakes are high  
 **highlight** — emphasize/underscore/highlight the need/potential; highlight  
@@ -836,21 +875,28 @@ broader ones.
 **interplay** — a complex interplay; interplay  
 **intersection** — at the intersection of  
 **intervention** — target an intervention  
+**interview** — land (place)  
 **into** — delve into; put into words; woven into  
 **intricacy** — intricacies  
 **intricate** — intricate  
 **introduce** — introduce for the first time  
-**it** — beat (comparison); it is agreed/probable/conceivable that; it is clear to me; it is important/critical/crucial to; it is important/critical/crucial/desirable to; it is worth noting; it might be said/argued; it might be the case/possible that; it seems important to note; it seems to me; it seems/appears that; the way I see it; the way I think/feel about it; when it comes to  
-**its** — beat (comparison)  
+**it** — beat (comparison); it is agreed/probable/conceivable that; it is clear to me; it is important/critical/crucial to; it is important/critical/crucial/desirable to; it is worth noting; it might be said/argued; it might be the case/possible that; it seems important to note; it seems to me; it seems/appears that; land (place); sit (place); the way I see it; the way I think/feel about it; when it comes to  
+**its** — beat (comparison); land (place); sit (place)  
+**jet** — land (place)  
+**job** — land (place)  
 **journey** — the journey begins  
+**judge** — sit (place)  
 **judgement** — cloud one's judgement; in my opinion/view/estimation/judgement  
+**jury** — sit (place)  
 **just** — just only  
 **juxtapose** — juxtapose  
 **key** — a crucial/pivotal/vital/key role/moment  
+**kid** — sit (place)  
 **kind** — kind of / sort of  
+**king** — sit (place)  
 **knowledge** — have knowledge of  
 **known** — become known/apparent  
-**land** — land near/around  
+**land** — land (place); land near/around  
 **landscape** — evolving landscape; landscape  
 **large** — become/get large; loom large  
 **last** — last but not least  
@@ -878,7 +924,7 @@ broader ones.
 **lucubrate** — lucubrate  
 **magnitude** — by orders of magnitude  
 **make** — become/get/make blacker; become/get/make cold; become/get/make damp; become/get/make darker; become/get/make deep; become/get/make lighter; become/get/make longer; become/get/make stronger; become/get/make worse; become/make better; become/make broad; become/make even; become/make stiff; become/make strong; become/make sweet; become/make thick; make a long story short; make a lot of sense; make an attempt  
-**man** — he is the man who is  
+**man** — he is the man who is; sit (place)  
 **mark** — leave a mark; mark a turning point; represent/mark a shift  
 **matter** — as a matter of fact; matter (verb)  
 **may** — may vary  
@@ -891,6 +937,7 @@ broader ones.
 **more** — bite off more than one can chew; more specifically  
 **moreover** — furthermore/moreover/additionally  
 **most** — for the most part; most profound  
+**mother** — sit (place)  
 **mount** — mounting pressure  
 **multifaceted** — multifaceted  
 **multiplicity** — multiplicity  
@@ -902,7 +949,7 @@ broader ones.
 **natural** — natural beauty  
 **nature** — in the nature of  
 **navigate** — ability to navigate; navigate; navigate the complex  
-**near** — land near/around  
+**near** — land (place); land near/around  
 **necessity** — feel the necessity for  
 **need** — be in need of; emphasize/underscore/highlight the need/potential; want/need strongly/desperately  
 **neighborhood** — in the neighborhood of  
@@ -910,6 +957,7 @@ broader ones.
 **never** — matter (verb)  
 **new** — a new avenue  
 **newfound** — innovative / groundbreaking / avant-garde / newfound  
+**nobody** — sit (place)  
 **not** — be not sure; be not willing; cannot help but; do not remember; last but not least; matter (verb); not anticipate; not fully understand  
 **notably** — importantly/notably/interestingly  
 **note** — it is worth noting; it seems important to note  
@@ -939,21 +987,28 @@ broader ones.
 **over** — over the course of  
 **owing** — owing to  
 **paradigm** — paradigm  
-**part** — for the most part  
+**part** — for the most part; land (place)  
 **particulate** — matter (verb)  
+**passenger** — sit (place)  
+**patient** — sit (place)  
 **pave** — pave the way; pave the way for the future  
 **peace** — smoke the peace pipe  
 **per** — beat (comparison)  
 **performance** — an exceptional performance  
+**person** — sit (place)  
 **personae** — personae  
 **personal** — from my personal perspective/standpoint  
 **personally** — imo / imho / personally  
 **perspective** — a diverse perspective; from my personal perspective/standpoint  
+**pianist** — sit (place)  
+**pilot** — land (place)  
 **pinch** — with a grain/pinch of salt  
 **pipe** — smoke the peace pipe  
 **pivotal** — a crucial/pivotal/vital/key role/moment; pivotal; a pivotal moment; play a pivotal/crucial role  
 **plainly** — plainly  
+**plane** — land (place)  
 **play** — play a pivotal/crucial role  
+**player** — sit (place)  
 **plethora** — a myriad/plethora of  
 **point** — at a point in time; at that point in time; at this point in time; focal point; from the point of view; from the point of view of; mark a turning point; a turning point; up to the time/moment/point when  
 **possession** — be in possession of  
@@ -977,6 +1032,7 @@ broader ones.
 **printed** — matter (verb)  
 **prior** — prior to  
 **probable** — it is agreed/probable/conceivable that  
+**probe** — land (place)  
 **process** — in the process of  
 **profit** — turn a profit  
 **profound** — most profound; profound  
@@ -987,11 +1043,13 @@ broader ones.
 **public** — shape the public opinion  
 **pulchritudinous** — beauteous / ravishing / splendiferous / pulchritudinous  
 **pulse** — beat (comparison)  
+**punch** — land (place)  
 **purpose** — for the purpose of; serve the purpose of  
 **purposes** — for all intents and purposes  
 **pursuit** — a relentless pursuit  
 **push** — push boundaries  
 **put** — put into words; utilize / utilise / put to use  
+**queen** — sit (place)  
 **question** — beg the question; the question hanging between them; the question hangs between them; raise an important question  
 **quick** — quick as a flash  
 **quietly** — speak/say quietly  
@@ -1013,6 +1071,7 @@ broader ones.
 **re-verifies** — re-derive/re-verify/re-measure  
 **re-verify** — re-derive/re-verify/re-measure  
 **re-verifying** — re-derive/re-verify/re-measure  
+**reader** — sit (place)  
 **realize** — than you think  
 **realm** — in the realm of; realm  
 **reason** — by cause/reason/virtue of; for the reason that; might be a reason why/for; might have been a reason why/for; what is the reason  
@@ -1037,9 +1096,11 @@ broader ones.
 **rib** — heart pounding against one's ribs  
 **rise** — give rise to  
 **risk** — a potential risk/concern  
-**role** — a crucial/pivotal/vital/key role/moment; play a pivotal/crucial role; a role in shaping  
+**rocket** — land (place)  
+**role** — a crucial/pivotal/vital/key role/moment; land (place); play a pivotal/crucial role; a role in shaping  
 **root** — address the root cause  
 **rooted** — deeply rooted  
+**safely** — land (place)  
 **said** — after all is said and done  
 **salt** — with a grain/pinch of salt  
 **same** — exact same  
@@ -1058,11 +1119,13 @@ broader ones.
 **shadow** — beyond a shadow of a doubt  
 **shake** — try to shake  
 **shape** — a role in shaping; shape the public opinion  
+**shared** — shared understanding  
 **she** — she is the woman who is  
 **shed** — shed light; shed light on  
 **sheet** — white as a sheet  
 **shift** — represent/mark a shift  
 **shimmer** — shimmer / glimmer / glint / glitter / glisten  
+**ship** — land (place)  
 **shockwave** — send shockwaves  
 **short** — make a long story short  
 **shorter** — become/get smaller/shorter; become/get smaller/shorter than  
@@ -1071,15 +1134,20 @@ broader ones.
 **showcases** — showcase  
 **showcasing** — showcase  
 **significant** — significant  
+**sister** — sit (place)  
+**sit** — sit (place)  
+**sitter** — sit (place)  
 **skill** — hone one's skills  
 **slowly** — walk slowly  
 **smaller** — become/get smaller/shorter; become/get smaller/shorter than  
 **smoke** — smoke the peace pipe  
 **societal** — the societal expectation  
 **solid** — become solid  
+**something** — sit (place)  
 **somewhat** — rather / somewhat / fairly / quite / pretty  
 **sooner** — easier said than done  
 **sort** — kind of / sort of  
+**spacecraft** — land (place)  
 **spate** — spate  
 **speak** — speak loudly; speak/say quietly  
 **speaks** — speaks volumes  
@@ -1099,11 +1167,13 @@ broader ones.
 **strategize** — strategize  
 **streamline** — streamline  
 **strength** — decrease in strength  
+**strip** — strip away  
 **strong** — become/make strong  
 **stronger** — become/get/make stronger  
 **strongly** — want/need strongly/desperately  
 **structural** — structural  
 **structurally** — structurally  
+**student** — sit (place)  
 **subject** — matter (verb)  
 **suddenly** — leave suddenly  
 **suggest** — it could be suggested that  
@@ -1126,6 +1196,7 @@ broader ones.
 **tapestry** — a tapestry of  
 **target** — target an intervention  
 **tbh** — tbh  
+**teacher** — sit (place)  
 **tendency** — exhibit a tendency to  
 **terms** — think in terms of  
 **testament** — be a testament to; a testament to  
@@ -1137,9 +1208,10 @@ broader ones.
 **think** — than you think; think in terms of; the way I think/feel about it  
 **this** — at a point in time; at this point in time; in this day and age; in this section  
 **thrilling** — thrilling  
-**through** — through the agency/medium of  
+**through** — sit (place); through the agency/medium of  
 **thrum** — thrum  
 **thusly** — thusly  
+**tight** — sit (place)  
 **tightly** — hold tightly  
 **time** — at a point in time; at that point in time; at the present time; at this point in time; introduce for the first time; up to the time/moment/point when  
 **tirelessly** — work tirelessly  
@@ -1154,6 +1226,7 @@ broader ones.
 **trend** — current trend  
 **trial** — trials and tribulations  
 **tribulation** — trials and tribulations  
+**troop** — land (place)  
 **trove** — treasure trove  
 **try** — try to shake  
 **turn** — turn a profit  
@@ -1163,14 +1236,14 @@ broader ones.
 **under** — take under consideration  
 **underscore** — emphasize/underscore/highlight the need/potential; underscore  
 **understand** — not fully understand  
-**understanding** — understanding  
+**understanding** — shared understanding; understanding  
 **unique** — offer/present/provide something unique/valuable; a unique blend  
 **unleash** — unleash  
 **unleashed** — unleashed  
 **unsure** — be unsure  
 **unwavering** — unwavering; an unwavering commitment  
 **unwilling** — be unwilling  
-**up** — up to the time/moment/point when  
+**up** — sit (place); up to the time/moment/point when  
 **us** — let's dive into/explore  
 **use** — utilize / utilise / put to use  
 **utilise** — utilize / utilise / put to use  
@@ -1185,6 +1258,7 @@ broader ones.
 **very** — the very  
 **vibrant** — vibrant  
 **view** — from the point of view; from the point of view of; in my opinion/view/estimation/judgement; with a view to  
+**viewer** — sit (place)  
 **virtue** — by cause/reason/virtue of  
 **vis-a-vis** — vis-a-vis  
 **vis-à-vis** — vis-a-vis  
@@ -1205,11 +1279,12 @@ broader ones.
 **whether** — as to whether  
 **whilst** — whilst  
 **white** — matter (verb); white as a sheet  
+**who** — sit (place)  
 **why** — might be a reason why/for; might have been a reason why/for  
 **willing** — be not willing  
 **with** — align with; associated with; be familiar/acquainted with; connected with/to; green with envy; in accordance with; in association with; in connection with/to; resonate with; with a grain/pinch of salt; with a view to; with or in regard/reference to; with practiced ease; with the advent of; with the condition that  
 **without** — it goes without saying; without further ado  
-**woman** — she is the woman who is  
+**woman** — she is the woman who is; sit (place)  
 **word** — choose one's words carefully  
 **words** — put into words  
 **work** — work tirelessly  
@@ -1217,6 +1292,7 @@ broader ones.
 **worse** — become/get/make worse  
 **worth** — it is worth noting; it seems important to note  
 **woven** — woven into  
+**writer** — sit (place)  
 **yet** — as yet  
 **you** — than you think
 
@@ -1577,7 +1653,7 @@ Default message: _Avoid clichés that make your writing stale_
 | with a grain/pinch of salt        | `with caution`                                                                                                                                                                                           |
 | with practiced ease               | `effortlessly`                                                                                                                                                                                           |
 
-### AI writing (172)
+### AI writing (176)
 
 Words and expressions that turn up constantly in text generated by language models. None of them is wrong on its own; together they are a house style, and readers have learned to recognize it.
 
@@ -1658,6 +1734,7 @@ Default message: _Avoid words and expressions that are common in AI-generated wr
 | intricate                                          | `complex`, `complicated`                                                                                                                                                               |
 | is a reminder                                      | Say what it reminds the reader of, or cut the sentence                                                                                                                                 |
 | the journey begins                                 | Name what is actually starting instead of calling it a journey                                                                                                                         |
+| land (place)                                       | A thing does not 'land' anywhere: 'the joke lands in the middle of the scene'. Say what happens: 'the joke interrupts the scene'                                                       |
 | land near/around                                   | `:inflect(give) you`                                                                                                                                                                   |
 | landscape                                          | If you mean a field, a market or a situation rather than scenery, say which                                                                                                            |
 | a lasting/indelible mark                           | Say what the thing actually changed, instead of saying it left something that lasts                                                                                                    |
@@ -1717,10 +1794,12 @@ Default message: _Avoid words and expressions that are common in AI-generated wr
 | serve/stand/function/operate as                    | `inflect(be)`                                                                                                                                                                          |
 | set the stage for                                  | Say what happened next                                                                                                                                                                 |
 | shape the public opinion                           | Say who ends up believing what, instead of 'shaping public opinion'                                                                                                                    |
+| shared understanding                               | Cut 'a shared understanding'. Say what the people agree on: 'They reached a shared understanding of the plan' becomes 'They agreed on the plan'                                        |
 | shed light                                         | `:inflect(illuminate)`, `:inflect(clarify)`, `:inflect(explain)`                                                                                                                       |
 | shed light on                                      | `:inflect(explain)`, `:inflect(clarify)`, `:inflect(reveal)`                                                                                                                           |
 | showcase                                           | `:inflect(show)`                                                                                                                                                                       |
 | significant                                        | Prefer a more common, shorter version of the same notion: important, major or big                                                                                                      |
+| sit (place)                                        | A thing does not 'sit' anywhere: 'the rarest words sit with specialists'. Say what is true of it: 'only specialists use the rarest words'                                              |
 | the societal expectation                           | `social :inflect(expectation)`                                                                                                                                                         |
 | speaks volumes                                     | `shows`, `indicates`, `says a lot`                                                                                                                                                     |
 | the stakes are high                                | Rewrite with the equivalent of 'there is a lot at risk'                                                                                                                                |
@@ -1730,6 +1809,7 @@ Default message: _Avoid words and expressions that are common in AI-generated wr
 | a step forward                                     | Rewrite the sentence to use an action verb, e.g. 'it is a step forward for the industry' => 'it advances the industry'                                                                 |
 | a step toward                                      | Rewrite the sentence to use an action verb, e.g. rewrite 'X is a step toward Y' to 'X brings Y closer', or 'with each step toward X' => 'as he approached X'                           |
 | streamline                                         | `:inflect(simplify)`                                                                                                                                                                   |
+| strip away                                         | 'Strip away' is a dressed-up 'remove': 'the edit strips away the jokes' becomes 'the edit removes the jokes'                                                                           |
 | structural                                         | Avoid vague metaphors, use concrete language.                                                                                                                                          |
 | structurally                                       | Avoid vague metaphors, use concrete language.                                                                                                                                          |
 | swear to protect                                   | Rewrite with the equivalent of 'vow to defend', or 'pledge to protect'                                                                                                                 |

@@ -77,6 +77,21 @@ const tests = [
     "two clauses joined by but, where the second has its own subject",
   ],
   [
+    "A novelist who drops pulchritude (it means beauty) into a chapter about a bus ride is not being exact, he is writing for the couple of people who will write him to say they caught it.",
+    [{ id: "no-negated-contrasts", start: 86, end: 182 }],
+    "a noun subject restated by a pronoun with the same verb, after a parenthesis",
+  ],
+  [
+    "It wasn't confusing, it was extra footage, a rabbit parade the book did not order, dumb crap with a budget.",
+    [{ id: "no-negated-contrasts", start: 3, end: 106 }],
+    "a comma splice that says what it was not and then what it was, with a list after it",
+  ],
+  [
+    "The essays were not edited, they were piled on the syllabus.",
+    [{ id: "no-negated-contrasts", start: 16, end: 59 }],
+    "a plural subject restated by they",
+  ],
+  [
     "The plan is not finished, it needs another week.",
     [],
     "a comma splice whose clauses have different subjects",
