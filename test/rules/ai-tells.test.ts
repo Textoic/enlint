@@ -366,8 +366,96 @@ describe("the three reports together", () => {
       "That is why the year beats the amount. It matters. The amount can be fixed later. The start date can't.";
     assert.deepEqual(flagged(text, "no-bad-words"), ["beats", "matters"]);
     assert.deepEqual(flagged(text, "no-bad-sentence-structures"), [
-      "The amount can be fixed later. The start date can't",
+      "That is why the year beats the amount. It matters. The amount can be fixed later. The start date can't",
     ]);
+    assert.deepEqual(kindsIn(text), ["can-cannot", "staccato-run"]);
+  });
+});
+
+describe("tells: a denial and its answer in two sentences", () => {
+  [
+    "It doesn't challenge anything. It just costs money.",
+    "You are missing nothing. You are just looking at a canvas.",
+    "It doesn't rhyme. It's just prose.",
+    "It doesn't challenge anything. It just costs money and nothing else.",
+    "This isn't a lack of patience. It is a rational decision made by every reader.",
+    "Not because the prose was bad. Because I did not care about the glass.",
+  ].forEach((text) => {
+    it(`finds "${text}"`, () => {
+      assert.deepEqual(kindsIn(text), ["split-contrast"]);
+      assert.deepEqual(spansIn(text), [text.slice(0, -1)]);
+    });
+  });
+
+  [
+    "I did not go. The rain came down hard all night and the road was closed by morning.",
+    "It costs money. It just sits there.",
+    "He did not call. He did not write.",
+    "I did not see him. He was at the back of the hall with the others.",
+    "She never wrote. It was a long winter.",
+    "The shop was not open. The rain had started.",
+    "The door was not locked. The key was under the mat.",
+    "Not all books are long. Some of them run to forty pages and nobody complains.",
+    "Not everyone agrees. He did not write.",
+    "No. I just think the book is bad.",
+    'He did not call. "It just slipped my mind," he said.',
+  ].forEach((text) => {
+    it(`leaves "${text}" alone`, () => {
+      assert.deepEqual(kindsIn(text), []);
+    });
+  });
+});
+
+describe("tells: a reason that repeats its claim", () => {
+  [
+    "You felt nothing because there was nothing there to feel.",
+    "None of it can be done badly, because none of it has rules to be measured against.",
+    "Once you remove every rule, the breaking stops meaning anything, because there is nothing to break against.",
+    "The bridge fails because it was built to fail.",
+  ].forEach((text) => {
+    it(`finds "${text}"`, () => {
+      assert.deepEqual(kindsIn(text), ["reasoned-echo"]);
+    });
+  });
+
+  [
+    "She left because he was late.",
+    "Because the rules were hard, the rules were kept.",
+    "A poem is interesting because, at the very least, it rhymes.",
+    "I stopped reading the novel because the novel had four hundred pages of weather.",
+    "I never go because there is no time.",
+    "I have no car because I never learned to drive.",
+  ].forEach((text) => {
+    it(`leaves "${text}" alone`, () => {
+      assert.deepEqual(kindsIn(text), []);
+    });
+  });
+});
+
+describe("tells: a run of clipped sentences", () => {
+  it("finds a longer run of short sentences with one of middling length in it", () => {
+    const text =
+      "They hide behind language. They make you feel small. They make you feel like you are missing something important. You are missing nothing. You are just looking at a canvas.";
+    assert.deepEqual(kindsIn(text), ["split-contrast", "staccato-run"]);
+  });
+
+  it("finds three in a row and reports the run once", () => {
+    const text =
+      "I looked at the blue. It was blue. I looked at the price. I walked away.";
+    assert.deepEqual(kindsIn(text), ["staccato-run"]);
+    assert.deepEqual(spansIn(text), [text.slice(0, -1)]);
+  });
+
+  [
+    "I looked at the blue. It was blue.",
+    "No. I agree. So why waste the time of a reader with these long descriptions?",
+    "I looked at it. Was it blue? I walked away. It rained.",
+    "1. Buy milk. 2. Buy eggs. 3. Go home.",
+    "I read the book last year. It took me four long months of evenings to finish. I liked it. The ending made me angry for a week afterwards.",
+  ].forEach((text) => {
+    it(`leaves "${text}" alone`, () => {
+      assert.deepEqual(kindsIn(text), []);
+    });
   });
 });
 

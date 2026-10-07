@@ -37,6 +37,7 @@ export const ErrorId = {
   NO_ABSOLUTE_PHRASES: "no-absolute-phrases",
   NO_BAD_SENTENCE_STRUCTURES: "no-bad-sentence-structures",
   NO_BAD_WORDS: "no-bad-words",
+  NO_CONVOLUTED_SENTENCES: "no-convoluted-sentences",
   NO_EXPLAINED_ANTONYMS: "no-explained-antonyms",
   NO_EXPLAINED_INTENSIFIERS: "no-explained-intensifiers",
   NO_HIGH_LEXICAL_DENSITY: "no-high-lexical-density",
@@ -47,6 +48,7 @@ export const ErrorId = {
   NO_PASSIVE_SENTENCES: "no-passive-sentences",
   NO_SIMILES: "no-similes",
   NO_SPECIAL_PUNCTUATION: "no-special-punctuation",
+  NO_UNMARKED_RELATIVES: "no-unmarked-relatives",
 } as const;
 
 export type ErrorId = (typeof ErrorId)[keyof typeof ErrorId];

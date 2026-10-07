@@ -16,6 +16,119 @@ Nor does routine history: git already records what changed and when.
 
 ## Log
 
+### 2026-10-07 — three more tells: a denial split in two, a reason that repeats its claim, and a run of clipped sentences
+
+The lab's essays answered the cap on clause joins with new shapes, and the
+user named them. `src/tells.ts` finds three more, and
+`no-bad-sentence-structures` reports them:
+
+- `split-contrast`: a sentence of three words or more with a negator, then
+  a sentence that answers it in one of four ways. It has "just", "only",
+  "simply" or "merely" among its first four words ("It doesn't challenge
+  anything. It just costs money."). Or the first denies with "be" and the
+  second opens on a pronoun and "be" ("This isn't a lack of patience. It is
+  a rational decision."). Or the first opens on "Not" and the second on the
+  word after it ("Not because the prose was bad. Because I did not care.").
+  Or both open on the same noun or pronoun, the second has twelve words or
+  fewer and denies nothing. A quotation or a question on either side is left
+  alone. An article is no shared opener: "The shop was not open. The rain
+  had started." is quiet.
+- `reasoned-echo`: a "because" past the first word with the same thing on
+  both sides of it: "nothing", "anything" or "none" on each side, or the
+  same full verb by its lemma ("fails because it was built to fail"). "You
+  felt nothing because there was nothing there to feel." A shared noun does
+  not count; it reported "I stopped reading the novel because the novel had
+  four hundred pages of weather", where the reason is new.
+- `staccato-run`: three or more sentences in a row of six words or fewer,
+  or four or more of eleven words or fewer that average 6.5 or less, with no
+  quotation, question or numbered item among them, reported once for the
+  run. The second form is there for the user's own example, whose sentences
+  run 4, 5, 11, 4 and 7 words. It is found over the list of sentences and
+  not by a detector of one sentence, since it needs more than the next one.
+
+The author writes the first of these: "People don't do that. People put off
+reading classics because they are so long." The lab's target holds 1.2
+`split-contrast` and 0.2 `reasoned-echo` per 1,000 words for the author and
+no `staccato-run`, so the lab counts the excess only.
+
+`reasoned-echo` catches three of the five sentences the user quoted, all
+three by the words of absence: artisan tags "breaking" in "the breaking
+stops meaning anything" as an adjective, so the verb is not compared there. "It
+mostly doesn't, because you rebuild everything anyway" and "What does arrive
+is the delay, because you have stopped moving" repeat nothing, and no rule
+here finds a reason that is only too tidy.
+
+Still wrong after an independent review of the three: "It was not cheap. It
+rained all week." is a `split-contrast` (same pronoun, short answer), and a
+reason that is only too tidy and repeats nothing is not found.
+
+Tells of different kinds share one rule id, and `lint` keeps the widest of
+two overlapping problems with one id. A `staccato-run` over a "can" and
+"can't" pair, or over a `split-contrast`, therefore hides the shorter
+report; the test "lists the
+comparison and the claim" records it. `tells()` itself returns both.
+
+### 2026-10-07 — a sentence is capped by its clause joins, and a relative clause with no marker is a rule of its own
+
+Two rules came from the lab's model-written essays: `no-convoluted-sentences`
+and `no-unmarked-relatives`. Both read `src/clauses.ts`. artisan was fixed
+first for the two prompting sentences (its `docs/architecture.md`,
+2026-10-07). What each rule reports, the counts and the known misses are in
+`docs/no-convoluted-sentences.md` and `docs/no-unmarked-relatives.md`.
+
+The measure of a convoluted sentence is the number of joins and not the
+number of clauses. Counted on the author's 13 essays against 60 model-written
+ones (lab runs `2026-10-06T06-41-09-human-grok-6` and
+`2026-10-06T17-22-38-human-grok-7`), share of sentences:
+
+| measure                   | the author | the model essays |
+| ------------------------- | ---------- | ---------------- |
+| five tensed verbs or more | 7%         | 20%              |
+| four joins or more        | 1.6%       | 13.0%            |
+
+The joins row is the rule as it stands, counted through the lab's profiler
+(6 of 375 sentences, 184 of 1,414). The verb row comes from a first draft
+on unmasked text and was not taken again, so the two rows are a rough
+comparison: verbs separated the texts by about three and joins by about
+eight. The author writes long sentences with a quotation or a list of
+questions in them, which hold many verbs and few joins.
+
+`no-convoluted-sentences` is on by default and `no-unmarked-relatives` is
+off: the rule reports the author's own essays ten times in 5,600 words. The default is a decision for the person who owns the configuration.
+
+Tried and dropped for the unmarked relative:
+
+- Any verb that hangs on a noun with a subject between: 18 reports on the
+  author's essays, 10 of them wrong. Most were a main clause after a fronted
+  phrase with no comma, which artisan hangs on the last noun of the phrase.
+- Asking for no object after the verb, with the clause read to the end of
+  the verb's subtree: it dropped "terms your audience uses because they save
+  time", since "time" is an object further down. The clause now ends at the
+  next punctuation mark or connective.
+- A quotation mark between the noun and the clause was allowed, to match
+  artisan's tagger. It reported 'the sentence "The best actor drove fast"'.
+
+An independent review found that the first version counted "as", "once",
+"after" and "since" as joins wherever a verb followed, and reported a main
+clause after "As a teacher", "Last year" and "For a while" as a relative.
+Both are fixed and tested. What it found and is not fixed is listed under
+"What it gets wrong" in the two rule pages.
+
+`lint` let any problem with a suggestion supersede the shorter problems it
+overlaps. A suggestion that only inserts text (a range of no width) no
+longer counts for that, because it rewrites nothing: without the change
+"that " in front of a clause hid every `no-bad-words` finding inside the
+clause.
+
+Both rules are tested under the rules-alone loader (`test/nlp.ts`) and the
+trained one (`test/trained-nlp.ts`), because the two tag differently:
+"keeps" in the prompting sentence is a verb under the first and a noun under
+the second. `scripts/nlp.ts` passes the whole of `weights.json`, wrapper
+included, so it runs the rules alone. The lab's loader does the same.
+
+Sixteen tests failed before this work and fail after it, all in the
+`no-bad-words` example and triage suites.
+
 ### 2026-10-06 — "X is Y", ", and", "sit" and "land": two tells, four entries, and a wider contrast
 
 The request came from model-written essays in enlint-lab. artisan mistagged

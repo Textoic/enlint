@@ -12,6 +12,9 @@ export const tellMessages: Record<TellKind, string> = {
   "matters-claim": `Saying that something matters tells the reader nothing about it: "That's why the year you start matters so much." Say what it changes: "Start ten years sooner and the total doubles."`,
   equation: `"X is Y" sets one noun equal to another instead of saying what happens: "A puzzle you did not ask for is just an interruption." Give the subject a verb of its own: "Random puzzles interrupt the reader."`,
   "comma-and": `", and" hangs a second full clause on the first: "They looked, the picture did not answer, and a staff member called that a failure." End the sentence at the comma, or drop the weaker clause.`,
+  "split-contrast": `These two sentences deny one thing and then assert another: "It doesn't challenge anything. It just costs money." It is "not X, it is Y" with a full stop in the middle. Say only what the thing does: "It costs money."`,
+  "reasoned-echo": `This sentence proves its claim with its own words: "You felt nothing because there was nothing there to feel." The reason repeats the claim and only sounds like an argument. Say the claim once, bluntly, or give a reason that brings something new.`,
+  "staccato-run": `Three or more clipped sentences in a row: "I looked at the blue. It was blue. I walked away." Join two of them, or say the whole thing in one ordinary sentence.`,
   "can-cannot": `This sets a "can" against a "can't" for effect: "The amount can be fixed later. The start date can't." Say the point once: "Only the amount can be fixed later."`,
 };
 

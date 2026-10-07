@@ -29,6 +29,7 @@ import noBadWords, {
   type BadWordCategory,
   type BadWordEntry,
 } from "./rules/no-bad-words.js";
+import noConvolutedSentences from "./rules/no-convoluted-sentences.js";
 import noExplainedAntonyms from "./rules/no-explained-antonyms.js";
 import noExplainedIntensifiers from "./rules/no-explained-intensifiers.js";
 import noHighLexicalDensity from "./rules/no-high-lexical-density.js";
@@ -39,6 +40,7 @@ import noNounClusters from "./rules/no-noun-clusters.js";
 import noPassiveSentences from "./rules/no-passive-sentences.js";
 import noSimiles from "./rules/no-similes.js";
 import noSpecialPunctuation from "./rules/no-special-punctuation.js";
+import noUnmarkedRelatives from "./rules/no-unmarked-relatives.js";
 
 export { CaseRuleId, ErrorId };
 export type {
@@ -71,6 +73,7 @@ const {
   NO_ABSOLUTE_PHRASES,
   NO_BAD_SENTENCE_STRUCTURES,
   NO_BAD_WORDS,
+  NO_CONVOLUTED_SENTENCES,
   NO_EXPLAINED_ANTONYMS,
   NO_EXPLAINED_INTENSIFIERS,
   NO_HIGH_LEXICAL_DENSITY,
@@ -81,6 +84,7 @@ const {
   NO_PASSIVE_SENTENCES,
   NO_SIMILES,
   NO_SPECIAL_PUNCTUATION,
+  NO_UNMARKED_RELATIVES,
 } = ErrorId;
 
 const rules: [ErrorId, Rule][] = [
@@ -92,6 +96,8 @@ const rules: [ErrorId, Rule][] = [
   [NO_NOUN_CLUSTERS, noNounClusters],
   [NO_HIGH_LEXICAL_DENSITY, noHighLexicalDensity],
   [NO_NESTED_CLAUSES, noNestedClauses],
+  [NO_CONVOLUTED_SENTENCES, noConvolutedSentences],
+  [NO_UNMARKED_RELATIVES, noUnmarkedRelatives],
   [NO_SIMILES, noSimiles],
   [NO_SPECIAL_PUNCTUATION, noSpecialPunctuation],
   [NO_BAD_SENTENCE_STRUCTURES, noBadSentenceStructures],
@@ -107,6 +113,7 @@ export const defaults: Config = {
   [NO_ABSOLUTE_PHRASES]: true,
   [NO_BAD_SENTENCE_STRUCTURES]: true,
   [NO_BAD_WORDS]: true,
+  [NO_CONVOLUTED_SENTENCES]: true,
   [NO_EXPLAINED_ANTONYMS]: true,
   [NO_EXPLAINED_INTENSIFIERS]: true,
   [NO_HIGH_LEXICAL_DENSITY]: true,
@@ -117,13 +124,14 @@ export const defaults: Config = {
   [NO_PASSIVE_SENTENCES]: true,
   [NO_SIMILES]: true,
   [NO_SPECIAL_PUNCTUATION]: false,
+  [NO_UNMARKED_RELATIVES]: false,
 };
 
 const overlaps = (one: LintError, other: LintError) =>
   one.start < other.end && other.start < one.end;
 
 const offersReplacement = ({ suggestions }: LintError) =>
-  (suggestions ?? []).length > 0;
+  (suggestions ?? []).some(({ range: [start, end] }) => end > start);
 
 const widthOf = ({ start, end }: LintError) => end - start;
 

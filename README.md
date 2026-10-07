@@ -50,6 +50,7 @@ wrong supersedes only shorter problems from its own rule, so the sentence-wide
 | [`no-bad-words`](docs/no-bad-words.md)                           | on      | Every flagged word and expression, all 451 of them              |
 | `no-absolute-phrases`                                            | on      | "We scrambled along the shore, the waves splashing at our feet" |
 | `no-bad-sentence-structures`                                     | on      | "not just X but Y", over a shorter span than the rule below     |
+| [`no-convoluted-sentences`](docs/no-convoluted-sentences.md)     | on      | More than three clauses joined by "and", "so", "because", "who" |
 | [`no-explained-antonyms`](docs/no-explained-antonyms.md)         | on      | "not harmful" for "harmless"                                    |
 | [`no-explained-intensifiers`](docs/no-explained-intensifiers.md) | on      | "very bad" for "awful"                                          |
 | [`no-high-lexical-density`](docs/no-high-lexical-density.md)     | on      | Sentences that are mostly nouns and adjectives                  |
@@ -60,6 +61,7 @@ wrong supersedes only shorter problems from its own rule, so the sentence-wide
 | [`no-mixed-dialects`](docs/no-mixed-dialects.md)                 | off     | "colour" in American English, and the reverse                   |
 | [`no-noun-clusters`](docs/no-noun-clusters.md)                   | off     | "stainless steel protection strips"                             |
 | `no-special-punctuation`                                         | off     | Em dashes between two words                                     |
+| [`no-unmarked-relatives`](docs/no-unmarked-relatives.md)         | off     | "rules another person can check", with "that" left out          |
 
 Two rules were removed on 2026-09-10: `no-complex-noun-phrases` and
 `no-complex-verb-tenses`. Both reported ordinary prose far more often than bad

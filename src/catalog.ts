@@ -74,6 +74,23 @@ const ruleTexts: Record<ErrorId, RuleText> = {
       { text: "It was an added bonus.", suggestion: "a bonus" },
     ],
   },
+  [ErrorId.NO_CONVOLUTED_SENTENCES]: {
+    name: "Convoluted sentences",
+    summary: "More than three clause joins in one sentence.",
+    description:
+      "Each “and”, “so”, “because”, “who” or “whether” hangs another clause on the sentence. Past three, the reader loses which clause explains which. The length of the sentence is not what is counted.",
+    examples: [
+      {
+        text: "He stayed because the car that she drove broke down, and nobody knew when the bus left or whether it ran.",
+      },
+      {
+        text: "She called when the train stopped, but he was out because the dog that he walks had run off.",
+      },
+      {
+        text: "We paid what they asked, and the car that we bought broke down before we got home, so I wrote to them.",
+      },
+    ],
+  },
   [ErrorId.NO_EXPLAINED_ANTONYMS]: {
     name: "Explained antonyms",
     summary: "“not X” where a single word says the same.",
@@ -210,6 +227,26 @@ const ruleTexts: Record<ErrorId, RuleText> = {
       { text: "The result was clear — we had won.", suggestion: ", " },
       { text: "We had one goal — ship by Friday.", suggestion: ", " },
       { text: "Read pages 10–20 before class.", suggestion: "-" },
+    ],
+  },
+  [ErrorId.NO_UNMARKED_RELATIVES]: {
+    name: "Unmarked relatives",
+    summary: "A relative clause with no “that” in front of it.",
+    description:
+      "A clause that describes the noun before it, with its own subject and nothing to mark where it starts. The reader takes the two nouns for one phrase until the verb arrives. Put “that” between them.",
+    examples: [
+      {
+        text: "You work inside rules another person can check.",
+        suggestion: "You work inside rules that another person can check.",
+      },
+      {
+        text: "The book you asked for is here.",
+        suggestion: "The book that you asked for is here.",
+      },
+      {
+        text: "She kept the letters he wrote.",
+        suggestion: "She kept the letters that he wrote.",
+      },
     ],
   },
 };

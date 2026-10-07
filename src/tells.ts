@@ -11,7 +11,10 @@ export type TellKind =
   | "matters-claim"
   | "can-cannot"
   | "equation"
-  | "comma-and";
+  | "comma-and"
+  | "split-contrast"
+  | "reasoned-echo"
+  | "staccato-run";
 
 export type Tell = { kind: TellKind; start: number; end: number };
 
@@ -743,6 +746,133 @@ const commaAnds = (tokens: ParsedToken[]): Tell[] =>
     )
     .map((and) => spanOf("comma-and", tokens[and.id - 1], and));
 
+const RESTRICTORS = new Set(["just", "only", "simply", "merely"]);
+
+const RESTRICTOR_REACH = 4;
+
+const SHORT_ANSWER = 12;
+
+const SHORTEST_DENIAL = 3;
+
+const wordsOf = (tokens: ParsedToken[]) => tokens.filter(isWord);
+
+const isPointer = ({ xpos, feats: { PronType } }: ParsedToken) =>
+  xpos === "NOUN" && (PronType === "Prs" || PronType === "Dem");
+
+const opensOnTheSameSubject = (tokens: ParsedToken[], next: ParsedToken[]) => {
+  const [first] = wordsOf(tokens);
+  const [second] = wordsOf(next);
+  return (
+    first.xpos === "NOUN" &&
+    formOf(first) === formOf(second) &&
+    wordsOf(next).length <= SHORT_ANSWER
+  );
+};
+
+const restrictsEarly = (next: ParsedToken[]) =>
+  wordsOf(next)
+    .slice(0, RESTRICTOR_REACH)
+    .some((token) => RESTRICTORS.has(formOf(token)));
+
+const affirms = (next: ParsedToken[]) => !next.some(isNegator);
+
+const restatesWithBe = (next: ParsedToken[]) => {
+  const [subject, verb] = wordsOf(next) as (ParsedToken | undefined)[];
+  return (
+    subject != null &&
+    verb != null &&
+    isPointer(subject) &&
+    wordOf(verb) === "be"
+  );
+};
+
+const deniesWithBe = (tokens: ParsedToken[]) =>
+  tokens.some(
+    (token) =>
+      token.lemma === "not" &&
+      token.id > 0 &&
+      wordOf(tokens[token.id - 1]) === "be",
+  );
+
+const repeatsAfterNot = (tokens: ParsedToken[], next: ParsedToken[]) => {
+  const [not, repeated] = wordsOf(tokens) as (ParsedToken | undefined)[];
+  const [answer] = wordsOf(next);
+  return (
+    not != null &&
+    repeated != null &&
+    formOf(not) === "not" &&
+    formOf(repeated) === formOf(answer)
+  );
+};
+
+const answersPlainly = (tokens: ParsedToken[], next: ParsedToken[]) =>
+  affirms(next) &&
+  ((deniesWithBe(tokens) && restatesWithBe(next)) ||
+    opensOnTheSameSubject(tokens, next));
+
+const answersADenial = (tokens: ParsedToken[], next: ParsedToken[]) =>
+  restrictsEarly(next) ||
+  repeatsAfterNot(tokens, next) ||
+  answersPlainly(tokens, next);
+
+const isUnspoken = (tokens: ParsedToken[], next: ParsedToken[]) =>
+  runsOn(tokens, next) && !isSpoken(tokens) && !isSpoken(next);
+
+const deniesThenAsserts = (tokens: ParsedToken[], next: ParsedToken[]) =>
+  wordsOf(tokens).length >= SHORTEST_DENIAL &&
+  tokens.some(isNegator) &&
+  isUnspoken(tokens, next) &&
+  answersADenial(tokens, next);
+
+const splitContrasts = (
+  tokens: ParsedToken[],
+  next: ParsedToken[] | undefined,
+): Tell[] => {
+  const first = tokens.find(isWord);
+  const last = next && lastWord(next);
+  return next && first && last && deniesThenAsserts(tokens, next)
+    ? [spanOf("split-contrast", first, last)]
+    : [];
+};
+
+const ABSENCES = new Set(["nothing", "anything", "none"]);
+
+const EMPTY_VERBS = new Set(["be", "have", "do", "get", "make", "go"]);
+
+const SHORTEST_ECHO = 4;
+
+const isFullVerb = (token: ParsedToken) =>
+  token.xpos === "VERB" &&
+  token.feats.Mood == null &&
+  !EMPTY_VERBS.has(wordOf(token)) &&
+  wordOf(token).length >= SHORTEST_ECHO;
+
+const echoKeyOf = (token: ParsedToken) => {
+  if (ABSENCES.has(formOf(token))) {
+    return "nothing";
+  }
+
+  return isFullVerb(token) ? wordOf(token) : undefined;
+};
+
+const keysOf = (tokens: ParsedToken[]) =>
+  new Set(tokens.map(echoKeyOf).filter((key) => key != null));
+
+const reasonedEchoes = (tokens: ParsedToken[]): Tell[] => {
+  const because = tokens.find(
+    (token) => token.id > 0 && formOf(token) === "because",
+  );
+  if (because == null) {
+    return [];
+  }
+
+  const claimed = keysOf(tokens.slice(0, because.id));
+  const echoes = [...keysOf(tokens.slice(because.id + 1))].some((key) =>
+    claimed.has(key),
+  );
+  return echoes ? wholeSentence("reasoned-echo", tokens) : [];
+};
+
 const DETECTORS: ((
   tokens: ParsedToken[],
   next: ParsedToken[] | undefined,
@@ -758,9 +888,78 @@ const DETECTORS: ((
   pairedAbilities,
   equations,
   commaAnds,
+  splitContrasts,
+  reasonedEchoes,
 ];
 
-export default (sentences: ParsedToken[][]): Tell[] =>
-  sentences.flatMap((tokens, at) =>
+const CLIPPED = 6;
+
+const STACCATO_RUN = 3;
+
+const SHORTISH = 11;
+
+const CHOPPY_RUN = 4;
+
+const CHOPPY_MEAN = 6.5;
+
+const isListed = (tokens: ParsedToken[]) => /^\d/u.test(tokens[0]?.form ?? "");
+
+const isUnder =
+  (limit: number) =>
+  (tokens: ParsedToken[]): boolean =>
+    wordsOf(tokens).length <= limit && !isSpoken(tokens) && !isListed(tokens);
+
+type Fits = (tokens: ParsedToken[]) => boolean;
+
+const runFrom = (sentences: ParsedToken[][], at: number, fits: Fits) => {
+  let length = 0;
+  while (
+    at + length < sentences.length &&
+    fits(sentences[at + length]) &&
+    (length === 0 || runsOn(sentences[at + length - 1], sentences[at + length]))
+  ) {
+    length += 1;
+  }
+
+  return sentences.slice(at, at + length);
+};
+
+const meanWords = (run: ParsedToken[][]) =>
+  run.reduce((total, tokens) => total + wordsOf(tokens).length, 0) /
+  Math.max(run.length, 1);
+
+const staccatoFrom = (sentences: ParsedToken[][], at: number) => {
+  const clipped = runFrom(sentences, at, isUnder(CLIPPED));
+  const choppy = runFrom(sentences, at, isUnder(SHORTISH));
+  const isChoppy =
+    choppy.length >= CHOPPY_RUN && meanWords(choppy) <= CHOPPY_MEAN;
+  if (isChoppy) {
+    return choppy;
+  }
+
+  return clipped.length >= STACCATO_RUN ? clipped : [];
+};
+
+const staccatoRuns = (sentences: ParsedToken[][]): Tell[] => {
+  const found: Tell[] = [];
+  let at = 0;
+  while (at < sentences.length) {
+    const run = staccatoFrom(sentences, at);
+    const first = run[0]?.find(isWord);
+    const last = lastWord(run[run.length - 1] ?? []);
+    if (first && last) {
+      found.push(spanOf("staccato-run", first, last));
+    }
+
+    at += Math.max(run.length, 1);
+  }
+
+  return found;
+};
+
+export default (sentences: ParsedToken[][]): Tell[] => [
+  ...sentences.flatMap((tokens, at) =>
     DETECTORS.flatMap((detector) => detector(tokens, sentences[at + 1])),
-  );
+  ),
+  ...staccatoRuns(sentences),
+];
