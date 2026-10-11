@@ -406,6 +406,119 @@ describe("tells: a denial and its answer in two sentences", () => {
   });
 });
 
+describe("tells: a denial answered by what the thing does", () => {
+  [
+    "The names didn't help you. They cost you attention and gave nothing back.",
+    "Postmodernism does not even attempt the thing. It comments on the attempt.",
+    "The dread doesn't come from the voice. It comes from what happens.",
+    "Nobody remembers the lawsuit in that long book. People remember the fog.",
+  ].forEach((text) => {
+    it(`finds "${text}"`, () => {
+      assert.deepEqual(kindsIn(text), ["split-contrast"]);
+      assert.deepEqual(spansIn(text), [text.slice(0, -1)]);
+    });
+  });
+
+  [
+    "The plan did not work. It rained all week and the river rose over the road by the mill.",
+    "She did not write. It was a long winter.",
+    "The engine did not start. It has not started since.",
+    "You remember that Gatsby threw parties for a woman he couldn't have. Anna threw herself under a train.",
+    "No one came. The band played to an empty hall.",
+    "Nobody talks like that. Nobody thinks like that.",
+    "I didn't go to the shop. It rained all day.",
+    "He did not answer the letter. They buried him in March.",
+    "She did not call on Sunday. That hurt more than I expected.",
+    "We didn't ship on Friday. It took two more weeks.",
+    "Nobody answered the phone. I just left a message.",
+  ].forEach((text) => {
+    it(`leaves "${text}" alone`, () => {
+      assert.deepEqual(kindsIn(text), []);
+    });
+  });
+});
+
+describe("tells: two short sentences on one mould", () => {
+  [
+    "A painter learns paint. A sculptor learns stone.",
+    "Dickens knew how to start a book. Tolstoy knew how to end one.",
+    "A joiner works with wood. A potter works with clay.",
+  ].forEach((text) => {
+    it(`finds "${text}"`, () => {
+      assert.deepEqual(kindsIn(text), ["parallel-pair"]);
+      assert.deepEqual(spansIn(text), [text.slice(0, -1)]);
+    });
+  });
+
+  [
+    "I went home. The rain had stopped by then.",
+    "He crushed my army. He murdered my friends.",
+    "I opened the door. I opened the window.",
+    "We ran the first test. We ran the second test.",
+    "Run the tests. Run the linter.",
+    "The cat sat on the mat. The dog sat beside it.",
+    "The raven shrugged his shoulders. The man came closer.",
+    'A painter learns paint. "A sculptor learns stone," she said.',
+    "A painter learns paint over many slow years in a cold studio. A sculptor learns stone.",
+  ].forEach((text) => {
+    it(`leaves "${text}" alone`, () => {
+      assert.deepEqual(kindsIn(text), []);
+    });
+  });
+});
+
+describe("tells: a paragraph that ends on a short verdict", () => {
+  const body =
+    "The publisher wanted ninety thousand words from a story of thirty thousand. The writer added a romance and two fights to reach the count.";
+
+  [
+    "That's the whole game.",
+    "Everything else is furniture.",
+    "That is the worst trade available.",
+    "It's a bad trade.",
+  ].forEach((verdict) => {
+    it(`finds "${verdict}" at the end of a paragraph`, () => {
+      const text = `${body} ${verdict}`;
+      assert.deepEqual(kindsIn(text), ["verdict-closer"]);
+      assert.deepEqual(spansIn(text), [verdict.slice(0, -1)]);
+    });
+  });
+
+  it("leaves a verdict alone in the middle of a paragraph", () => {
+    assert.deepEqual(kindsIn(`That's the whole game. ${body}`), []);
+  });
+
+  it("leaves a short paragraph alone", () => {
+    assert.deepEqual(
+      kindsIn("The writer added a romance. That's the whole game."),
+      [],
+    );
+  });
+
+  [
+    "It was his turn.",
+    "The deadline is Friday.",
+    "There are three chapters left.",
+    "My name is Luis.",
+    "The results are in the table below.",
+    "The writer's editor never asked why.",
+    "You are just looking at a canvas.",
+    "Nobody stopped them from doing it at any point along the way.",
+    "Is that the whole game?",
+  ].forEach((ending) => {
+    it(`leaves "${ending}" alone at the end of a paragraph`, () => {
+      assert.ok(!kindsIn(`${body} ${ending}`).includes("verdict-closer"));
+    });
+  });
+
+  it("reads each paragraph on its own", () => {
+    const text = `${body}
+
+That's the whole game.`;
+    assert.deepEqual(kindsIn(text), []);
+  });
+});
+
 describe("tells: a reason that repeats its claim", () => {
   [
     "You felt nothing because there was nothing there to feel.",

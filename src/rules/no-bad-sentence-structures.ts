@@ -15,6 +15,8 @@ export const tellMessages: Record<TellKind, string> = {
   "split-contrast": `These two sentences deny one thing and then assert another: "It doesn't challenge anything. It just costs money." It is "not X, it is Y" with a full stop in the middle. Say only what the thing does: "It costs money."`,
   "reasoned-echo": `This sentence proves its claim with its own words: "You felt nothing because there was nothing there to feel." The reason repeats the claim and only sounds like an argument. Say the claim once, bluntly, or give a reason that brings something new.`,
   "staccato-run": `Three or more clipped sentences in a row: "I looked at the blue. It was blue. I walked away." Join two of them, or say the whole thing in one ordinary sentence.`,
+  "parallel-pair": `These two short sentences are built on one mould with the same verb: "A painter learns paint. A sculptor learns stone." The pair reads as a slogan. Keep one example, or put both in one plain sentence: "Painters and sculptors each learn a material."`,
+  "verdict-closer": `The paragraph ends on a short verdict: "That's the whole game." A line like that sums up what the paragraph already said and is there to be quoted. Cut it, or end on the last thing that carries a fact.`,
   "can-cannot": `This sets a "can" against a "can't" for effect: "The amount can be fixed later. The start date can't." Say the point once: "Only the amount can be fixed later."`,
 };
 

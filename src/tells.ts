@@ -14,7 +14,9 @@ export type TellKind =
   | "comma-and"
   | "split-contrast"
   | "reasoned-echo"
-  | "staccato-run";
+  | "staccato-run"
+  | "parallel-pair"
+  | "verdict-closer";
 
 export type Tell = { kind: TellKind; start: number; end: number };
 
@@ -774,7 +776,12 @@ const restrictsEarly = (next: ParsedToken[]) =>
     .slice(0, RESTRICTOR_REACH)
     .some((token) => RESTRICTORS.has(formOf(token)));
 
-const affirms = (next: ParsedToken[]) => !next.some(isNegator);
+const NOBODIES = new Set(["nobody", "no-one", "noone"]);
+
+const isDenier = (token: ParsedToken) =>
+  isNegator(token) || NOBODIES.has(formOf(token));
+
+const affirms = (next: ParsedToken[]) => !next.some(isDenier);
 
 const restatesWithBe = (next: ParsedToken[]) => {
   const [subject, verb] = wordsOf(next) as (ParsedToken | undefined)[];
@@ -805,10 +812,78 @@ const repeatsAfterNot = (tokens: ParsedToken[], next: ParsedToken[]) => {
   );
 };
 
+const THINGS_POINTED_AT = new Set([
+  "it",
+  "they",
+  "that",
+  "this",
+  "these",
+  "those",
+]);
+
+const PERSONS = new Set(["i", "we", "you", "he", "she"]);
+
+const isAboutAThing = (tokens: ParsedToken[]) =>
+  !PERSONS.has(formOf(wordsOf(tokens)[0]));
+
+const deniesAnAction = (tokens: ParsedToken[]) =>
+  isAboutAThing(tokens) &&
+  tokens.some(
+    (token) =>
+      token.lemma === "not" &&
+      token.id > 0 &&
+      wordOf(tokens[token.id - 1]) === "do",
+  );
+
+const pointsBackAndActs = (next: ParsedToken[]) => {
+  const [subject, verb] = wordsOf(next) as (ParsedToken | undefined)[];
+  return (
+    subject != null &&
+    verb != null &&
+    THINGS_POINTED_AT.has(formOf(subject)) &&
+    isFinite(verb) &&
+    !isHelper(verb) &&
+    wordOf(verb) !== "be" &&
+    wordsOf(next).length <= SHORT_ANSWER &&
+    !next.some((token) => token.lemma === "not")
+  );
+};
+
+const EMPTY_VERBS = new Set(["be", "have", "do", "get", "make", "go"]);
+
+const SHORTEST_ECHO = 4;
+
+const isFullVerb = (token: ParsedToken) =>
+  token.xpos === "VERB" &&
+  token.feats.Mood == null &&
+  !EMPTY_VERBS.has(wordOf(token)) &&
+  wordOf(token).length >= SHORTEST_ECHO;
+
+const firstFullVerb = (tokens: ParsedToken[]) => tokens.find(isFullVerb);
+
+const deniedVerbOf = (tokens: ParsedToken[]) => {
+  const denial = tokens.findIndex(isDenier);
+  return denial < 0 ? undefined : firstFullVerb(tokens.slice(denial + 1));
+};
+
+const repeatsTheVerb = (tokens: ParsedToken[], next: ParsedToken[]) => {
+  const denied = deniedVerbOf(tokens);
+  const answered = firstFullVerb(next);
+  return (
+    denied != null &&
+    answered != null &&
+    wordOf(denied) === wordOf(answered) &&
+    wordsOf(next).length <= SHORT_ANSWER &&
+    !next.some(isDenier)
+  );
+};
+
 const answersPlainly = (tokens: ParsedToken[], next: ParsedToken[]) =>
-  affirms(next) &&
-  ((deniesWithBe(tokens) && restatesWithBe(next)) ||
-    opensOnTheSameSubject(tokens, next));
+  repeatsTheVerb(tokens, next) ||
+  (deniesAnAction(tokens) && pointsBackAndActs(next)) ||
+  (affirms(next) &&
+    ((deniesWithBe(tokens) && restatesWithBe(next)) ||
+      opensOnTheSameSubject(tokens, next)));
 
 const answersADenial = (tokens: ParsedToken[], next: ParsedToken[]) =>
   restrictsEarly(next) ||
@@ -818,11 +893,14 @@ const answersADenial = (tokens: ParsedToken[], next: ParsedToken[]) =>
 const isUnspoken = (tokens: ParsedToken[], next: ParsedToken[]) =>
   runsOn(tokens, next) && !isSpoken(tokens) && !isSpoken(next);
 
+const answersSomeDenial = (tokens: ParsedToken[], next: ParsedToken[]) =>
+  (tokens.some(isNegator) && answersADenial(tokens, next)) ||
+  repeatsTheVerb(tokens, next);
+
 const deniesThenAsserts = (tokens: ParsedToken[], next: ParsedToken[]) =>
   wordsOf(tokens).length >= SHORTEST_DENIAL &&
-  tokens.some(isNegator) &&
   isUnspoken(tokens, next) &&
-  answersADenial(tokens, next);
+  answersSomeDenial(tokens, next);
 
 const splitContrasts = (
   tokens: ParsedToken[],
@@ -836,16 +914,6 @@ const splitContrasts = (
 };
 
 const ABSENCES = new Set(["nothing", "anything", "none"]);
-
-const EMPTY_VERBS = new Set(["be", "have", "do", "get", "make", "go"]);
-
-const SHORTEST_ECHO = 4;
-
-const isFullVerb = (token: ParsedToken) =>
-  token.xpos === "VERB" &&
-  token.feats.Mood == null &&
-  !EMPTY_VERBS.has(wordOf(token)) &&
-  wordOf(token).length >= SHORTEST_ECHO;
 
 const echoKeyOf = (token: ParsedToken) => {
   if (ABSENCES.has(formOf(token))) {
@@ -873,6 +941,63 @@ const reasonedEchoes = (tokens: ParsedToken[]): Tell[] => {
   return echoes ? wholeSentence("reasoned-echo", tokens) : [];
 };
 
+const SHORTEST_TWIN = 3;
+
+const LONGEST_TWIN = 9;
+
+const TWIN_SLACK = 2;
+
+const TWIN_OPENING = 3;
+
+const isTwinSized = (tokens: ParsedToken[]) =>
+  wordsOf(tokens).length >= SHORTEST_TWIN &&
+  wordsOf(tokens).length <= LONGEST_TWIN;
+
+const openingShapeOf = (tokens: ParsedToken[]) =>
+  wordsOf(tokens)
+    .slice(0, TWIN_OPENING)
+    .map(({ xpos }) => xpos)
+    .join(" ");
+
+const LINKING = new Set(["be", "do"]);
+
+const actionsOf = (tokens: ParsedToken[]) =>
+  tokens
+    .filter((token) => token.xpos === "VERB" && !LINKING.has(wordOf(token)))
+    .map(wordOf);
+
+const sharesAnAction = (tokens: ParsedToken[], next: ParsedToken[]) =>
+  actionsOf(next).some((verb) => actionsOf(tokens).includes(verb));
+
+const opensOnANamedThing = (tokens: ParsedToken[]) => {
+  const [first] = wordsOf(tokens);
+  return first.xpos !== "VERB" && first.feats.PronType !== "Prs";
+};
+
+const pointsBack = (next: ParsedToken[]) => next.some(isPointer);
+
+const isBuiltAlike = (tokens: ParsedToken[], next: ParsedToken[]) =>
+  Math.abs(wordsOf(tokens).length - wordsOf(next).length) <= TWIN_SLACK &&
+  openingShapeOf(tokens) === openingShapeOf(next) &&
+  opensOnANamedThing(tokens) &&
+  !pointsBack(next) &&
+  sharesAnAction(tokens, next);
+
+const parallelPairs = (
+  tokens: ParsedToken[],
+  next: ParsedToken[] | undefined,
+): Tell[] => {
+  const first = tokens.find(isWord);
+  const last = next && lastWord(next);
+  const isPair =
+    next != null &&
+    isTwinSized(tokens) &&
+    isTwinSized(next) &&
+    isUnspoken(tokens, next) &&
+    isBuiltAlike(tokens, next);
+  return isPair && first && last ? [spanOf("parallel-pair", first, last)] : [];
+};
+
 const DETECTORS: ((
   tokens: ParsedToken[],
   next: ParsedToken[] | undefined,
@@ -890,6 +1015,7 @@ const DETECTORS: ((
   commaAnds,
   splitContrasts,
   reasonedEchoes,
+  parallelPairs,
 ];
 
 const CLIPPED = 6;
@@ -957,9 +1083,77 @@ const staccatoRuns = (sentences: ParsedToken[][]): Tell[] => {
   return found;
 };
 
+const paragraphsOf = (sentences: ParsedToken[][]) =>
+  sentences.reduce<ParsedToken[][][]>((paragraphs, tokens, at) => {
+    const current = paragraphs[paragraphs.length - 1] as
+      | ParsedToken[][]
+      | undefined;
+    if (current != null && at > 0 && runsOn(sentences[at - 1], tokens)) {
+      current.push(tokens);
+      return paragraphs;
+    }
+
+    return [...paragraphs, [tokens]];
+  }, []);
+
+const SHORTEST_BUILD_UP = 3;
+
+const LONGEST_VERDICT = 8;
+
+const SHORTEST_VERDICT = 2;
+
+const PRESENT_BE = new Set([
+  "is",
+  "are",
+  "'s",
+  "'re",
+  "’s",
+  "’re",
+  "isn",
+  "aren",
+]);
+
+const isPresentBe = (token: ParsedToken) =>
+  token.xpos === "VERB" &&
+  wordOf(token) === "be" &&
+  PRESENT_BE.has(formOf(token));
+
+const isNoOtherVerb = (token: ParsedToken) =>
+  token.xpos !== "VERB" || wordOf(token) === "be";
+
+const SUMMING_SUBJECTS = new Set([
+  "that",
+  "this",
+  "it",
+  "these",
+  "those",
+  "everything",
+  "nothing",
+]);
+
+const sumsUp = (tokens: ParsedToken[]) =>
+  SUMMING_SUBJECTS.has(formOf(wordsOf(tokens)[0]));
+
+const isVerdict = (tokens: ParsedToken[]) =>
+  sumsUp(tokens) &&
+  wordsOf(tokens).length >= SHORTEST_VERDICT &&
+  wordsOf(tokens).length <= LONGEST_VERDICT &&
+  !isSpoken(tokens) &&
+  !isListed(tokens) &&
+  tokens.some(isPresentBe) &&
+  tokens.every(isNoOtherVerb);
+
+const verdictClosers = (sentences: ParsedToken[][]): Tell[] =>
+  paragraphsOf(sentences)
+    .filter((paragraph) => paragraph.length >= SHORTEST_BUILD_UP)
+    .map((paragraph) => paragraph[paragraph.length - 1])
+    .filter(isVerdict)
+    .flatMap((tokens) => wholeSentence("verdict-closer", tokens));
+
 export default (sentences: ParsedToken[][]): Tell[] => [
   ...sentences.flatMap((tokens, at) =>
     DETECTORS.flatMap((detector) => detector(tokens, sentences[at + 1])),
   ),
   ...staccatoRuns(sentences),
+  ...verdictClosers(sentences),
 ];

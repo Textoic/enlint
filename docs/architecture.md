@@ -16,6 +16,77 @@ Nor does routine history: git already records what changed and when.
 
 ## Log
 
+### 2026-10-11 — the judges catch polish: a wider split contrast, paired slogans, a verdict that closes a paragraph, and a dash that ends the sentence
+
+Two LLM judges were asked to quote what gave 60 model essays away. Of 97
+notes by the stronger judge on model text, 44 say "polished", 37 "neat" or
+"neatly", 17 "punchline" and 12 "aphoristic". On the author's essays the same
+judge writes "idiosyncratic", "awkward" and "uneven". The passages it quotes
+are short verdicts and matched pairs, and the tells of 2026-10-07 missed most
+of them. Counts below are in 1,000 words: the author's 11 essays, then about
+130,000 words of the author's two novels, then 40 essays from the plain
+prompt the lab calls `voice`.
+
+- `split-contrast` now also takes a denial with "do" about a thing,
+  answered by "it", "they", "that", "this", "these" or "those" and a full
+  verb other than "be", in twelve words or fewer: "The names didn't help
+  you. They cost you attention." The answer may hold "nothing" but no
+  "not". A denial that opens on "I", "we", "you", "he" or "she" is left
+  alone, because the next sentence then tells what happened and contrasts
+  nothing ("I didn't go to the shop. It rained all day."). It also takes a
+  denial whose verb the answer repeats: "The dread doesn't come from the
+  voice. It comes from what happens." There "nobody" counts as a denial.
+  0.80, 0.79 and 3.11, where the old detector gave 0.80, 0.79 and 2.76.
+- Still reported and wrong: "The plan did not work. It rained all week."
+  The "it" of the weather looks the same as an "it" that points back. Not
+  reported and wanted: a denial with "never", "won't" or "can't" ("The fix
+  won't remove the warning. It hides it.").
+- A first version shared any full verb between the two sentences and
+  flagged "You remember that Gatsby threw parties for a woman he couldn't
+  have. Anna threw herself under a train." The denied verb is now the first
+  full verb after the denial, and the answer must open on it.
+- `parallel-pair`: two sentences in a row of three to nine words, within two
+  words of each other, whose first three words have the same parts of
+  speech and which share a verb other than "be" and "do". The first must
+  open on a named thing, so no personal pronoun and no command, and the
+  second must hold no pronoun that points back. "A painter learns paint. A
+  sculptor learns stone." 0.00, 0.02 and 0.62. Without the last two
+  conditions it flagged "I opened the door. I opened the window.", "Run the
+  tests. Run the linter." and "The cat sat on the mat. The dog sat beside
+  it.", and gave 0.17 on the novels. The cost: "Call the king Bob. Call the
+  planet Bob." is no longer found.
+- `verdict-closer`: the last sentence of a paragraph of three sentences or
+  more, two to eight words, that opens on "that", "this", "it", "these",
+  "those", "everything" or "nothing" and has "is" or "are" as its only
+  verb. "That's the whole game." 0.00, 0.06 and 0.69. Without the list of
+  openers it flagged plain facts ("The deadline is Friday.", "My name is
+  Luis.") and gave 0.24 on the novels; the plugin runs this rule on every
+  answer, where such closers are common. The past tense is left out because
+  narration ends paragraphs on it ("It was his turn.").
+- The parser gives a possessive "'s" the lemma "be" and in "The writer's
+  editor never asked why." tags it a verb. The opener list keeps that
+  sentence quiet. The mistag itself belongs in artisan and is not fixed.
+- This is one of the owner's three gaps in part. "A pair of clipped
+  sentences" as such is not reported: the author's essays hold such pairs.
+  `parallel-pair` covers the pairs the judges quoted.
+- `no-special-punctuation` offered a comma for every em dash, and the lab
+  applies that swap without a model. Where a statement stood on each side
+  the result was a comma splice. The swap is now a full stop and a capital
+  when the sentence holds one dash, no bracket and no question mark, a
+  finite verb comes before the dash, and the words after it are
+  determiners or adjectives, then nouns, then at most adverbs, then a
+  finite verb. Every other dash keeps the comma. A first version asked only
+  for a noun somewhere before a verb and cut "They cut the budget — a
+  decision the board regretted." in two, which made a `noun-fragment`.
+- The check reads the parser's tags, so a mistagged verb leaves the comma
+  and the splice: "I like the book — the ending works." ("works" tagged a
+  noun), "It was late — he left." ("left" tagged an adverb). Those are for
+  artisan. A command after the dash has no subject and also keeps the
+  comma ("The rule is simple — never use a dash.").
+- Not done: a detector for a comma splice the writer typed.
+- 16 tests of the bad-words fixtures fail with and without this change
+  ("the fixture names entries that are no longer on the list").
+
 ### 2026-10-07 — three more tells: a denial split in two, a reason that repeats its claim, and a run of clipped sentences
 
 The lab's essays answered the cap on clause joins with new shapes, and the

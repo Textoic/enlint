@@ -61,11 +61,77 @@ const tests = [
       {
         start: 25,
         end: 26,
+        suggestions: [{ range: [24, 30], text: ". The" }],
+        id: "no-special-punctuation",
+      },
+    ],
+    "end the sentence where a second statement follows the dash, and swallow the spaces on both sides",
+  ],
+  [
+    "Voice is about restraint — and the best narrators say less",
+    [
+      {
+        start: 25,
+        end: 26,
         suggestions: [{ range: [24, 27], text: ", " }],
         id: "no-special-punctuation",
       },
     ],
-    "swallow the spaces on both sides so the swap leaves one space, not two",
+    "keep the comma where a joining word follows the dash",
+  ],
+  ...[
+    "They cut the budget — a decision the board regretted",
+    "She found the letter — the one her mother wrote in 1950",
+    "The judges read sixty essays — essays written by a model",
+    "The house was quiet — too quiet for a place children lived in",
+    "Is the plan dead — the team thinks so?",
+    "(the plan failed — the team quit)",
+  ].map((text): [string, LintError[], string] => [
+    text,
+    [
+      {
+        start: text.indexOf("—"),
+        end: text.indexOf("—") + 1,
+        suggestions: [
+          {
+            range: [text.indexOf("—") - 1, text.indexOf("—") + 2],
+            text: ", ",
+          },
+        ],
+        id: "no-special-punctuation",
+      } as LintError,
+    ],
+    `keep the comma in "${text}"`,
+  ]),
+  [
+    "The best narrators — the quiet ones — say less",
+    [
+      {
+        start: 19,
+        end: 20,
+        suggestions: [{ range: [18, 21], text: ", " }],
+        id: "no-special-punctuation",
+      },
+      {
+        start: 36,
+        end: 37,
+        suggestions: [{ range: [35, 38], text: ", " }],
+        id: "no-special-punctuation",
+      },
+    ],
+    "keep the commas around an aside set between two dashes",
+  ],
+  [
+    "And the so-called movement — there is no such thing",
+    [
+      {
+        start: 27,
+        end: 28,
+        suggestions: [{ range: [26, 29], text: ", " }],
+        id: "no-special-punctuation",
+      },
+    ],
+    "keep the comma where no statement comes before the dash",
   ],
   [
     '"What if she—" he stopped himself',
