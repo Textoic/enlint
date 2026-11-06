@@ -15,6 +15,101 @@ the log. Date each one. Keep each entry to a single finding.
 Nor does routine history: git already records what changed and when.
 
 ## Log
+### 2026-11-06, uncertainty is not a mechanical doubt replacement
+
+The bounded replay changed "I am not sure which is worse" into "I doubt which
+is worse" after a vocabulary suggestion. The old examples also produced
+"She doubted about the exact date". Besides the bad complement, uncertainty
+does not always express doubt that a proposition is true. A universal word
+replacement therefore cannot preserve grammar and meaning.
+
+Both "be not sure" and "be unsure" still report their findings. They now give
+advice that distinguishes missing knowledge from doubt, with no mechanical
+replacement. Four manual example rewrites preserve uncertainty. Twelve controls
+across both providers retain the findings and verify that no "doubt" suggestion
+appears. The adjective fixes in Artisan also remove the two retained false
+relative markers; genuine relatives and noun uses remain covered.
+
+All 118 focused tests pass. The full suite passes 1,498/1,514 and retains the
+same sixteen pre-existing vocabulary failures. Lint and typecheck pass.
+Independent review finds no actionable issue. The lab preserves the completed
+experiment unchanged and stores post-run evidence in
+`data/style-ab/2026-11-06-post-replay-repairs/`. The conditional false-relative
+case remains open; this change does not certify broader grammar coverage.
+
+### 2026-11-06, decline a malformed participial subject opening
+
+The trained parse tags "clearing" as a participial adjective in "a person
+clearing the board can read it without taking the paper down". It proposes
+"clearing the board" as the finite verb's subject span. The relative detector
+then suggests "person that clearing", which breaks the sentence. A narrow
+guard now declines an ADJ-tagged present participle followed by an article at
+that subject opening. This does not change parser tags or clause completeness.
+
+Six new cases run in both modes. Controls retain genuine relatives followed by
+an adjunct, a particle verb, stranded "without", or a ditransitive object gap.
+All 98 relative/nested tests pass. The paired audit of 90 texts removes only
+the full retained synthetic case and its minimal form: findings drop from 77 to
+75. Eight originals and retained model drafts are unchanged. The lint reports
+zero findings under all rules for the two corrected cases. Lint and typecheck
+pass; the full suite passes 1,478/1,494 with the same sixteen vocabulary
+failures. Independent review finds no actionable issue. It also finds no
+detector difference in 960 additional synthetic gerund-relative controls.
+Existing gerund-subject parser misses remain outside this guard. The lab
+preserves evidence in `data/style-ab/2026-11-06-repair-completion/`.
+
+### 2026-11-06, precautionary "in case" is not an unmarked relative
+
+The eight-essay screen's repair changed "in case they matter" into "in case
+that they matter" after a false relative-clause finding. The words "in case"
+introduce a precaution, so "case" cannot anchor the proposed relative. Its
+noun tag is legitimate; the error lies in the clause context, not the tag.
+Noun phrases such as "in the case we bought" still report their relative. So
+do relatives inside a precaution clause.
+
+Seven new cases run in both parsing modes. All 86 relative/nested-clause tests
+pass, as do lint and typecheck.
+
+The paired audit covers eight originals and sixteen raw/final pairs. It holds
+tokens fixed while comparing the frozen pre-patch detector with the new one.
+It removes exactly the retained false finding, taking 50 findings to 49. It
+changes no original and adds no finding. The lab preserves this audit in
+`data/style-ab/2026-11-06-repair-prerequisites/clause-audit.json`. Frozen
+benchmark texts and scores remain unchanged. Existing parser misses remain for
+"She testified in the case we discussed" and the inner relative of "Take notes
+in case the editor I hired calls"; neither arose from this patch.
+
+### 2026-11-05 — five humanizer grammar failures came from tags and clause context
+
+The frontier screen retained false relative-clause suggestions after "how far",
+"at least" and "the ordinary one". artisan now fixes those tags. Four new
+integration cases cover the exact three source sentences and "at most we wait
+an hour" with both parsing modes. These cases need no rule exclusions.
+
+"How much attention I am supposed to pay" attached the noun through "how".
+The detector now recognizes that head together with a quantity modifier. It
+still finds the inner relative in "how much attention the editor I hired paid".
+The parser made "means" the root of "A lot of the time they just guess and keep
+reading, which means...". That comma relative cannot supply the governing main
+clause that a proposed relative about "time" requires. The detector discounts
+such an ancestor when identifying a fronted phrase. Genuine relatives remain
+reported in "A lot of the time we spent was wasted" and "The time we spent,
+which was wasted, is gone". A later verb with its own subject prevents the
+quantity guard from hiding "money he earned she had spent". This remains a
+heuristic: "how much money he thought she had spent" still receives a false
+relative marker, as it did before this patch. The detector does not yet know
+which verbs introduce a complement clause.
+
+On all eight owner essays and twenty retained raw drafts, with current parser
+tokens held fixed, the clause changes remove three false findings and add none
+in either mode. They affect only model drafts: "how many unusual words the
+writer knows", "how much attention I am supposed to pay" and the fronted time
+phrase. The eight owner essays keep the same relative findings. The lab retains
+the sentences and hashes in `clause-corpus-audit.json`.
+
+The full suite has sixteen vocabulary failures. The same failures
+also occur with the frozen parser from before this patch. The lab retains both
+logs in its all-essay goal directory. Lint and typecheck pass.
 
 ### 2026-10-11 — the judges catch polish: a wider split contrast, paired slogans, a verdict that closes a paragraph, and a dash that ends the sentence
 

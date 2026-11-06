@@ -804,11 +804,11 @@
   "be not sure": [
     {
       "text": "I am not sure if the train is delayed.",
-      "fixed": "I doubt if the train is delayed."
+      "fixed": "I cannot tell if the train is delayed."
     },
     {
       "text": "She was not sure about the exact date.",
-      "fixed": "She doubted about the exact date."
+      "fixed": "She could not say what the exact date was."
     }
   ],
   "be not willing": [
@@ -824,11 +824,11 @@
   "be unsure": [
     {
       "text": "She was unsure about the deadline.",
-      "fixed": "She doubted about the deadline."
+      "fixed": "She could not confirm the deadline."
     },
     {
       "text": "We are unsure if the train is late.",
-      "fixed": "We doubt if the train is late."
+      "fixed": "We cannot tell if the train is late."
     }
   ],
   "be unwilling": [

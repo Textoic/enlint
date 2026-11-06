@@ -353,7 +353,8 @@ export const entries: BadWordEntry[] = [
     phrase: "be not sure",
     category: "explained-verb",
     selector: "[lemma=be] > [form=sure i] > [lemma=not]",
-    suggestions: [":inflect(doubt)"],
+    message:
+      "Express the uncertainty directly. Preserve whether the writer lacks knowledge or doubts a claim; 'doubt' does not fit every complement.",
   },
   {
     phrase: "be not willing",
@@ -365,7 +366,8 @@ export const entries: BadWordEntry[] = [
     phrase: "be unsure",
     category: "explained-verb",
     selector: "[lemma=be] > [form=unsure i]",
-    suggestions: [":inflect(doubt)"],
+    message:
+      "Express the uncertainty directly. Preserve whether the writer lacks knowledge or doubts a claim; 'doubt' does not fit every complement.",
   },
   {
     phrase: "be unwilling",

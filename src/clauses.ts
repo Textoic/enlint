@@ -148,6 +148,15 @@ const isSetInFront = (tokens: ParsedToken[], antecedent: ParsedToken) =>
   takesAnyClause(antecedent) ||
   followsAMarker(tokens, antecedent);
 
+const isCommaRelative = (tokens: ParsedToken[], verb: ParsedToken) =>
+  verb.misc.children.some(
+    (id) =>
+      id > 0 &&
+      id < verb.id &&
+      ["which", "who"].includes(formOf(tokens[id])) &&
+      tokens[id - 1].form === ",",
+  );
+
 const opensTheSentenceAlone = (
   tokens: ParsedToken[],
   antecedent: ParsedToken,
@@ -155,8 +164,34 @@ const opensTheSentenceAlone = (
   const above = ancestorsOf(tokens, antecedent);
   const top = above[above.length - 1] as ParsedToken | undefined;
   return (
-    !above.some(isVerb) &&
+    !above.some((token) => isVerb(token) && !isCommaRelative(tokens, token)) &&
     (top == null ? isSetInFront(tokens, antecedent) : !isNoun(top))
+  );
+};
+
+const hasAnotherSubject = (tokens: ParsedToken[], verb: ParsedToken) =>
+  parseToSubtree(tokens, verb.id).some((id) =>
+    isVerb(tokens[id]) && id > verb.id
+      ? tokens[id].misc.children.some(
+          (child) =>
+            child > verb.id && child < id && canBeASubject(tokens[child]),
+        )
+      : false,
+  );
+
+const asksHowMuch = (
+  tokens: ParsedToken[],
+  antecedent: ParsedToken,
+  verb: ParsedToken,
+) => {
+  const head = tokens[antecedent.head] as ParsedToken | undefined;
+  return (
+    head != null &&
+    formOf(head) === "how" &&
+    modifiersOf(tokens, antecedent).some((token) =>
+      ["much", "many"].includes(formOf(token)),
+    ) &&
+    !hasAnotherSubject(tokens, verb)
   );
 };
 
@@ -167,10 +202,21 @@ const asksWhich = (tokens: ParsedToken[], antecedent: ParsedToken) =>
 
 const CONNECTIVES = new Set(["as", "so", "than", "like", "but", "and", "or"]);
 
-const canAnchorAClause = (tokens: ParsedToken[], antecedent: ParsedToken) =>
+const isInCase = (tokens: ParsedToken[], antecedent: ParsedToken) =>
+  formOf(antecedent) === "case" &&
+  antecedent.id > 0 &&
+  formOf(tokens[antecedent.id - 1]) === "in";
+
+const canAnchorAClause = (
+  tokens: ParsedToken[],
+  antecedent: ParsedToken,
+  verb: ParsedToken,
+) =>
   canTakeARelative(antecedent) &&
   !CONNECTIVES.has(formOf(antecedent)) &&
+  !isInCase(tokens, antecedent) &&
   !asksWhich(tokens, antecedent) &&
+  !asksHowMuch(tokens, antecedent, verb) &&
   !opensTheSentenceAlone(tokens, antecedent);
 
 const opensAnotherClause = (token: ParsedToken) =>
@@ -243,6 +289,27 @@ const leavesAGap = (tokens: ParsedToken[], verb: ParsedToken) => {
   );
 };
 
+const opensOnParticipialModifier = (
+  tokens: ParsedToken[],
+  opening: ParsedToken,
+) => {
+  const next = tokens[opening.id + 1] as ParsedToken | undefined;
+  return (
+    opening.xpos === "ADJ" &&
+    isPresentParticiple(opening) &&
+    next?.feats.PronType === "Art"
+  );
+};
+
+const isUnmarkedOpening = (
+  tokens: ParsedToken[],
+  antecedent: ParsedToken,
+  opening: ParsedToken,
+) =>
+  opening.id === antecedent.id + 1 &&
+  !opensOnParticipialModifier(tokens, opening) &&
+  !RELATIVE_PRONOUNS.has(formOf(opening));
+
 const unmarkedRelativeAt = (
   tokens: ParsedToken[],
   verb: ParsedToken,
@@ -252,7 +319,7 @@ const unmarkedRelativeAt = (
     return [];
   }
 
-  const subject = canAnchorAClause(tokens, antecedent)
+  const subject = canAnchorAClause(tokens, antecedent, verb)
     ? subjectOf(tokens, verb, antecedent)
     : undefined;
   if (subject == null || !holdsOnlyTheClause(tokens, subject, verb)) {
@@ -260,8 +327,7 @@ const unmarkedRelativeAt = (
   }
 
   const opening = openingOf(tokens, subject);
-  return opening.id === antecedent.id + 1 &&
-    !RELATIVE_PRONOUNS.has(formOf(opening)) &&
+  return isUnmarkedOpening(tokens, antecedent, opening) &&
     (takesAnyClause(antecedent) || leavesAGap(tokens, verb))
     ? [{ antecedent, opening, verb }]
     : [];
