@@ -15,6 +15,55 @@ the log. Date each one. Keep each entry to a single finding.
 Nor does routine history: git already records what changed and when.
 
 ## Log
+### 2026-11-11, no-mixed-dialects: a metric unit's two spellings share one lemma
+
+artisan treats a metric unit's British spelling as a synonym of the American
+one, like its abbreviation: "kilometres", "kilometers" and "km" all get the
+lemma "kilometer". A lemma selector cannot tell the two spellings apart. The
+old `[lemma=kilometer]` entry flagged "kilometres" in en-GB with
+"kilometres" as the fix, and `[lemma=kilometre]` never matched. Litre had the
+same fault in the singular. Kilometre, centimetre, millimetre and litre now
+match on the singular and plural form. Changing the lemma in artisan would
+split the unit from its abbreviation. Metre has no entry, because "meter" is
+also a measuring device in both dialects.
+
+### 2026-11-11, no-mixed-dialects: doubled-l spellings must list every form
+
+"modelled" and "modeled" share the lemma "model", so the doubled-l pairs match
+on the form, as canceled and cancelled already did. A form entry catches only
+the forms it lists. Each pair lists the past, the -ing form and the agent
+noun with its plural where the word has them.
+
+### 2026-11-11, no-mixed-dialects: "analyses" and participles need a noun guard
+
+artisan gives the plural noun "analyses" the lemma "analyse", so a bare
+`[lemma=analyse]` flags every plural of "analysis" in en-US. The analyse,
+paralyse and catalyse entries and their American twins carry
+`:not([xpos=NOUN])`. A verb-only guard was tried first and missed the
+participle in "The paralyzed man walked", which artisan tags ADJ.
+
+### 2026-11-11, no-mixed-dialects: capitalized Gray and Grey are left alone
+
+artisan tags "Gray" in "Thomas Gray" as a common noun with the lemma "gray",
+so the gray and grey entries flagged surnames, place names and Earl Grey
+tea. They now skip the capitalized form with `:not([form=Gray])`. The cost is
+a sentence that opens with the colour, "Gray clouds came", which goes
+unflagged.
+
+### 2026-11-11, no-mixed-dialects: the tire entry is for the noun only
+
+`[lemma=tire]` matched "tired" in "I was tired", whose lemma is the verb
+"tire", and offered "tyred" in en-GB. A lint of 82 texts showed it three
+times. The entry now carries `[xpos=NOUN]`.
+
+### 2026-11-11, no-mixed-dialects: Canada splits between the two spellings
+
+The spelling entries added this day follow the locales of the entries
+already in the file. Canada takes the American -ize and -yze and the British
+-our, -re and doubled l. It also takes the American form of plow, artifact,
+aluminum, skeptic, maneuver, the medical words (fetus, anemia, esophagus,
+estrogen, pediatric), airplane, donut and aging.
+
 ### 2026-11-06, uncertainty is not a mechanical doubt replacement
 
 The bounded replay changed "I am not sure which is worse" into "I doubt which
