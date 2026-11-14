@@ -6,9 +6,10 @@ const isFloatingParticiple = ({ feats: { VerbForm } }: ParsedToken) =>
 
 const isComma = ({ feats: { PunctType } }: ParsedToken) => PunctType === "Comm";
 
-const isStructuralBoundary = ({ form, feats }: ParsedToken) =>
+const isStructuralBoundary = ({ form, feats, xpos }: ParsedToken) =>
   ["Colo", "Semi", "Brck"].includes(feats.PunctType ?? "") ||
-  /^[—–]$/u.test(form);
+  /^[—–]$/u.test(form) ||
+  (xpos === "PUNCT" && /^-{2,3}$/u.test(form));
 
 const reportingVerbs = [
   "say",

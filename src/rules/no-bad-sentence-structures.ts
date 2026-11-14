@@ -17,6 +17,8 @@ export const tellMessages: Record<TellKind, string> = {
   "staccato-run": `Three or more clipped sentences in a row: "I looked at the blue. It was blue. I walked away." Join two of them, or say the whole thing in one ordinary sentence.`,
   "parallel-pair": `These two short sentences are built on one mould with the same verb: "A painter learns paint. A sculptor learns stone." The pair reads as a slogan. Keep one example, or put both in one plain sentence: "Painters and sculptors each learn a material."`,
   "verdict-closer": `The paragraph ends on a short verdict: "That's the whole game." A line like that sums up what the paragraph already said and is there to be quoted. Cut it, or end on the last thing that carries a fact.`,
+  "hindsight-closer": `The sentence ends on "to begin with" or "in the first place": "There was no rule she could have broken, because she never had one to begin with." The tag turns the point into a sting that cancels the premise. Drop the tag and state the point plainly: "She had no rules to break."`,
+  "past-cleft": `This puts the point in "X is the one that..." or "X was what...": "The boring word is the one most people used." The frame withholds the point to deliver it as a reveal. Give the sentence its own verb: "Most people used the boring word."`,
   "can-cannot": `This sets a "can" against a "can't" for effect: "The amount can be fixed later. The start date can't." Say the point once: "Only the amount can be fixed later."`,
 };
 

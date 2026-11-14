@@ -7,6 +7,49 @@ import type { LintError } from "../../src/types/index.js";
 const tests = [
   ["", [], "an empty string"],
   ["What if she—", [], "allow em dashes as interrupted conversation"],
+  ["What if she--", [], "allow typed dashes as interrupted conversation"],
+  [
+    "Run the tool with --force to skip the check.",
+    [],
+    "leave a command-line flag alone",
+  ],
+  ["Pages 10--12 cover it.", [], "leave a range typed with two hyphens alone"],
+  [
+    "there he was -- still and silent",
+    [
+      {
+        start: 13,
+        end: 15,
+        suggestions: [{ range: [12, 16], text: ", " }],
+        id: "no-special-punctuation",
+      },
+    ],
+    "avoid a dash typed as two hyphens",
+  ],
+  [
+    "Voice is about restraint -- the best narrators say less",
+    [
+      {
+        start: 25,
+        end: 27,
+        suggestions: [{ range: [24, 31], text: ". The" }],
+        id: "no-special-punctuation",
+      },
+    ],
+    "split two statements joined by a typed dash",
+  ],
+  [
+    "Nihilism--which is nothing",
+    [
+      {
+        start: 8,
+        end: 10,
+        suggestions: [{ range: [8, 10], text: ", " }],
+        id: "no-special-punctuation",
+      },
+    ],
+    "avoid an unspaced typed dash",
+  ],
   [
     "there he was—still and silent",
     [

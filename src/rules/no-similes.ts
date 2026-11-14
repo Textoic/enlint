@@ -18,6 +18,7 @@ const properLikePhrasalVerbHeads = [
 const isClauseBoundary = ({ form, lemma, xpos, feats }: ParsedToken) =>
   ["Colo", "Semi"].includes(feats.PunctType ?? "") ||
   /^[—–]$/u.test(form) ||
+  (xpos === "PUNCT" && /^-{2,3}$/u.test(form)) ||
   (xpos === "MARK" && ["and", "but", "or"].includes(lemma ?? ""));
 
 const followsDetachedNominal = (tokens: ParsedToken[], id: number) => {

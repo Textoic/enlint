@@ -16,7 +16,9 @@ export type TellKind =
   | "reasoned-echo"
   | "staccato-run"
   | "parallel-pair"
-  | "verdict-closer";
+  | "verdict-closer"
+  | "hindsight-closer"
+  | "past-cleft";
 
 export type Tell = { kind: TellKind; start: number; end: number };
 
@@ -941,6 +943,95 @@ const reasonedEchoes = (tokens: ParsedToken[]): Tell[] => {
   return echoes ? wholeSentence("reasoned-echo", tokens) : [];
 };
 
+const HINDSIGHT_CLOSER = /\b(?:to (?:begin|start) with|in the first place)$/u;
+
+const isPastForm = (token: ParsedToken) =>
+  token.feats.Tense === "Past" && ["VERB", "ADJ"].includes(token.xpos ?? "");
+
+const hindsightClosers = (tokens: ParsedToken[]): Tell[] =>
+  !isSpoken(tokens) &&
+  tokens.some(isPastForm) &&
+  HINDSIGHT_CLOSER.test(textOf(tokens))
+    ? wholeSentence("hindsight-closer", tokens)
+    : [];
+
+const CLEFT_NOUNS = new Set(["one", "ones", "thing", "things", "part", "bit"]);
+
+const CLEFT_PICKS = new Set(["only", "first", "last", "same", "real"]);
+
+const RELATIVE_OPENERS = new Set(["that", "which", "who"]);
+
+const CLAUSE_JOINERS = new Set([
+  "and",
+  "but",
+  "or",
+  "so",
+  "because",
+  "while",
+  "though",
+  "although",
+]);
+
+const endsTheClause = (token: ParsedToken) =>
+  token.xpos === "PUNCT" || CLAUSE_JOINERS.has(formOf(token));
+
+const clauseAfter = (tokens: ParsedToken[], at: number) => {
+  const rest = tokens.slice(at + 1);
+  const start = rest.findIndex((token) => !isAdverb(token));
+  const clause = start === -1 ? [] : rest.slice(start);
+  const stop = clause.findIndex(endsTheClause);
+  return stop === -1 ? clause : clause.slice(0, stop);
+};
+
+const pickedNounAt = (clause: ParsedToken[]) => {
+  const at = clause[1] != null && CLEFT_PICKS.has(formOf(clause[1])) ? 2 : 1;
+  return clause[at] != null && CLEFT_NOUNS.has(formOf(clause[at]))
+    ? at + 1
+    : -1;
+};
+
+const deniedNounAt = (clause: ParsedToken[]) =>
+  isCommonNoun(clause[1] ?? clause[0]) &&
+  RELATIVE_OPENERS.has(formOf(clause[2] ?? clause[0]))
+    ? 3
+    : -1;
+
+const cleftBodyAt = (clause: ParsedToken[], afterThere: boolean) => {
+  const opener = formOf(clause[0] ?? ({ form: "" } as ParsedToken));
+  if (opener === "what") {
+    return 1;
+  }
+
+  if (opener === "the") {
+    return pickedNounAt(clause);
+  }
+
+  return opener === "no" && afterThere ? deniedNounAt(clause) : -1;
+};
+
+const tellsAPastAct = (body: ParsedToken[]) =>
+  body.some(
+    (token, step) =>
+      isPastForm(token) &&
+      wordOf(token) !== "be" &&
+      (step === 0 || !isBe(body[step - 1])),
+  );
+
+const cleftAt = (tokens: ParsedToken[], at: number) => {
+  if (at === 0 || !isBe(tokens[at])) {
+    return false;
+  }
+
+  const clause = clauseAfter(tokens, at);
+  const body = cleftBodyAt(clause, formOf(tokens[at - 1]) === "there");
+  return body > 0 && tellsAPastAct(clause.slice(body));
+};
+
+const pastClefts = (tokens: ParsedToken[]): Tell[] =>
+  !isSpoken(tokens) && tokens.some((_, at) => cleftAt(tokens, at))
+    ? wholeSentence("past-cleft", tokens)
+    : [];
+
 const SHORTEST_TWIN = 3;
 
 const LONGEST_TWIN = 9;
@@ -1015,6 +1106,8 @@ const DETECTORS: ((
   commaAnds,
   splitContrasts,
   reasonedEchoes,
+  hindsightClosers,
+  pastClefts,
   parallelPairs,
 ];
 

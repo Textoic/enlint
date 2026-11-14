@@ -15,6 +15,51 @@ the log. Date each one. Keep each entry to a single finding.
 Nor does routine history: git already records what changed and when.
 
 ## Log
+### 2026-11-14, typed dashes, hindsight closers and past clefts
+
+The user read lab drafts beside their own essays and named three tells.
+
+- `no-special-punctuation` treats "--" and "---" as an em dash, and
+  `no-absolute-phrases` and `no-similes` treat them as a clause break, when
+  artisan tags them PUNCT. That needed artisan to stop reading "--" as an
+  emoticon first (artisan `docs/architecture.md`, 2026-11-14). artisan
+  leaves "--force", "10--12" and a "---" line as INTJ, so they stay quiet.
+  In the lab's 382 final drafts Opus and DeepSeek typed "--" where they had
+  been told to avoid "—"; card 8d of the lab even asked for it.
+- `hindsight-closer`: a sentence outside quotes with a past form in it that
+  ends on "to begin with", "to start with" or "in the first place". The
+  user's example was "There was no rule that she could have broken,
+  because she never had one to begin with." The past form keeps a literal
+  use quiet: "Flour is what you need to start with." On the user's 172k
+  words of essays and novels the closer fires 0.01 times per 1,000 words,
+  and 0.22 on the drafts.
+- `past-cleft`: a "be" with a word before it, then one of three openers,
+  then a past form in the same clause that does not follow "be". The
+  openers are "what", "the" with "one/ones/thing/things/part/bit" (an
+  "only/first/last/same/real" may sit between), and "no" with a noun and
+  "that/which/who" after "there be". "The boring word is the one that the
+  most people used", "The rules were what made it art", "There was no rule
+  that she could have broken". The clause stops at the first punctuation
+  mark or at "and", "but", "or", "so", "because", "while", "though" or
+  "although", so "The cat is the one in the box, and I loved it" stays
+  quiet. The user described the shape as "X is the thing/the one/what X
+  verb-in-past-form". It fires 0.13 times per 1,000 words on the user's
+  writing (23 times) and 0.44 on the drafts (59 times). The user's hits
+  seen in a first count were all novel dialogue where the quote mark sits in another sentence, so `isSpoken`
+  cannot see them. "That's the part that really gets me" stays quiet
+  because the user named the past form.
+- Known misses, both for artisan: "She was the one who found it" ("found"
+  is tagged present, read as the verb "to found") and "He is the one who
+  left" ("left" is tagged ADV). "the most people used" works only because
+  `isPastForm` accepts ADJ: artisan tags "people" a verb and "used" an
+  adjective there.
+- An independent review found the flag, range and "---" cases, the dash
+  before a quote or bracket, the clause leak and the "Flour" case in a
+  first version. All are fixed and in the tests.
+- 16 tests of the bad-words fixtures fail with and without this change. 14
+  more "sits" tests fail because of an uncommitted change to
+  `no-bad-words.ts` that is not part of this work.
+
 ### 2026-11-11, no-mixed-dialects: a metric unit's two spellings share one lemma
 
 artisan treats a metric unit's British spelling as a synonym of the American

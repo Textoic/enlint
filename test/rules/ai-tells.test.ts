@@ -545,6 +545,58 @@ describe("tells: a reason that repeats its claim", () => {
   });
 });
 
+describe("tells: a reason tagged with hindsight", () => {
+  [
+    "There was no rule that she could have broken, because she never had one to begin with.",
+    "There was no rule that she could have broken because she didn't have one to start with.",
+    "Nobody ever decided what the piece was supposed to do in the first place.",
+  ].forEach((text) => {
+    it(`finds "${text}"`, () => {
+      assert.ok(kindsIn(text).includes("hindsight-closer"));
+    });
+  });
+
+  [
+    "In the first place we went, the food was cold.",
+    "To begin with, read the manual.",
+    "Flour is what you need to start with.",
+    'She said "you were racist in the first place."',
+  ].forEach((text) => {
+    it(`leaves "${text}" alone`, () => {
+      assert.ok(!kindsIn(text).includes("hindsight-closer"));
+    });
+  });
+});
+
+describe("tells: a point framed as the one that was", () => {
+  [
+    "The boring word is the one that the most people used.",
+    "The rules were what made it art.",
+    "The money was the thing he had wanted.",
+    "There was no rule that she could have broken.",
+    "That was the only one people used.",
+  ].forEach((text) => {
+    it(`finds "${text}"`, () => {
+      assert.ok(kindsIn(text).includes("past-cleft"));
+    });
+  });
+
+  [
+    "She knew the strongest proof is the one that's paid in blood.",
+    "That's the part that really gets me.",
+    "What I wanted was a plain answer.",
+    "The cat is the one in the box.",
+    'He said "that\'s what I thought."',
+    "The cat is the one in the box, and I loved it.",
+    "This is what I think, but I asked him first.",
+    "There was no time to waste.",
+  ].forEach((text) => {
+    it(`leaves "${text}" alone`, () => {
+      assert.ok(!kindsIn(text).includes("past-cleft"));
+    });
+  });
+});
+
 describe("tells: a run of clipped sentences", () => {
   it("finds a longer run of short sentences with one of middling length in it", () => {
     const text =

@@ -39,7 +39,9 @@ const JOINERS = new Set([
 const isFiniteVerb = ({ xpos, feats: { VerbForm } }: ParsedToken) =>
   xpos === "VERB" && VerbForm !== "Part";
 
-const isDash = ({ form }: ParsedToken) => form === "—";
+const EM_DASHES = new Set(["—", "--", "---"]);
+
+const isDash = ({ form }: ParsedToken) => EM_DASHES.has(form);
 
 const isNoun = ({ xpos }: ParsedToken) => xpos === "NOUN";
 
@@ -98,10 +100,13 @@ const fullStopSwap = (
 const emDashError = (tokens: ParsedToken[], id: number): LintError => {
   const previousToken = tokens[id - 1];
   const nextToken = tokens[id + 1];
-  const { at } = tokens[id].misc;
+  const {
+    form,
+    misc: { at },
+  } = tokens[id];
   const range: [number, number] = [
     Math.max(previousToken.misc.at + previousToken.form.length, at - 1),
-    Math.min(nextToken.misc.at, at + 2),
+    Math.min(nextToken.misc.at, at + form.length + 1),
   ];
   const stop = splitsTwoStatements(tokens, id)
     ? fullStopSwap(range, nextToken)
@@ -109,7 +114,7 @@ const emDashError = (tokens: ParsedToken[], id: number): LintError => {
 
   return {
     start: at,
-    end: at + 1,
+    end: at + form.length,
     suggestions: [stop ?? { range, text: ", " }],
     message: `Rewrite the sentence to replace the dash with a full stop '.' if the next sentence is a separate thought, a colon ':' if the dash is introducing a thought or parentheses if there are two dashes enclosing an aside.`,
     id: ErrorId.NO_SPECIAL_PUNCTUATION,
@@ -149,7 +154,7 @@ const applyRule = (tokens: ParsedToken[]) =>
   tokens
     .filter(({ xpos }) => xpos === "PUNCT")
     .reduce((errors: LintError[], { form, misc: { at }, id }) => {
-      if (["—", EN_DASH].includes(form)) {
+      if (form === EN_DASH || EM_DASHES.has(form)) {
         return errors.concat(applyDashRule(tokens, at, id, form));
       }
 
