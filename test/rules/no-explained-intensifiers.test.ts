@@ -41,6 +41,19 @@ const tests = [
     [],
     "an adjective that has no intensified replacement",
   ],
+  [
+    "He doesn't look very happy.",
+    [],
+    "a negated linking verb, where 'not very happy' is not 'not ecstatic'",
+  ],
+  ["He's not very smart.", [], "a negated adjective"],
+  [
+    "She's not very happy now, but she soon will be.",
+    [],
+    "a negation the parser hangs on the intensifier",
+  ],
+  ["He must not be very important.", [], "a negated copula"],
+  ["I don't think she was very angry.", [], "a negated verb higher up"],
 ] as [text: string, errors: LintError[], name: string][];
 
 describe("no-explained-intensifiers", () => {

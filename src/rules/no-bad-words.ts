@@ -430,7 +430,6 @@ export const entries: BadWordEntry[] = [
     ["become get make", "worse", "worsen"],
     ["become make", "better", "improve"],
     ["become make", "broad*", "broaden"],
-    ["become make", "even", "even"],
     ["become make", "stiff*", "stiffen"],
     ["become make", "strong*", "strengthen"],
     ["become make", "sweet*", "sweeten"],
@@ -2328,14 +2327,6 @@ export const entries: BadWordEntry[] = [
     selector: "[form=significant i]",
     message:
       "Prefer a more common, shorter version of the same notion: important, major or big",
-  },
-  {
-    phrase: "sit (place)",
-    category: "ai",
-    selector:
-      "[lemma=sit][xpos=VERB]:not(:has(> :matches([PronType=Prs]:not([form=it i]):not([form=its i]), [PronType=Ind]:not([form=something i]):not([form=anything i]), [PronType=Tot]:not([form=everything i]), [lemma=nobody], [PronType=Rel][form=who i], [lemma=person], [lemma=reader], [lemma=writer], [lemma=author], [lemma=audience], [lemma=viewer], [lemma=student], [lemma=child], [lemma=kid], [lemma=man], [lemma=woman], [lemma=guest], [lemma=crowd], [lemma=family], [lemma=sitter], [lemma=passenger], [lemma=driver], [lemma=patient], [lemma=jury], [lemma=judge], [lemma=committee], [lemma=cat], [lemma=dog], [lemma=bird], [lemma=teacher], [lemma=mother], [lemma=father], [lemma=brother], [lemma=sister], [lemma=friend], [lemma=boy], [lemma=girl], [lemma=king], [lemma=queen], [lemma=guy], [lemma=doctor], [lemma=player], [lemma=pianist], [form=down i], [form=up i], [form=back i], [form=tight i], [form=through i]))):not(:matches([Mood=Pot], [Mood=Nec], [Mood=Cnd], [lemma=do], [lemma=be], [lemma=have]):has(> :matches([PronType=Prs]:not([form=it i]):not([form=its i]), [PronType=Ind]:not([form=something i]):not([form=anything i]), [PronType=Tot]:not([form=everything i]), [lemma=nobody], [PronType=Rel][form=who i], [lemma=person], [lemma=reader], [lemma=writer], [lemma=author], [lemma=audience], [lemma=viewer], [lemma=student], [lemma=child], [lemma=kid], [lemma=man], [lemma=woman], [lemma=guest], [lemma=crowd], [lemma=family], [lemma=sitter], [lemma=passenger], [lemma=driver], [lemma=patient], [lemma=jury], [lemma=judge], [lemma=committee], [lemma=cat], [lemma=dog], [lemma=bird], [lemma=teacher], [lemma=mother], [lemma=father], [lemma=brother], [lemma=sister], [lemma=friend], [lemma=boy], [lemma=girl], [lemma=king], [lemma=queen], [lemma=guy], [lemma=doctor], [lemma=player], [lemma=pianist])) > *):not(:matches([PronType=Prs]:not([form=it i]):not([form=its i]), [PronType=Ind]:not([form=something i]):not([form=anything i]), [PronType=Tot]:not([form=everything i]), [lemma=nobody], [PronType=Rel][form=who i], [lemma=person], [lemma=reader], [lemma=writer], [lemma=author], [lemma=audience], [lemma=viewer], [lemma=student], [lemma=child], [lemma=kid], [lemma=man], [lemma=woman], [lemma=guest], [lemma=crowd], [lemma=family], [lemma=sitter], [lemma=passenger], [lemma=driver], [lemma=patient], [lemma=jury], [lemma=judge], [lemma=committee], [lemma=cat], [lemma=dog], [lemma=bird], [lemma=teacher], [lemma=mother], [lemma=father], [lemma=brother], [lemma=sister], [lemma=friend], [lemma=boy], [lemma=girl], [lemma=king], [lemma=queen], [lemma=guy], [lemma=doctor], [lemma=player], [lemma=pianist]) > *)",
-    message:
-      "A thing does not 'sit' anywhere: 'the rarest words sit with specialists'. Say what is true of it: 'only specialists use the rarest words'",
   },
   {
     phrase: "smoke the peace pipe",

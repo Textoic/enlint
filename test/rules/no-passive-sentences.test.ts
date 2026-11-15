@@ -465,6 +465,30 @@ const tests = [
     ],
     "an agent with no Number, which agrees as a singular",
   ],
+  ["I was caught by surprise.", [], "an idiom whose by-phrase names no agent"],
+  [
+    "The professor is caught by surprise exiting his office.",
+    [],
+    "the same idiom with a clause after it",
+  ],
+  ["The town was taken by storm.", [], "a bare idiomatic noun"],
+  [
+    "I was caught by complete surprise.",
+    [],
+    "an idiom with an adjective, which is still no agent",
+  ],
+  [
+    "The town was destroyed by the storm.",
+    [
+      {
+        id: "no-passive-sentences",
+        start: 0,
+        end: 35,
+        suggestions: [{ range: [0, 35], text: "The storm destroyed the town" }],
+      },
+    ],
+    "the same noun with a determiner, which is a real agent",
+  ],
 ] as [text: string, errors: LintError[], name: string][];
 
 const config = { ...defaults, "no-bad-sentence-structures": false };

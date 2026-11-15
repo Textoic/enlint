@@ -674,11 +674,53 @@ const spanOfPassive = (
   return { leftMost, start, end: endPosition + endWord.length };
 };
 
+const idiomaticAgentNouns = new Set([
+  "accident",
+  "chance",
+  "default",
+  "design",
+  "force",
+  "hand",
+  "heart",
+  "mistake",
+  "name",
+  "sight",
+  "storm",
+  "surprise",
+]);
+
+const isIdiomaticAgent = (
+  entities: ParsedToken[],
+  passiveAgentSubtree: number[],
+) => {
+  const head = passiveAgentSubtree.find(
+    (index) => !passiveAgentSubtree.includes(entities[index].head),
+  );
+  if (head == null) {
+    return false;
+  }
+
+  const { lemma, form, misc } = entities[head];
+  const isDeterminer = ({ xpos, feats }: ParsedToken) =>
+    xpos === "NOUN" || feats.PronType != null;
+  const isDetermined = misc.children.some(
+    (child) => child < head && isDeterminer(entities[child]),
+  );
+  const isName = form[0] !== form[0].toLowerCase();
+  return (
+    idiomaticAgentNouns.has((lemma ?? form).toLowerCase()) &&
+    !isDetermined &&
+    !isName
+  );
+};
+
 const hasUsableAgent = (
   entities: ParsedToken[],
   passiveAgentSubtree: number[],
 ) =>
-  passiveAgentSubtree.length > 0 && !isNonAgent(entities, passiveAgentSubtree);
+  passiveAgentSubtree.length > 0 &&
+  !isNonAgent(entities, passiveAgentSubtree) &&
+  !isIdiomaticAgent(entities, passiveAgentSubtree);
 
 const PASSIVE_MESSAGE = `Prefer the active voice over the passive to make your message clear in the reader's mind`;
 

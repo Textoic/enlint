@@ -126,6 +126,61 @@ const tests = [
     ],
     "an adjective after a negated verb, which the negation does reach",
   ],
+  [
+    "It wasn't fair.",
+    [
+      {
+        start: 3,
+        end: 14,
+        suggestions: [{ range: [3, 14], text: "was unfair" }],
+        id: "no-explained-antonyms",
+      },
+    ],
+    "a contracted negation, whose n belongs to the clitic",
+  ],
+  [
+    "They Aren’t fair.",
+    [
+      {
+        start: 5,
+        end: 16,
+        suggestions: [{ range: [5, 16], text: "Are unfair" }],
+        id: "no-explained-antonyms",
+      },
+    ],
+    "a contraction with a curly apostrophe and a capital",
+  ],
+  [
+    "It can't be fair.",
+    [{ start: 6, end: 16, id: "no-explained-antonyms" }],
+    "a 'can't', whose n belongs to 'can'",
+  ],
+  ["It isn't really fair.", [], "an adverb between the negation and the word"],
+  [
+    "She doesn't really agree.",
+    [],
+    "an adverb on the negated verb, which the antonym would drop",
+  ],
+  ["It won't be very easy.", [], "an adverb on the predicate"],
+  ["It's not fair at all.", [], "'at all', which needs the negation"],
+  ["She doesn't agree anymore.", [], "'anymore', which needs the negation"],
+  [
+    "IT WASN'T FAIR.",
+    [
+      {
+        start: 3,
+        end: 14,
+        suggestions: [{ range: [3, 14], text: "WAS UNFAIR" }],
+        id: "no-explained-antonyms",
+      },
+    ],
+    "an all-caps contraction",
+  ],
+  [
+    "If people associated to 'otherwise-good-ideologies' are banned from speaking about their ideas, why not ban those ideologies directly?",
+    [],
+    "a negated verb that does not link to the adverb after it",
+  ],
 ] as [text: string, errors: LintError[], name: string][];
 
 describe("no-explained-antonyms", () => {

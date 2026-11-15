@@ -10,6 +10,36 @@ import {
 
 const isPredicate = (token: ParsedToken) => ["ADJ", "ADV"].includes(token.xpos);
 
+const linkingVerbs = new Set([
+  "appear",
+  "be",
+  "become",
+  "feel",
+  "get",
+  "grow",
+  "look",
+  "prove",
+  "remain",
+  "seem",
+  "smell",
+  "sound",
+  "stay",
+  "taste",
+  "turn",
+]);
+
+const isLinkingVerb = ({ xpos, lemma }: ParsedToken) =>
+  xpos === "VERB" && linkingVerbs.has(lemma ?? "");
+
+const hasAdverbOtherThan = (
+  entities: ParsedToken[],
+  token: ParsedToken,
+  negation: number,
+) =>
+  token.misc.children.some(
+    (child) => child !== negation && entities[child].xpos === "ADV",
+  );
+
 const predicateSiblingAfter = (
   entities: ParsedToken[],
   head: number,
@@ -19,8 +49,56 @@ const predicateSiblingAfter = (
     (sibling) =>
       sibling > head &&
       isPredicate(entities[sibling]) &&
-      antonymOf(entities[sibling]),
+      antonymOf(entities[sibling]) &&
+      !hasAdverbOtherThan(entities, entities[sibling], -1),
   );
+
+const contractedAuxiliaries: Record<string, string | undefined> = {
+  ain: undefined,
+  can: "can",
+  shan: "shall",
+  won: "will",
+};
+
+const isClitic = ({ form }: ParsedToken) => /^['’]t$/iu.test(form);
+
+const hostOf = (entities: ParsedToken[], negation: ParsedToken) => {
+  const host = negation.id > 0 ? entities[negation.id - 1] : undefined;
+  const isAttached =
+    host != null && host.misc.at + host.form.length === negation.misc.at;
+  return isClitic(negation) && isAttached ? host : undefined;
+};
+
+const isUpperCase = (text: string) =>
+  text === text.toUpperCase() && text !== text.toLowerCase();
+
+const withCaseOf = (form: string, word: string) => {
+  if (form.length > 1 && isUpperCase(form)) {
+    return word.toUpperCase();
+  }
+
+  return isUpperCase(form[0])
+    ? `${word[0].toUpperCase()}${word.slice(1)}`
+    : word;
+};
+
+const uncontracted = (host: ParsedToken) => {
+  const lower = host.form.toLowerCase();
+  const base = Object.hasOwn(contractedAuxiliaries, lower)
+    ? contractedAuxiliaries[lower]
+    : lower.endsWith("n")
+      ? lower.slice(0, -1)
+      : undefined;
+  return base ? withCaseOf(host.form, base) : undefined;
+};
+
+const ownsTheN = (host: ParsedToken) =>
+  /n$/iu.test(host.form) && host.form.toLowerCase() !== "can";
+
+const negationStart = (entities: ParsedToken[], negation: ParsedToken) => {
+  const host = hostOf(entities, negation);
+  return host && ownsTheN(host) ? negation.misc.at - 1 : negation.misc.at;
+};
 
 const swappedPredicateError = (
   entities: ParsedToken[],
@@ -46,19 +124,15 @@ const isAuxiliaryBefore = (
   token.misc.at < negativePosition &&
   token.lemma === "do";
 
-type Negator = { id: number; grandFather: number; negativePosition: number };
-
-const auxiliaryFor = (
-  entities: ParsedToken[],
-  { id, grandFather, negativePosition }: Negator,
-) => {
-  const preceding = id > 0 ? entities[id - 1] : undefined;
-  if (isAuxiliaryBefore(preceding, negativePosition)) {
+const auxiliaryFor = (entities: ParsedToken[], negation: ParsedToken) => {
+  const preceding = negation.id > 0 ? entities[negation.id - 1] : undefined;
+  if (isAuxiliaryBefore(preceding, negation.misc.at)) {
     return preceding;
   }
 
+  const grandFather = entities[negation.head].head;
   const ancestor = grandFather !== -1 ? entities[grandFather] : undefined;
-  return isAuxiliaryBefore(ancestor, negativePosition) ? ancestor : undefined;
+  return isAuxiliaryBefore(ancestor, negation.misc.at) ? ancestor : undefined;
 };
 
 const agreementOf = (
@@ -80,97 +154,125 @@ const agreementOf = (
   return { Number, Tense, Person, VerbForm };
 };
 
-const inflectsTheAuxiliary = (
-  headTag: string,
-  auxiliary: ParsedToken | undefined,
-): auxiliary is ParsedToken => headTag === "VERB" && auxiliary != null;
+type Replacement = { start: number; text: string };
 
-const replacementsFor = (
-  headAntonym: string,
-  headTag: string,
-  auxiliary: ParsedToken | undefined,
-  agreement: ReturnType<typeof agreementOf>,
-) =>
-  inflectsTheAuxiliary(headTag, auxiliary)
+const verbReplacement = (
+  entities: ParsedToken[],
+  negation: ParsedToken,
+  antonym: string,
+): Replacement | undefined => {
+  const auxiliary = auxiliaryFor(entities, negation);
+  if (auxiliary == null) {
+    return undefined;
+  }
+
+  const text = inflect({
+    lemma: antonym,
+    xpos: "VERB" as PosTag,
+    feats: agreementOf(entities, auxiliary),
+  }) as string;
+  return { start: auxiliary.misc.at, text };
+};
+
+const predicateReplacement = (
+  entities: ParsedToken[],
+  negation: ParsedToken,
+  antonym: string,
+): Replacement | undefined => {
+  const host = hostOf(entities, negation);
+  if (host == null) {
+    return { start: negation.misc.at, text: antonym };
+  }
+
+  const auxiliary = uncontracted(host);
+  return auxiliary
+    ? {
+        start: host.misc.at,
+        text: `${auxiliary} ${withCaseOf(entities[negation.head].form, antonym)}`,
+      }
+    : undefined;
+};
+
+const negativePolarityWords = new Set(["anymore", "either", "ever", "yet"]);
+
+const isNegativePolarityItem = (entities: ParsedToken[], index: number) => {
+  const { form, misc } = entities[index];
+  const word = form.toLowerCase();
+  const isAtAll =
+    word === "at" &&
+    misc.children.some((child) => entities[child].form.toLowerCase() === "all");
+  return isAtAll || negativePolarityWords.has(word);
+};
+
+const hasNegativePolarityItem = (entities: ParsedToken[], token: ParsedToken) =>
+  token.misc.children.some(
+    (child) => child > token.id && isNegativePolarityItem(entities, child),
+  );
+
+const negatesItsHeadAlone = (entities: ParsedToken[], negation: ParsedToken) =>
+  negation.head === negation.id + 1 &&
+  !hasAdverbOtherThan(entities, entities[negation.head], negation.id) &&
+  !hasNegativePolarityItem(entities, entities[negation.head]);
+
+const directError = (
+  entities: ParsedToken[],
+  negation: ParsedToken,
+): LintError[] => {
+  const headToken = entities[negation.head];
+  const antonym = antonymOf(headToken);
+  if (!antonym || !negatesItsHeadAlone(entities, negation)) {
+    return [];
+  }
+
+  const replace =
+    headToken.xpos === "VERB" ? verbReplacement : predicateReplacement;
+  const replacement = replace(entities, negation, antonym);
+  if (replacement == null) {
+    return [];
+  }
+
+  const { start, text } = replacement;
+  const end = headToken.misc.at + headToken.form.length;
+  return [
+    {
+      start,
+      end,
+      suggestions: [{ range: [start, end], text }],
+      message: `Replace a negative with a positive when it retains the same meaning`,
+      id: ErrorId.NO_EXPLAINED_ANTONYMS,
+      case: antonymKeyOf(headToken),
+    },
+  ];
+};
+
+const swappedSibling = (entities: ParsedToken[], negation: ParsedToken) => {
+  const verb = entities[negation.head];
+  return negation.head > negation.id && isLinkingVerb(verb)
+    ? predicateSiblingAfter(entities, negation.head, verb.misc.children)
+    : undefined;
+};
+
+const errorsFor = (entities: ParsedToken[], negation: ParsedToken) => {
+  if (negation.head === -1) {
+    return [];
+  }
+
+  const sibling = swappedSibling(entities, negation);
+  return sibling != null
     ? [
-        inflect({
-          lemma: headAntonym,
-          xpos: "VERB" as PosTag,
-          feats: agreement,
-        }) as string,
+        swappedPredicateError(
+          entities,
+          negationStart(entities, negation),
+          sibling,
+        ),
       ]
-    : [headAntonym];
-
-const startOf = (
-  headTag: string,
-  auxiliary: ParsedToken | undefined,
-  negativePosition: number,
-) =>
-  inflectsTheAuxiliary(headTag, auxiliary)
-    ? auxiliary.misc.at
-    : negativePosition;
+    : directError(entities, negation);
+};
 
 const applyRule = (entities: ParsedToken[]) =>
   entities
     .filter(({ lemma }) => lemma === "not")
-    .reduce(
-      (errors: LintError[], { id, head, misc: { at: negativePosition } }) => {
-        if (head === -1) {
-          return errors;
-        }
-
-        const headToken = entities[head];
-        const {
-          form: headWord,
-          xpos: headTag,
-          misc: { at: headPosition, children: siblings },
-          head: grandFather,
-        } = headToken;
-        const headAntonym = antonymOf(headToken);
-
-        const siblingAfterVerb = predicateSiblingAfter(
-          entities,
-          head,
-          siblings,
-        );
-        if (headTag === "VERB" && head > id && siblingAfterVerb != null) {
-          return errors.concat(
-            swappedPredicateError(entities, negativePosition, siblingAfterVerb),
-          );
-        }
-
-        if (!headAntonym || negativePosition > headPosition) {
-          return errors;
-        }
-
-        const negator = { id, grandFather, negativePosition };
-        const auxiliary = auxiliaryFor(entities, negator);
-        if (headTag === "VERB" && auxiliary == null) {
-          return errors;
-        }
-
-        const start = startOf(headTag, auxiliary, negativePosition);
-        const end = headPosition + headWord.length;
-        const suggestions = replacementsFor(
-          headAntonym,
-          headTag,
-          auxiliary,
-          agreementOf(entities, auxiliary),
-        );
-        return errors.concat({
-          start,
-          end,
-          suggestions: suggestions.map((text) => ({
-            range: [start, end] as [number, number],
-            text,
-          })),
-          message: `Replace a negative with a positive when it retains the same meaning`,
-          id: ErrorId.NO_EXPLAINED_ANTONYMS,
-          case: antonymKeyOf(headToken),
-        });
-      },
-      [],
-    );
+    .flatMap((negation) => errorsFor(entities, negation));
 
 export default (sentences: ParsedToken[][]) =>
   sentences.reduce(

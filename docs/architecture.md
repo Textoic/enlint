@@ -15,6 +15,54 @@ the log. Date each one. Keep each entry to a single finding.
 Nor does routine history: git already records what changed and when.
 
 ## Log
+### 2026-11-14, four bad replacements a novelist hit in textoic-desktop
+
+The user edited a novel in textoic-desktop and reported these.
+
+- "It wasn't fair" became "It wasnfair". artisan splits "wasn't" into
+  "wasn" and "'t", so the negation starts one character after the "n".
+  `no-explained-antonyms` replaced from the "'t" and left the "n" behind.
+  When the "'t" is glued to the word before it, the replacement now starts
+  at that word and rebuilds it: "wasn" becomes "was", "won" "will", "shan"
+  "shall", "can" stays "can" (its "n" is its own), and "ain't" abstains.
+  The highlight of the message-only shape starts at the "n" for the same
+  reason. A full tokenizer fix in artisan ("was" + "n't") would be cleaner
+  but would move every offset its models were trained on.
+- "doesn't really like" became "dislike", dropping "really". The rule now
+  abstains when the negated word is not the next token after "not", or when
+  it has an adverb other than the negation ("isn't really fair", "doesn't
+  quite agree", "won't be very easy"). "not really fair" is not "unfair".
+  The user's own uncommitted edit to `src/antonyms.ts` also removes the
+  "like" verb pair; that edit is theirs and the three "does not like"
+  tests fail because of it, with or without this change.
+- "why not ban those ideologies directly?" was told to use "indirectly".
+  The "not X ... adjective" shape (it will not be easy, the room did not feel
+  comfortable) is a linking verb with a predicate. It now needs one of
+  appear, be, become, feel, get, grow, look, prove, remain, seem, smell,
+  sound, stay, taste or turn. The parse was right: "not" hangs from "ban".
+- "He doesn't look very happy" offered "ecstatic". Under negation an
+  intensified adjective is an understatement, and "doesn't look ecstatic"
+  says something else. `no-explained-intensifiers` now skips the pair when
+  the adjective, or the verb it hangs from, has a "not" or "never" child.
+  The user also had "not very smart" and "must not be very important" on
+  their ignore list for the same reason.
+- "caught by surprise" was a passive with "surprise" as the agent.
+  `no-passive-sentences` now treats a bare "by" noun from a short idiom list
+  (accident, chance, default, design, force, hand, heart, mistake, name,
+  sight, storm, surprise) as no agent. A determiner or noun before it makes
+  it an agent again: "destroyed by the storm" still reports, while "caught
+  by complete surprise" does not. A capitalized "Chance" is a name and
+  still reports.
+- In the novel artisan hung "not" on "very" in "She's not very happy now",
+  so the intensifier check also looks at the intensifier's own children,
+  and at every verb above the adjective ("I don't think she was very
+  angry").
+- An independent review found "It's not fair at all" turning into "It's
+  unfair at all", the all-caps "WASN'T" coming back as "Was", and the two
+  idiom cases above. The antonym rule now abstains when the head has "at
+  all", "anymore", "either", "ever" or "yet" after it, and keeps all-caps
+  text in capitals. All are in the tests.
+
 ### 2026-11-14, typed dashes, hindsight closers and past clefts
 
 The user read lab drafts beside their own essays and named three tells.

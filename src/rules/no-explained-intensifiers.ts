@@ -90,6 +90,27 @@ export const intensifierDictionary = {
   worried: ["distressed"],
 } as Record<string, string[]>;
 
+const negators = new Set(["not", "never"]);
+
+const hasNegatorChild = (entities: ParsedToken[], token: ParsedToken) =>
+  token.misc.children.some((child) =>
+    negators.has(entities[child].lemma ?? ""),
+  );
+
+const verbAncestorsOf = (entities: ParsedToken[], token: ParsedToken) => {
+  const ancestors: ParsedToken[] = [];
+  for (let at = token.head; at !== -1; at = entities[at].head) {
+    ancestors.push(entities[at]);
+  }
+
+  return ancestors.filter(({ xpos }) => xpos === "VERB");
+};
+
+const isNegated = (entities: ParsedToken[], modified: number) =>
+  [entities[modified], ...verbAncestorsOf(entities, entities[modified])].some(
+    (token) => hasNegatorChild(entities, token),
+  );
+
 const applyRule = (entities: ParsedToken[]) =>
   entities
     .filter(
@@ -99,7 +120,9 @@ const applyRule = (entities: ParsedToken[]) =>
         xpos === "ADV" &&
         head !== -1 &&
         head > index &&
-        ["ADJ", "ADV"].includes(entities[head].xpos),
+        ["ADJ", "ADV"].includes(entities[head].xpos) &&
+        !isNegated(entities, head) &&
+        !hasNegatorChild(entities, entities[index]),
     )
     .reduce((errors: LintError[], { head }) => {
       const {
